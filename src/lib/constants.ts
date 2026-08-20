@@ -9,7 +9,10 @@ export const SITE = {
     line1: "8145 Valleywood Lane",
     line2: "Portage, MI 49024",
     full: "8145 Valleywood Lane, Portage, MI 49024",
+    mapsHref: "https://www.google.com/maps/search/?api=1&query=8145+Valleywood+Lane+Portage+MI+49024",
+    directionsHref: "https://www.google.com/maps/dir/?api=1&destination=8145+Valleywood+Lane+Portage+MI+49024",
   },
+  mailtoHref: "mailto:info@accessnowcare.com",
   hours: {
     days: "Monday – Sunday",
     time: "12:00 PM – 8:00 PM",
