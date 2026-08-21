@@ -6,12 +6,11 @@ export interface NavDropdownItem {
 export interface NavItem {
   label: string;
   href: string;
-  active?: boolean;
   dropdown?: NavDropdownItem[];
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "#", active: true },
+  { label: "Home", href: "/" },
   {
     label: "Urgent Care",
     href: "#",

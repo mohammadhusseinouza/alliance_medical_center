@@ -1,3 +1,4 @@
+import { Link, useLocation } from "react-router-dom";
 import { ChevronDownIcon } from "../../icons";
 import type { NavItem } from "./navigation.data";
 
@@ -5,7 +6,7 @@ export interface DesktopNavLinkProps {
   item: NavItem;
 }
 
-function linkClass(active: boolean | undefined) {
+function linkClass(active: boolean) {
   const color = active ? "text-[#155D72]" : "text-[#29364A]";
   const underline = active ? "after:scale-x-100" : "after:scale-x-0";
   return (
@@ -20,19 +21,29 @@ function linkClass(active: boolean | undefined) {
 }
 
 export function DesktopNavLink({ item }: DesktopNavLinkProps) {
+  const { pathname } = useLocation();
+  const isInternalRoute = item.href.startsWith("/");
+  const active = isInternalRoute && pathname === item.href;
+
   if (!item.dropdown) {
     return (
       <div className="relative">
-        <a href={item.href} className={linkClass(item.active)}>
-          {item.label}
-        </a>
+        {isInternalRoute ? (
+          <Link to={item.href} className={linkClass(active)}>
+            {item.label}
+          </Link>
+        ) : (
+          <a href={item.href} className={linkClass(active)}>
+            {item.label}
+          </a>
+        )}
       </div>
     );
   }
 
   return (
     <div className="group relative">
-      <a href={item.href} className={linkClass(item.active)}>
+      <a href={item.href} className={linkClass(active)}>
         {item.label}
         <ChevronDownIcon
           size={12}

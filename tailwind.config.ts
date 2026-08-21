@@ -21,6 +21,7 @@ const config: Config = {
         "mw-700": { max: "700px" },
         "mw-650": { max: "650px" },
         "mw-640": { max: "640px" },
+        "mw-420": { max: "420px" },
       },
       fontFamily: {
         sans: ["Inter", "Arial", "sans-serif"],

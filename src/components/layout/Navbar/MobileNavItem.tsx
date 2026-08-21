@@ -1,3 +1,4 @@
+import { Link, useLocation } from "react-router-dom";
 import { ChevronDownIcon } from "../../icons";
 import type { NavItem } from "./navigation.data";
 
@@ -6,14 +7,20 @@ export interface MobileNavItemProps {
 }
 
 export function MobileNavItem({ item }: MobileNavItemProps) {
+  const { pathname } = useLocation();
+  const isInternalRoute = item.href.startsWith("/");
+  const active = isInternalRoute && pathname === item.href;
+
   if (!item.dropdown) {
-    return (
+    const label = <span className={`text-[17px] font-semibold ${active ? "text-[#155D72]" : "text-[#29364A]"}`}>{item.label}</span>;
+
+    return isInternalRoute ? (
+      <Link to={item.href} className="block border-b border-[#F0F3F4] no-underline">
+        <div className="flex items-center justify-between px-1 py-4">{label}</div>
+      </Link>
+    ) : (
       <a href={item.href} className="block border-b border-[#F0F3F4] no-underline">
-        <div className="flex items-center justify-between px-1 py-4">
-          <span className={`text-[17px] font-semibold ${item.active ? "text-[#155D72]" : "text-[#29364A]"}`}>
-            {item.label}
-          </span>
-        </div>
+        <div className="flex items-center justify-between px-1 py-4">{label}</div>
       </a>
     );
   }

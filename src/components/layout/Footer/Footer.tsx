@@ -1,16 +1,18 @@
+import { Link } from "react-router-dom";
 import { ClockDialIcon, FacebookIcon, InstagramIcon, Logo, TwitterIcon } from "../../icons";
 import { SITE } from "../../../lib/constants";
 import { FOOTER_CONTACT_ROWS, FOOTER_LEGAL_LINKS, FOOTER_SERVICE_LINKS } from "./footer.data";
 import { FooterContactRowItem } from "./FooterContactRow";
 import { Newsletter } from "./Newsletter";
+import type { FooterProps } from "./Footer.types";
 
-export function Footer() {
+export function Footer({ showNewsletter = true }: FooterProps) {
   return (
     <footer
       className="relative overflow-visible text-white"
       style={{ background: "linear-gradient(135deg, #103F48 0%, #124954 60%, #103F48 100%)" }}
     >
-      <Newsletter />
+      {showNewsletter && <Newsletter />}
 
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div
@@ -23,7 +25,12 @@ export function Footer() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-[1320px] px-6 pb-[45px] pt-[95px] mw-1000:pt-[330px] mw-650:px-5 mw-650:pb-[30px] mw-650:pt-[360px]">
+      <div
+        className={
+          "relative mx-auto max-w-[1320px] px-6 pb-[45px] mw-650:px-5 mw-650:pb-[30px] " +
+          (showNewsletter ? "pt-[95px] mw-1000:pt-[330px] mw-650:pt-[360px]" : "pt-[45px]")
+        }
+      >
         <div className="grid grid-cols-[1.05fr_1fr_1.15fr_1.15fr] gap-[55px] mw-1000:grid-cols-2 mw-1000:gap-x-[35px] mw-1000:gap-y-[45px] mw-650:grid-cols-1 mw-650:gap-[38px]">
           <div className="animate-ft-col1 motion-reduce:[animation-duration:0.01ms]">
             <div className="flex items-center gap-2.5">
@@ -69,12 +76,12 @@ export function Footer() {
                 <InstagramIcon size={18} />
               </a>
             </div>
-            <a
-              href={SITE.bookingHref}
+            <Link
+              to={SITE.bookingHref}
               className="mt-[22px] inline-flex items-center gap-2 rounded-[9px] border border-white/[0.13] bg-white/[0.08] px-[18px] py-[11px] text-[13px] font-semibold text-white no-underline transition-colors duration-200 hover:bg-white hover:text-[#176D7C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
             >
               Need care today? Book Appointment
-            </a>
+            </Link>
           </div>
 
           <div className="animate-ft-col3 motion-reduce:[animation-duration:0.01ms]">

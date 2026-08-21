@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRightIcon, ChevronIcon, ClockIcon, HeartIcon, UsersIcon } from "../../../components/icons";
 import { useCarousel } from "../../../hooks/useCarousel";
 import { SITE } from "../../../lib/constants";
@@ -85,14 +86,14 @@ export function Hero() {
               key={`cta-${activeSlide.id}`}
               className="mt-7 animate-[hero-up_0.6s_ease_0.26s_both] motion-reduce:animate-none"
             >
-              <a
-                href={SITE.bookingHref}
+              <Link
+                to={SITE.bookingHref}
                 className="inline-flex min-h-[50px] items-center gap-[9px] rounded-[7px] px-[22px] text-[14px] font-semibold text-white shadow-[0_8px_20px_rgba(10,120,140,0.16)] [transition:background_220ms_ease,transform_220ms_ease,box-shadow_220ms_ease] hover:-translate-y-0.5 hover:shadow-[0_12px_25px_rgba(10,120,140,0.22)]"
                 style={{ background: "linear-gradient(90deg, #087E8D, #0594A1)" }}
               >
                 Book Appointment
                 <ArrowRightIcon size={15} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

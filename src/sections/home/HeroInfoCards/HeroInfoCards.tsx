@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   ArrowRightIcon,
   CalendarIcon,
@@ -47,13 +48,13 @@ function CardBody({ card }: { card: HeroInfoCardItem }) {
     return (
       <>
         <p className="mt-[14px] max-w-[300px] text-[14.5px] leading-[1.65] text-white/[0.82]">{card.description}</p>
-        <a
-          href={card.ctaHref}
+        <Link
+          to={card.ctaHref}
           className="mt-[26px] inline-flex h-[50px] min-w-[200px] items-center justify-center gap-2 rounded-md bg-white px-[22px] text-[15px] font-semibold text-[#13324F] no-underline"
         >
           {card.ctaLabel}
           <ArrowRightIcon size={13} />
-        </a>
+        </Link>
       </>
     );
   }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useScrolled } from "../../../hooks/useScrolled";
 import { SITE } from "../../../lib/constants";
 import { Container } from "../Container";
@@ -30,15 +31,15 @@ export function Navbar({ mobileOpen }: NavbarProps) {
         </nav>
 
         <div className="flex flex-shrink-0 mw-980:hidden">
-          <a
-            href={SITE.bookingHref}
+          <Link
+            to={SITE.bookingHref}
             className={
               "inline-flex h-11 min-w-[190px] items-center justify-center rounded-lg bg-cta px-[22px] text-[14.5px] font-semibold text-white shadow-[0_4px_8px_rgba(0,0,0,0.16)] " +
               ctaTransition
             }
           >
             Book Appointment
-          </a>
+          </Link>
         </div>
       </Container>
 
@@ -50,15 +51,15 @@ export function Navbar({ mobileOpen }: NavbarProps) {
           {NAV_ITEMS.map((item) => (
             <MobileNavItem key={item.label} item={item} />
           ))}
-          <a
-            href={SITE.bookingHref}
+          <Link
+            to={SITE.bookingHref}
             className={
               "mt-[18px] flex h-[52px] w-full items-center justify-center rounded-lg bg-cta text-[16px] font-semibold text-white " +
               ctaTransition
             }
           >
             Book Appointment
-          </a>
+          </Link>
         </nav>
       )}
     </div>
