@@ -1,4 +1,5 @@
-import { PersonIcon, ShieldCheckIcon } from "../../../components/icons";
+import careDoctorImage from "../../../assets/home/care-doctor.webp";
+import { ShieldCheckIcon } from "../../../components/icons";
 import { CARE_ITEMS } from "./care.data";
 import { CareCard } from "./CareCard";
 
@@ -36,15 +37,18 @@ export function Care() {
 
         <div className="relative isolate flex min-h-[540px] animate-care-doctor-in items-end justify-center motion-reduce:[animation-duration:0.01ms] mw-850:order-[-1] mw-850:col-span-full">
           <div
-            role="img"
-            aria-label="Doctor facing forward, arms crossed"
-            className="pointer-events-none absolute left-1/2 top-[52%] z-[1] flex h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 items-end justify-center rounded-full pb-5"
+            className="pointer-events-none absolute left-1/2 top-[52%] z-[1] flex h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 items-end justify-center rounded-full"
             style={{
               background:
                 "radial-gradient(circle, rgba(15,164,175,0.10) 0%, rgba(15,164,175,0.06) 40%, rgba(15,164,175,0.02) 65%, transparent 78%)",
             }}
           >
-            <PersonIcon size={180} strokeWidth={1.3} className="relative z-[5] text-[#0F8FA0] opacity-55" />
+            <img
+              src={careDoctorImage}
+              alt="Doctor facing forward, arms crossed"
+              className="relative z-[5] h-full w-full rounded-full object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
 

@@ -1,9 +1,7 @@
 import type { IconProps } from "./types";
 
 /**
- * Distinct from PersonIcon (different circle radius/position and a
- * straight-shoulder path instead of a smooth arc) and from
- * UsersIcon/UserGroupIcon (single figure, not two).
+ * Distinct from UsersIcon/UserGroupIcon (single figure, not two).
  */
 export function UserIcon({ size = 24, className }: IconProps) {
   return (

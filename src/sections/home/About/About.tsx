@@ -1,3 +1,4 @@
+import aboutImage from "../../../assets/home/about-us.webp";
 import { ArrowRightIcon, HeartPulseIcon } from "../../../components/icons";
 import { ABOUT_FEATURE, ABOUT_STATS } from "./about.data";
 import { AboutStatRow } from "./AboutStatRow";
@@ -52,16 +53,14 @@ export function About() {
         </div>
 
         <div
-          role="img"
-          aria-label="Doctor consulting with a patient at AccessNow Care"
-          className="relative h-full min-h-[520px] w-full animate-about-fade-img [transition:transform_600ms_ease] motion-reduce:duration-[0.01ms] motion-reduce:[animation-duration:0.01ms] mw-1100:min-h-[420px] mw-700:min-h-[360px]"
-          style={{ background: "linear-gradient(135deg, #0B5664 0%, #087B87 55%, #0C8F98 100%)" }}
+          className="group relative h-full min-h-[520px] w-full animate-about-fade-img overflow-hidden motion-reduce:[animation-duration:0.01ms] mw-1100:min-h-[420px] mw-700:min-h-[360px]"
         >
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <div className="h-[30%] max-h-[220px] w-[30%] max-w-[220px] text-white opacity-[0.16]">
-              <HeartPulseIcon strokeWidth={1.2} className="h-full w-full" />
-            </div>
-          </div>
+          <img
+            src={aboutImage}
+            alt="Doctor consulting with a patient at AccessNow Care"
+            className="block h-full w-full object-cover [transition:transform_600ms_ease] group-hover:scale-[1.025] motion-reduce:duration-[0.01ms]"
+            loading="lazy"
+          />
         </div>
 
         <div

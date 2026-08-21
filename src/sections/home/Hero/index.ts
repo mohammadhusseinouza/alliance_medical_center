@@ -1,2 +1,2 @@
 export { Hero } from "./Hero";
-export type { HeroSlide, HeroSlideIcon } from "./Hero.types";
+export type { HeroSlide } from "./Hero.types";

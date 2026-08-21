@@ -1,19 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRightIcon, ChevronIcon, ClockIcon, HeartIcon, UsersIcon } from "../../../components/icons";
+import { ArrowRightIcon, ChevronIcon } from "../../../components/icons";
 import { useCarousel } from "../../../hooks/useCarousel";
 import { SITE } from "../../../lib/constants";
 import { HERO_SLIDES } from "./hero.data";
-import type { HeroSlideIcon } from "./Hero.types";
 
 const arrowButtonClass =
   "absolute top-[44%] z-[5] flex h-[58px] w-[48px] -translate-y-1/2 items-center justify-center bg-white/90 text-[#168094] shadow-[0_5px_16px_rgba(20,70,90,0.08)] transition-colors duration-200 hover:bg-[#15798A] hover:text-white mw-900:h-[50px] mw-900:w-[40px]";
-
-function SlideIcon({ icon }: { icon: HeroSlideIcon }) {
-  const props = { className: "h-full w-full", strokeWidth: 1.2 };
-  if (icon === "heart") return <HeartIcon {...props} />;
-  if (icon === "users") return <UsersIcon {...props} />;
-  return <ClockIcon {...props} />;
-}
 
 export function Hero() {
   const { index, next, previous, onMouseEnter, onMouseLeave } = useCarousel({
@@ -34,17 +26,18 @@ export function Hero() {
             return (
               <div
                 key={slide.id}
-                role="img"
-                aria-label={slide.ariaLabel}
                 className={
-                  "absolute inset-0 flex h-full w-full items-center justify-center [transition:opacity_700ms_ease] motion-reduce:duration-[0.01ms] " +
+                  "absolute inset-0 h-full w-full [transition:opacity_700ms_ease] motion-reduce:duration-[0.01ms] " +
                   (active ? "animate-hero-img-in opacity-100 motion-reduce:animate-none" : "opacity-0")
                 }
-                style={{ background: slide.backgroundGradient }}
               >
-                <div className="h-[30%] max-h-[220px] w-[30%] max-w-[220px] text-white opacity-[0.16]">
-                  <SlideIcon icon={slide.icon} />
-                </div>
+                <img
+                  src={slide.image}
+                  alt={slide.ariaLabel}
+                  className="h-full w-full object-cover"
+                  loading="eager"
+                  fetchPriority={slideIndex === 0 ? "high" : undefined}
+                />
               </div>
             );
           })}

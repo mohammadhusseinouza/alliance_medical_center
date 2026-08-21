@@ -13,13 +13,13 @@ export function TeamCard({ member, animationDelayMs, hiddenClassName = "" }: Tea
       className={`group relative min-h-[420px] animate-team-card overflow-hidden rounded-[18px] border border-[rgba(30,90,110,0.08)] bg-white shadow-[0_10px_28px_rgba(20,65,85,0.07)] [transition:transform_260ms_ease,box-shadow_260ms_ease,border-color_260ms_ease] hover:-translate-y-[7px] hover:border-[rgba(35,135,155,0.20)] hover:shadow-[0_18px_38px_rgba(20,80,100,0.13)] motion-reduce:duration-[0.01ms] motion-reduce:[animation-duration:0.01ms] ${hiddenClassName}`}
       style={{ animationDelay: `${animationDelayMs}ms` }}
     >
-      <div
-        role="img"
-        aria-label={`Photo of ${member.name}`}
-        className="absolute inset-0 flex items-center justify-center transition-transform duration-[450ms] ease group-hover:scale-[1.035]"
-        style={{ background: member.gradient }}
-      >
-        <span className="text-[56px] font-bold tracking-[1px] text-white/[0.28]">{member.initials}</span>
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={member.photo}
+          alt={`Photo of ${member.name}`}
+          className="h-full w-full object-cover transition-transform duration-[450ms] ease group-hover:scale-[1.035]"
+          loading="lazy"
+        />
       </div>
 
       <div
