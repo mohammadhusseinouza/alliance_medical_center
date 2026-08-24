@@ -36,7 +36,6 @@ export function Hero() {
                   alt={slide.ariaLabel}
                   className="h-full w-full object-cover"
                   loading="eager"
-                  fetchPriority={slideIndex === 0 ? "high" : undefined}
                 />
               </div>
             );

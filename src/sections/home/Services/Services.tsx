@@ -5,6 +5,7 @@ import { ServiceItem } from "./ServiceItem";
 export function Services() {
   return (
     <section
+      id="services"
       className="relative overflow-hidden px-6 pb-[95px] pt-[78px] mw-650:px-[18px] mw-650:pb-[75px] mw-650:pt-[65px]"
       style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #FBFDFE 70%, #F5FBFC 100%)" }}
     >

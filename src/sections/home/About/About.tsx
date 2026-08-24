@@ -5,7 +5,7 @@ import { AboutStatRow } from "./AboutStatRow";
 
 export function About() {
   return (
-    <section className="relative w-full" style={{ background: "linear-gradient(180deg, #F8FBFC 0%, #F4F8FA 100%)" }}>
+    <section id="about" className="relative w-full" style={{ background: "linear-gradient(180deg, #F8FBFC 0%, #F4F8FA 100%)" }}>
       <div className="grid w-full min-h-[520px] grid-cols-[minmax(430px,38%)_minmax(520px,39%)_minmax(300px,23%)] overflow-hidden bg-white mw-1100:min-h-[auto] mw-1100:grid-cols-2 mw-700:w-[calc(100%-32px)] mw-700:grid-cols-1">
         <div
           className="flex animate-about-fade-l flex-col justify-center px-[clamp(40px,4.5vw,78px)] py-[50px] motion-reduce:[animation-duration:0.01ms] mw-700:px-6 mw-700:py-[30px]"

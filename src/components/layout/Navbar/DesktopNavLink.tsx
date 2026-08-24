@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { ChevronDownIcon } from "../../icons";
 import type { NavItem } from "./navigation.data";
+import { parseNavHref } from "./navHref";
 
 export interface DesktopNavLinkProps {
   item: NavItem;
@@ -21,46 +21,15 @@ function linkClass(active: boolean) {
 }
 
 export function DesktopNavLink({ item }: DesktopNavLinkProps) {
-  const { pathname } = useLocation();
-  const isInternalRoute = item.href.startsWith("/");
-  const active = isInternalRoute && pathname === item.href;
-
-  if (!item.dropdown) {
-    return (
-      <div className="relative">
-        {isInternalRoute ? (
-          <Link to={item.href} className={linkClass(active)}>
-            {item.label}
-          </Link>
-        ) : (
-          <a href={item.href} className={linkClass(active)}>
-            {item.label}
-          </a>
-        )}
-      </div>
-    );
-  }
+  const { pathname, hash } = useLocation();
+  const target = parseNavHref(item.href);
+  const active = pathname === target.pathname && hash === target.hash;
 
   return (
-    <div className="group relative">
-      <a href={item.href} className={linkClass(active)}>
+    <div className="relative">
+      <Link to={item.href} className={linkClass(active)}>
         {item.label}
-        <ChevronDownIcon
-          size={12}
-          className="transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
-        />
-      </a>
-      <div className="absolute left-0 top-[calc(100%+12px)] z-50 hidden w-[250px] animate-fade-slide rounded-lg bg-white p-2.5 shadow-dropdown group-hover:block group-focus-within:block">
-        {item.dropdown.map((entry) => (
-          <a
-            key={entry.label}
-            href={entry.href}
-            className="block rounded-md px-3.5 py-2.5 text-[15px] font-medium text-[#27354A] no-underline transition-colors duration-150 hover:bg-[#EAF3F4] hover:text-brand-icon focus-visible:bg-[#EAF3F4] focus-visible:text-brand-icon"
-          >
-            {entry.label}
-          </a>
-        ))}
-      </div>
+      </Link>
     </div>
   );
 }

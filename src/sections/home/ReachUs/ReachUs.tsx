@@ -5,6 +5,7 @@ import { ReachUsMap } from "./ReachUsMap";
 export function ReachUs() {
   return (
     <section
+      id="contact"
       className="relative px-6 pb-[300px] pt-[90px]"
       style={{
         background:
