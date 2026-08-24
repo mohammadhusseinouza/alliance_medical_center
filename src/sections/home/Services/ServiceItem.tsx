@@ -43,6 +43,7 @@ export interface ServiceItemProps {
 export function ServiceItem({ service }: ServiceItemProps) {
   return (
     <div
+      id={service.id}
       className="group relative flex min-h-[290px] animate-svc-item flex-col items-center border-b border-r border-[#DCE7EB] px-[30px] pb-[34px] pt-[40px] text-center [transition:background_250ms_ease,transform_250ms_ease] hover:-translate-y-[2px] hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.95),#F6FBFC)] motion-reduce:duration-[0.01ms] motion-reduce:[animation-duration:0.01ms] mw-650:min-h-[auto] mw-650:items-start mw-650:px-[22px] mw-650:pb-[30px] mw-650:pt-[30px] mw-650:text-left"
       style={{ color: service.accentColor, animationDelay: `${service.animationDelayMs}ms` }}
     >

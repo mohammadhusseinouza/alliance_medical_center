@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
+import { ChevronDownIcon } from "../../icons";
 import type { NavItem } from "./navigation.data";
-import { parseNavHref } from "./navHref";
+import { isNavItemActive, parseNavHref } from "./navHref";
 
 export interface DesktopNavLinkProps {
   item: NavItem;
@@ -22,14 +23,47 @@ function linkClass(active: boolean) {
 
 export function DesktopNavLink({ item }: DesktopNavLinkProps) {
   const { pathname, hash } = useLocation();
-  const target = parseNavHref(item.href);
-  const active = pathname === target.pathname && hash === target.hash;
+  const active = isNavItemActive(item, pathname, hash);
+
+  if (!item.dropdown) {
+    return (
+      <div className="relative">
+        <Link to={item.href} className={linkClass(active)}>
+          {item.label}
+        </Link>
+      </div>
+    );
+  }
 
   return (
-    <div className="relative">
+    <div className="group relative">
       <Link to={item.href} className={linkClass(active)}>
         {item.label}
+        <ChevronDownIcon
+          size={12}
+          className="transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+        />
       </Link>
+      <div className="absolute left-0 top-full z-50 hidden w-[250px] pt-3 group-hover:block group-focus-within:block">
+        <div className="rounded-lg bg-white p-2.5 shadow-dropdown">
+          {item.dropdown.map((entry) => {
+            const entryTarget = parseNavHref(entry.href);
+            const entryActive = pathname === entryTarget.pathname && hash === entryTarget.hash;
+            return (
+              <Link
+                key={entry.label}
+                to={entry.href}
+                className={
+                  "block rounded-md px-3.5 py-2.5 text-[15px] font-medium no-underline transition-colors duration-150 hover:bg-[#EAF3F4] hover:text-brand-icon focus-visible:bg-[#EAF3F4] focus-visible:text-brand-icon " +
+                  (entryActive ? "bg-[#EAF3F4] text-brand-icon" : "text-[#27354A]")
+                }
+              >
+                {entry.label}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
