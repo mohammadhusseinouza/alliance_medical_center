@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { useScrolled } from "../../../hooks/useScrolled";
 import { ClockIcon, Logo, MapPinIcon, PhoneIcon } from "../../icons";
 import { Container } from "../Container";
 import { SITE } from "../../../lib/constants";
@@ -12,15 +11,8 @@ export interface TopBarProps {
 }
 
 export function TopBar({ hamburger }: TopBarProps) {
-  const scrolled = useScrolled();
-
   return (
-    <div
-      className={
-        "w-full overflow-hidden bg-white [transition:max-height_280ms_ease,opacity_220ms_ease] " +
-        (scrolled ? "max-h-0 opacity-0" : "max-h-40 opacity-100")
-      }
-    >
+    <div className="w-full bg-white">
       <Container className="flex min-h-[96px] flex-wrap items-center justify-between gap-4 px-[60px] py-4">
         <div className="flex flex-shrink-0 items-center gap-2.5">
           <Logo />

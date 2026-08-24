@@ -20,8 +20,8 @@ export function HomePage() {
         <TopBar
           hamburger={<MobileMenuButton isOpen={mobileOpen} onToggle={() => setMobileOpen((open) => !open)} />}
         />
-        <Navbar mobileOpen={mobileOpen} />
       </header>
+      <Navbar mobileOpen={mobileOpen} />
       <main>
         <Hero />
         <HeroInfoCards />
