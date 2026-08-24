@@ -20,15 +20,6 @@ export const SERVICES: ServiceItem[] = [
     animationDelayMs: 130,
   },
   {
-    id: "weight-loss",
-    title: "Weight Loss",
-    description: "Personalized support for healthy weight and long-term wellness goals.",
-    icon: "heart-pulse",
-    accentColor: "#0BA168",
-    href: "#",
-    animationDelayMs: 180,
-  },
-  {
     id: "occupational-health",
     title: "Occupational Health",
     description: "Workplace health services, physicals, testing, and employer care.",
@@ -64,14 +55,5 @@ export const SERVICES: ServiceItem[] = [
     accentColor: "#6248E8",
     href: "#",
     animationDelayMs: 380,
-  },
-  {
-    id: "education",
-    title: "Education",
-    description: "Helpful health information and resources for patients and families.",
-    icon: "book-open",
-    accentColor: "#0BA47A",
-    href: "#",
-    animationDelayMs: 430,
   },
 ];

@@ -30,7 +30,7 @@ export function Services() {
           wellness.
         </p>
 
-        <div className="mt-[50px] grid grid-cols-4 border-l border-t border-[#DCE7EB] mw-1050:grid-cols-2 mw-650:grid-cols-1">
+        <div className="mx-auto mt-[50px] grid max-w-[1035px] grid-cols-3 border-l border-t border-[#DCE7EB] mw-1050:max-w-none mw-1050:grid-cols-2 mw-650:grid-cols-1">
           {SERVICES.map((service) => (
             <ServiceItem key={service.id} service={service} />
           ))}
