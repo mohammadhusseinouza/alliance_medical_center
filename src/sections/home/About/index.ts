@@ -1,2 +1,2 @@
 export { About } from "./About";
-export type { AboutFeature, AboutStat, AboutStatIcon } from "./About.types";
+export type { AboutStat, AboutStatIcon } from "./About.types";

@@ -19,18 +19,16 @@ export const EMPTY_BOOKING_VALUES: BookingFormValues = {
 };
 
 export const GENDER_OPTIONS = [
-  { value: "female", label: "Female" },
-  { value: "male", label: "Male" },
-  { value: "other", label: "Other" },
-  { value: "prefer-not", label: "Prefer not to say" },
+  { value: "female", translationKey: "female" },
+  { value: "male", translationKey: "male" },
+  { value: "other", translationKey: "other" },
+  { value: "prefer-not", translationKey: "preferNot" },
 ];
 
 export const VISIT_TYPE_OPTIONS = [
-  { value: "urgent", label: "Urgent Care" },
-  { value: "family", label: "Family Medicine / Wellness" },
-  { value: "weightloss", label: "Weight Loss" },
-  { value: "physical", label: "Physical Exam" },
-  { value: "followup", label: "Follow-up Visit" },
+  { value: "urgent", translationKey: "urgent" },
+  { value: "family", translationKey: "family" },
+  { value: "weightloss", translationKey: "weightloss" },
+  { value: "physical", translationKey: "physical" },
+  { value: "followup", translationKey: "followup" },
 ];
-
-export const WEEKDAY_LABELS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];

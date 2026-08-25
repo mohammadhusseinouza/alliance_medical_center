@@ -1,3 +1,6 @@
+import { withLocale } from "../../../i18n/routing";
+import type { Language, TranslateFn } from "../../../i18n/types";
+import { SERVICES } from "../../../sections/home/Services/services.data";
 import { SITE } from "../../../lib/constants";
 import type { FooterContactRow, FooterLink } from "./Footer.types";
 
@@ -32,20 +35,25 @@ export const FOOTER_CONTACT_ROWS: FooterContactRow[] = [
   },
 ];
 
-export const FOOTER_SERVICE_LINKS: FooterLink[] = [
-  { label: "Urgent Care", href: "#" },
-  { label: "Occupational Health", href: "#" },
-  { label: "Family Medicine", href: "#" },
-  { label: "Careers", href: "#" },
-  { label: "Women's Health", href: "#" },
-  { label: "Diagnostic Services", href: "#" },
-  { label: "Pediatric Care", href: "#" },
-  { label: "Health Education", href: "#" },
-  { label: "Weight Loss", href: "#" },
-];
+/**
+ * Derives the Footer's service links from the same structural `SERVICES`
+ * enumeration used by the Services section and the Navbar dropdown, so
+ * there is exactly one list of the six logical services. `services.data.ts`
+ * has no imports back into `components/layout/*`, so this does not create
+ * a circular dependency (identical to how `navigation.data.ts` already
+ * reuses `SERVICES`).
+ */
+export function buildFooterServiceLinks(t: TranslateFn, language: Language): FooterLink[] {
+  return SERVICES.map((service) => ({
+    label: t(`services.items.${service.translationKey}.title`),
+    href: withLocale(`/#${service.id}`, language),
+  }));
+}
 
-export const FOOTER_LEGAL_LINKS: FooterLink[] = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "HIPAA Notice", href: "#" },
-];
+export function buildFooterLegalLinks(t: TranslateFn): FooterLink[] {
+  return [
+    { label: t("footer.legalLinks.privacyPolicy"), href: "#" },
+    { label: t("footer.legalLinks.termsOfService"), href: "#" },
+    { label: t("footer.legalLinks.hipaaNotice"), href: "#" },
+  ];
+}

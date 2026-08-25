@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { MapPinIcon } from "../../../components/icons";
 import { ReachUsDetails } from "./ReachUsDetails";
 import { ReachUsMap } from "./ReachUsMap";
 
 export function ReachUs() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="contact"
@@ -16,16 +19,15 @@ export function ReachUs() {
         <div className="text-center">
           <div className="mx-auto inline-flex w-fit animate-ru-badge items-center gap-2 rounded-full bg-badge-bg px-4 py-2 text-[12px] font-bold uppercase tracking-[0.7px] text-[#0B8490] motion-reduce:[animation-duration:0.01ms]">
             <MapPinIcon size={14} />
-            Location
+            {t("reachUs.eyebrow")}
           </div>
 
           <h2 className="mt-5 animate-ru-heading text-[clamp(46px,4vw,64px)] font-bold leading-[1.05] tracking-[-1.2px] text-text-primary motion-reduce:[animation-duration:0.01ms] mw-650:text-[34px]">
-            Reach Us in Portage
+            {t("reachUs.heading")}
           </h2>
 
           <p className="mx-auto mt-[18px] max-w-[900px] animate-ru-desc text-[16px] leading-[1.65] text-text-secondary motion-reduce:[animation-duration:0.01ms]">
-            Walk in, call ahead, or get directions—we are here in Portage with convenient parking and a welcoming
-            clinic ready to help your family.
+            {t("reachUs.description")}
           </p>
         </div>
 

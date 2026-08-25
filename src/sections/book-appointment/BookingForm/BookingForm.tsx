@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { useTranslation } from "react-i18next";
 import { ArrowRightIcon } from "../../../components/icons";
 import { BookingConfirmation } from "./BookingConfirmation";
 import { DateTimeFields } from "./DateTimeFields";
@@ -21,6 +22,7 @@ function currentMonthStart(): Date {
 }
 
 export function BookingForm() {
+  const { t } = useTranslation();
   const [values, setValues] = useState<BookingFormValues>(EMPTY_BOOKING_VALUES);
   const [errors, setErrors] = useState<BookingErrors>({});
   const [step, setStep] = useState<BookingStep>(1);
@@ -66,7 +68,7 @@ export function BookingForm() {
     >
       {!submitted && (
         <form onSubmit={handleSubmit}>
-          <h2 className="text-[26px] font-bold text-[#10264A]">Book your visit</h2>
+          <h2 className="text-[26px] font-bold text-[#10264A]">{t("booking.formHeading")}</h2>
           <StepIndicator step={step} />
 
           {step === 1 && (
@@ -85,10 +87,10 @@ export function BookingForm() {
 
               <div className="mt-[30px] flex gap-3.5 mw-700:flex-col mw-700:[&>*]:w-full">
                 <button type="submit" className={primaryBtnClass} style={{ background: "linear-gradient(90deg,#117F8D,#2E86EA)" }}>
-                  Request Appointment
+                  {t("booking.requestAppointment")}
                 </button>
                 <button type="button" onClick={() => setStep(2)} className={secondaryBtnClass}>
-                  Add Insurance &amp; Medical Info (Optional)
+                  {t("booking.addInsuranceOptional")}
                   <ArrowRightIcon size={14} />
                 </button>
               </div>
@@ -101,10 +103,10 @@ export function BookingForm() {
 
               <div className="mt-[30px] flex gap-3.5 mw-700:flex-col mw-700:[&>*]:w-full">
                 <button type="submit" className={primaryBtnClass} style={{ background: "linear-gradient(90deg,#117F8D,#2E86EA)" }}>
-                  Request Appointment
+                  {t("booking.requestAppointment")}
                 </button>
                 <button type="button" onClick={() => setStep(1)} className={secondaryBtnClass}>
-                  Back
+                  {t("booking.back")}
                 </button>
               </div>
             </>

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 import { ClockIcon, Logo, MapPinIcon, PhoneIcon } from "../../icons";
 import { Container } from "../Container";
 import { SITE } from "../../../lib/constants";
@@ -11,6 +12,8 @@ export interface TopBarProps {
 }
 
 export function TopBar({ hamburger }: TopBarProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full bg-white">
       <Container className="flex min-h-[96px] flex-wrap items-center justify-between gap-4 px-[60px] py-4">
@@ -19,7 +22,7 @@ export function TopBar({ hamburger }: TopBarProps) {
           <div className="flex flex-col leading-[1.15]">
             <span className="whitespace-nowrap text-[20px] font-bold text-[#29364A]">{SITE.name}</span>
             <span className="whitespace-nowrap text-[10.5px] font-semibold uppercase tracking-[0.4px] text-[#5B9A5E]">
-              {SITE.tagline}
+              {t("common.tagline")}
             </span>
           </div>
         </div>
@@ -30,7 +33,7 @@ export function TopBar({ hamburger }: TopBarProps) {
               <ClockIcon size={20} />
             </span>
             <div className="flex flex-col leading-[1.3]">
-              <span className="whitespace-nowrap text-[15px] font-semibold text-[#29364A]">Open 7 Days</span>
+              <span className="whitespace-nowrap text-[15px] font-semibold text-[#29364A]">{t("common.openDays")}</span>
               <span className="whitespace-nowrap text-[13px] font-normal text-text-muted">{SITE.hours.time}</span>
             </div>
           </div>

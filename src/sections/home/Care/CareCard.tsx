@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   ActivityIcon,
   BagIcon,
@@ -32,6 +33,7 @@ export interface CareCardProps {
 }
 
 export function CareCard({ item }: CareCardProps) {
+  const { t } = useTranslation();
   const isLeft = item.position === "left";
   const connectorSide = isLeft ? "right-[-25px]" : "left-[-25px]";
   const entranceAnimation = isLeft ? "animate-care-left-in" : "animate-care-right-in";
@@ -57,8 +59,12 @@ export function CareCard({ item }: CareCardProps) {
       </div>
 
       <div>
-        <h3 className="text-[18px] font-bold leading-[1.25] text-text-primary">{item.title}</h3>
-        <p className="mt-[6px] text-[13.5px] leading-[1.55] text-[#566D82]">{item.description}</p>
+        <h3 className="text-[18px] font-bold leading-[1.25] text-text-primary">
+          {t(`care.items.${item.translationKey}.title`)}
+        </h3>
+        <p className="mt-[6px] text-[13.5px] leading-[1.55] text-[#566D82]">
+          {t(`care.items.${item.translationKey}.description`)}
+        </p>
       </div>
 
       <ChevronIcon

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   ArrowRightIcon,
   BookOpenIcon,
@@ -41,6 +42,8 @@ export interface ServiceItemProps {
 }
 
 export function ServiceItem({ service }: ServiceItemProps) {
+  const { t } = useTranslation();
+
   return (
     <div
       id={service.id}
@@ -52,16 +55,16 @@ export function ServiceItem({ service }: ServiceItemProps) {
       <h3
         className={`text-[20px] font-bold leading-[1.25] text-[#102039] ${service.titleNoWrap ? "whitespace-nowrap" : ""}`}
       >
-        {service.title}
+        {t(`services.items.${service.translationKey}.title`)}
       </h3>
       <p className="mt-3 max-w-[245px] text-[14px] leading-[1.55] text-[#61758A] mw-650:max-w-none">
-        {service.description}
+        {t(`services.items.${service.translationKey}.description`)}
       </p>
       <a
         href={service.href}
         className="mt-auto inline-flex items-center gap-2 pt-6 text-[12px] font-bold uppercase tracking-[0.4px] text-[#087C91] no-underline"
       >
-        Explore Service
+        {t("services.exploreService")}
         <ArrowRightIcon
           size={14}
           className="transition-transform duration-[220ms] ease group-hover:translate-x-[5px] motion-reduce:duration-[0.01ms]"

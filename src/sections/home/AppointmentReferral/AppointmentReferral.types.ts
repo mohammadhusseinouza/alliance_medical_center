@@ -5,10 +5,12 @@ export interface ReferralFormValues {
   disease: string;
 }
 
+export type ReferralFieldTranslationKey = "name" | "email" | "doctorName" | "disease";
+
 export interface ReferralFormField {
   id: string;
   name: keyof ReferralFormValues;
-  label: string;
-  placeholder: string;
+  /** Key suffix under the `appointmentReferral.fields.*` translation resource domain. */
+  translationKey: ReferralFieldTranslationKey;
   type: "text" | "email";
 }

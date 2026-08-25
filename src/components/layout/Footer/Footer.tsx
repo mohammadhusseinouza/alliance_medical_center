@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ClockDialIcon, FacebookIcon, InstagramIcon, Logo, TwitterIcon } from "../../icons";
+import { withLocale } from "../../../i18n/routing";
+import { useLanguage } from "../../../i18n/useLanguage";
 import { SITE } from "../../../lib/constants";
-import { FOOTER_CONTACT_ROWS, FOOTER_LEGAL_LINKS, FOOTER_SERVICE_LINKS } from "./footer.data";
+import { buildFooterLegalLinks, buildFooterServiceLinks, FOOTER_CONTACT_ROWS } from "./footer.data";
 import { FooterContactRowItem } from "./FooterContactRow";
 import { Newsletter } from "./Newsletter";
 import type { FooterProps } from "./Footer.types";
 
 export function Footer({ showNewsletter = true }: FooterProps) {
+  const { t } = useTranslation();
+  const language = useLanguage();
+  const footerServiceLinks = buildFooterServiceLinks(t, language);
+  const footerLegalLinks = buildFooterLegalLinks(t);
+
   return (
     <footer
       className="relative overflow-visible text-white"
@@ -38,54 +46,53 @@ export function Footer({ showNewsletter = true }: FooterProps) {
               <div className="flex flex-col leading-[1.15]">
                 <span className="whitespace-nowrap text-[22px] font-bold text-white">{SITE.name}</span>
                 <span className="whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.4px] text-[#A9D85C]">
-                  {SITE.tagline}
+                  {t("common.tagline")}
                 </span>
               </div>
             </div>
             <p className="mt-5 max-w-[260px] text-[14px] leading-[1.65] text-white/[0.68]">
-              Urgent care and family health for the Portage community.
+              {t("footer.tagline")}
             </p>
           </div>
 
           <div className="animate-ft-col2 motion-reduce:[animation-duration:0.01ms]">
             <div className="text-[21px] font-bold text-white">Access Now</div>
             <p className="mt-[18px] text-[15px] leading-[1.7] text-white/[0.76]">
-              Providing quality urgent care and family health services to the Portage, Michigan community with
-              compassion, expertise, and convenience.
+              {t("footer.aboutDescription")}
             </p>
             <div className="mt-6 flex gap-3">
               <a
                 href="#"
-                aria-label="Visit AccessNow Care on Facebook"
+                aria-label={t("footer.socialAria.facebook")}
                 className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.07] text-white/[0.65] no-underline transition-[transform,background-color,color,border-color] duration-[220ms] ease hover:-translate-y-[3px] hover:scale-[1.03] hover:border-white hover:bg-white hover:text-[#176D7C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
               >
                 <FacebookIcon size={18} />
               </a>
               <a
                 href="#"
-                aria-label="Visit AccessNow Care on Twitter"
+                aria-label={t("footer.socialAria.twitter")}
                 className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.07] text-white/[0.65] no-underline transition-[transform,background-color,color,border-color] duration-[220ms] ease hover:-translate-y-[3px] hover:scale-[1.03] hover:border-white hover:bg-white hover:text-[#176D7C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
               >
                 <TwitterIcon size={18} />
               </a>
               <a
                 href="#"
-                aria-label="Visit AccessNow Care on Instagram"
+                aria-label={t("footer.socialAria.instagram")}
                 className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.07] text-white/[0.65] no-underline transition-[transform,background-color,color,border-color] duration-[220ms] ease hover:-translate-y-[3px] hover:scale-[1.03] hover:border-white hover:bg-white hover:text-[#176D7C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
               >
                 <InstagramIcon size={18} />
               </a>
             </div>
             <Link
-              to={SITE.bookingHref}
+              to={withLocale(SITE.bookingHref, language)}
               className="mt-[22px] inline-flex items-center gap-2 rounded-[9px] border border-white/[0.13] bg-white/[0.08] px-[18px] py-[11px] text-[13px] font-semibold text-white no-underline transition-colors duration-200 hover:bg-white hover:text-[#176D7C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
             >
-              Need care today? Book Appointment
+              {t("footer.ctaText")}
             </Link>
           </div>
 
           <div className="animate-ft-col3 motion-reduce:[animation-duration:0.01ms]">
-            <div className="text-[21px] font-bold text-white">Contact Info</div>
+            <div className="text-[21px] font-bold text-white">{t("footer.contactInfoHeading")}</div>
             <div className="mt-5 flex flex-col gap-[17px]">
               {FOOTER_CONTACT_ROWS.map((row) => (
                 <FooterContactRowItem key={row.id} row={row} />
@@ -93,16 +100,18 @@ export function Footer({ showNewsletter = true }: FooterProps) {
             </div>
             <div className="mt-[22px] flex items-center gap-2.5 border-t border-white/[0.08] pt-[18px]">
               <ClockDialIcon size={16} strokeWidth={2} className="text-white/70" />
-              <span className="text-[13.5px] text-white/70">{SITE.hours.summary}</span>
+              <span className="text-[13.5px] text-white/70">
+                {t("common.hoursSummary", { time: SITE.hours.time })}
+              </span>
             </div>
           </div>
 
           <div className="animate-ft-col4 motion-reduce:[animation-duration:0.01ms]">
-            <div className="text-[21px] font-bold text-white">Services</div>
+            <div className="text-[21px] font-bold text-white">{t("footer.servicesHeading")}</div>
             <div className="mt-5 grid grid-cols-2 gap-x-7 gap-y-[13px] text-[14.5px]">
-              {FOOTER_SERVICE_LINKS.map((link) => (
+              {footerServiceLinks.map((link) => (
                 <a
-                  key={link.label}
+                  key={link.href}
                   href={link.href}
                   className="relative inline-flex w-fit items-center text-white/[0.78] no-underline transition-[color,transform] duration-200 before:h-[5px] before:w-0 before:flex-shrink-0 before:rounded-full before:bg-[#A9D85C] before:transition-[width,margin-right] before:duration-200 before:content-[''] hover:translate-x-1 hover:text-white hover:before:mr-[7px] hover:before:w-[5px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
                 >
@@ -120,7 +129,7 @@ export function Footer({ showNewsletter = true }: FooterProps) {
             © {new Date().getFullYear()} Access Now URGENT CARE
           </div>
           <div className="flex gap-[30px]">
-            {FOOTER_LEGAL_LINKS.map((link) => (
+            {footerLegalLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}

@@ -1,8 +1,8 @@
+export type HeroSlideTranslationKey = "qualityCare" | "wholeFamily" | "yourSchedule";
+
 export interface HeroSlide {
   id: string;
-  headingLine1: string;
-  headingLine2: string;
-  description: string;
   image: string;
-  ariaLabel: string;
+  /** Key suffix under the `hero.slides.*` translation resource domain. */
+  translationKey: HeroSlideTranslationKey;
 }

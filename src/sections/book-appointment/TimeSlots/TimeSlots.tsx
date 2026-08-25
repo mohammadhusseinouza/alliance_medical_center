@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import type { TimeSlot, TimeSlotsProps } from "./TimeSlots.types";
 
 function buildTimeSlots(selectedTime: string | null): TimeSlot[] {
@@ -15,12 +16,14 @@ function buildTimeSlots(selectedTime: string | null): TimeSlot[] {
 }
 
 export function TimeSlots({ selectedDate, selectedTime, onSelectTime }: TimeSlotsProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="box-border h-[348px] w-full max-w-full overflow-hidden rounded-[9px] border border-[#DCE5EB] bg-white p-4 mw-1100:h-auto">
-      <div className="mb-3 text-[14.5px] font-bold text-[#10264A]">Available times</div>
+      <div className="mb-3 text-[14.5px] font-bold text-[#10264A]">{t("calendar.availableTimes")}</div>
 
       {!selectedDate && (
-        <div className="py-[30px] text-center text-[13.5px] text-[#8A97A3]">Select a date to see available times.</div>
+        <div className="py-[30px] text-center text-[13.5px] text-[#8A97A3]">{t("calendar.selectDatePrompt")}</div>
       )}
 
       {selectedDate && (
@@ -37,7 +40,7 @@ export function TimeSlots({ selectedDate, selectedTime, onSelectTime }: TimeSlot
                 type="button"
                 disabled={slot.disabled}
                 aria-selected={slot.selected}
-                aria-label={`${slot.label}${slot.disabled ? " (unavailable)" : ""}`}
+                aria-label={`${slot.label}${slot.disabled ? ` ${t("calendar.unavailableSuffix")}` : ""}`}
                 onClick={slot.disabled ? undefined : () => onSelectTime(slot.label)}
                 className={`min-h-[38px] rounded-md border px-2 py-[7px] text-[12px] transition-colors duration-150 ${stateClass}`}
               >

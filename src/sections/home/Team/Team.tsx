@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ChevronIcon } from "../../../components/icons";
 import { TEAM_MEMBERS } from "./team.data";
 import { TeamCard } from "./TeamCard";
@@ -12,6 +13,7 @@ function wrap(index: number, length: number): number {
 }
 
 export function Team() {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(4);
   const total = TEAM_MEMBERS.length;
 
@@ -24,22 +26,21 @@ export function Team() {
     >
       <div className="mx-auto max-w-[1320px]">
         <div className="mx-auto w-fit animate-team-badge rounded-[5px] bg-[#E6F4F7] px-[14px] py-2 text-[12px] font-bold uppercase tracking-[0.7px] text-[#168397] motion-reduce:[animation-duration:0.01ms]">
-          Our Team
+          {t("team.eyebrow")}
         </div>
 
         <h2 className="mt-[18px] animate-team-title text-center text-[clamp(42px,4vw,58px)] font-bold leading-[1.08] tracking-[-1.2px] text-[#10203B] motion-reduce:[animation-duration:0.01ms]">
-          Meet Our Expert Medical Team
+          {t("team.heading")}
         </h2>
 
         <p className="mx-auto mt-[18px] max-w-[760px] animate-team-desc text-center text-[16px] leading-[1.65] text-[#5E7186] motion-reduce:[animation-duration:0.01ms]">
-          Meet the professionals dedicated to providing compassionate urgent care, family medicine, and convenient
-          healthcare services to our community.
+          {t("team.description")}
         </p>
 
         <div className="relative mt-[55px]">
           <button
             type="button"
-            aria-label="Previous team members"
+            aria-label={t("team.previousMembers")}
             onClick={() => setIndex((i) => wrap(i - 1, total))}
             className={`${arrowButtonClass} left-[-26px]`}
           >
@@ -47,7 +48,7 @@ export function Team() {
           </button>
           <button
             type="button"
-            aria-label="Next team members"
+            aria-label={t("team.nextMembers")}
             onClick={() => setIndex((i) => wrap(i + 1, total))}
             className={`${arrowButtonClass} right-[-26px]`}
           >
@@ -72,7 +73,7 @@ export function Team() {
                 <button
                   key={member.id}
                   type="button"
-                  aria-label={`Go to team member ${i + 1}`}
+                  aria-label={t("team.goToMember", { index: i + 1 })}
                   aria-current={active || undefined}
                   onClick={() => setIndex(i)}
                   className={`h-2 rounded-full border-none p-0 ${active ? "w-5 bg-[#168899]" : "w-2 bg-[#D1DDE1]"}`}

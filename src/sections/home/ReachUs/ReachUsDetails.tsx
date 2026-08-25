@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 import { ArrowUpRightIcon, MapPinIcon, PhoneIcon, PrinterIcon, StopwatchIcon, UserIcon } from "../../../components/icons";
+import { SITE } from "../../../lib/constants";
 import { CONTACT_ROWS, REACH_ACTIONS } from "./reachUs.data";
-import type { ContactIconName, ContactRow, ReachActionIcon } from "./ReachUs.types";
+import type { ContactIconName, ContactRow, ReachActionIcon, ReachAction } from "./ReachUs.types";
 
 function ContactRowIcon({ icon }: { icon: ContactIconName }) {
   const props = { size: 18 };
@@ -16,6 +18,7 @@ function ActionIcon({ icon }: { icon: ReachActionIcon }) {
 }
 
 function ContactRowItem({ row }: { row: ContactRow }) {
+  const { t } = useTranslation();
   const hoverValueClass = row.href
     ? row.hoverUnderline
       ? "group-hover:text-[#176D7C] group-hover:underline"
@@ -27,7 +30,9 @@ function ContactRowItem({ row }: { row: ContactRow }) {
       <span className="flex h-[42px] w-[42px] flex-shrink-0 items-center justify-center rounded-full bg-[#EDF8F9] text-[#0B8794] transition-transform duration-[220ms] group-hover:-translate-y-0.5 group-hover:scale-[1.04]">
         <ContactRowIcon icon={row.icon} />
       </span>
-      <span className="whitespace-nowrap text-[13px] font-bold text-[#0B8794]">{row.label}</span>
+      <span className="whitespace-nowrap text-[13px] font-bold text-[#0B8794]">
+        {t(`reachUs.labels.${row.translationKey}`)}
+      </span>
       <span className={`text-[14px] leading-[1.5] text-[#4F657A] transition-colors duration-[220ms] ${hoverValueClass}`}>
         {row.value}
       </span>
@@ -59,6 +64,34 @@ function ContactRowItem({ row }: { row: ContactRow }) {
   );
 }
 
+function ActionItem({ action, index }: { action: ReachAction; index: number }) {
+  const { t } = useTranslation();
+  const subtitle = action.subtitleValue ?? t(`reachUs.actions.${action.translationKey}.subtitle`);
+
+  return (
+    <a
+      href={action.href}
+      target={action.external ? "_blank" : undefined}
+      rel={action.external ? "noopener" : undefined}
+      className={`group flex items-center gap-[14px] text-white no-underline ${
+        index === 1
+          ? "border-l border-[rgba(255,255,255,0.20)] pl-[26px] mw-650:border-l-0 mw-650:border-t mw-650:border-t-[rgba(255,255,255,0.20)] mw-650:pl-0 mw-650:pt-4"
+          : ""
+      }`}
+    >
+      <span className="flex h-[58px] w-[58px] flex-shrink-0 items-center justify-center rounded-full border border-[rgba(255,255,255,0.45)] bg-white/[0.06] transition-colors duration-200 group-hover:bg-white/[0.16]">
+        <span className="inline-flex transition-transform duration-200 group-hover:translate-x-0.5">
+          <ActionIcon icon={action.icon} />
+        </span>
+      </span>
+      <div>
+        <div className="text-[16px] font-bold">{t(`reachUs.actions.${action.translationKey}.title`)}</div>
+        <div className="mt-0.5 text-[13px] text-white/[0.82]">{subtitle}</div>
+      </div>
+    </a>
+  );
+}
+
 function InfoCard({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <div
@@ -70,6 +103,8 @@ function InfoCard({ children, className = "" }: { children: ReactNode; className
 }
 
 export function ReachUsDetails() {
+  const { t } = useTranslation();
+
   return (
     <div className="flex animate-ru-side flex-col gap-[18px] motion-reduce:[animation-duration:0.01ms] mw-850:order-2">
       <InfoCard className="px-[30px] py-7 shadow-[0_12px_30px_rgba(20,65,85,0.07)]">
@@ -77,7 +112,7 @@ export function ReachUsDetails() {
           <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#EDF8F9] text-[#0B8794]">
             <UserIcon size={20} />
           </span>
-          <div className="text-[22px] font-bold text-text-primary">Contact Details</div>
+          <div className="text-[22px] font-bold text-text-primary">{t("reachUs.contactDetailsTitle")}</div>
         </div>
 
         {CONTACT_ROWS.map((row) => (
@@ -91,15 +126,15 @@ export function ReachUsDetails() {
             <StopwatchIcon size={20} />
           </span>
           <div>
-            <div className="text-[16px] font-bold text-text-primary">Hours &amp; Availability</div>
+            <div className="text-[16px] font-bold text-text-primary">{t("reachUs.hoursTitle")}</div>
             <div className="mt-1 text-[13.5px] text-text-secondary">
-              Monday - Sunday: 12:00 PM - 8:00 PM
+              {t("reachUs.hoursValue", { days: t("common.hoursDaysRange"), time: SITE.hours.time })}
             </div>
           </div>
         </div>
         <div className="inline-flex items-center gap-[7px] whitespace-nowrap rounded-full bg-success-bg px-[18px] py-3 text-[12px] font-bold text-success-text">
           <span className="h-[7px] w-[7px] rounded-full bg-success" />
-          Open 7 Days a Week
+          {t("reachUs.openDaysBadge")}
         </div>
       </InfoCard>
 
@@ -108,27 +143,7 @@ export function ReachUsDetails() {
         style={{ background: "linear-gradient(120deg, #0B5664 0%, #087B87 55%, #0C8F98 100%)" }}
       >
         {REACH_ACTIONS.map((action, index) => (
-          <a
-            key={action.id}
-            href={action.href}
-            target={action.external ? "_blank" : undefined}
-            rel={action.external ? "noopener" : undefined}
-            className={`group flex items-center gap-[14px] text-white no-underline ${
-              index === 1
-                ? "border-l border-[rgba(255,255,255,0.20)] pl-[26px] mw-650:border-l-0 mw-650:border-t mw-650:border-t-[rgba(255,255,255,0.20)] mw-650:pl-0 mw-650:pt-4"
-                : ""
-            }`}
-          >
-            <span className="flex h-[58px] w-[58px] flex-shrink-0 items-center justify-center rounded-full border border-[rgba(255,255,255,0.45)] bg-white/[0.06] transition-colors duration-200 group-hover:bg-white/[0.16]">
-              <span className="inline-flex transition-transform duration-200 group-hover:translate-x-0.5">
-                <ActionIcon icon={action.icon} />
-              </span>
-            </span>
-            <div>
-              <div className="text-[16px] font-bold">{action.title}</div>
-              <div className="mt-0.5 text-[13px] text-white/[0.82]">{action.subtitle}</div>
-            </div>
-          </a>
+          <ActionItem key={action.id} action={action} index={index} />
         ))}
       </div>
     </div>

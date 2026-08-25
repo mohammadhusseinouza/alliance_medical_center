@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { CloseIcon, MenuIcon } from "../../icons";
 
 export interface MobileMenuButtonProps {
@@ -6,11 +7,13 @@ export interface MobileMenuButtonProps {
 }
 
 export function MobileMenuButton({ isOpen, onToggle }: MobileMenuButtonProps) {
+  const { t } = useTranslation();
+
   return (
     <button
       type="button"
       onClick={onToggle}
-      aria-label="Toggle menu"
+      aria-label={t("navbar.toggleMenu")}
       aria-expanded={isOpen}
       className="ml-auto hidden h-11 w-11 flex-shrink-0 items-center justify-center border-none bg-transparent text-[#27354A] mw-980:flex"
     >

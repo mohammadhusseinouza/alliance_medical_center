@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { REFERRAL_FORM_FIELDS, REFERRAL_SUCCESS_MESSAGE } from "./appointmentReferral.data";
+import { useTranslation } from "react-i18next";
+import { REFERRAL_FORM_FIELDS } from "./appointmentReferral.data";
 import type { ReferralFormValues } from "./AppointmentReferral.types";
 
 const EMPTY_VALUES: ReferralFormValues = { name: "", email: "", doctorName: "", disease: "" };
@@ -8,6 +9,7 @@ const inputClass =
   "h-[58px] w-full rounded-[3px] border-none bg-white/[0.13] px-[18px] font-sans text-[16px] text-white outline-none placeholder:text-white/90 focus:bg-white/[0.18] focus:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)]";
 
 export function AppointmentForm() {
+  const { t } = useTranslation();
   const [values, setValues] = useState<ReferralFormValues>(EMPTY_VALUES);
   const [submitted, setSubmitted] = useState(false);
 
@@ -23,12 +25,12 @@ export function AppointmentForm() {
         {REFERRAL_FORM_FIELDS.map((field) => (
           <div key={field.id}>
             <label htmlFor={field.id} className="sr-only">
-              {field.label}
+              {t(`appointmentReferral.fields.${field.translationKey}.label`)}
             </label>
             <input
               id={field.id}
               type={field.type}
-              placeholder={field.placeholder}
+              placeholder={t(`appointmentReferral.fields.${field.translationKey}.placeholder`)}
               value={values[field.name]}
               onChange={(event) => setValues((prev) => ({ ...prev, [field.name]: event.target.value }))}
               className={inputClass}
@@ -41,10 +43,10 @@ export function AppointmentForm() {
         type="submit"
         className="mt-[30px] h-[56px] w-[180px] cursor-pointer rounded-[3px] border-none bg-white font-sans text-[13px] font-medium uppercase tracking-[0.4px] text-[#0B5664] hover:bg-[#F4F4F4]"
       >
-        Send Message
+        {t("appointmentReferral.submit")}
       </button>
 
-      {submitted && <div>{REFERRAL_SUCCESS_MESSAGE}</div>}
+      {submitted && <div>{t("appointmentReferral.successMessage")}</div>}
     </form>
   );
 }

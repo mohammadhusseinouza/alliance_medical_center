@@ -1,9 +1,11 @@
 export type HeroInfoCardIcon = "medical-bag" | "users" | "clock-alt";
 export type HeroInfoCardDecoration = "heart" | "calendar";
+export type HeroInfoCardTranslationKey = "urgentCare" | "familyHealth" | "openingHours";
 
 interface HeroInfoCardCommon {
   id: string;
-  title: string;
+  /** Key suffix under the `heroInfoCards.*` translation resource domain. */
+  translationKey: HeroInfoCardTranslationKey;
   gradient: string;
   icon: HeroInfoCardIcon;
   decoration: HeroInfoCardDecoration;
@@ -12,27 +14,18 @@ interface HeroInfoCardCommon {
 
 export interface HeroInfoCardPhone extends HeroInfoCardCommon {
   kind: "phone";
-  description: string;
   phoneLabel: string;
   phoneHref: string;
 }
 
 export interface HeroInfoCardCta extends HeroInfoCardCommon {
   kind: "cta";
-  description: string;
-  ctaLabel: string;
   ctaHref: string;
-}
-
-export interface HeroInfoCardHoursRow {
-  label: string;
-  value: string;
 }
 
 export interface HeroInfoCardHours extends HeroInfoCardCommon {
   kind: "hours";
-  rows: HeroInfoCardHoursRow[];
-  statusLabel: string;
+  hoursValue: string;
 }
 
 export type HeroInfoCardItem = HeroInfoCardPhone | HeroInfoCardCta | HeroInfoCardHours;

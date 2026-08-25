@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ChevronDownIcon } from "../../icons";
 import type { NavItem } from "./navigation.data";
 import { isNavItemActive, parseNavHref } from "./navHref";
@@ -8,6 +9,7 @@ export interface MobileNavItemProps {
 }
 
 export function MobileNavItem({ item }: MobileNavItemProps) {
+  const { t } = useTranslation();
   const { pathname, hash } = useLocation();
   const active = isNavItemActive(item, pathname, hash);
 
@@ -40,7 +42,7 @@ export function MobileNavItem({ item }: MobileNavItemProps) {
           to={item.href}
           className="rounded-md px-2.5 py-2 text-[15px] font-semibold text-[#155D72] no-underline transition-colors hover:bg-[#EAF3F4] hover:text-brand-icon"
         >
-          View All Services
+          {t("common.viewAllServices")}
         </Link>
         {item.dropdown.map((entry) => {
           const entryTarget = parseNavHref(entry.href);

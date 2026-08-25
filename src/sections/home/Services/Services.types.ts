@@ -8,10 +8,18 @@ export type ServiceIconName =
   | "flask"
   | "book-open";
 
+export type ServiceTranslationKey =
+  | "urgentCare"
+  | "familyHealth"
+  | "occupationalHealth"
+  | "womensHealth"
+  | "pediatricCare"
+  | "diagnosticServices";
+
 export interface ServiceItem {
   id: string;
-  title: string;
-  description: string;
+  /** Key suffix under the `services.items.*` translation resource domain. */
+  translationKey: ServiceTranslationKey;
   icon: ServiceIconName;
   accentColor: string;
   href: string;

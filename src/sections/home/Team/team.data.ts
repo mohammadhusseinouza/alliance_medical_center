@@ -10,37 +10,37 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "mahmoud-kassir",
     name: "Dr. Mahmoud Kassir",
-    role: "Family Physician & Co-Founder",
+    roleTranslationKey: "mahmoudKassir",
     photo: teamPhoto1,
   },
   {
     id: "dalal-kassir",
     name: "Dr. Dalal Kassir",
-    role: "Medical Director & Family Medicine Physician",
+    roleTranslationKey: "dalalKassir",
     photo: teamPhoto2,
   },
   {
     id: "amy-meints",
     name: "Amy Meints",
-    role: "Family Nurse Practitioner",
+    roleTranslationKey: "amyMeints",
     photo: teamPhoto3,
   },
   {
     id: "robin-kuiper",
     name: "Robin Kuiper",
-    role: "Family Nurse Practitioner",
+    roleTranslationKey: "robinKuiper",
     photo: teamPhoto4,
   },
   {
     id: "amanda-kerwin",
     name: "Amanda Kerwin",
-    role: "Practice Manager",
+    roleTranslationKey: "amandaKerwin",
     photo: teamPhoto5,
   },
   {
     id: "breiann-church",
     name: "BreiAnn Church",
-    role: "Registered Medical Assistant",
+    roleTranslationKey: "breiannChurch",
     photo: teamPhoto6,
   },
 ];

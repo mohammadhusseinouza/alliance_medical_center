@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   ArrowRightIcon,
   CalendarIcon,
@@ -8,6 +9,9 @@ import {
   PhoneIcon,
   UsersIcon,
 } from "../../../components/icons";
+import { withLocale } from "../../../i18n/routing";
+import { useLanguage } from "../../../i18n/useLanguage";
+import type { Language, TranslateFn } from "../../../i18n/types";
 import { HERO_INFO_CARDS } from "./heroInfoCards.data";
 import type { HeroInfoCardDecoration, HeroInfoCardIcon, HeroInfoCardItem } from "./HeroInfoCards.types";
 
@@ -26,11 +30,13 @@ function DecorationIcon({ decoration }: { decoration: HeroInfoCardDecoration }) 
   return <CalendarIcon size={88} strokeWidth={1.6} className={className} />;
 }
 
-function CardBody({ card }: { card: HeroInfoCardItem }) {
+function CardBody({ card, t, language }: { card: HeroInfoCardItem; t: TranslateFn; language: Language }) {
   if (card.kind === "phone") {
     return (
       <>
-        <p className="mt-[14px] max-w-[300px] text-[14.5px] leading-[1.65] text-white/[0.82]">{card.description}</p>
+        <p className="mt-[14px] max-w-[300px] text-[14.5px] leading-[1.65] text-white/[0.82]">
+          {t(`heroInfoCards.${card.translationKey}.description`)}
+        </p>
         <a
           href={card.phoneHref}
           className="mt-[26px] inline-flex items-center gap-3 text-[16px] font-bold text-white no-underline"
@@ -47,12 +53,14 @@ function CardBody({ card }: { card: HeroInfoCardItem }) {
   if (card.kind === "cta") {
     return (
       <>
-        <p className="mt-[14px] max-w-[300px] text-[14.5px] leading-[1.65] text-white/[0.82]">{card.description}</p>
+        <p className="mt-[14px] max-w-[300px] text-[14.5px] leading-[1.65] text-white/[0.82]">
+          {t(`heroInfoCards.${card.translationKey}.description`)}
+        </p>
         <Link
-          to={card.ctaHref}
+          to={withLocale(card.ctaHref, language)}
           className="mt-[26px] inline-flex h-[50px] min-w-[200px] items-center justify-center gap-2 rounded-md bg-white px-[22px] text-[15px] font-semibold text-[#13324F] no-underline"
         >
-          {card.ctaLabel}
+          {t("common.bookAppointment")}
           <ArrowRightIcon size={13} />
         </Link>
       </>
@@ -62,21 +70,22 @@ function CardBody({ card }: { card: HeroInfoCardItem }) {
   return (
     <>
       <div className="mt-[18px] flex flex-col text-[14.5px] text-white/90">
-        {card.rows.map((row) => (
-          <div key={row.label} className="flex items-center justify-between gap-3 py-3">
-            <span>{row.label}</span>
-            <span>{row.value}</span>
-          </div>
-        ))}
+        <div className="flex items-center justify-between gap-3 py-3">
+          <span>{t("common.hoursDaysRange")}</span>
+          <span>{card.hoursValue}</span>
+        </div>
       </div>
       <div className="mt-[14px] border-t border-white/25 pt-[14px] text-[13.5px] font-semibold text-white/[0.92]">
-        {card.statusLabel}
+        {t("common.openDays")}
       </div>
     </>
   );
 }
 
 export function HeroInfoCards() {
+  const { t } = useTranslation();
+  const language = useLanguage();
+
   return (
     <div className="relative -mt-[175px] pb-[175px] mw-900:mt-0 mw-900:pb-0">
       <div className="absolute left-1/2 bottom-[-110px] z-10 grid w-[min(1320px,calc(100%-80px))] -translate-x-1/2 grid-cols-3 items-stretch gap-[22px] mw-1100:w-[calc(100%-60px)] mw-1100:gap-[18px] mw-900:relative mw-900:left-auto mw-900:bottom-auto mw-900:mt-[-40px] mw-900:w-full mw-900:transform-none mw-900:grid-cols-1 mw-900:gap-[14px] mw-900:px-[18px]">
@@ -88,8 +97,10 @@ export function HeroInfoCards() {
           >
             <DecorationIcon decoration={card.decoration} />
             <MainIcon icon={card.icon} />
-            <h2 className="mt-[2px] text-[23px] font-bold leading-[1.2] text-white">{card.title}</h2>
-            <CardBody card={card} />
+            <h2 className="mt-[2px] text-[23px] font-bold leading-[1.2] text-white">
+              {t(`heroInfoCards.${card.translationKey}.title`)}
+            </h2>
+            <CardBody card={card} t={t} language={language} />
           </article>
         ))}
       </div>

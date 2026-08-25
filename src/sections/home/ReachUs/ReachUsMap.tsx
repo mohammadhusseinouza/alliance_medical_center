@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
 import { CarIcon, MapMarkerIcon } from "../../../components/icons";
 import { SITE } from "../../../lib/constants";
 
 export function ReachUsMap() {
+  const { t } = useTranslation();
+
   return (
     <div className="relative min-h-[560px] animate-ru-map overflow-hidden rounded-[22px] border border-[#DCE7EA] bg-[#EAF3F5] shadow-elevated motion-reduce:[animation-duration:0.01ms] mw-1100:min-h-[500px] mw-850:order-1 mw-850:min-h-[460px] mw-650:min-h-[380px] mw-650:rounded-[18px]">
       <iframe
-        title={`Map showing Access Now Urgent Care at ${SITE.address.full}`}
+        title={t("reachUs.mapTitle", { business: "Access Now Urgent Care", address: SITE.address.full })}
         src="https://www.google.com/maps?q=8145+Valleywood+Lane,+Portage,+MI+49024&output=embed"
         width="100%"
         height="100%"
@@ -38,8 +41,8 @@ export function ReachUsMap() {
           <CarIcon size={18} />
         </div>
         <div>
-          <div className="text-[14px] font-bold text-text-primary">Convenient parking</div>
-          <div className="mt-0.5 text-[12.5px] text-text-secondary">available on-site</div>
+          <div className="text-[14px] font-bold text-text-primary">{t("reachUs.parkingTitle")}</div>
+          <div className="mt-0.5 text-[12.5px] text-text-secondary">{t("reachUs.parkingSubtitle")}</div>
         </div>
       </a>
     </div>

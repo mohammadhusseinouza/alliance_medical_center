@@ -1,4 +1,6 @@
 import { SERVICES } from "../../../sections/home/Services/services.data";
+import { withLocale } from "../../../i18n/routing";
+import type { Language, TranslateFn } from "../../../i18n/types";
 
 export interface NavDropdownItem {
   label: string;
@@ -11,14 +13,16 @@ export interface NavItem {
   dropdown?: NavDropdownItem[];
 }
 
-const SERVICES_DROPDOWN: NavDropdownItem[] = SERVICES.map((service) => ({
-  label: service.title,
-  href: `/#${service.id}`,
-}));
+export function buildNavItems(t: TranslateFn, language: Language): NavItem[] {
+  const servicesDropdown: NavDropdownItem[] = SERVICES.map((service) => ({
+    label: t(`services.items.${service.translationKey}.title`),
+    href: withLocale(`/#${service.id}`, language),
+  }));
 
-export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/#services", dropdown: SERVICES_DROPDOWN },
-  { label: "About Us", href: "/#about" },
-  { label: "Contact Us", href: "/#contact" },
-];
+  return [
+    { label: t("navbar.home"), href: withLocale("/", language) },
+    { label: t("navbar.services"), href: withLocale("/#services", language), dropdown: servicesDropdown },
+    { label: t("navbar.aboutUs"), href: withLocale("/#about", language) },
+    { label: t("navbar.contactUs"), href: withLocale("/#contact", language) },
+  ];
+}

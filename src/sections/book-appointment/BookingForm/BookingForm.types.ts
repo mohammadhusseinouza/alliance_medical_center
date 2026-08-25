@@ -28,8 +28,10 @@ export type BookingRequiredField =
   | "visitType"
   | "reason";
 
-export type BookingErrors = Partial<Record<BookingRequiredField, string>> & {
-  dateTime?: string;
+export type BookingErrorCode = BookingRequiredField | "dateRequired" | "timeRequired";
+
+export type BookingErrors = Partial<Record<BookingRequiredField, BookingErrorCode>> & {
+  dateTime?: Extract<BookingErrorCode, "dateRequired" | "timeRequired">;
 };
 
 export type BookingStep = 1 | 2;

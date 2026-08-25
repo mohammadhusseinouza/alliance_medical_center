@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { ClockDialIcon, FlaskBasicIcon, MapPinIcon } from "../../../components/icons";
 import type { AboutStat, AboutStatIcon } from "./About.types";
 
@@ -13,6 +14,8 @@ export interface AboutStatRowProps {
 }
 
 export function AboutStatRow({ stat, showDivider }: AboutStatRowProps) {
+  const { t } = useTranslation();
+
   return (
     <div
       className={`flex flex-1 animate-about-fade-up items-center gap-5 py-4 motion-reduce:[animation-duration:0.01ms] mw-1100:flex-col mw-1100:border-t-0 mw-1100:text-center mw-700:flex-row mw-700:py-[22px] mw-700:text-left ${
@@ -24,8 +27,12 @@ export function AboutStatRow({ stat, showDivider }: AboutStatRowProps) {
         <StatIcon icon={stat.icon} />
       </div>
       <div>
-        <p className="text-[19px] font-bold tracking-[0.2px] text-white">{stat.title}</p>
-        <p className="mt-2 text-[13px] leading-[1.5] text-white/70">{stat.description}</p>
+        <p className="text-[19px] font-bold tracking-[0.2px] text-white">
+          {t(stat.titleKey ?? `about.stats.${stat.translationKey}.title`)}
+        </p>
+        <p className="mt-2 text-[13px] leading-[1.5] text-white/70">
+          {t(`about.stats.${stat.translationKey}.description`)}
+        </p>
       </div>
     </div>
   );
