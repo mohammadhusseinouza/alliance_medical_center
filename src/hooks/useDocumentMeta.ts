@@ -8,7 +8,13 @@ export function useDocumentMeta() {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    const page = stripLocale(pathname) === "/book-appointment" ? "booking" : "home";
+    const canonicalPath = stripLocale(pathname);
+    const page =
+      canonicalPath === "/book-appointment"
+        ? "booking"
+        : canonicalPath === "/services/urgent-care"
+          ? "urgentCare"
+          : "home";
     document.title = t(`meta.${page}.title`);
     document.querySelector('meta[name="description"]')?.setAttribute("content", t(`meta.${page}.description`));
   }, [pathname, i18n.language, t]);

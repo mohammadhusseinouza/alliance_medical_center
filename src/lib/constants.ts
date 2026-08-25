@@ -19,4 +19,5 @@ export const SITE = {
     summary: "Open 7 Days · 12:00 PM – 8:00 PM",
   },
   bookingHref: "/book-appointment",
+  urgentCareHref: "/services/urgent-care",
 } as const;

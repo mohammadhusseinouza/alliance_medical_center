@@ -1,6 +1,9 @@
 import { SERVICES } from "../../../sections/home/Services/services.data";
 import { withLocale } from "../../../i18n/routing";
 import type { Language, TranslateFn } from "../../../i18n/types";
+import { SITE } from "../../../lib/constants";
+
+const URGENT_CARE_SERVICE_ID = "urgent-care";
 
 export interface NavDropdownItem {
   label: string;
@@ -16,7 +19,10 @@ export interface NavItem {
 export function buildNavItems(t: TranslateFn, language: Language): NavItem[] {
   const servicesDropdown: NavDropdownItem[] = SERVICES.map((service) => ({
     label: t(`services.items.${service.translationKey}.title`),
-    href: withLocale(`/#${service.id}`, language),
+    href:
+      service.id === URGENT_CARE_SERVICE_ID
+        ? withLocale(SITE.urgentCareHref, language)
+        : withLocale(`/#${service.id}`, language),
   }));
 
   return [

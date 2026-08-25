@@ -94,6 +94,69 @@ export const es: TranslationResource = {
       },
     },
   },
+  servicePage: {
+    breadcrumbLabel: "Ruta de navegación",
+    imagePlaceholder: "Marcador de Imagen",
+    sidebarCta: {
+      heading: "¿Listo Para Recibir Atención Experta?",
+      description: "Atención de urgencias el mismo día, sin cita previa. Nuestro equipo está aquí cuando nos necesite.",
+    },
+    urgentCare: {
+      heading: "Atención de Urgencias Profesional Cuando la Necesite",
+      intro:
+        "AccessNow Care ofrece tratamiento el mismo día para enfermedades y lesiones menores, con la comodidad de la atención sin cita y tiempos de espera mínimos. Nuestro personal clínico brinda atención profesional y familiar, junto con indicaciones claras sobre los próximos pasos, para que pueda volver a sentirse usted mismo.",
+      whatsIncluded: "Qué Incluye",
+      benefits: {
+        minorIllnesses: "Tratamiento para enfermedades y lesiones menores",
+        walkIns: "Atención sin cita previa, no se necesita hacer una cita",
+        convenientAccess: "Acceso conveniente con tiempos de espera mínimos",
+        diagnostics: "Apoyo diagnóstico en el mismo lugar, incluyendo laboratorio y radiografías",
+        minorInjuries: "Atención para esguinces, torceduras y lesiones menores",
+        commonIllnesses: "Resfriado, gripe, fiebre e infecciones comunes",
+        screenings: "Exámenes físicos básicos y evaluaciones de salud",
+        followUp: "Indicaciones claras de seguimiento cuando se necesite atención adicional",
+      },
+      comprehensive: {
+        heading: "Atención Integral en la que Puede Confiar",
+        description:
+          "Combinamos experiencia clínica con un enfoque centrado en el paciente, brindando una atención conveniente, accesible y enfocada en su bienestar.",
+      },
+      faq: {
+        eyebrow: "Preguntas Frecuentes",
+        items: {
+          appointment: {
+            question: "¿Necesito una cita para recibir atención de urgencias?",
+            answer:
+              "No se requiere cita previa. Aceptamos pacientes sin cita durante todo nuestro horario de atención, y también puede reservar en línea con anticipación para reducir su tiempo de espera.",
+          },
+          conditions: {
+            question: "¿Qué afecciones tratan en la atención de urgencias?",
+            answer:
+              "Tratamos enfermedades y lesiones menores, incluyendo resfriados y gripe, fiebre, infecciones, esguinces y torceduras, cortes menores, sarpullidos y otras afecciones que no ponen en riesgo la vida.",
+          },
+          insurance: {
+            question: "¿Aceptan seguro médico?",
+            answer:
+              "Aceptamos la mayoría de los principales planes de seguro y también ofrecemos precios de pago particular transparentes. Traiga su tarjeta de seguro y una identificación con foto a su visita.",
+          },
+          hours: {
+            question: "¿Cuál es su horario de atención?",
+            answer: "Abrimos los 7 días de la semana, de 12:00 PM a 8:00 PM, incluyendo la mayoría de los días festivos.",
+          },
+          emergency: {
+            question: "¿Cuándo debo ir a la sala de emergencias en lugar de atención de urgencias?",
+            answer:
+              "Acuda a la sala de emergencias o llame al 911 si presenta dolor en el pecho, dificultad para respirar, sangrado severo, síntomas de derrame cerebral, trauma grave o cualquier condición que ponga en riesgo la vida.",
+          },
+          moreInformation: {
+            question: "¿Necesita Más Información?",
+            answer:
+              "Si tiene preguntas adicionales o necesita ayuda para elegir el servicio adecuado, comuníquese con nuestro equipo al {{phone}}. Estaremos encantados de ayudarle.",
+          },
+        },
+      },
+    },
+  },
   about: {
     eyebrow: "Sobre Nosotros",
     headingLine1: "Atención Completa,",
@@ -316,6 +379,11 @@ export const es: TranslationResource = {
       title: "Reservar una Cita — AccessNow Care",
       description:
         "Programe una visita con AccessNow Care en Portage, Michigan. Elija una fecha y hora, luego solicite su cita en línea.",
+    },
+    urgentCare: {
+      title: "Atención de Urgencias — AccessNow Care",
+      description:
+        "Atención de urgencias el mismo día en Portage, Michigan. Aceptamos pacientes sin cita, los 7 días de la semana de 12:00 PM a 8:00 PM. Conozca qué incluye una visita.",
     },
   },
 };

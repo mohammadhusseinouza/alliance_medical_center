@@ -92,6 +92,69 @@ export const en = {
       },
     },
   },
+  servicePage: {
+    breadcrumbLabel: "Breadcrumb",
+    imagePlaceholder: "Image Placeholder",
+    sidebarCta: {
+      heading: "Ready To Get Expert Care?",
+      description: "Same-day urgent care, walk-ins welcome. Our team is here when you need us.",
+    },
+    urgentCare: {
+      heading: "Professional Urgent Care When You Need It",
+      intro:
+        "AccessNow Care provides same-day treatment for minor illnesses and injuries, with walk-in convenience and minimal wait times. Our clinicians deliver professional, family-friendly care and clear guidance on next steps, so you can get back to feeling like yourself.",
+      whatsIncluded: "What's Included",
+      benefits: {
+        minorIllnesses: "Treatment for minor illnesses and injuries",
+        walkIns: "Walk-ins welcome, no appointment necessary",
+        convenientAccess: "Convenient access with minimal wait times",
+        diagnostics: "On-site diagnostic support, including labs and X-rays",
+        minorInjuries: "Care for sprains, strains, and minor injuries",
+        commonIllnesses: "Cold, flu, fever, and common infections",
+        screenings: "Basic physicals and health screenings",
+        followUp: "Clear follow-up guidance when further care is needed",
+      },
+      comprehensive: {
+        heading: "Comprehensive Care You Can Trust",
+        description:
+          "We combine clinical expertise with a patient-first approach, delivering care that is convenient, accessible, and centered on your well-being.",
+      },
+      faq: {
+        eyebrow: "Frequently Asked Questions",
+        items: {
+          appointment: {
+            question: "Do I need an appointment for urgent care?",
+            answer:
+              "No appointment is required. Walk-ins are welcome during all open hours, and you can also book ahead online to shorten your wait.",
+          },
+          conditions: {
+            question: "What conditions do you treat at urgent care?",
+            answer:
+              "We treat minor illnesses and injuries, including colds and flu, fevers, infections, sprains and strains, minor cuts, rashes, and similar non-emergency concerns.",
+          },
+          insurance: {
+            question: "Do you accept insurance?",
+            answer:
+              "We accept most major insurance plans and also offer transparent self-pay pricing. Bring your insurance card and a photo ID to your visit.",
+          },
+          hours: {
+            question: "What are your hours of operation?",
+            answer: "We are open 7 days a week, 12:00 PM to 8:00 PM, including most holidays.",
+          },
+          emergency: {
+            question: "When should I go to the ER instead of urgent care?",
+            answer:
+              "Go to the emergency room or call 911 for chest pain, difficulty breathing, severe bleeding, stroke symptoms, major trauma, or any life-threatening condition.",
+          },
+          moreInformation: {
+            question: "Need More Information?",
+            answer:
+              "If you have additional questions or need help choosing the right service, please contact our friendly team at {{phone}}. We are happy to help.",
+          },
+        },
+      },
+    },
+  },
   about: {
     eyebrow: "About Us",
     headingLine1: "Complete Care,",
@@ -316,6 +379,11 @@ export const en = {
       title: "Book an Appointment — AccessNow Care",
       description:
         "Schedule a visit with AccessNow Care in Portage, Michigan. Choose a date and time, then request your appointment online.",
+    },
+    urgentCare: {
+      title: "Urgent Care Services — AccessNow Care",
+      description:
+        "Same-day urgent care in Portage, Michigan. Walk-ins welcome, 7 days a week from 12:00 PM to 8:00 PM. See what's included in a visit.",
     },
   },
 } as const;
