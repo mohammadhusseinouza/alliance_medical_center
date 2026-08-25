@@ -230,7 +230,7 @@ export const en = {
     heading: "Workplace Health Solutions",
     description:
       "Comprehensive occupational health services to keep your team safe, healthy, and productive.",
-    imagePlaceholder: "Image Placeholder",
+    imageAlt: "Occupational health clinician consulting with a workplace employee",
     cta: "Explore All Services",
     items: {
       physicalExams: {

@@ -230,7 +230,7 @@ export const es: TranslationResource = {
     heading: "Soluciones de Salud Laboral",
     description:
       "Servicios integrales de salud ocupacional para mantener a su equipo seguro, saludable y productivo.",
-    imagePlaceholder: "Marcador de Imagen",
+    imageAlt: "Clínico de salud ocupacional conversando con un empleado",
     cta: "Explorar Todos los Servicios",
     items: {
       physicalExams: {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import workplaceHealthImage from "../../../assets/home/workplace-health.webp";
 import { ArrowRightIcon, BriefcaseIcon } from "../../../components/icons";
-import { ImagePlaceholder } from "../../../components/ui/ImagePlaceholder";
 import { withLocale } from "../../../i18n/routing";
 import { useLanguage } from "../../../i18n/useLanguage";
 import { WORKPLACE_HEALTH_SERVICES } from "./workplaceHealth.data";
@@ -30,10 +30,12 @@ export function WorkplaceHealth() {
             </p>
           </div>
 
-          <div className="animate-about-fade-img motion-reduce:[animation-duration:0.01ms]">
-            <ImagePlaceholder
-              label={t("workplaceHealth.imagePlaceholder")}
-              className="aspect-[3/2] w-full overflow-hidden rounded-2xl shadow-card"
+          <div className="animate-about-fade-img aspect-[3/2] w-full overflow-hidden rounded-2xl shadow-card motion-reduce:[animation-duration:0.01ms]">
+            <img
+              src={workplaceHealthImage}
+              alt={t("workplaceHealth.imageAlt")}
+              className="block h-full w-full object-cover"
+              loading="lazy"
             />
           </div>
         </div>
