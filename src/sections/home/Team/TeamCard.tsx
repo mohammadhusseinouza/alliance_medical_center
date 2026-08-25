@@ -4,18 +4,13 @@ import type { TeamMember } from "./Team.types";
 
 export interface TeamCardProps {
   member: TeamMember;
-  animationDelayMs: number;
-  hiddenClassName?: string;
 }
 
-export function TeamCard({ member, animationDelayMs, hiddenClassName = "" }: TeamCardProps) {
+export function TeamCard({ member }: TeamCardProps) {
   const { t } = useTranslation();
 
   return (
-    <div
-      className={`group relative min-h-[420px] animate-team-card overflow-hidden rounded-[18px] border border-[rgba(30,90,110,0.08)] bg-white shadow-[0_10px_28px_rgba(20,65,85,0.07)] [transition:transform_260ms_ease,box-shadow_260ms_ease,border-color_260ms_ease] hover:-translate-y-[7px] hover:border-[rgba(35,135,155,0.20)] hover:shadow-[0_18px_38px_rgba(20,80,100,0.13)] motion-reduce:duration-[0.01ms] motion-reduce:[animation-duration:0.01ms] ${hiddenClassName}`}
-      style={{ animationDelay: `${animationDelayMs}ms` }}
-    >
+    <div className="group relative min-h-[420px] overflow-hidden rounded-[18px] border border-[rgba(30,90,110,0.08)] bg-white shadow-[0_10px_28px_rgba(20,65,85,0.07)] [transition:transform_260ms_ease,box-shadow_260ms_ease,border-color_260ms_ease] hover:-translate-y-[7px] hover:border-[rgba(35,135,155,0.20)] hover:shadow-[0_18px_38px_rgba(20,80,100,0.13)] motion-reduce:duration-[0.01ms]">
       <div className="absolute inset-0 overflow-hidden">
         <img
           src={member.photo}
