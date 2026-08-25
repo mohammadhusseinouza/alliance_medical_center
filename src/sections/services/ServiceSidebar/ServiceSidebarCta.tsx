@@ -11,8 +11,23 @@ export function ServiceSidebarCta() {
   const language = useLanguage();
 
   return (
-    <div className="overflow-hidden rounded-2xl text-white" style={{ background: "linear-gradient(160deg, #0E5C69 0%, #0B8995 100%)" }}>
-      <div className="px-6 pb-5 pt-[26px]">
+    <div className="relative min-h-[520px] overflow-hidden rounded-2xl text-white">
+      <img
+        src={ctaPortraitImage}
+        alt={t("servicePage.sidebarCta.portraitAlt")}
+        className="absolute inset-0 z-0 h-full w-full object-cover object-[50%_35%]"
+        loading="lazy"
+      />
+
+      <div
+        className="pointer-events-none absolute inset-0 z-[1]"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.32) 28%, rgba(0,0,0,0.12) 48%, rgba(0,0,0,0) 68%)",
+        }}
+      />
+
+      <div className="relative z-[2] px-6 pt-[26px]">
         <h3 className="m-0 text-[22px] font-bold leading-[1.2] tracking-[-0.4px]">
           {t("servicePage.sidebarCta.heading")}
         </h3>
@@ -27,13 +42,6 @@ export function ServiceSidebarCta() {
           <ArrowRightIcon size={15} className="transition-transform duration-200 ease-out group-hover:translate-x-[3px]" />
         </Link>
       </div>
-
-      <img
-        src={ctaPortraitImage}
-        alt={t("servicePage.sidebarCta.portraitAlt")}
-        className="block h-[280px] w-full object-cover"
-        loading="lazy"
-      />
     </div>
   );
 }
