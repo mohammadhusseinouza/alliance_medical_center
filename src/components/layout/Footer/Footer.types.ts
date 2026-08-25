@@ -1,7 +1,3 @@
-export interface FooterProps {
-  showNewsletter?: boolean;
-}
-
 export interface FooterLink {
   label: string;
   href: string;

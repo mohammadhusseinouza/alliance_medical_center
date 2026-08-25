@@ -9,7 +9,7 @@ export function ReachUs() {
   return (
     <section
       id="contact"
-      className="relative px-6 pb-[300px] pt-[90px]"
+      className="relative px-6 pb-[90px] pt-[90px]"
       style={{
         background:
           "radial-gradient(circle at 50% 45%, rgba(13,145,155,0.05), transparent 42%), linear-gradient(180deg, #F8FBFC 0%, #FFFFFF 100%)",

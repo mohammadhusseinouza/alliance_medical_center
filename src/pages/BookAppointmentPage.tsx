@@ -24,7 +24,7 @@ export function BookAppointmentPage() {
           <DoctorPanel />
         </div>
       </main>
-      <Footer showNewsletter={false} />
+      <Footer />
     </>
   );
 }

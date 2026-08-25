@@ -227,15 +227,6 @@ export const es: TranslationResource = {
       hipaaNotice: "Aviso de HIPAA",
     },
   },
-  newsletter: {
-    headingLine1: "Últimas Novedades",
-    headingLine2: "Suscríbase a Nuestro Boletín",
-    placeholder: "Ingrese Su Correo Electrónico",
-    emailSrLabel: "Correo electrónico",
-    submit: "Suscribirse",
-    successMessage: "Gracias — enviaremos novedades a {{email}}.",
-    errorMessage: "Por favor ingrese un correo electrónico válido.",
-  },
   booking: {
     intro: {
       eyebrow: "CITA",

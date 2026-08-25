@@ -227,15 +227,6 @@ export const en = {
       hipaaNotice: "HIPAA Notice",
     },
   },
-  newsletter: {
-    headingLine1: "Latest Updates",
-    headingLine2: "Subscribe To Our Newsletter",
-    placeholder: "Enter Your Email",
-    emailSrLabel: "Email address",
-    submit: "Sign Up",
-    successMessage: "Thanks — we'll send updates to {{email}}.",
-    errorMessage: "Please enter a valid email address.",
-  },
   booking: {
     intro: {
       eyebrow: "APPOINTMENT",

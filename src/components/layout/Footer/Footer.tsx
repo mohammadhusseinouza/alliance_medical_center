@@ -6,10 +6,8 @@ import { useLanguage } from "../../../i18n/useLanguage";
 import { SITE } from "../../../lib/constants";
 import { buildFooterLegalLinks, buildFooterServiceLinks, FOOTER_CONTACT_ROWS } from "./footer.data";
 import { FooterContactRowItem } from "./FooterContactRow";
-import { Newsletter } from "./Newsletter";
-import type { FooterProps } from "./Footer.types";
 
-export function Footer({ showNewsletter = true }: FooterProps) {
+export function Footer() {
   const { t } = useTranslation();
   const language = useLanguage();
   const footerServiceLinks = buildFooterServiceLinks(t, language);
@@ -20,8 +18,6 @@ export function Footer({ showNewsletter = true }: FooterProps) {
       className="relative overflow-visible text-white"
       style={{ background: "linear-gradient(135deg, #103F48 0%, #124954 60%, #103F48 100%)" }}
     >
-      {showNewsletter && <Newsletter />}
-
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div
           className="absolute right-[-100px] top-[-250px] h-[500px] w-[500px] rounded-full"
@@ -33,12 +29,7 @@ export function Footer({ showNewsletter = true }: FooterProps) {
         />
       </div>
 
-      <div
-        className={
-          "relative mx-auto max-w-[1320px] px-6 pb-[45px] mw-650:px-5 mw-650:pb-[30px] " +
-          (showNewsletter ? "pt-[95px] mw-1000:pt-[330px] mw-650:pt-[360px]" : "pt-[45px]")
-        }
-      >
+      <div className="relative mx-auto max-w-[1320px] px-6 pb-[45px] pt-[45px] mw-650:px-5 mw-650:pb-[30px]">
         <div className="grid grid-cols-[1.05fr_1fr_1.15fr_1.15fr] gap-[55px] mw-1000:grid-cols-2 mw-1000:gap-x-[35px] mw-1000:gap-y-[45px] mw-650:grid-cols-1 mw-650:gap-[38px]">
           <div className="animate-ft-col1 motion-reduce:[animation-duration:0.01ms]">
             <div className="flex items-center gap-2.5">
