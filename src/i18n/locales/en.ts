@@ -98,12 +98,19 @@ export const en = {
     sidebarCta: {
       heading: "Ready To Get Expert Care?",
       description: "Same-day urgent care, walk-ins welcome. Our team is here when you need us.",
+      portraitAlt: "Nurse holding a clipboard, ready to help patients",
     },
     urgentCare: {
       heading: "Professional Urgent Care When You Need It",
       intro:
         "AccessNow Care provides same-day treatment for minor illnesses and injuries, with walk-in convenience and minimal wait times. Our clinicians deliver professional, family-friendly care and clear guidance on next steps, so you can get back to feeling like yourself.",
       whatsIncluded: "What's Included",
+      heroImageAlt: "Clinician talking with a patient in a bright exam room",
+      mainPhotoAlt: "Doctor reviewing results with a patient",
+      pairAlt: {
+        pediatric: "Nurse treating a young patient",
+        lab: "Lab technician running diagnostic tests",
+      },
       benefits: {
         minorIllnesses: "Treatment for minor illnesses and injuries",
         walkIns: "Walk-ins welcome, no appointment necessary",

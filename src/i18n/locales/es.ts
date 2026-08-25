@@ -100,12 +100,19 @@ export const es: TranslationResource = {
     sidebarCta: {
       heading: "¿Listo Para Recibir Atención Experta?",
       description: "Atención de urgencias el mismo día, sin cita previa. Nuestro equipo está aquí cuando nos necesite.",
+      portraitAlt: "Enfermera sosteniendo un portapapeles, lista para ayudar a los pacientes",
     },
     urgentCare: {
       heading: "Atención de Urgencias Profesional Cuando la Necesite",
       intro:
         "AccessNow Care ofrece tratamiento el mismo día para enfermedades y lesiones menores, con la comodidad de la atención sin cita y tiempos de espera mínimos. Nuestro personal clínico brinda atención profesional y familiar, junto con indicaciones claras sobre los próximos pasos, para que pueda volver a sentirse usted mismo.",
       whatsIncluded: "Qué Incluye",
+      heroImageAlt: "Personal clínico conversando con un paciente en un consultorio luminoso",
+      mainPhotoAlt: "Médico revisando resultados con un paciente",
+      pairAlt: {
+        pediatric: "Enfermera atendiendo a una paciente joven",
+        lab: "Técnico de laboratorio realizando pruebas diagnósticas",
+      },
       benefits: {
         minorIllnesses: "Tratamiento para enfermedades y lesiones menores",
         walkIns: "Atención sin cita previa, no se necesita hacer una cita",

@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
+import labImage from "../../../assets/urgent-care/lab-diagnostics.png";
+import mainPhotoImage from "../../../assets/urgent-care/main-consultation.png";
+import pediatricImage from "../../../assets/urgent-care/pediatric-care.png";
 import { CheckIcon } from "../../../components/icons";
-import { ImagePlaceholder } from "../../../components/ui/ImagePlaceholder";
 import { UrgentCareFaq } from "./UrgentCareFaq";
 
 const BENEFIT_KEYS = [
@@ -19,9 +21,11 @@ export function UrgentCareContent() {
 
   return (
     <div className="min-w-0">
-      <ImagePlaceholder
-        label={t("servicePage.imagePlaceholder")}
-        className="aspect-[16/8] w-full overflow-hidden rounded-2xl"
+      <img
+        src={mainPhotoImage}
+        alt={t("servicePage.urgentCare.mainPhotoAlt")}
+        className="block aspect-[16/8] w-full rounded-2xl object-cover"
+        loading="lazy"
       />
 
       <h2 className="mt-[30px] text-[clamp(28px,2.4vw,32px)] font-bold leading-[1.2] tracking-[-0.8px] text-text-primary">
@@ -56,13 +60,17 @@ export function UrgentCareContent() {
       </p>
 
       <div className="mt-5 grid grid-cols-2 gap-[22px] mw-880:grid-cols-1">
-        <ImagePlaceholder
-          label={t("servicePage.imagePlaceholder")}
-          className="aspect-[4/3] w-full overflow-hidden rounded-[14px]"
+        <img
+          src={pediatricImage}
+          alt={t("servicePage.urgentCare.pairAlt.pediatric")}
+          className="block aspect-[4/3] w-full rounded-[14px] object-cover"
+          loading="lazy"
         />
-        <ImagePlaceholder
-          label={t("servicePage.imagePlaceholder")}
-          className="aspect-[4/3] w-full overflow-hidden rounded-[14px]"
+        <img
+          src={labImage}
+          alt={t("servicePage.urgentCare.pairAlt.lab")}
+          className="block aspect-[4/3] w-full rounded-[14px] object-cover"
+          loading="lazy"
         />
       </div>
 

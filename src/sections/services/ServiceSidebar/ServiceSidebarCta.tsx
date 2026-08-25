@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ctaPortraitImage from "../../../assets/urgent-care/cta-portrait.png";
 import { ArrowRightIcon } from "../../../components/icons";
-import { ImagePlaceholder } from "../../../components/ui/ImagePlaceholder";
 import { withLocale } from "../../../i18n/routing";
 import { useLanguage } from "../../../i18n/useLanguage";
 import { SITE } from "../../../lib/constants";
@@ -28,7 +28,12 @@ export function ServiceSidebarCta() {
         </Link>
       </div>
 
-      <ImagePlaceholder label={t("servicePage.imagePlaceholder")} className="h-[280px] w-full" />
+      <img
+        src={ctaPortraitImage}
+        alt={t("servicePage.sidebarCta.portraitAlt")}
+        className="block h-[280px] w-full object-cover"
+        loading="lazy"
+      />
     </div>
   );
 }
