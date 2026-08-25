@@ -37,20 +37,12 @@ export function Care() {
         </div>
 
         <div className="relative isolate flex min-h-[540px] animate-care-doctor-in items-end justify-center motion-reduce:[animation-duration:0.01ms] mw-850:order-[-1] mw-850:col-span-full">
-          <div
-            className="pointer-events-none absolute left-1/2 top-[52%] z-[1] flex h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 items-end justify-center rounded-full"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(15,164,175,0.10) 0%, rgba(15,164,175,0.06) 40%, rgba(15,164,175,0.02) 65%, transparent 78%)",
-            }}
-          >
-            <img
-              src={careDoctorImage}
-              alt={t("care.imageAlt")}
-              className="relative z-[5] h-full w-full rounded-full object-cover"
-              loading="lazy"
-            />
-          </div>
+          <img
+            src={careDoctorImage}
+            alt={t("care.imageAlt")}
+            className="h-[420px] w-auto max-w-full -translate-y-[40px] object-contain"
+            loading="lazy"
+          />
         </div>
 
         <div className="flex flex-col gap-[22px]">
