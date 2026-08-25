@@ -63,13 +63,13 @@ export function UrgentCareContent() {
         <img
           src={pediatricImage}
           alt={t("servicePage.urgentCare.pairAlt.pediatric")}
-          className="block aspect-[4/3] w-full rounded-[14px] object-cover"
+          className="block aspect-[4/3] w-full rounded-[14px] object-cover object-center"
           loading="lazy"
         />
         <img
           src={labImage}
           alt={t("servicePage.urgentCare.pairAlt.lab")}
-          className="block aspect-[4/3] w-full rounded-[14px] object-cover"
+          className="block aspect-[4/3] w-full rounded-[14px] object-cover object-[55%_center]"
           loading="lazy"
         />
       </div>
