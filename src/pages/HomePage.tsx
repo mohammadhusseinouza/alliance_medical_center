@@ -6,6 +6,7 @@ import { HeroInfoCards } from "../sections/home/HeroInfoCards";
 import { Services } from "../sections/home/Services";
 import { About } from "../sections/home/About";
 import { Care } from "../sections/home/Care";
+import { WorkplaceHealth } from "../sections/home/WorkplaceHealth";
 import { Team } from "../sections/home/Team";
 import { AppointmentReferral } from "../sections/home/AppointmentReferral";
 import { ReachUs } from "../sections/home/ReachUs";
@@ -28,6 +29,7 @@ export function HomePage() {
         <Services />
         <About />
         <Care />
+        <WorkplaceHealth />
         <Team />
         <AppointmentReferral />
         <ReachUs />

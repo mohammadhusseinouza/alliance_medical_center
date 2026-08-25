@@ -225,6 +225,36 @@ export const es: TranslationResource = {
       },
     },
   },
+  workplaceHealth: {
+    eyebrow: "Para Empleadores",
+    heading: "Soluciones de Salud Laboral",
+    description:
+      "Servicios integrales de salud ocupacional para mantener a su equipo seguro, saludable y productivo.",
+    imagePlaceholder: "Marcador de Imagen",
+    cta: "Explorar Todos los Servicios",
+    items: {
+      physicalExams: {
+        title: "Exámenes Físicos",
+        description: "Exámenes previos al empleo, físicos DOT y evaluaciones de regreso al trabajo.",
+      },
+      injuryCare: {
+        title: "Atención de Lesiones",
+        description: "Tratamiento inmediato y manejo de casos para lesiones laborales.",
+      },
+      drugTesting: {
+        title: "Pruebas de Drogas",
+        description: "Pruebas de 5 y 10 paneles, y de alcohol en aliento con resultados rápidos.",
+      },
+      telemedicine: {
+        title: "Telemedicina",
+        description: "Consultas virtuales para un acceso conveniente a la atención ocupacional.",
+      },
+      wellnessPrograms: {
+        title: "Programas de Bienestar",
+        description: "Apoyo preventivo de bienestar laboral para un equipo más saludable.",
+      },
+    },
+  },
   team: {
     eyebrow: "Nuestro Equipo",
     heading: "Conozca a Nuestro Equipo Médico Experto",

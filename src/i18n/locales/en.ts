@@ -225,6 +225,36 @@ export const en = {
       },
     },
   },
+  workplaceHealth: {
+    eyebrow: "For Employers",
+    heading: "Workplace Health Solutions",
+    description:
+      "Comprehensive occupational health services to keep your team safe, healthy, and productive.",
+    imagePlaceholder: "Image Placeholder",
+    cta: "Explore All Services",
+    items: {
+      physicalExams: {
+        title: "Physical Exams",
+        description: "Pre-employment, DOT physicals, and return-to-work evaluations.",
+      },
+      injuryCare: {
+        title: "Injury Care",
+        description: "Immediate treatment and case management for work-related injuries.",
+      },
+      drugTesting: {
+        title: "Drug Testing",
+        description: "5-panel, 10-panel, and breath alcohol testing with fast results.",
+      },
+      telemedicine: {
+        title: "Telemedicine",
+        description: "Virtual consultations for convenient access to occupational care.",
+      },
+      wellnessPrograms: {
+        title: "Wellness Programs",
+        description: "Preventive workplace wellness support for a healthier team.",
+      },
+    },
+  },
   team: {
     eyebrow: "Our Team",
     heading: "Meet Our Expert Medical Team",
