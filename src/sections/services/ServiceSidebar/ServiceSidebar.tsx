@@ -8,6 +8,7 @@ import { SERVICES } from "../../home/Services/services.data";
 import { ServiceSidebarCta } from "./ServiceSidebarCta";
 
 const ACTIVE_SERVICE_ID = "urgent-care";
+const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
 
 export function ServiceSidebar() {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ export function ServiceSidebar() {
           {t("services.eyebrow")}
         </h2>
         <div className="flex flex-col gap-2">
-          {SERVICES.map((service) => {
+          {SERVICES.filter((service) => service.id !== OCCUPATIONAL_HEALTH_SERVICE_ID).map((service) => {
             const label = t(`services.items.${service.translationKey}.title`);
             const labelClassName = service.titleNoWrap ? "whitespace-nowrap" : undefined;
 
