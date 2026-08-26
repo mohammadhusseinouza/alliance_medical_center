@@ -8,6 +8,7 @@ const PAGE_BY_CANONICAL_PATH: Record<string, string> = {
   "/services/urgent-care": "urgentCare",
   "/services/diagnostic-services": "diagnosticServices",
   "/services/womens-health": "womensHealth",
+  "/services/pediatric-care": "pediatricCare",
   "/occupational-health": "occupationalHealth",
 };
 

@@ -369,6 +369,93 @@ export const en = {
       portraitAlt: "Female healthcare provider ready to help patients",
     },
   },
+  pediatricCare: {
+    hero: {
+      imageAlt: "Pediatrician warmly interacting with a child and parent in a bright exam room",
+    },
+    mainPhotoAlt: "Pediatrician warmly interacting with a child and parent in a bright exam room",
+    heading: "Specialized Healthcare for Children and Adolescents",
+    intro:
+      "Our pediatric care services provide comprehensive medical care for infants, children, and teenagers in a child-friendly environment. From routine checkups and immunizations to illness treatment, developmental monitoring, and adolescent health support, our team is here to help children stay healthy at every stage of growth.",
+    whatsIncluded: "What's Included",
+    benefits: {
+      regularCheckups: "Regular checkups",
+      growthTracking: "Growth tracking",
+      immunizations: "Childhood immunizations",
+      developmentalScreening: "Developmental screening",
+      schoolPhysicals: "School physicals",
+      commonIllnesses: "Treatment for common illnesses",
+      respiratoryCare: "Respiratory care",
+      skinConditions: "Skin condition treatment",
+      digestiveProblems: "Digestive problem care",
+      minorInjuries: "Minor injury treatment",
+      teenHealthExams: "Teen health exams",
+      mentalHealthSupport: "Mental health support",
+      sportsMedicine: "Sports medicine",
+      nutritionCounseling: "Nutrition counseling",
+    },
+    whyChoose: {
+      heading: "Why Choose Our Pediatric Care Services?",
+      items: {
+        childFriendly: "Child-friendly environment",
+        specialists: "Pediatric specialists",
+        parentEducation: "Parent education resources",
+        flexibleScheduling: "Flexible appointment times",
+        immunizationRecords: "Electronic immunization records",
+        schoolCoordination: "Coordination with schools",
+      },
+    },
+    comprehensive: {
+      heading: "Comprehensive Pediatric Care You Can Trust",
+      description:
+        "We provide preventive, diagnostic, and everyday medical care for children and adolescents in a comfortable environment designed to support both young patients and their families. Our approach combines routine health monitoring, illness treatment, developmental support, and parent education.",
+    },
+    pairAlt: {
+      examination: "Pediatric physician performing a routine health examination on a young child with a parent present",
+      wellness: "Healthcare professional interacting with a child during a pediatric wellness assessment",
+    },
+    faq: {
+      eyebrow: "Frequently Asked Questions",
+      items: {
+        services: {
+          question: "What pediatric services do you provide?",
+          answer:
+            "We provide regular checkups, growth monitoring, immunizations, developmental screenings, school physicals, treatment for common illnesses, respiratory care, skin and digestive condition treatment, teen health exams, sports medicine, mental health support, and nutrition counseling.",
+        },
+        ages: {
+          question: "What ages do you treat?",
+          answer:
+            "Our pediatric care services are designed for infants, children, and adolescents, providing age-appropriate care throughout childhood and the teenage years.",
+        },
+        immunizations: {
+          question: "Do you provide childhood immunizations?",
+          answer:
+            "Yes. We provide routine childhood vaccinations and boosters according to recommended immunization schedules and maintain electronic immunization records when applicable.",
+        },
+        illnessesInjuries: {
+          question: "Can you treat common childhood illnesses and minor injuries?",
+          answer:
+            "Yes. Our pediatric team can evaluate and treat common conditions such as colds, flu, fever, ear infections, asthma symptoms, rashes, stomach problems, and minor injuries.",
+        },
+        hours: {
+          question: "What are your hours of operation?",
+          answer:
+            "We're open 7 days a week. Monday – Friday: 9:00 AM – 8:00 PM. Saturday – Sunday: 12:00 PM – 6:00 PM. Starting September 1, weekend hours are 10:00 AM – 6:00 PM.",
+        },
+        moreInformation: {
+          question: "Need More Information?",
+          answer:
+            "If you have additional questions about our pediatric care services or need help choosing the right appointment for your child, contact our friendly team at {{phone}}. We are happy to help.",
+        },
+      },
+    },
+    sidebarCta: {
+      heading: "Ready To Get Expert Care?",
+      description:
+        "Specialized healthcare for infants, children, and adolescents in a welcoming, child-friendly environment.",
+      portraitAlt: "Pediatric healthcare provider ready to help patients",
+    },
+  },
   about: {
     eyebrow: "About Us",
     headingLine1: "Complete Care,",
@@ -833,6 +920,11 @@ export const en = {
       title: "Women's Health Services — AccessNow Care",
       description:
         "Comprehensive women's health services in Portage, Michigan, including preventive care, prenatal care, and wellness management.",
+    },
+    pediatricCare: {
+      title: "Pediatric Care Services — AccessNow Care",
+      description:
+        "Specialized healthcare for infants, children, and adolescents in Portage, Michigan, including checkups, immunizations, and illness treatment.",
     },
   },
 } as const;

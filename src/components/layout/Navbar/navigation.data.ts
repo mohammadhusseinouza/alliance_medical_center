@@ -14,6 +14,7 @@ const DEDICATED_SERVICE_HREFS: Record<string, string> = {
   "urgent-care": SITE.urgentCareHref,
   "diagnostic-services": SITE.diagnosticServicesHref,
   "womens-health": SITE.womensHealthHref,
+  "pediatric-care": SITE.pediatricCareHref,
 };
 
 export interface NavDropdownItem {

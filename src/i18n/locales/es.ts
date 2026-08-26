@@ -372,6 +372,94 @@ export const es: TranslationResource = {
       portraitAlt: "Profesional de la salud femenina lista para ayudar a las pacientes",
     },
   },
+  pediatricCare: {
+    hero: {
+      imageAlt: "Pediatra interactuando cálidamente con un niño y su padre/madre en un consultorio luminoso",
+    },
+    mainPhotoAlt: "Pediatra interactuando cálidamente con un niño y su padre/madre en un consultorio luminoso",
+    heading: "Atención Médica Especializada para Niños y Adolescentes",
+    intro:
+      "Nuestros servicios de atención pediátrica ofrecen cuidado médico integral para bebés, niños y adolescentes en un entorno amigable para niños. Desde chequeos de rutina e inmunizaciones hasta tratamiento de enfermedades, monitoreo del desarrollo y apoyo en la salud adolescente, nuestro equipo está aquí para ayudar a los niños a mantenerse saludables en cada etapa de su crecimiento.",
+    whatsIncluded: "Qué Incluye",
+    benefits: {
+      regularCheckups: "Chequeos regulares",
+      growthTracking: "Seguimiento del crecimiento",
+      immunizations: "Inmunizaciones infantiles",
+      developmentalScreening: "Evaluación del desarrollo",
+      schoolPhysicals: "Exámenes físicos escolares",
+      commonIllnesses: "Tratamiento de enfermedades comunes",
+      respiratoryCare: "Atención respiratoria",
+      skinConditions: "Tratamiento de afecciones de la piel",
+      digestiveProblems: "Atención de problemas digestivos",
+      minorInjuries: "Tratamiento de lesiones menores",
+      teenHealthExams: "Exámenes de salud para adolescentes",
+      mentalHealthSupport: "Apoyo de salud mental",
+      sportsMedicine: "Medicina deportiva",
+      nutritionCounseling: "Asesoramiento nutricional",
+    },
+    whyChoose: {
+      heading: "¿Por Qué Elegir Nuestros Servicios de Atención Pediátrica?",
+      items: {
+        childFriendly: "Entorno amigable para niños",
+        specialists: "Especialistas pediátricos",
+        parentEducation: "Recursos educativos para padres",
+        flexibleScheduling: "Horarios de citas flexibles",
+        immunizationRecords: "Registros electrónicos de inmunización",
+        schoolCoordination: "Coordinación con las escuelas",
+      },
+    },
+    comprehensive: {
+      heading: "Atención Pediátrica Integral en la que Puede Confiar",
+      description:
+        "Ofrecemos atención médica preventiva, diagnóstica y cotidiana para niños y adolescentes en un entorno cómodo diseñado para apoyar tanto a los jóvenes pacientes como a sus familias. Nuestro enfoque combina el monitoreo de salud de rutina, el tratamiento de enfermedades, el apoyo al desarrollo y la educación para padres.",
+    },
+    pairAlt: {
+      examination:
+        "Pediatra realizando un examen de salud de rutina a un niño pequeño con un padre presente",
+      wellness: "Profesional de la salud interactuando con un niño durante una evaluación pediátrica de bienestar",
+    },
+    faq: {
+      eyebrow: "Preguntas Frecuentes",
+      items: {
+        services: {
+          question: "¿Qué servicios pediátricos ofrecen?",
+          answer:
+            "Ofrecemos chequeos regulares, monitoreo del crecimiento, inmunizaciones, evaluaciones del desarrollo, exámenes físicos escolares, tratamiento de enfermedades comunes, atención respiratoria, tratamiento de afecciones de la piel y problemas digestivos, exámenes de salud para adolescentes, medicina deportiva, apoyo de salud mental y asesoramiento nutricional.",
+        },
+        ages: {
+          question: "¿Qué edades atienden?",
+          answer:
+            "Nuestros servicios de atención pediátrica están diseñados para bebés, niños y adolescentes, brindando atención apropiada para cada edad durante la infancia y la adolescencia.",
+        },
+        immunizations: {
+          question: "¿Ofrecen inmunizaciones infantiles?",
+          answer:
+            "Sí. Ofrecemos vacunas infantiles de rutina y refuerzos según los calendarios de inmunización recomendados, y mantenemos registros electrónicos de inmunización cuando corresponde.",
+        },
+        illnessesInjuries: {
+          question: "¿Pueden tratar enfermedades infantiles comunes y lesiones menores?",
+          answer:
+            "Sí. Nuestro equipo pediátrico puede evaluar y tratar afecciones comunes como resfriados, gripe, fiebre, infecciones de oído, síntomas de asma, sarpullidos, problemas estomacales y lesiones menores.",
+        },
+        hours: {
+          question: "¿Cuál es su horario de atención?",
+          answer:
+            "Estamos abiertos los 7 días de la semana. Lunes – Viernes: 9:00 AM – 8:00 PM. Sábado – Domingo: 12:00 PM – 6:00 PM. A partir del 1 de septiembre, el horario de fin de semana será de 10:00 AM – 6:00 PM.",
+        },
+        moreInformation: {
+          question: "¿Necesita Más Información?",
+          answer:
+            "Si tiene preguntas adicionales sobre nuestros servicios de atención pediátrica o necesita ayuda para elegir la cita adecuada para su hijo, comuníquese con nuestro equipo al {{phone}}. Estaremos encantados de ayudarle.",
+        },
+      },
+    },
+    sidebarCta: {
+      heading: "¿Listo Para Recibir Atención Experta?",
+      description:
+        "Atención especializada para bebés, niños y adolescentes en un entorno acogedor y amigable para niños.",
+      portraitAlt: "Profesional de la salud pediátrica lista para ayudar a los pacientes",
+    },
+  },
   about: {
     eyebrow: "Sobre Nosotros",
     headingLine1: "Atención Completa,",
@@ -836,6 +924,11 @@ export const es: TranslationResource = {
       title: "Servicios de Salud de la Mujer — AccessNow Care",
       description:
         "Servicios integrales de salud de la mujer en Portage, Michigan, incluyendo atención preventiva, atención prenatal y manejo del bienestar.",
+    },
+    pediatricCare: {
+      title: "Servicios de Atención Pediátrica — AccessNow Care",
+      description:
+        "Atención médica especializada para bebés, niños y adolescentes en Portage, Michigan, incluyendo chequeos, inmunizaciones y tratamiento de enfermedades.",
     },
   },
 };

@@ -13,6 +13,7 @@ const DEDICATED_SERVICE_HREFS: Record<string, string> = {
   "occupational-health": SITE.occupationalHealthHref,
   "diagnostic-services": SITE.diagnosticServicesHref,
   "womens-health": SITE.womensHealthHref,
+  "pediatric-care": SITE.pediatricCareHref,
 };
 
 export const FOOTER_CONTACT_ROWS: FooterContactRow[] = [
