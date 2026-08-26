@@ -4,12 +4,14 @@ import { BookAppointmentPage } from "./pages/BookAppointmentPage";
 import { UrgentCarePage } from "./pages/UrgentCarePage";
 import { OccupationalHealthPage } from "./pages/OccupationalHealthPage";
 import { useScrollToHash } from "./hooks/useScrollToHash";
+import { useScrollToTop } from "./hooks/useScrollToTop";
 import { useDocumentMeta } from "./hooks/useDocumentMeta";
 import { useLanguageSync } from "./i18n/useLanguage";
 
 function AppRoutes() {
   useLanguageSync();
   useScrollToHash();
+  useScrollToTop();
   useDocumentMeta();
 
   return (
