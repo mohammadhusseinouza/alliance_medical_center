@@ -1,0 +1,1 @@
+export { DotPhysicalExaminations } from "./DotPhysicalExaminations";

@@ -255,6 +255,194 @@ export const es: TranslationResource = {
       },
     },
   },
+  occupationalHealth: {
+    eyebrow: "Para Empleadores",
+    heading: "Medicina Ocupacional",
+    description:
+      "Nuestro programa de medicina ocupacional ofrece servicios de salud integrales diseñados en función de las necesidades de los empleadores y su fuerza laboral. Ayudamos a fomentar un lugar de trabajo más seguro y saludable mediante exámenes convenientes, pruebas, atención de lesiones laborales y servicios continuos de salud para empleados.",
+    imageAlt: "Clínico de salud ocupacional conversando con un empleado",
+    benefits: {
+      preEmployment: {
+        title: "Exámenes Previos al Empleo",
+        description: "Evaluaciones de salud que ayudan a determinar la aptitud para el puesto.",
+      },
+      returnToWork: {
+        title: "Evaluaciones de Regreso al Trabajo",
+        description: "Evaluaciones médicas que respaldan un regreso seguro a las funciones laborales.",
+      },
+      injuryCare: {
+        title: "Atención de Lesiones Laborales",
+        description: "Evaluación y tratamiento oportunos para lesiones relacionadas con el trabajo.",
+      },
+      surveillance: {
+        title: "Vigilancia Médica",
+        description: "Monitoreo continuo de la salud laboral y atención preventiva.",
+      },
+    },
+    services: {
+      eyebrow: "Atención Ocupacional",
+      heading: "Servicios de Salud Laboral",
+      description:
+        "Servicios médicos esenciales diseñados para apoyar la salud de los empleados, la seguridad laboral y los requisitos del empleador.",
+      items: {
+        preEmployment: {
+          title: "Exámenes Previos al Empleo",
+          description:
+            "Exámenes integrales para ayudar a determinar si los candidatos están físicamente preparados para las responsabilidades del puesto.",
+          features: {
+            healthAssessment: "Evaluación de salud",
+            visionHearing: "Pruebas de visión y audición",
+            jobSpecific: "Evaluación específica del puesto",
+          },
+        },
+        drugTesting: {
+          title: "Servicios de Pruebas de Drogas",
+          description:
+            "Pruebas convenientes de drogas y alcohol en el lugar de trabajo, con procedimientos profesionales y resultados oportunos.",
+          features: {
+            fivePanel: "Prueba de 5 paneles",
+            tenPanel: "Prueba de 10 paneles",
+            breathAlcohol: "Prueba de alcohol en aliento",
+          },
+        },
+        dotPhysical: {
+          title: "Exámenes Físicos DOT",
+          description:
+            "Exámenes físicos para conductores comerciales que respaldan los requisitos de certificación médica DOT.",
+          features: {
+            certified: "Exámenes certificados",
+            visionHearing: "Revisiones de visión y audición",
+            medicalHistory: "Revisión del historial médico",
+          },
+        },
+        telemedicine: {
+          title: "Servicios de Telemedicina",
+          description:
+            "Consultas virtuales de salud ocupacional que brindan acceso conveniente a atención médica para los empleados.",
+          features: {
+            remoteSupport: "Apoyo para trabajadores remotos",
+            followUp: "Consultas de seguimiento",
+            access: "Acceso conveniente a la atención",
+          },
+        },
+      },
+    },
+    injuryCare: {
+      heading: "Atención de Lesiones Laborales",
+      description:
+        "Atención rápida y profesional para lesiones relacionadas con el trabajo, enfocada en ayudar a los empleados a recuperarse de forma segura y regresar al trabajo con confianza.",
+      benefits: {
+        immediateEvaluation: "Evaluación Inmediata de Lesiones",
+        caseManagement: "Manejo de Casos",
+        rehabilitation: "Apoyo de Rehabilitación",
+        followUp: "Atención de Seguimiento",
+      },
+    },
+    exams: {
+      heading: "Exámenes Físicos, Pruebas y Detecciones",
+      description:
+        "Exámenes médicos laborales convenientes y servicios de detección para la salud de los empleados y los requisitos ocupacionales.",
+      items: {
+        preEmployment: {
+          title: "Exámenes Previos al Empleo",
+          description: "Confirme que los candidatos estén aptos y listos para el puesto.",
+        },
+        fitForDuty: {
+          title: "Exámenes de Aptitud Laboral",
+          description: "Confirme que un empleado pueda realizar sus funciones de forma segura.",
+        },
+        returnToWork: {
+          title: "Evaluaciones de Regreso al Trabajo",
+          description: "Evaluaciones claras y objetivas antes de un regreso seguro a las funciones laborales.",
+        },
+        respirator: {
+          title: "Exámenes Médicos para Respiradores",
+          description: "Evaluaciones de aptitud para el uso de respiradores en el trabajo.",
+        },
+        surveillance: {
+          title: "Detecciones de Vigilancia",
+          description: "Monitoreo continuo para puestos con riesgos de exposición ocupacional.",
+        },
+        laboratory: {
+          title: "Pruebas de Laboratorio",
+          description: "Trabajo de laboratorio en el mismo lugar para respaldar exámenes y detecciones.",
+        },
+      },
+    },
+    drugTesting: {
+      heading: "Servicios de Pruebas de Drogas",
+      description:
+        "Servicios de pruebas de drogas y alcohol en el lugar de trabajo, diseñados para respaldar la contratación, la seguridad y los programas de pruebas del empleador.",
+      items: {
+        fivePanel: {
+          title: "Prueba de 5 Paneles",
+          description: "Detección estándar de sustancias comunes.",
+        },
+        tenPanel: {
+          title: "Prueba de 10 Paneles",
+          description: "Detección ampliada para un panel de sustancias más amplio.",
+        },
+        breathAlcohol: {
+          title: "Prueba de Alcohol en Aliento",
+          description: "Prueba de alcohol en el mismo lugar con resultados rápidos.",
+        },
+      },
+    },
+    dotPhysical: {
+      heading: "Exámenes Físicos DOT",
+      description:
+        "Exámenes médicos ocupacionales para conductores comerciales, diseñados para respaldar los requisitos de certificación médica DOT.",
+      includesLabel: "El Examen Físico DOT Incluye",
+      includes: {
+        medicalHistory: "Revisión del historial médico",
+        vision: "Prueba de visión",
+        hearing: "Evaluación de audición",
+        bloodPressure: "Control de presión arterial",
+        physicalExam: "Examen físico",
+        medicalCertification: "Certificación médica",
+      },
+    },
+    telemedicine: {
+      heading: "Servicios de Telemedicina",
+      description:
+        "Consultas de atención médica virtual que llevan el apoyo de medicina ocupacional a los empleados donde sea que se encuentren.",
+      benefits: {
+        immediateAccess: "Acceso Inmediato a la Atención",
+        remoteWorkforce: "Apoyo para Trabajadores Remotos",
+        convenientFollowUp: "Seguimiento Conveniente",
+      },
+    },
+    additionalServices: {
+      heading: "Servicios de Salud Adicionales",
+      description: "Opciones de atención adicionales que apoyan a los empleados y sus familias.",
+      items: {
+        sports: {
+          title: "Exámenes Físicos Deportivos",
+          description: "Mantenga a los atletas saludables y listos para la temporada.",
+        },
+        school: {
+          title: "Exámenes Físicos Escolares",
+          description: "Cumpla con los requisitos escolares y apoye el éxito estudiantil.",
+        },
+        vaccinations: {
+          title: "Vacunas e Inmunizaciones",
+          description: "Proteja a su equipo y mantenga las enfermedades fuera del lugar de trabajo.",
+        },
+      },
+    },
+    cta: {
+      heading: "Sea Nuestro Aliado en Salud Laboral",
+      description:
+        "Permítanos ayudarle a crear un lugar de trabajo más seguro, saludable y productivo con servicios de salud ocupacional confiables.",
+      requestConsultation: "Solicitar Consulta",
+      call: "Llamar",
+      support: {
+        experiencedTeam: "Equipo Médico con Experiencia",
+        trustedReliable: "Confiable. Cumple con las Normas. Seguro.",
+        fastAppointments: "Citas y Resultados Rápidos",
+      },
+    },
+  },
   team: {
     eyebrow: "Nuestro Equipo",
     heading: "Conozca a Nuestro Equipo Médico Experto",
@@ -421,6 +609,11 @@ export const es: TranslationResource = {
       title: "Atención de Urgencias — AccessNow Care",
       description:
         "Atención de urgencias el mismo día en Portage, Michigan. Aceptamos pacientes sin cita, los 7 días de la semana de 12:00 PM a 8:00 PM. Conozca qué incluye una visita.",
+    },
+    occupationalHealth: {
+      title: "Salud Ocupacional — AccessNow Care",
+      description:
+        "Medicina ocupacional y servicios de salud laboral en Portage, Michigan, incluyendo exámenes físicos, atención de lesiones y programas de salud para empleados.",
     },
   },
 };

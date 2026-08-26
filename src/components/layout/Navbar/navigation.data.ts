@@ -4,6 +4,7 @@ import type { Language, TranslateFn } from "../../../i18n/types";
 import { SITE } from "../../../lib/constants";
 
 const URGENT_CARE_SERVICE_ID = "urgent-care";
+const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
 
 export interface NavDropdownItem {
   label: string;
@@ -22,7 +23,9 @@ export function buildNavItems(t: TranslateFn, language: Language): NavItem[] {
     href:
       service.id === URGENT_CARE_SERVICE_ID
         ? withLocale(SITE.urgentCareHref, language)
-        : withLocale(`/#${service.id}`, language),
+        : service.id === OCCUPATIONAL_HEALTH_SERVICE_ID
+          ? withLocale(SITE.occupationalHealthHref, language)
+          : withLocale(`/#${service.id}`, language),
   }));
 
   return [

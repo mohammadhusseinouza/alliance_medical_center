@@ -255,6 +255,193 @@ export const en = {
       },
     },
   },
+  occupationalHealth: {
+    eyebrow: "For Employers",
+    heading: "Occupational Medicine",
+    description:
+      "Our occupational medicine program provides comprehensive healthcare services designed around the needs of employers and their workforce. We help support a safer, healthier workplace through convenient examinations, testing, work-related injury care, and ongoing employee health services.",
+    imageAlt: "Occupational health clinician consulting with a workplace employee",
+    benefits: {
+      preEmployment: {
+        title: "Pre-Employment Physicals",
+        description: "Health evaluations that help determine job readiness.",
+      },
+      returnToWork: {
+        title: "Return-to-Work Evaluations",
+        description: "Medical assessments supporting a safe return to duty.",
+      },
+      injuryCare: {
+        title: "Workplace Injury Care",
+        description: "Prompt evaluation and treatment for work-related injuries.",
+      },
+      surveillance: {
+        title: "Medical Surveillance",
+        description: "Ongoing workplace health monitoring and preventive care.",
+      },
+    },
+    services: {
+      eyebrow: "Occupational Care",
+      heading: "Workplace Health Services",
+      description:
+        "Essential medical services designed to support employee health, workplace safety, and employer requirements.",
+      items: {
+        preEmployment: {
+          title: "Pre-Employment Physicals",
+          description:
+            "Comprehensive examinations to help determine whether candidates are physically ready for job responsibilities.",
+          features: {
+            healthAssessment: "Health assessment",
+            visionHearing: "Vision & hearing tests",
+            jobSpecific: "Job-specific evaluation",
+          },
+        },
+        drugTesting: {
+          title: "Drug Testing Services",
+          description:
+            "Convenient workplace drug and alcohol testing with professional testing procedures and timely results.",
+          features: {
+            fivePanel: "5-panel screening",
+            tenPanel: "10-panel screening",
+            breathAlcohol: "Breath alcohol testing",
+          },
+        },
+        dotPhysical: {
+          title: "DOT Physical Examinations",
+          description: "Commercial driver physical examinations supporting DOT medical certification requirements.",
+          features: {
+            certified: "Certified examinations",
+            visionHearing: "Vision & hearing checks",
+            medicalHistory: "Medical history review",
+          },
+        },
+        telemedicine: {
+          title: "Telemedicine Services",
+          description:
+            "Virtual occupational-health consultations that provide convenient access to medical care for employees.",
+          features: {
+            remoteSupport: "Remote workforce support",
+            followUp: "Follow-up consultations",
+            access: "Convenient access to care",
+          },
+        },
+      },
+    },
+    injuryCare: {
+      heading: "Workplace Injury Care",
+      description:
+        "Prompt, professional care for work-related injuries with a focus on helping employees recover safely and return to work confidently.",
+      benefits: {
+        immediateEvaluation: "Immediate Injury Evaluation",
+        caseManagement: "Case Management",
+        rehabilitation: "Rehabilitation Support",
+        followUp: "Follow-Up Care",
+      },
+    },
+    exams: {
+      heading: "Physical Exams, Tests & Screenings",
+      description:
+        "Convenient workplace medical examinations and screening services for employee health and occupational requirements.",
+      items: {
+        preEmployment: {
+          title: "Pre-Employment Physicals",
+          description: "Confirm candidates are fit and ready for the role.",
+        },
+        fitForDuty: {
+          title: "Fit-for-Duty Exams",
+          description: "Confirm an employee can safely perform job duties.",
+        },
+        returnToWork: {
+          title: "Return-to-Work Evaluations",
+          description: "Clear, objective assessments before a safe return to duty.",
+        },
+        respirator: {
+          title: "Respirator Medical Exams",
+          description: "Clearance evaluations for respirator use on the job.",
+        },
+        surveillance: {
+          title: "Surveillance Screenings",
+          description: "Ongoing monitoring for roles with occupational exposure risks.",
+        },
+        laboratory: {
+          title: "Laboratory Testing",
+          description: "On-site lab work to support exams and screenings.",
+        },
+      },
+    },
+    drugTesting: {
+      heading: "Drug Testing Services",
+      description:
+        "Workplace drug and alcohol testing services designed to support hiring, safety, and employer testing programs.",
+      items: {
+        fivePanel: {
+          title: "5-Panel Drug Screen",
+          description: "Standard screening for common substances.",
+        },
+        tenPanel: {
+          title: "10-Panel Drug Screen",
+          description: "Expanded screening for a broader substance panel.",
+        },
+        breathAlcohol: {
+          title: "Breath Alcohol Testing",
+          description: "On-site alcohol testing with fast results.",
+        },
+      },
+    },
+    dotPhysical: {
+      heading: "DOT Physical Examinations",
+      description:
+        "Occupational medical examinations for commercial drivers designed to support DOT medical certification requirements.",
+      includesLabel: "DOT Physical Includes",
+      includes: {
+        medicalHistory: "Medical history review",
+        vision: "Vision testing",
+        hearing: "Hearing evaluation",
+        bloodPressure: "Blood pressure check",
+        physicalExam: "Physical examination",
+        medicalCertification: "Medical certification",
+      },
+    },
+    telemedicine: {
+      heading: "Telemedicine Services",
+      description:
+        "Virtual healthcare consultations that bring occupational medicine support to employees wherever they are.",
+      benefits: {
+        immediateAccess: "Immediate Access to Care",
+        remoteWorkforce: "Remote Workforce Support",
+        convenientFollowUp: "Convenient Follow-Up",
+      },
+    },
+    additionalServices: {
+      heading: "Additional Health Services",
+      description: "Additional care options supporting employees and their families.",
+      items: {
+        sports: {
+          title: "Sports Physicals",
+          description: "Keep athletes healthy and ready for the season.",
+        },
+        school: {
+          title: "School Physicals",
+          description: "Meet school requirements and support student success.",
+        },
+        vaccinations: {
+          title: "Vaccinations & Immunizations",
+          description: "Protect your team and keep sickness out of the workplace.",
+        },
+      },
+    },
+    cta: {
+      heading: "Partner With Us for Workplace Health",
+      description:
+        "Let us help you create a safer, healthier, and more productive workplace with trusted occupational health services.",
+      requestConsultation: "Request Consultation",
+      call: "Call",
+      support: {
+        experiencedTeam: "Experienced Medical Team",
+        trustedReliable: "Trusted. Compliant. Reliable.",
+        fastAppointments: "Fast Appointments & Results",
+      },
+    },
+  },
   team: {
     eyebrow: "Our Team",
     heading: "Meet Our Expert Medical Team",
@@ -421,6 +608,11 @@ export const en = {
       title: "Urgent Care Services — AccessNow Care",
       description:
         "Same-day urgent care in Portage, Michigan. Walk-ins welcome, 7 days a week from 12:00 PM to 8:00 PM. See what's included in a visit.",
+    },
+    occupationalHealth: {
+      title: "Occupational Health — AccessNow Care",
+      description:
+        "Occupational medicine and workplace health services in Portage, Michigan, including physicals, injury care, and employee health programs.",
     },
   },
 } as const;

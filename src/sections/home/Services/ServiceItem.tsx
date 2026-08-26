@@ -17,6 +17,7 @@ import { SITE } from "../../../lib/constants";
 import type { ServiceIconName, ServiceItem as ServiceItemData } from "./Services.types";
 
 const URGENT_CARE_SERVICE_ID = "urgent-care";
+const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
 
 const iconClass =
   "mb-[22px] transition-transform duration-[280ms] ease group-hover:-translate-y-[5px] group-hover:scale-[1.045] motion-reduce:duration-[0.01ms]";
@@ -58,6 +59,12 @@ export function ServiceItem({ service }: ServiceItemProps) {
       className="transition-transform duration-[220ms] ease group-hover:translate-x-[5px] motion-reduce:duration-[0.01ms]"
     />
   );
+  const dedicatedHref =
+    service.id === URGENT_CARE_SERVICE_ID
+      ? SITE.urgentCareHref
+      : service.id === OCCUPATIONAL_HEALTH_SERVICE_ID
+        ? SITE.occupationalHealthHref
+        : null;
 
   return (
     <div
@@ -75,8 +82,8 @@ export function ServiceItem({ service }: ServiceItemProps) {
       <p className="mt-3 max-w-[245px] text-[14px] leading-[1.55] text-[#61758A] mw-650:max-w-none">
         {t(`services.items.${service.translationKey}.description`)}
       </p>
-      {service.id === URGENT_CARE_SERVICE_ID ? (
-        <Link to={withLocale(SITE.urgentCareHref, language)} className={exploreClassName}>
+      {dedicatedHref ? (
+        <Link to={withLocale(dedicatedHref, language)} className={exploreClassName}>
           {t("services.exploreService")}
           {exploreArrow}
         </Link>

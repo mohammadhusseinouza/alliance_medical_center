@@ -4,6 +4,9 @@ import { SERVICES } from "../../../sections/home/Services/services.data";
 import { SITE } from "../../../lib/constants";
 import type { FooterContactRow, FooterLink } from "./Footer.types";
 
+const URGENT_CARE_SERVICE_ID = "urgent-care";
+const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
+
 export const FOOTER_CONTACT_ROWS: FooterContactRow[] = [
   {
     id: "address",
@@ -46,7 +49,12 @@ export const FOOTER_CONTACT_ROWS: FooterContactRow[] = [
 export function buildFooterServiceLinks(t: TranslateFn, language: Language): FooterLink[] {
   return SERVICES.map((service) => ({
     label: t(`services.items.${service.translationKey}.title`),
-    href: withLocale(`/#${service.id}`, language),
+    href:
+      service.id === URGENT_CARE_SERVICE_ID
+        ? withLocale(SITE.urgentCareHref, language)
+        : service.id === OCCUPATIONAL_HEALTH_SERVICE_ID
+          ? withLocale(SITE.occupationalHealthHref, language)
+          : withLocale(`/#${service.id}`, language),
   }));
 }
 
