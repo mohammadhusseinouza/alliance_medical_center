@@ -3,8 +3,17 @@ import { withLocale } from "../../../i18n/routing";
 import type { Language, TranslateFn } from "../../../i18n/types";
 import { SITE } from "../../../lib/constants";
 
-const URGENT_CARE_SERVICE_ID = "urgent-care";
 const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
+
+/**
+ * Services with their own dedicated route instead of a Home-page anchor.
+ * Occupational Health isn't listed here — it's filtered out of this dropdown
+ * entirely and lives as its own top-level Navbar item.
+ */
+const DEDICATED_SERVICE_HREFS: Record<string, string> = {
+  "urgent-care": SITE.urgentCareHref,
+  "diagnostic-services": SITE.diagnosticServicesHref,
+};
 
 export interface NavDropdownItem {
   label: string;
@@ -31,10 +40,7 @@ export function buildNavItems(t: TranslateFn, language: Language): NavItem[] {
     (service) => service.id !== OCCUPATIONAL_HEALTH_SERVICE_ID,
   ).map((service) => ({
     label: t(`services.items.${service.translationKey}.title`),
-    href:
-      service.id === URGENT_CARE_SERVICE_ID
-        ? withLocale(SITE.urgentCareHref, language)
-        : withLocale(`/#${service.id}`, language),
+    href: withLocale(DEDICATED_SERVICE_HREFS[service.id] ?? `/#${service.id}`, language),
   }));
 
   return [

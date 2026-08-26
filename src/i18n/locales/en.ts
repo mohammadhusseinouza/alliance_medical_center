@@ -163,6 +163,137 @@ export const en = {
       },
     },
   },
+  diagnosticServices: {
+    hero: {
+      imageAlt: "Diagnostic imaging technician preparing a patient for a scan",
+    },
+    content: {
+      heading: "Diagnostic Services",
+      subheading: "Advanced testing and imaging for accurate diagnosis",
+      description:
+        "Our diagnostic services provide comprehensive testing and imaging capabilities to help diagnose and monitor your health conditions.",
+      mainPhotoAlt: "Diagnostic imaging technician preparing a patient for a scan",
+      pairAlt: {
+        lab: "Laboratory technician analyzing a blood sample",
+        imaging: "Clinician performing an ultrasound examination",
+      },
+    },
+    services: {
+      heading: "Services We Offer",
+      items: {
+        bloodWork: {
+          title: "Blood Work",
+          description: "Complete blood counts, chemistry panels, and lipid profiles",
+        },
+        hormoneTesting: {
+          title: "Hormone Testing",
+          description: "Thyroid, diabetes, and reproductive hormone levels",
+        },
+        infectiousDisease: {
+          title: "Infectious Disease Testing",
+          description: "COVID-19, flu, strep, and other pathogen detection",
+        },
+        cancerMarkers: {
+          title: "Cancer Markers",
+          description: "Tumor markers and cancer screening tests",
+        },
+        allergyTesting: {
+          title: "Allergy Testing",
+          description: "Environmental and food allergy identification",
+        },
+        digitalXrays: {
+          title: "Digital X-Rays",
+          description: "High-quality bone and joint imaging",
+        },
+        ultrasound: {
+          title: "Ultrasound",
+          description: "Soft tissue and organ visualization",
+        },
+        ctScans: {
+          title: "CT Scans",
+          description: "Detailed cross-sectional body imaging",
+        },
+        mri: {
+          title: "MRI",
+          description: "Advanced magnetic resonance imaging",
+        },
+        mammography: {
+          title: "Mammography",
+          description: "Breast cancer screening and detection",
+        },
+        ekgEcg: {
+          title: "EKG/ECG",
+          description: "Heart rhythm and electrical activity monitoring",
+        },
+        stressTesting: {
+          title: "Stress Testing",
+          description: "Exercise and pharmacological stress tests",
+        },
+        echocardiogram: {
+          title: "Echocardiogram",
+          description: "Heart structure and function assessment",
+        },
+        holterMonitoring: {
+          title: "Holter Monitoring",
+          description: "24-hour continuous heart rhythm monitoring",
+        },
+      },
+    },
+    whyChoose: {
+      heading: "Why Choose Our Diagnostic Services?",
+      items: {
+        sameDay: "Same-day results available",
+        digitalImaging: "Digital imaging technology",
+        radiologists: "Board-certified radiologists",
+        electronicResults: "Electronic result delivery",
+        insurance: "Insurance coverage verification",
+        scheduling: "Convenient scheduling",
+      },
+    },
+    hours: {
+      weekdays: "Monday – Friday: 9:00 AM – 8:00 PM",
+      weekend: "Saturday – Sunday: 12:00 PM – 6:00 PM",
+      daysOpen: "Open 7 Days a Week",
+      holidays: "Open Daily – call ahead",
+      note: "Starting September 1, weekend hours expand to 10:00 AM – 6:00 PM.",
+    },
+    faq: {
+      eyebrow: "Frequently Asked Questions",
+      items: {
+        hours: {
+          question: "What are your hours of operation?",
+          answer:
+            "We're open 7 days a week. Monday – Friday: 9:00 AM – 8:00 PM. Saturday – Sunday: 12:00 PM – 6:00 PM. We're open daily on holidays — please call ahead. Starting September 1, weekend hours expand to 10:00 AM – 6:00 PM.",
+        },
+        servicesAvailable: {
+          question: "What diagnostic services are available?",
+          answer:
+            "We offer a full range of laboratory testing — including blood work, hormone testing, infectious disease testing, cancer markers, and allergy testing — along with imaging and cardiac diagnostic services such as digital X-rays, ultrasound, CT scans, MRI, mammography, EKG/ECG, stress testing, echocardiogram, and Holter monitoring.",
+        },
+        appointment: {
+          question: "Do I need an appointment?",
+          answer:
+            "Appointments can be scheduled online, and patients may call the clinic for availability and guidance.",
+        },
+        resultsTiming: {
+          question: "How quickly are results available?",
+          answer:
+            "Same-day results are available for some services. Timing may vary depending on the test or imaging service.",
+        },
+        insurance: {
+          question: "Do you accept insurance?",
+          answer:
+            "Insurance coverage verification is available. Patients should contact the clinic to confirm coverage for specific services.",
+        },
+      },
+    },
+    sidebarCta: {
+      heading: "Ready to Schedule Your Diagnostic Test?",
+      description:
+        "Schedule online or call us today. We're here to make diagnostics simple and convenient.",
+      portraitAlt: "Diagnostic lab technician ready to help patients",
+    },
+  },
   about: {
     eyebrow: "About Us",
     headingLine1: "Complete Care,",
@@ -618,6 +749,10 @@ export const en = {
       title: "Occupational Health — AccessNow Care",
       description:
         "Occupational medicine and workplace health services in Portage, Michigan, including physicals, injury care, and employee health programs.",
+    },
+    diagnosticServices: {
+      title: "Diagnostic Services — AccessNow Care",
+      description: "Advanced testing and imaging services to help diagnose and monitor health conditions.",
     },
   },
 } as const;

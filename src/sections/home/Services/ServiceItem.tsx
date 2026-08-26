@@ -18,6 +18,7 @@ import type { ServiceIconName, ServiceItem as ServiceItemData } from "./Services
 
 const URGENT_CARE_SERVICE_ID = "urgent-care";
 const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
+const DIAGNOSTIC_SERVICES_SERVICE_ID = "diagnostic-services";
 
 const iconClass =
   "mb-[22px] transition-transform duration-[280ms] ease group-hover:-translate-y-[5px] group-hover:scale-[1.045] motion-reduce:duration-[0.01ms]";
@@ -64,7 +65,9 @@ export function ServiceItem({ service }: ServiceItemProps) {
       ? SITE.urgentCareHref
       : service.id === OCCUPATIONAL_HEALTH_SERVICE_ID
         ? SITE.occupationalHealthHref
-        : null;
+        : service.id === DIAGNOSTIC_SERVICES_SERVICE_ID
+          ? SITE.diagnosticServicesHref
+          : null;
 
   return (
     <div

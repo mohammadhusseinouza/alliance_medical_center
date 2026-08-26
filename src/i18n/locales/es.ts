@@ -165,6 +165,137 @@ export const es: TranslationResource = {
       },
     },
   },
+  diagnosticServices: {
+    hero: {
+      imageAlt: "Técnico de imágenes diagnósticas preparando a un paciente para un estudio",
+    },
+    content: {
+      heading: "Servicios de Diagnóstico",
+      subheading: "Pruebas e imágenes avanzadas para un diagnóstico preciso",
+      description:
+        "Nuestros servicios de diagnóstico ofrecen capacidades integrales de pruebas e imágenes para ayudar a diagnosticar y monitorear sus condiciones de salud.",
+      mainPhotoAlt: "Técnico de imágenes diagnósticas preparando a un paciente para un estudio",
+      pairAlt: {
+        lab: "Técnico de laboratorio analizando una muestra de sangre",
+        imaging: "Clínico realizando un examen de ultrasonido",
+      },
+    },
+    services: {
+      heading: "Servicios que Ofrecemos",
+      items: {
+        bloodWork: {
+          title: "Análisis de Sangre",
+          description: "Conteos sanguíneos completos, paneles químicos y perfiles lipídicos",
+        },
+        hormoneTesting: {
+          title: "Pruebas Hormonales",
+          description: "Niveles hormonales tiroideos, de diabetes y reproductivos",
+        },
+        infectiousDisease: {
+          title: "Pruebas de Enfermedades Infecciosas",
+          description: "Detección de COVID-19, gripe, faringitis estreptocócica y otros patógenos",
+        },
+        cancerMarkers: {
+          title: "Marcadores de Cáncer",
+          description: "Marcadores tumorales y pruebas de detección de cáncer",
+        },
+        allergyTesting: {
+          title: "Pruebas de Alergias",
+          description: "Identificación de alergias ambientales y alimentarias",
+        },
+        digitalXrays: {
+          title: "Radiografías Digitales",
+          description: "Imágenes de alta calidad de huesos y articulaciones",
+        },
+        ultrasound: {
+          title: "Ultrasonido",
+          description: "Visualización de tejidos blandos y órganos",
+        },
+        ctScans: {
+          title: "Tomografías Computarizadas",
+          description: "Imágenes transversales detalladas del cuerpo",
+        },
+        mri: {
+          title: "Resonancia Magnética",
+          description: "Imágenes avanzadas por resonancia magnética",
+        },
+        mammography: {
+          title: "Mamografía",
+          description: "Detección y diagnóstico de cáncer de mama",
+        },
+        ekgEcg: {
+          title: "EKG/ECG",
+          description: "Monitoreo del ritmo cardíaco y la actividad eléctrica",
+        },
+        stressTesting: {
+          title: "Pruebas de Esfuerzo",
+          description: "Pruebas de esfuerzo con ejercicio y farmacológicas",
+        },
+        echocardiogram: {
+          title: "Ecocardiograma",
+          description: "Evaluación de la estructura y función cardíaca",
+        },
+        holterMonitoring: {
+          title: "Monitoreo Holter",
+          description: "Monitoreo continuo del ritmo cardíaco durante 24 horas",
+        },
+      },
+    },
+    whyChoose: {
+      heading: "¿Por Qué Elegir Nuestros Servicios de Diagnóstico?",
+      items: {
+        sameDay: "Resultados el mismo día disponibles",
+        digitalImaging: "Tecnología de imágenes digitales",
+        radiologists: "Radiólogos certificados",
+        electronicResults: "Entrega electrónica de resultados",
+        insurance: "Verificación de cobertura de seguro",
+        scheduling: "Programación conveniente",
+      },
+    },
+    hours: {
+      weekdays: "Lunes – Viernes: 9:00 AM – 8:00 PM",
+      weekend: "Sábado – Domingo: 12:00 PM – 6:00 PM",
+      daysOpen: "Abiertos los 7 Días de la Semana",
+      holidays: "Abiertos Todos los Días – llame con anticipación",
+      note: "A partir del 1 de septiembre, el horario de fin de semana se amplía a 10:00 AM – 6:00 PM.",
+    },
+    faq: {
+      eyebrow: "Preguntas Frecuentes",
+      items: {
+        hours: {
+          question: "¿Cuál es su horario de atención?",
+          answer:
+            "Estamos abiertos los 7 días de la semana. Lunes – Viernes: 9:00 AM – 8:00 PM. Sábado – Domingo: 12:00 PM – 6:00 PM. Abrimos todos los días festivos — por favor llame con anticipación. A partir del 1 de septiembre, el horario de fin de semana se amplía a 10:00 AM – 6:00 PM.",
+        },
+        servicesAvailable: {
+          question: "¿Qué servicios de diagnóstico están disponibles?",
+          answer:
+            "Ofrecemos una amplia gama de pruebas de laboratorio — incluyendo análisis de sangre, pruebas hormonales, pruebas de enfermedades infecciosas, marcadores de cáncer y pruebas de alergias — junto con servicios de diagnóstico por imágenes y cardíacos como radiografías digitales, ultrasonido, tomografías computarizadas, resonancia magnética, mamografía, EKG/ECG, pruebas de esfuerzo, ecocardiograma y monitoreo Holter.",
+        },
+        appointment: {
+          question: "¿Necesito una cita?",
+          answer:
+            "Las citas se pueden programar en línea, y los pacientes pueden llamar a la clínica para conocer disponibilidad y orientación.",
+        },
+        resultsTiming: {
+          question: "¿Qué tan rápido están disponibles los resultados?",
+          answer:
+            "Los resultados el mismo día están disponibles para algunos servicios. El tiempo puede variar según la prueba o el servicio de imagen.",
+        },
+        insurance: {
+          question: "¿Aceptan seguro médico?",
+          answer:
+            "La verificación de cobertura de seguro está disponible. Los pacientes deben comunicarse con la clínica para confirmar la cobertura de servicios específicos.",
+        },
+      },
+    },
+    sidebarCta: {
+      heading: "¿Listo Para Programar Su Prueba de Diagnóstico?",
+      description:
+        "Programe en línea o llámenos hoy. Estamos aquí para hacer que el diagnóstico sea simple y conveniente.",
+      portraitAlt: "Técnico de laboratorio de diagnóstico listo para ayudar a los pacientes",
+    },
+  },
   about: {
     eyebrow: "Sobre Nosotros",
     headingLine1: "Atención Completa,",
@@ -619,6 +750,11 @@ export const es: TranslationResource = {
       title: "Salud Ocupacional — AccessNow Care",
       description:
         "Medicina ocupacional y servicios de salud laboral en Portage, Michigan, incluyendo exámenes físicos, atención de lesiones y programas de salud para empleados.",
+    },
+    diagnosticServices: {
+      title: "Servicios de Diagnóstico — AccessNow Care",
+      description:
+        "Servicios avanzados de pruebas e imágenes para ayudar a diagnosticar y monitorear condiciones de salud.",
     },
   },
 };

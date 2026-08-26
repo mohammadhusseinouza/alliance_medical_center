@@ -1,22 +1,28 @@
 import { useTranslation } from "react-i18next";
-import heroImage from "../../../assets/urgent-care/hero.png";
+import { ImagePlaceholder } from "../../../components/ui/ImagePlaceholder";
 import { ServiceBreadcrumb } from "./ServiceBreadcrumb";
 
 export interface ServicePageHeroProps {
   currentServiceLabel: string;
+  heroImage?: string;
+  heroImageAlt: string;
 }
 
-export function ServicePageHero({ currentServiceLabel }: ServicePageHeroProps) {
+export function ServicePageHero({ currentServiceLabel, heroImage, heroImageAlt }: ServicePageHeroProps) {
   const { t } = useTranslation();
 
   return (
     <section className="relative flex min-h-[250px] items-center overflow-hidden mw-1100:min-h-[200px]">
-      <img
-        src={heroImage}
-        alt={t("servicePage.urgentCare.heroImageAlt")}
-        className="absolute inset-0 z-0 h-full w-full object-cover object-[60%_center]"
-        loading="eager"
-      />
+      {heroImage ? (
+        <img
+          src={heroImage}
+          alt={heroImageAlt}
+          className="absolute inset-0 z-0 h-full w-full object-cover object-[60%_center]"
+          loading="eager"
+        />
+      ) : (
+        <ImagePlaceholder label={heroImageAlt} className="absolute inset-0 z-0 h-full w-full" />
+      )}
 
       <div
         className="pointer-events-none absolute inset-0 z-[1]"

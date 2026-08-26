@@ -14,9 +14,11 @@ export function useDocumentMeta() {
         ? "booking"
         : canonicalPath === "/services/urgent-care"
           ? "urgentCare"
-          : canonicalPath === "/occupational-health"
-            ? "occupationalHealth"
-            : "home";
+          : canonicalPath === "/services/diagnostic-services"
+            ? "diagnosticServices"
+            : canonicalPath === "/occupational-health"
+              ? "occupationalHealth"
+              : "home";
     document.title = t(`meta.${page}.title`);
     document.querySelector('meta[name="description"]')?.setAttribute("content", t(`meta.${page}.description`));
   }, [pathname, i18n.language, t]);

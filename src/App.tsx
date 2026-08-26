@@ -3,6 +3,7 @@ import { HomePage } from "./pages/HomePage";
 import { BookAppointmentPage } from "./pages/BookAppointmentPage";
 import { UrgentCarePage } from "./pages/UrgentCarePage";
 import { OccupationalHealthPage } from "./pages/OccupationalHealthPage";
+import { DiagnosticServicesPage } from "./pages/DiagnosticServicesPage";
 import { useScrollToHash } from "./hooks/useScrollToHash";
 import { useScrollToTop } from "./hooks/useScrollToTop";
 import { useDocumentMeta } from "./hooks/useDocumentMeta";
@@ -19,10 +20,12 @@ function AppRoutes() {
       <Route path="/" element={<HomePage />} />
       <Route path="/book-appointment" element={<BookAppointmentPage />} />
       <Route path="/services/urgent-care" element={<UrgentCarePage />} />
+      <Route path="/services/diagnostic-services" element={<DiagnosticServicesPage />} />
       <Route path="/occupational-health" element={<OccupationalHealthPage />} />
       <Route path="/es" element={<HomePage />} />
       <Route path="/es/book-appointment" element={<BookAppointmentPage />} />
       <Route path="/es/services/urgent-care" element={<UrgentCarePage />} />
+      <Route path="/es/services/diagnostic-services" element={<DiagnosticServicesPage />} />
       <Route path="/es/occupational-health" element={<OccupationalHealthPage />} />
     </Routes>
   );

@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ChevronIcon } from "../../../components/icons";
-import { withLocale } from "../../../i18n/routing";
-import { useLanguage } from "../../../i18n/useLanguage";
-import { SITE } from "../../../lib/constants";
 import { SERVICES } from "../../home/Services/services.data";
-import { ServiceSidebarCta } from "./ServiceSidebarCta";
+import { ServiceSidebarCta, type ServiceSidebarCtaProps } from "./ServiceSidebarCta";
 
-const ACTIVE_SERVICE_ID = "urgent-care";
 const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
 
-export function ServiceSidebar() {
+export interface ServiceSidebarProps {
+  activeServiceId: string;
+  activeHref: string;
+  cta: ServiceSidebarCtaProps;
+}
+
+export function ServiceSidebar({ activeServiceId, activeHref, cta }: ServiceSidebarProps) {
   const { t } = useTranslation();
-  const language = useLanguage();
 
   return (
     <aside className="sticky top-[84px] flex flex-col gap-6 mw-880:static mw-880:top-auto">
@@ -25,11 +26,11 @@ export function ServiceSidebar() {
             const label = t(`services.items.${service.translationKey}.title`);
             const labelClassName = service.titleNoWrap ? "whitespace-nowrap" : undefined;
 
-            if (service.id === ACTIVE_SERVICE_ID) {
+            if (service.id === activeServiceId) {
               return (
                 <Link
                   key={service.id}
-                  to={withLocale(SITE.urgentCareHref, language)}
+                  to={activeHref}
                   aria-current="page"
                   className="group flex items-center justify-between gap-3 rounded-[10px] border border-badge-text bg-badge-text px-[15px] py-[13px] text-[15px] font-semibold text-white no-underline [transition:background-color_180ms_ease,border-color_180ms_ease,color_180ms_ease]"
                 >
@@ -57,7 +58,7 @@ export function ServiceSidebar() {
         </div>
       </div>
 
-      <ServiceSidebarCta />
+      <ServiceSidebarCta {...cta} />
     </aside>
   );
 }

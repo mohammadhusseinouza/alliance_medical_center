@@ -6,6 +6,7 @@ import type { FooterContactRow, FooterLink } from "./Footer.types";
 
 const URGENT_CARE_SERVICE_ID = "urgent-care";
 const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
+const DIAGNOSTIC_SERVICES_SERVICE_ID = "diagnostic-services";
 
 export const FOOTER_CONTACT_ROWS: FooterContactRow[] = [
   {
@@ -54,7 +55,9 @@ export function buildFooterServiceLinks(t: TranslateFn, language: Language): Foo
         ? withLocale(SITE.urgentCareHref, language)
         : service.id === OCCUPATIONAL_HEALTH_SERVICE_ID
           ? withLocale(SITE.occupationalHealthHref, language)
-          : withLocale(`/#${service.id}`, language),
+          : service.id === DIAGNOSTIC_SERVICES_SERVICE_ID
+            ? withLocale(SITE.diagnosticServicesHref, language)
+            : withLocale(`/#${service.id}`, language),
   }));
 }
 
