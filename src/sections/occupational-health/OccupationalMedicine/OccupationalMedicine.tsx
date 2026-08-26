@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import workplaceHealthImage from "../../../assets/home/workplace-health.webp";
+import occupationalMedicineImage from "../../../assets/occupational-health/om_ocupationalmedicine.png";
 import { BriefcaseIcon, CheckIcon } from "../../../components/icons";
 
 const BENEFIT_KEYS = ["preEmployment", "returnToWork", "injuryCare", "surveillance"] as const;
@@ -45,7 +45,7 @@ export function OccupationalMedicine() {
 
         <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-card">
           <img
-            src={workplaceHealthImage}
+            src={occupationalMedicineImage}
             alt={t("occupationalHealth.imageAlt")}
             className="block h-full w-full object-cover"
             loading="lazy"

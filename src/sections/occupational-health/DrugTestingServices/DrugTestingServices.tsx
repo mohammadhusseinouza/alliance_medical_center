@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { ImagePlaceholder } from "../../../components/ui/ImagePlaceholder";
+import drugTestingImage from "../../../assets/occupational-health/om_drugtesting.png";
 import { DRUG_TESTING_ITEMS } from "./drugTestingServices.data";
 
 export function DrugTestingServices() {
@@ -32,7 +32,12 @@ export function DrugTestingServices() {
         </div>
 
         <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-card">
-          <ImagePlaceholder label={t("servicePage.imagePlaceholder")} className="h-full w-full" />
+          <img
+            src={drugTestingImage}
+            alt={t("occupationalHealth.drugTesting.imageAlt")}
+            className="block h-full w-full object-cover"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

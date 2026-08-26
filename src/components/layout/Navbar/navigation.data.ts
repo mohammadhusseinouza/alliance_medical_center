@@ -18,19 +18,20 @@ export interface NavItem {
 }
 
 export function buildNavItems(t: TranslateFn, language: Language): NavItem[] {
-  const servicesDropdown: NavDropdownItem[] = SERVICES.map((service) => ({
+  const servicesDropdown: NavDropdownItem[] = SERVICES.filter(
+    (service) => service.id !== OCCUPATIONAL_HEALTH_SERVICE_ID,
+  ).map((service) => ({
     label: t(`services.items.${service.translationKey}.title`),
     href:
       service.id === URGENT_CARE_SERVICE_ID
         ? withLocale(SITE.urgentCareHref, language)
-        : service.id === OCCUPATIONAL_HEALTH_SERVICE_ID
-          ? withLocale(SITE.occupationalHealthHref, language)
-          : withLocale(`/#${service.id}`, language),
+        : withLocale(`/#${service.id}`, language),
   }));
 
   return [
     { label: t("navbar.home"), href: withLocale("/", language) },
     { label: t("navbar.services"), href: withLocale("/#services", language), dropdown: servicesDropdown },
+    { label: t("navbar.occupationalHealth"), href: withLocale(SITE.occupationalHealthHref, language) },
     { label: t("navbar.aboutUs"), href: withLocale("/#about", language) },
     { label: t("navbar.contactUs"), href: withLocale("/#contact", language) },
   ];

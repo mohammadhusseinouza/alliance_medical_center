@@ -10,6 +10,7 @@ export const en = {
   navbar: {
     home: "Home",
     services: "Services",
+    occupationalHealth: "Occupational Health",
     aboutUs: "About Us",
     contactUs: "Contact Us",
     toggleMenu: "Toggle menu",
@@ -330,6 +331,7 @@ export const en = {
       heading: "Workplace Injury Care",
       description:
         "Prompt, professional care for work-related injuries with a focus on helping employees recover safely and return to work confidently.",
+      imageAlt: "Nurse bandaging an employee's arm during a workplace injury visit",
       benefits: {
         immediateEvaluation: "Immediate Injury Evaluation",
         caseManagement: "Case Management",
@@ -372,6 +374,7 @@ export const en = {
       heading: "Drug Testing Services",
       description:
         "Workplace drug and alcohol testing services designed to support hiring, safety, and employer testing programs.",
+      imageAlt: "Nurse holding a specimen cup during a workplace drug test",
       items: {
         fivePanel: {
           title: "5-Panel Drug Screen",
@@ -391,6 +394,7 @@ export const en = {
       heading: "DOT Physical Examinations",
       description:
         "Occupational medical examinations for commercial drivers designed to support DOT medical certification requirements.",
+      imageAlt: "Clinician checking a patient's blood pressure during a DOT physical exam",
       includesLabel: "DOT Physical Includes",
       includes: {
         medicalHistory: "Medical history review",
@@ -405,6 +409,7 @@ export const en = {
       heading: "Telemedicine Services",
       description:
         "Virtual healthcare consultations that bring occupational medicine support to employees wherever they are.",
+      imageAlt: "Employee having a virtual consultation with a doctor on a laptop",
       benefits: {
         immediateAccess: "Immediate Access to Care",
         remoteWorkforce: "Remote Workforce Support",

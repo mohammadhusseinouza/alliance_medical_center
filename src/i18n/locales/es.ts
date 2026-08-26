@@ -12,6 +12,7 @@ export const es: TranslationResource = {
   navbar: {
     home: "Inicio",
     services: "Servicios",
+    occupationalHealth: "Salud Ocupacional",
     aboutUs: "Sobre Nosotros",
     contactUs: "Contáctanos",
     toggleMenu: "Alternar menú",
@@ -331,6 +332,7 @@ export const es: TranslationResource = {
       heading: "Atención de Lesiones Laborales",
       description:
         "Atención rápida y profesional para lesiones relacionadas con el trabajo, enfocada en ayudar a los empleados a recuperarse de forma segura y regresar al trabajo con confianza.",
+      imageAlt: "Enfermera vendando el brazo de un empleado durante una consulta por lesión laboral",
       benefits: {
         immediateEvaluation: "Evaluación Inmediata de Lesiones",
         caseManagement: "Manejo de Casos",
@@ -373,6 +375,7 @@ export const es: TranslationResource = {
       heading: "Servicios de Pruebas de Drogas",
       description:
         "Servicios de pruebas de drogas y alcohol en el lugar de trabajo, diseñados para respaldar la contratación, la seguridad y los programas de pruebas del empleador.",
+      imageAlt: "Enfermera sosteniendo un frasco de muestra durante una prueba de drogas laboral",
       items: {
         fivePanel: {
           title: "Prueba de 5 Paneles",
@@ -392,6 +395,7 @@ export const es: TranslationResource = {
       heading: "Exámenes Físicos DOT",
       description:
         "Exámenes médicos ocupacionales para conductores comerciales, diseñados para respaldar los requisitos de certificación médica DOT.",
+      imageAlt: "Clínico controlando la presión arterial de un paciente durante un examen físico DOT",
       includesLabel: "El Examen Físico DOT Incluye",
       includes: {
         medicalHistory: "Revisión del historial médico",
@@ -406,6 +410,7 @@ export const es: TranslationResource = {
       heading: "Servicios de Telemedicina",
       description:
         "Consultas de atención médica virtual que llevan el apoyo de medicina ocupacional a los empleados donde sea que se encuentren.",
+      imageAlt: "Empleado en una consulta virtual con un médico a través de una computadora portátil",
       benefits: {
         immediateAccess: "Acceso Inmediato a la Atención",
         remoteWorkforce: "Apoyo para Trabajadores Remotos",

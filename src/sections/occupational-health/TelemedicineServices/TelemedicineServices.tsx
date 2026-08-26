@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
+import telemedicineImage from "../../../assets/occupational-health/om_telemedicine.png";
 import { CheckIcon } from "../../../components/icons";
-import { ImagePlaceholder } from "../../../components/ui/ImagePlaceholder";
 
 const BENEFIT_KEYS = ["immediateAccess", "remoteWorkforce", "convenientFollowUp"] as const;
 
@@ -32,7 +32,12 @@ export function TelemedicineServices() {
         </div>
 
         <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-card">
-          <ImagePlaceholder label={t("servicePage.imagePlaceholder")} className="h-full w-full" />
+          <img
+            src={telemedicineImage}
+            alt={t("occupationalHealth.telemedicine.imageAlt")}
+            className="block h-full w-full object-cover"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
