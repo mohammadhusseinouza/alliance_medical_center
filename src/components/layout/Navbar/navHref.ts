@@ -12,13 +12,21 @@ export function parseNavHref(href: string): ParsedNavHref {
   return { pathname: href.slice(0, hashIndex) || "/", hash: href.slice(hashIndex) };
 }
 
-export function isNavItemActive(item: NavItem, pathname: string, hash: string): boolean {
-  const target = parseNavHref(item.href);
-  // The Services nav item points at the homepage's #services anchor, but a
-  // service detail page (e.g. /services/urgent-care) has no hash to match —
-  // treat any /services/* route as still being "within" Services.
-  if (target.hash === "#services" && stripLocale(pathname).startsWith("/services/")) return true;
-  if (pathname !== target.pathname) return false;
-  if (hash === target.hash) return true;
-  return (item.dropdown ?? []).some((entry) => parseNavHref(entry.href).hash === hash);
+/**
+ * Route-only active state. Home-page hashes (#services, #about, #contact, ...)
+ * never affect which top-level label is active — only the canonical
+ * (locale-stripped) pathname does, via each item's `activeMatch`. This
+ * guarantees exactly one top-level item can ever be active at a time.
+ */
+export function isNavItemActive(item: NavItem, pathname: string): boolean {
+  if (!item.activeMatch) return false;
+  const canonical = stripLocale(pathname);
+  switch (item.activeMatch) {
+    case "home":
+      return canonical === "/";
+    case "services":
+      return canonical.startsWith("/services/");
+    case "occupational-health":
+      return canonical === "/occupational-health";
+  }
 }

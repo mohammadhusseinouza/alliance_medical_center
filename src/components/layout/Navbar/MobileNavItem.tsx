@@ -11,7 +11,7 @@ export interface MobileNavItemProps {
 export function MobileNavItem({ item }: MobileNavItemProps) {
   const { t } = useTranslation();
   const { pathname, hash } = useLocation();
-  const active = isNavItemActive(item, pathname, hash);
+  const active = isNavItemActive(item, pathname);
 
   if (!item.dropdown) {
     return (

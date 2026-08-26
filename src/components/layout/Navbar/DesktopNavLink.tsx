@@ -7,14 +7,16 @@ export interface DesktopNavLinkProps {
   item: NavItem;
 }
 
-function linkClass(active: boolean) {
-  const color = active ? "text-[#155D72]" : "text-[#29364A]";
+const linkClass =
+  "relative -mx-2.5 flex items-center gap-1 whitespace-nowrap rounded-md px-2.5 py-2 text-[15px] font-medium text-[#29364A] no-underline " +
+  "transition-colors duration-200 hover:bg-[#EAF3F4] hover:text-[#155D72] " +
+  "mw-1300:text-[14px]";
+
+function labelClass(active: boolean) {
+  const color = active ? "text-[#155D72]" : "";
   const underline = active ? "after:scale-x-100" : "after:scale-x-0";
   return (
-    "relative -mx-2.5 flex items-center gap-1 whitespace-nowrap rounded-md px-2.5 py-2 text-[15px] font-medium no-underline " +
-    "transition-colors duration-200 hover:bg-[#EAF3F4] hover:text-[#155D72] " +
-    "after:absolute after:bottom-[-13px] after:left-2.5 after:h-[2px] after:w-[calc(100%-20px)] after:origin-left after:bg-[#176477] after:transition-transform after:duration-200 after:content-[''] " +
-    "mw-1300:text-[14px] " +
+    "relative inline-block after:absolute after:bottom-[-13px] after:left-0 after:right-0 after:h-[2px] after:origin-left after:bg-[#176477] after:transition-transform after:duration-200 after:content-[''] " +
     color +
     " " +
     underline
@@ -23,13 +25,13 @@ function linkClass(active: boolean) {
 
 export function DesktopNavLink({ item }: DesktopNavLinkProps) {
   const { pathname, hash } = useLocation();
-  const active = isNavItemActive(item, pathname, hash);
+  const active = isNavItemActive(item, pathname);
 
   if (!item.dropdown) {
     return (
       <div className="relative">
-        <Link to={item.href} className={linkClass(active)}>
-          {item.label}
+        <Link to={item.href} className={linkClass}>
+          <span className={labelClass(active)}>{item.label}</span>
         </Link>
       </div>
     );
@@ -37,8 +39,8 @@ export function DesktopNavLink({ item }: DesktopNavLinkProps) {
 
   return (
     <div className="group relative">
-      <Link to={item.href} className={linkClass(active)}>
-        {item.label}
+      <Link to={item.href} className={linkClass}>
+        <span className={labelClass(active)}>{item.label}</span>
         <ChevronDownIcon
           size={12}
           className="transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
