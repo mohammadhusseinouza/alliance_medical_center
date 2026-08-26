@@ -460,6 +460,93 @@ export const es: TranslationResource = {
       portraitAlt: "Profesional de la salud pediátrica lista para ayudar a los pacientes",
     },
   },
+  familyHealth: {
+    hero: {
+      imageAlt: "Médico de atención primaria consultando con un paciente en un consultorio luminoso",
+    },
+    mainPhotoAlt: "Médico de atención primaria consultando con un paciente en un consultorio luminoso",
+    heading: "Atención Médica Integral para Toda su Familia",
+    intro:
+      "Nuestros médicos de atención primaria brindan atención médica continua e integral para pacientes de todas las edades, enfocándose en la prevención, el bienestar y el manejo de enfermedades crónicas. Desde exámenes físicos de rutina y detecciones de salud hasta el manejo de afecciones crónicas y referencias a especialistas, nuestro equipo apoya su salud en cada etapa de la vida.",
+    whatsIncluded: "Qué Incluye",
+    benefits: {
+      annualExams: "Exámenes físicos anuales",
+      immunizations: "Inmunizaciones para adultos y niños",
+      healthScreenings: "Detecciones de salud",
+      wellnessCounseling: "Asesoramiento de bienestar",
+      mentalHealthScreening: "Detección de salud mental",
+      diabetesCare: "Atención de la diabetes",
+      hypertensionTreatment: "Tratamiento de la hipertensión",
+      cholesterolManagement: "Manejo del colesterol",
+      asthmaCare: "Atención del asma",
+      arthritisTreatment: "Tratamiento de la artritis",
+      pediatricCare: "Atención pediátrica",
+      adultMedicine: "Medicina para adultos",
+      geriatricCare: "Atención geriátrica",
+      sportsMedicine: "Medicina deportiva",
+    },
+    whyChoose: {
+      heading: "¿Por Qué Elegir Nuestros Servicios de Salud Familiar?",
+      items: {
+        sameDay: "Citas el mismo día disponibles",
+        careCoordination: "Coordinación integral de la atención",
+        electronicRecords: "Registros de salud electrónicos",
+        prescriptionManagement: "Manejo de recetas",
+        specialistReferrals: "Referencias a especialistas",
+        telehealth: "Consultas de telemedicina",
+      },
+    },
+    comprehensive: {
+      heading: "Atención Integral de Salud Familiar en la que Puede Confiar",
+      description:
+        "Ofrecemos atención médica preventiva, diagnóstica y continua para pacientes de todas las edades en un solo lugar conveniente. Nuestro enfoque combina servicios de bienestar de rutina, manejo de enfermedades crónicas, detecciones de salud, apoyo con recetas y referencias coordinadas para ayudar a las personas y familias a mantener su salud a largo plazo.",
+    },
+    pairAlt: {
+      consultation: "Médico de atención primaria realizando un examen de salud de rutina con un paciente adulto",
+      familyVisit: "Proveedor de medicina familiar reunido con un padre y un niño en un entorno clínico moderno",
+    },
+    faq: {
+      eyebrow: "Preguntas Frecuentes",
+      items: {
+        services: {
+          question: "¿Qué servicios de Salud Familiar ofrecen?",
+          answer:
+            "Ofrecemos exámenes físicos anuales, inmunizaciones, detecciones de salud, asesoramiento de bienestar, detección de salud mental, manejo de enfermedades crónicas, atención pediátrica, medicina para adultos, atención geriátrica, medicina deportiva y referencias coordinadas a especialistas.",
+        },
+        allAges: {
+          question: "¿Atienden a pacientes de todas las edades?",
+          answer:
+            "Sí. Nuestros servicios de Salud Familiar están diseñados para niños, adultos y adultos mayores, permitiendo que las personas y familias reciban atención primaria integral en un solo lugar conveniente.",
+        },
+        chronicConditions: {
+          question: "¿Pueden manejar afecciones crónicas?",
+          answer:
+            "Sí. Brindamos atención continua para afecciones como diabetes, presión arterial alta, colesterol alto, asma y artritis, incluyendo monitoreo, planificación del tratamiento y manejo de medicamentos.",
+        },
+        screenings: {
+          question: "¿Ofrecen detecciones de salud preventivas?",
+          answer:
+            "Sí. Ofrecemos detecciones preventivas para afecciones como diabetes, enfermedades cardiovasculares y ciertos tipos de cáncer, junto con exámenes físicos de rutina y asesoramiento de bienestar.",
+        },
+        hours: {
+          question: "¿Cuál es su horario de atención?",
+          answer:
+            "Estamos abiertos los 7 días de la semana. Lunes – Viernes: 9:00 AM – 8:00 PM. Sábado – Domingo: 12:00 PM – 6:00 PM. A partir del 1 de septiembre, el horario de fin de semana será de 10:00 AM – 6:00 PM.",
+        },
+        moreInformation: {
+          question: "¿Necesita Más Información?",
+          answer:
+            "Si tiene preguntas adicionales sobre nuestros servicios de Salud Familiar o necesita ayuda para elegir la cita adecuada, comuníquese con nuestro equipo al {{phone}}. Estaremos encantados de ayudarle.",
+        },
+      },
+    },
+    sidebarCta: {
+      heading: "¿Listo Para Recibir Atención Experta?",
+      description:
+        "Atención primaria integral para niños, adultos y familias, enfocada en la prevención, el bienestar y la salud a largo plazo.",
+      portraitAlt: "Proveedor de Salud Familiar listo para ayudar a los pacientes",
+    },
+  },
   about: {
     eyebrow: "Sobre Nosotros",
     headingLine1: "Atención Completa,",
@@ -929,6 +1016,11 @@ export const es: TranslationResource = {
       title: "Servicios de Atención Pediátrica — AccessNow Care",
       description:
         "Atención médica especializada para bebés, niños y adolescentes en Portage, Michigan, incluyendo chequeos, inmunizaciones y tratamiento de enfermedades.",
+    },
+    familyHealth: {
+      title: "Servicios de Salud Familiar — AccessNow Care",
+      description:
+        "Atención primaria integral para toda su familia en Portage, Michigan, incluyendo exámenes físicos, manejo de enfermedades crónicas y detecciones preventivas.",
     },
   },
 };

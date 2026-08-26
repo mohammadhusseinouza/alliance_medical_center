@@ -1,0 +1,1 @@
+export { FamilyHealthContent } from "./FamilyHealthContent";

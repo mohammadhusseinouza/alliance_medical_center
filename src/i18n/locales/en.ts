@@ -456,6 +456,93 @@ export const en = {
       portraitAlt: "Pediatric healthcare provider ready to help patients",
     },
   },
+  familyHealth: {
+    hero: {
+      imageAlt: "Primary care physician consulting with a patient in a bright exam room",
+    },
+    mainPhotoAlt: "Primary care physician consulting with a patient in a bright exam room",
+    heading: "Comprehensive Healthcare for Your Entire Family",
+    intro:
+      "Our primary care physicians provide ongoing, comprehensive medical care for patients of all ages, focusing on prevention, wellness, and chronic disease management. From routine physical exams and health screenings to chronic condition management and specialist referrals, our team supports your health at every stage of life.",
+    whatsIncluded: "What's Included",
+    benefits: {
+      annualExams: "Annual physical exams",
+      immunizations: "Adult and pediatric immunizations",
+      healthScreenings: "Health screenings",
+      wellnessCounseling: "Wellness counseling",
+      mentalHealthScreening: "Mental health screening",
+      diabetesCare: "Diabetes care",
+      hypertensionTreatment: "Hypertension treatment",
+      cholesterolManagement: "Cholesterol management",
+      asthmaCare: "Asthma care",
+      arthritisTreatment: "Arthritis treatment",
+      pediatricCare: "Pediatric care",
+      adultMedicine: "Adult medicine",
+      geriatricCare: "Geriatric care",
+      sportsMedicine: "Sports medicine",
+    },
+    whyChoose: {
+      heading: "Why Choose Our Family Health Services?",
+      items: {
+        sameDay: "Same-day appointments available",
+        careCoordination: "Comprehensive care coordination",
+        electronicRecords: "Electronic health records",
+        prescriptionManagement: "Prescription management",
+        specialistReferrals: "Specialist referrals",
+        telehealth: "Telehealth consultations",
+      },
+    },
+    comprehensive: {
+      heading: "Comprehensive Family Health Care You Can Trust",
+      description:
+        "We provide preventive, diagnostic, and ongoing medical care for patients of all ages in one convenient setting. Our approach combines routine wellness services, chronic disease management, health screenings, prescription support, and coordinated referrals to help individuals and families maintain long-term health.",
+    },
+    pairAlt: {
+      consultation: "Primary care physician performing a routine health examination with an adult patient",
+      familyVisit: "Family medicine provider meeting with a parent and child in a modern clinical environment",
+    },
+    faq: {
+      eyebrow: "Frequently Asked Questions",
+      items: {
+        services: {
+          question: "What Family Health services do you provide?",
+          answer:
+            "We provide annual physical exams, immunizations, health screenings, wellness counseling, mental health screening, chronic disease management, pediatric care, adult medicine, geriatric care, sports medicine, and coordinated specialist referrals.",
+        },
+        allAges: {
+          question: "Do you provide care for patients of all ages?",
+          answer:
+            "Yes. Our Family Health services are designed for children, adults, and older adults, allowing individuals and families to receive comprehensive primary care in one convenient setting.",
+        },
+        chronicConditions: {
+          question: "Can you manage chronic conditions?",
+          answer:
+            "Yes. We provide ongoing care for conditions such as diabetes, high blood pressure, high cholesterol, asthma, and arthritis, including monitoring, treatment planning, and medication management.",
+        },
+        screenings: {
+          question: "Do you provide preventive health screenings?",
+          answer:
+            "Yes. We offer preventive screenings for conditions such as diabetes, cardiovascular disease, and certain cancers, along with routine physical exams and wellness counseling.",
+        },
+        hours: {
+          question: "What are your hours of operation?",
+          answer:
+            "We're open 7 days a week. Monday – Friday: 9:00 AM – 8:00 PM. Saturday – Sunday: 12:00 PM – 6:00 PM. Starting September 1, weekend hours are 10:00 AM – 6:00 PM.",
+        },
+        moreInformation: {
+          question: "Need More Information?",
+          answer:
+            "If you have additional questions about our Family Health services or need help choosing the right appointment, contact our friendly team at {{phone}}. We are happy to help.",
+        },
+      },
+    },
+    sidebarCta: {
+      heading: "Ready To Get Expert Care?",
+      description:
+        "Comprehensive primary healthcare for children, adults, and families, with a focus on prevention, wellness, and long-term health.",
+      portraitAlt: "Family Health provider ready to help patients",
+    },
+  },
   about: {
     eyebrow: "About Us",
     headingLine1: "Complete Care,",
@@ -925,6 +1012,11 @@ export const en = {
       title: "Pediatric Care Services — AccessNow Care",
       description:
         "Specialized healthcare for infants, children, and adolescents in Portage, Michigan, including checkups, immunizations, and illness treatment.",
+    },
+    familyHealth: {
+      title: "Family Health Services — AccessNow Care",
+      description:
+        "Comprehensive primary care for your entire family in Portage, Michigan, including physicals, chronic disease management, and preventive screenings.",
     },
   },
 } as const;

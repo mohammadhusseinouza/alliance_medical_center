@@ -6,6 +6,7 @@ import { OccupationalHealthPage } from "./pages/OccupationalHealthPage";
 import { DiagnosticServicesPage } from "./pages/DiagnosticServicesPage";
 import { WomensHealthPage } from "./pages/WomensHealthPage";
 import { PediatricCarePage } from "./pages/PediatricCarePage";
+import { FamilyHealthPage } from "./pages/FamilyHealthPage";
 import { useScrollToHash } from "./hooks/useScrollToHash";
 import { useScrollToTop } from "./hooks/useScrollToTop";
 import { useDocumentMeta } from "./hooks/useDocumentMeta";
@@ -25,6 +26,7 @@ function AppRoutes() {
       <Route path="/services/diagnostic-services" element={<DiagnosticServicesPage />} />
       <Route path="/services/womens-health" element={<WomensHealthPage />} />
       <Route path="/services/pediatric-care" element={<PediatricCarePage />} />
+      <Route path="/services/family-health" element={<FamilyHealthPage />} />
       <Route path="/occupational-health" element={<OccupationalHealthPage />} />
       <Route path="/es" element={<HomePage />} />
       <Route path="/es/book-appointment" element={<BookAppointmentPage />} />
@@ -32,6 +34,7 @@ function AppRoutes() {
       <Route path="/es/services/diagnostic-services" element={<DiagnosticServicesPage />} />
       <Route path="/es/services/womens-health" element={<WomensHealthPage />} />
       <Route path="/es/services/pediatric-care" element={<PediatricCarePage />} />
+      <Route path="/es/services/family-health" element={<FamilyHealthPage />} />
       <Route path="/es/occupational-health" element={<OccupationalHealthPage />} />
     </Routes>
   );
