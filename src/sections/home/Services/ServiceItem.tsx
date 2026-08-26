@@ -16,9 +16,16 @@ import { useLanguage } from "../../../i18n/useLanguage";
 import { SITE } from "../../../lib/constants";
 import type { ServiceIconName, ServiceItem as ServiceItemData } from "./Services.types";
 
-const URGENT_CARE_SERVICE_ID = "urgent-care";
-const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
-const DIAGNOSTIC_SERVICES_SERVICE_ID = "diagnostic-services";
+/**
+ * Services with their own dedicated route instead of the Home-page anchor
+ * fallback (`service.href`).
+ */
+const DEDICATED_SERVICE_HREFS: Record<string, string> = {
+  "urgent-care": SITE.urgentCareHref,
+  "occupational-health": SITE.occupationalHealthHref,
+  "diagnostic-services": SITE.diagnosticServicesHref,
+  "womens-health": SITE.womensHealthHref,
+};
 
 const iconClass =
   "mb-[22px] transition-transform duration-[280ms] ease group-hover:-translate-y-[5px] group-hover:scale-[1.045] motion-reduce:duration-[0.01ms]";
@@ -60,14 +67,7 @@ export function ServiceItem({ service }: ServiceItemProps) {
       className="transition-transform duration-[220ms] ease group-hover:translate-x-[5px] motion-reduce:duration-[0.01ms]"
     />
   );
-  const dedicatedHref =
-    service.id === URGENT_CARE_SERVICE_ID
-      ? SITE.urgentCareHref
-      : service.id === OCCUPATIONAL_HEALTH_SERVICE_ID
-        ? SITE.occupationalHealthHref
-        : service.id === DIAGNOSTIC_SERVICES_SERVICE_ID
-          ? SITE.diagnosticServicesHref
-          : null;
+  const dedicatedHref = DEDICATED_SERVICE_HREFS[service.id] ?? null;
 
   return (
     <div

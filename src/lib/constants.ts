@@ -22,4 +22,5 @@ export const SITE = {
   urgentCareHref: "/services/urgent-care",
   occupationalHealthHref: "/occupational-health",
   diagnosticServicesHref: "/services/diagnostic-services",
+  womensHealthHref: "/services/womens-health",
 } as const;

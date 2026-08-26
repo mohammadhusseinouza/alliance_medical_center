@@ -296,6 +296,82 @@ export const es: TranslationResource = {
       portraitAlt: "Técnico de laboratorio de diagnóstico listo para ayudar a los pacientes",
     },
   },
+  womensHealth: {
+    hero: {
+      imageAlt: "Médica consultando con una paciente en un consultorio luminoso",
+    },
+    mainPhotoAlt: "Médica consultando con una paciente adulta en un consultorio moderno",
+    heading: "Atención Médica Especializada para la Mujer en Cada Etapa de la Vida",
+    intro:
+      "Nuestros servicios de salud de la mujer ofrecen atención integral y compasiva, adaptada a las necesidades de salud únicas de las mujeres en cada etapa de la vida. Desde exámenes preventivos y planificación familiar hasta atención prenatal y manejo de la menopausia, nuestro equipo está aquí para apoyar su salud y bienestar.",
+    whatsIncluded: "Qué Incluye",
+    benefits: {
+      annualExams: "Exámenes ginecológicos anuales",
+      papSmears: "Papanicolaou y detección cervical",
+      breastExams: "Exámenes clínicos de mama",
+      familyPlanning: "Planificación familiar y anticoncepción",
+      stdTesting: "Pruebas confidenciales de ETS",
+      pregnancyTesting: "Pruebas de embarazo",
+      prenatalCare: "Atención prenatal",
+      nutritionalCounseling: "Asesoramiento nutricional",
+      highRiskPregnancy: "Atención de embarazo de alto riesgo",
+      menopauseManagement: "Manejo de la menopausia",
+      pcosTreatment: "Tratamiento del SOP",
+      thyroidManagement: "Manejo de trastornos tiroideos",
+      osteoporosisPrevention: "Prevención de la osteoporosis",
+      wellnessCare: "Atención de bienestar personalizada para la mujer",
+    },
+    comprehensive: {
+      heading: "Atención Integral para la Mujer en la que Puede Confiar",
+      description:
+        "Combinamos atención preventiva, exámenes de detección, servicios de salud reproductiva y apoyo continuo de bienestar en un entorno cómodo y confidencial centrado en sus necesidades individuales.",
+    },
+    pairAlt: {
+      consultation: "Médica consultando con una mujer durante una visita de bienestar de rutina",
+      screening: "Profesional de la salud realizando un examen médico de detección",
+    },
+    faq: {
+      eyebrow: "Preguntas Frecuentes",
+      items: {
+        services: {
+          question: "¿Qué servicios de salud de la mujer ofrecen?",
+          answer:
+            "Ofrecemos exámenes preventivos, Papanicolaou, exámenes de mama, planificación familiar, atención del embarazo, atención relacionada con hormonas, manejo de la menopausia y otros servicios de bienestar para la mujer.",
+        },
+        appointment: {
+          question: "¿Necesito una cita?",
+          answer:
+            "Se recomienda programar una cita para garantizar la disponibilidad del proveedor y horario adecuados. También pueden estar disponibles citas el mismo día.",
+        },
+        pregnancy: {
+          question: "¿Ofrecen atención de embarazo y prenatal?",
+          answer:
+            "Sí. Los servicios incluyen pruebas de embarazo, monitoreo prenatal, orientación nutricional y apoyo para embarazos que puedan requerir atención médica adicional.",
+        },
+        confidentiality: {
+          question: "¿Las consultas son confidenciales?",
+          answer:
+            "Sí. Las consultas de salud de la mujer y la información médica se manejan de forma privada y confidencial.",
+        },
+        hours: {
+          question: "¿Cuál es su horario de atención?",
+          answer:
+            "Estamos abiertos los 7 días de la semana. Lunes – Viernes: 9:00 AM – 8:00 PM. Sábado – Domingo: 12:00 PM – 6:00 PM. A partir del 1 de septiembre, el horario de fin de semana será de 10:00 AM – 6:00 PM.",
+        },
+        moreInformation: {
+          question: "¿Necesita Más Información?",
+          answer:
+            "Si tiene preguntas adicionales sobre nuestros servicios de salud de la mujer o necesita ayuda para elegir la cita adecuada, comuníquese con nuestro equipo al {{phone}}. Estaremos encantados de ayudarle.",
+        },
+      },
+    },
+    sidebarCta: {
+      heading: "¿Listo Para Recibir Atención Experta?",
+      description:
+        "Atención médica especializada para la mujer, diseñada para cada etapa de la vida. Nuestro equipo está aquí cuando nos necesite.",
+      portraitAlt: "Profesional de la salud femenina lista para ayudar a las pacientes",
+    },
+  },
   about: {
     eyebrow: "Sobre Nosotros",
     headingLine1: "Atención Completa,",
@@ -755,6 +831,11 @@ export const es: TranslationResource = {
       title: "Servicios de Diagnóstico — AccessNow Care",
       description:
         "Servicios avanzados de pruebas e imágenes para ayudar a diagnosticar y monitorear condiciones de salud.",
+    },
+    womensHealth: {
+      title: "Servicios de Salud de la Mujer — AccessNow Care",
+      description:
+        "Servicios integrales de salud de la mujer en Portage, Michigan, incluyendo atención preventiva, atención prenatal y manejo del bienestar.",
     },
   },
 };

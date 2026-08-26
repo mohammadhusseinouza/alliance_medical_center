@@ -13,6 +13,7 @@ const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
 const DEDICATED_SERVICE_HREFS: Record<string, string> = {
   "urgent-care": SITE.urgentCareHref,
   "diagnostic-services": SITE.diagnosticServicesHref,
+  "womens-health": SITE.womensHealthHref,
 };
 
 export interface NavDropdownItem {

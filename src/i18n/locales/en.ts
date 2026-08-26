@@ -294,6 +294,81 @@ export const en = {
       portraitAlt: "Diagnostic lab technician ready to help patients",
     },
   },
+  womensHealth: {
+    hero: {
+      imageAlt: "Female physician consulting with a patient in a bright exam room",
+    },
+    mainPhotoAlt: "Female physician consulting with an adult female patient in a modern exam room",
+    heading: "Specialized Women's Healthcare for Every Stage of Life",
+    intro:
+      "Our women's health services provide comprehensive, compassionate care tailored to the unique health needs of women throughout every stage of life. From preventive screenings and family planning to pregnancy care and menopause management, our team is here to support your health and well-being.",
+    whatsIncluded: "What's Included",
+    benefits: {
+      annualExams: "Annual gynecological exams",
+      papSmears: "Pap smears and cervical screenings",
+      breastExams: "Clinical breast examinations",
+      familyPlanning: "Family planning and contraception",
+      stdTesting: "Confidential STD testing",
+      pregnancyTesting: "Pregnancy testing",
+      prenatalCare: "Prenatal care",
+      nutritionalCounseling: "Nutritional counseling",
+      highRiskPregnancy: "High-risk pregnancy care",
+      menopauseManagement: "Menopause management",
+      pcosTreatment: "PCOS treatment",
+      thyroidManagement: "Thyroid disorder management",
+      osteoporosisPrevention: "Osteoporosis prevention",
+      wellnessCare: "Personalized women's wellness care",
+    },
+    comprehensive: {
+      heading: "Comprehensive Women's Care You Can Trust",
+      description:
+        "We combine preventive care, screenings, reproductive health services and ongoing wellness support in a comfortable, confidential environment centered around your individual needs.",
+    },
+    pairAlt: {
+      consultation: "Female physician consulting with a woman during a routine wellness visit",
+      screening: "Female healthcare professional performing a medical screening",
+    },
+    faq: {
+      eyebrow: "Frequently Asked Questions",
+      items: {
+        services: {
+          question: "What women's health services do you provide?",
+          answer:
+            "We provide preventive exams, Pap smears, breast exams, family planning, pregnancy care, hormone-related care, menopause management and other women's wellness services.",
+        },
+        appointment: {
+          question: "Do I need an appointment?",
+          answer:
+            "Appointments are recommended to ensure the appropriate provider and appointment time are available. Same-day appointments may also be available.",
+        },
+        pregnancy: {
+          question: "Do you provide pregnancy and prenatal care?",
+          answer:
+            "Yes. Services include pregnancy testing, prenatal monitoring, nutritional guidance and support for pregnancies that may require additional medical attention.",
+        },
+        confidentiality: {
+          question: "Are consultations confidential?",
+          answer: "Yes. Women's health consultations and medical information are handled privately and confidentially.",
+        },
+        hours: {
+          question: "What are your hours of operation?",
+          answer:
+            "We're open 7 days a week. Monday – Friday: 9:00 AM – 8:00 PM. Saturday – Sunday: 12:00 PM – 6:00 PM. Starting September 1, weekend hours are 10:00 AM – 6:00 PM.",
+        },
+        moreInformation: {
+          question: "Need More Information?",
+          answer:
+            "If you have additional questions about our women's health services or need help choosing the right appointment, contact our friendly team at {{phone}}. We are happy to help.",
+        },
+      },
+    },
+    sidebarCta: {
+      heading: "Ready To Get Expert Care?",
+      description:
+        "Specialized women's healthcare designed around every stage of life. Our team is here when you need us.",
+      portraitAlt: "Female healthcare provider ready to help patients",
+    },
+  },
   about: {
     eyebrow: "About Us",
     headingLine1: "Complete Care,",
@@ -753,6 +828,11 @@ export const en = {
     diagnosticServices: {
       title: "Diagnostic Services — AccessNow Care",
       description: "Advanced testing and imaging services to help diagnose and monitor health conditions.",
+    },
+    womensHealth: {
+      title: "Women's Health Services — AccessNow Care",
+      description:
+        "Comprehensive women's health services in Portage, Michigan, including preventive care, prenatal care, and wellness management.",
     },
   },
 } as const;

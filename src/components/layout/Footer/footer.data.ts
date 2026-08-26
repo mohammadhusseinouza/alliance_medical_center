@@ -4,9 +4,16 @@ import { SERVICES } from "../../../sections/home/Services/services.data";
 import { SITE } from "../../../lib/constants";
 import type { FooterContactRow, FooterLink } from "./Footer.types";
 
-const URGENT_CARE_SERVICE_ID = "urgent-care";
-const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
-const DIAGNOSTIC_SERVICES_SERVICE_ID = "diagnostic-services";
+/**
+ * Services with their own dedicated route instead of the Home-page anchor
+ * fallback.
+ */
+const DEDICATED_SERVICE_HREFS: Record<string, string> = {
+  "urgent-care": SITE.urgentCareHref,
+  "occupational-health": SITE.occupationalHealthHref,
+  "diagnostic-services": SITE.diagnosticServicesHref,
+  "womens-health": SITE.womensHealthHref,
+};
 
 export const FOOTER_CONTACT_ROWS: FooterContactRow[] = [
   {
@@ -50,14 +57,7 @@ export const FOOTER_CONTACT_ROWS: FooterContactRow[] = [
 export function buildFooterServiceLinks(t: TranslateFn, language: Language): FooterLink[] {
   return SERVICES.map((service) => ({
     label: t(`services.items.${service.translationKey}.title`),
-    href:
-      service.id === URGENT_CARE_SERVICE_ID
-        ? withLocale(SITE.urgentCareHref, language)
-        : service.id === OCCUPATIONAL_HEALTH_SERVICE_ID
-          ? withLocale(SITE.occupationalHealthHref, language)
-          : service.id === DIAGNOSTIC_SERVICES_SERVICE_ID
-            ? withLocale(SITE.diagnosticServicesHref, language)
-            : withLocale(`/#${service.id}`, language),
+    href: withLocale(DEDICATED_SERVICE_HREFS[service.id] ?? `/#${service.id}`, language),
   }));
 }
 

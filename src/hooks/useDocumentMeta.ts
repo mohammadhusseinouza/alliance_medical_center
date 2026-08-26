@@ -3,22 +3,21 @@ import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { stripLocale } from "../i18n/routing";
 
+const PAGE_BY_CANONICAL_PATH: Record<string, string> = {
+  "/book-appointment": "booking",
+  "/services/urgent-care": "urgentCare",
+  "/services/diagnostic-services": "diagnosticServices",
+  "/services/womens-health": "womensHealth",
+  "/occupational-health": "occupationalHealth",
+};
+
 export function useDocumentMeta() {
   const { pathname } = useLocation();
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const canonicalPath = stripLocale(pathname);
-    const page =
-      canonicalPath === "/book-appointment"
-        ? "booking"
-        : canonicalPath === "/services/urgent-care"
-          ? "urgentCare"
-          : canonicalPath === "/services/diagnostic-services"
-            ? "diagnosticServices"
-            : canonicalPath === "/occupational-health"
-              ? "occupationalHealth"
-              : "home";
+    const page = PAGE_BY_CANONICAL_PATH[canonicalPath] ?? "home";
     document.title = t(`meta.${page}.title`);
     document.querySelector('meta[name="description"]')?.setAttribute("content", t(`meta.${page}.description`));
   }, [pathname, i18n.language, t]);
