@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#0B8995">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0B8995"></rect>
+    <rect x="300" y="220" width="180" height="360" rx="22" fill="#FFFFFF" opacity="0.55"></rect>
+    <rect x="510" y="220" width="390" height="200" rx="22" fill="#FFFFFF"></rect>
+    <rect x="510" y="440" width="390" height="24" rx="12" fill="#FFFFFF" opacity="0.85"></rect>
+    <rect x="510" y="484" width="300" height="24" rx="12" fill="#FFFFFF" opacity="0.6"></rect>
+    <rect x="510" y="540" width="185" height="40" rx="12" fill="#FFFFFF" opacity="0.85"></rect>
+    <rect x="715" y="540" width="185" height="40" rx="12" fill="#FFFFFF" opacity="0.85"></rect>
+    <g stroke="#FFFFFF" stroke-width="26" stroke-linecap="round">
+      <path d="M600 120h0"></path>
+    </g>
+    <path d="M560 130h60M590 100v60" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round"></path>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Inter', Arial, sans-serif; overflow-x: hidden; }
+  a { color: #0B8995; }
+  a:hover { color: #155D72; }
+  .anc-navlink { position: relative; text-decoration: none; white-space: nowrap; border-radius: 6px; padding: 8px 10px !important; margin: 0 -10px; transition: background 0.2s ease, color 0.2s ease; }
+  .anc-navlink:hover { background: #EAF3F4; color: #155D72 !important; }
+  .anc-navlink::after { content: ''; position: absolute; left: 10px; bottom: -13px; height: 2px; width: calc(100% - 20px); background: #176477; transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
+  .anc-navlink.anc-active::after { transform: scaleX(1); }
+  .anc-cta { transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease; }
+  .anc-cta:hover { background: #1A5560; transform: translateY(-1px); box-shadow: 0 6px 14px rgba(18,63,72,0.22); }
+  @keyframes anc-mobile-fade { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+  .anc-desktop-links, .anc-cta-desktop { display: flex; }
+  .anc-hamburger-btn { display: none; }
+  .anc-info-blocks { display: flex; }
+  @media (max-width: 1300px) { .anc-desktop-links { gap: 22px !important; } .anc-desktop-links a { font-size: 14px !important; } .anc-info-blocks { gap: 26px !important; } }
+  @media (max-width: 1100px) { .anc-info-blocks > div:first-child { display: none !important; } }
+  @media (max-width: 980px) { .anc-desktop-links, .anc-cta-desktop { display: none !important; } .anc-hamburger-btn { display: flex !important; } .anc-info-blocks > div:nth-child(2) { display: none !important; } }
+  @media (max-width: 640px) { .anc-info-blocks { display: none !important; } }
+  @media (prefers-reduced-motion: reduce) { .anc-top-header, .anc-nav-row { transition-duration: 0.01ms !important; } }
+
+  .uc-svc-item { transition: background 180ms ease, color 180ms ease, border-color 180ms ease; }
+  .uc-svc-item:hover { background: #F1F8F9; }
+  .uc-svc-item.uc-active:hover { background: #0B8995; }
+  .uc-svc-item svg { transition: transform 200ms ease; }
+  .uc-svc-item:hover svg { transform: translateX(3px); }
+  .uc-faq-row { transition: border-color 180ms ease, box-shadow 180ms ease; }
+  .uc-faq-row:hover { border-color: #BFDDE2; }
+  .uc-faq-btn { transition: color 180ms ease; }
+  .uc-faq-btn:hover { color: #0B8995; }
+
+  @media (max-width: 1100px) {
+    .uc-page-grid { grid-template-columns: 250px minmax(0,1fr) !important; gap: 30px !important; }
+    .uc-hero { min-height: 200px !important; }
+  }
+  @media (max-width: 880px) {
+    .uc-page-grid { display: flex !important; flex-direction: column !important; }
+    .uc-sidebar { width: 100% !important; }
+    .uc-hero-inner { grid-template-columns: 1fr !important; }
+    .uc-hero-image { min-height: 180px !important; }
+    .uc-checklist { grid-template-columns: 1fr !important; }
+    .uc-pair-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 600px) {
+    .uc-shell { width: calc(100% - 32px) !important; }
+    .uc-hero-title { font-size: 34px !important; }
+  }
+</style>
+</helmet>
+
+<div style="width:100%;font-family:'Inter',Arial,sans-serif;background:#FFFFFF;min-height:100vh;">
+
+  <div class="anc-top-header" style="{{ topHeaderStyle }}">
+    <div style="max-width:1660px;margin:0 auto;min-height:96px;display:flex;align-items:center;justify-content:space-between;padding:16px 60px;flex-wrap:wrap;gap:16px;">
+      <a href="./AccessNow%20Nav.dc.html" style="display:flex;align-items:center;gap:10px;flex-shrink:0;text-decoration:none;">
+        <svg width="32" height="38" viewBox="0 0 34 40" fill="none" style="flex-shrink:0;">
+          <path d="M17 2C10 2 5 9 8 16c2.5 5.5 9 7 9 14 0-7 6.5-8.5 9-14 3-7-2-14-9-14z" stroke="#8BC59A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M17 8C13 8 10 12 12 16.5c1.5 3.5 5 4.5 5 9.5 0-5 3.5-6 5-9.5C24 12 21 8 17 8z" stroke="#1D6778" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <div style="display:flex;flex-direction:column;line-height:1.15;">
+          <span style="font-size:20px;font-weight:700;color:#29364A;white-space:nowrap;">AccessNow Care</span>
+          <span style="font-size:10.5px;font-weight:600;color:#5B9A5E;letter-spacing:0.4px;white-space:nowrap;">URGENT CARE &amp; FAMILY HEALTH</span>
+        </div>
+      </a>
+      <div class="anc-info-blocks" style="align-items:center;gap:40px;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #1D6778;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D6778" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;line-height:1.3;">
+            <span style="font-size:15px;font-weight:600;color:#29364A;white-space:nowrap;">Open 7 Days</span>
+            <span style="font-size:13px;font-weight:400;color:#8A97A3;white-space:nowrap;">12:00 PM - 8:00 PM</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #1D6778;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#1D6778" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;line-height:1.3;">
+            <span style="font-size:15px;font-weight:600;color:#29364A;white-space:nowrap;">(269) 321-4774</span>
+            <span style="font-size:13px;font-weight:400;color:#8A97A3;white-space:nowrap;">info@accessnowcare.com</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:44px;height:44px;border-radius:50%;border:1.5px solid #1D6778;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#1D6778" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;line-height:1.3;">
+            <span style="font-size:15px;font-weight:600;color:#29364A;white-space:nowrap;">8145 Valleywood Lane</span>
+            <span style="font-size:13px;font-weight:400;color:#8A97A3;white-space:nowrap;">Portage, MI 49024</span>
+          </div>
+        </div>
+      </div>
+      <button class="anc-hamburger-btn" onClick="{{ toggleMobile }}" style="align-items:center;justify-content:center;width:44px;height:44px;background:transparent;border:none;cursor:pointer;flex-shrink:0;margin-left:auto;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27354A" stroke-width="2.2" stroke-linecap="round">
+          <sc-if value="{{ mobileOpen }}" hint-placeholder-val="{{ false }}">
+            <line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line>
+          </sc-if>
+          <sc-if value="{{ !mobileOpen }}" hint-placeholder-val="{{ true }}">
+            <line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+          </sc-if>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="anc-nav-row" style="{{ navRowStyle }}">
+    <div style="max-width:1660px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 60px;">
+      <nav class="anc-desktop-links" style="align-items:center;gap:28px;">
+        <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="8">
+          <a href="{{ link.href }}" class="anc-navlink {{ link.activeClass }}" style="font-size:15px;font-weight:500;color:{{ link.color }};padding:10px 0;">{{ link.label }}</a>
+        </sc-for>
+      </nav>
+      <div class="anc-cta-desktop" style="flex-shrink:0;">
+        <a href="./Book-Appointment.dc.html" class="anc-cta" style="min-width:190px;height:44px;padding:0 22px;background:#216979;color:#FFFFFF;border:none;border-radius:8px;font-weight:600;font-size:14.5px;font-family:'Inter',Arial,sans-serif;cursor:pointer;box-shadow:0 4px 8px rgba(0,0,0,0.16);display:flex;align-items:center;justify-content:center;text-decoration:none;">Book Appointment</a>
+      </div>
+    </div>
+    <sc-if value="{{ mobileOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="width:100%;background:#FFFFFF;border-top:1px solid #EDF1F2;box-shadow:0 16px 32px rgba(18,63,72,0.12);animation:anc-mobile-fade 0.25s ease forwards;padding:14px 24px 24px;">
+        <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="8">
+          <div style="border-bottom:1px solid #F0F3F4;">
+            <a href="{{ link.href }}" style="display:block;padding:16px 4px;font-size:17px;font-weight:600;color:{{ link.color }};text-decoration:none;">{{ link.label }}</a>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+  </div>
+
+  <div class="uc-hero" style="position:relative;overflow:hidden;min-height:250px;background:linear-gradient(90deg,#F1F9FB 0%,#EAF5F8 55%,#E6F3F6 100%);">
+    <div style="position:absolute;left:-90px;bottom:-120px;width:320px;height:320px;border-radius:50%;background:rgba(11,137,149,0.06);"></div>
+    <div class="uc-hero-inner uc-shell" style="position:relative;width:min(1320px,calc(100% - 64px));margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:36px;min-height:250px;">
+      <div style="padding:38px 0;">
+        <h1 class="uc-hero-title" style="margin:0;font-size:clamp(36px,4.2vw,52px);line-height:1.08;font-weight:700;letter-spacing:-1.4px;color:#10264A;">Our Services</h1>
+        <div style="margin-top:14px;display:flex;align-items:center;flex-wrap:wrap;gap:10px;font-size:13px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:#5B7085;">
+          <a href="./AccessNow%20Nav.dc.html" style="display:inline-flex;align-items:center;gap:7px;color:#5B7085;text-decoration:none;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 10v10h14V10"></path></svg>
+            Home
+          </a>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9DB0BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+          <span>Services</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9DB0BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+          <span style="color:#0B8995;">Urgent Care</span>
+        </div>
+      </div>
+      <div class="uc-hero-image" style="position:relative;height:100%;min-height:250px;">
+        <image-slot id="uc-hero-banner" shape="rect" style="width:100%;height:100%;min-height:250px;display:block;" placeholder="Wide banner image — clinician with a patient"></image-slot>
+      </div>
+    </div>
+  </div>
+
+  <div class="uc-page-grid uc-shell" style="width:min(1320px,calc(100% - 64px));margin:0 auto;padding:46px 0 80px;display:grid;grid-template-columns:280px minmax(0,1fr);gap:40px;align-items:start;">
+
+    <aside class="uc-sidebar" style="display:flex;flex-direction:column;gap:24px;position:sticky;top:84px;">
+      <div style="border-radius:16px;background:#F7FAFB;border:1px solid #E3ECEF;padding:14px;">
+        <div style="padding:6px 8px 12px;font-size:12px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#0B8995;">Our Services</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <sc-for list="{{ services }}" as="svc" hint-placeholder-count="6">
+            <a href="{{ svc.href }}" class="uc-svc-item {{ svc.activeClass }}" style="{{ svc.style }}">
+              <span style="font-size:15px;font-weight:600;">{{ svc.label }}</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="position:relative;overflow:hidden;border-radius:16px;background:linear-gradient(160deg,#0E5C69 0%,#0B8995 100%);color:#FFFFFF;">
+        <div style="padding:26px 24px 20px;">
+          <h3 style="margin:0;font-size:22px;line-height:1.2;font-weight:700;letter-spacing:-0.4px;">Ready To Get Expert Care?</h3>
+          <p style="margin:10px 0 0;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,0.82);">Same-day urgent care, walk-ins welcome. Our team is here when you need us.</p>
+          <a href="./Book-Appointment.dc.html" class="anc-cta" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:8px;background:#FFFFFF;color:#0B5F6B;font-size:14.5px;font-weight:700;text-decoration:none;">
+            Book Appointment
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="M12 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+        <div style="height:280px;">
+          <image-slot id="uc-cta-portrait" shape="rect" style="width:100%;height:100%;display:block;" placeholder="Portrait image — nurse with clipboard"></image-slot>
+        </div>
+      </div>
+    </aside>
+
+    <main style="min-width:0;">
+      <div style="width:100%;aspect-ratio:16/8;border-radius:16px;overflow:hidden;">
+        <image-slot id="uc-main-photo" shape="rect" style="width:100%;height:100%;display:block;" placeholder="Wide landscape image — doctor reviewing results with a patient"></image-slot>
+      </div>
+
+      <h2 style="margin:30px 0 0;font-size:clamp(28px,2.4vw,32px);line-height:1.2;font-weight:700;letter-spacing:-0.8px;color:#10264A;">Professional Urgent Care When You Need It</h2>
+      <p style="margin:14px 0 0;max-width:780px;font-size:16.5px;line-height:1.7;color:#5B7085;text-wrap:pretty;">AccessNow Care provides same-day treatment for minor illnesses and injuries, with walk-in convenience and minimal wait times. Our clinicians deliver professional, family-friendly care and clear guidance on next steps, so you can get back to feeling like yourself.</p>
+
+      <div style="margin-top:26px;width:fit-content;padding:7px 15px;border-radius:999px;background:#EAF6F7;color:#0B8995;font-size:12px;font-weight:700;letter-spacing:0.7px;text-transform:uppercase;">What's Included</div>
+
+      <div class="uc-checklist" style="margin-top:18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 34px;">
+        <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="8">
+          <div style="display:flex;align-items:flex-start;gap:11px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B8995" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M20 6L9 17l-5-5"></path></svg>
+            <span style="font-size:15.5px;line-height:1.55;color:#41586D;">{{ b }}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <h2 style="margin:42px 0 0;font-size:clamp(24px,2vw,26px);line-height:1.25;font-weight:700;letter-spacing:-0.6px;color:#10264A;">Comprehensive Care You Can Trust</h2>
+      <p style="margin:12px 0 0;max-width:780px;font-size:16px;line-height:1.7;color:#5B7085;text-wrap:pretty;">We combine clinical expertise with a patient-first approach, delivering care that is convenient, accessible, and centered on your well-being.</p>
+
+      <div class="uc-pair-grid" style="margin-top:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;">
+        <div style="aspect-ratio:4/3;border-radius:14px;overflow:hidden;">
+          <image-slot id="uc-pair-1" shape="rect" style="width:100%;height:100%;display:block;" placeholder="Nurse treating a young patient"></image-slot>
+        </div>
+        <div style="aspect-ratio:4/3;border-radius:14px;overflow:hidden;">
+          <image-slot id="uc-pair-2" shape="rect" style="width:100%;height:100%;display:block;" placeholder="Lab technician running diagnostics"></image-slot>
+        </div>
+      </div>
+
+      <div style="margin-top:42px;font-size:12px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#0B8995;">Frequently Asked Questions</div>
+
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;">
+        <sc-for list="{{ faqs }}" as="item" hint-placeholder-count="6">
+          <div class="uc-faq-row" style="{{ item.rowStyle }}">
+            <button class="uc-faq-btn" onClick="{{ item.toggle }}" style="{{ item.btnStyle }}">
+              <span style="text-align:left;">{{ item.q }}</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:{{ item.iconTransform }};transition:transform 220ms ease;"><path d="M6 9l6 6 6-6"></path></svg>
+            </button>
+            <sc-if value="{{ item.open }}">
+              <div style="padding:0 22px 20px;font-size:15.5px;line-height:1.7;color:#5B7085;">{{ item.a }}</div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </main>
+  </div>
+
+  <footer style="position:relative;overflow:hidden;background:linear-gradient(135deg,#103F48 0%,#124954 60%,#103F48 100%);color:#FFFFFF;">
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:60px 24px 45px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <svg width="30" height="36" viewBox="0 0 34 40" fill="none" style="flex-shrink:0;">
+            <path d="M17 2C10 2 5 9 8 16c2.5 5.5 9 7 9 14 0-7 6.5-8.5 9-14 3-7-2-14-9-14z" stroke="#8BC59A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M17 8C13 8 10 12 12 16.5c1.5 3.5 5 4.5 5 9.5 0-5 3.5-6 5-9.5C24 12 21 8 17 8z" stroke="#5FB6C4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <span style="font-size:19px;font-weight:700;color:#FFFFFF;">AccessNow Care</span>
+        </div>
+        <div style="font-size:13.5px;color:rgba(255,255,255,0.55);">© {{ currentYear }} Access Now URGENT CARE</div>
+      </div>
+      <div style="margin-top:30px;border-top:1px solid rgba(255,255,255,0.09);padding-top:20px;font-size:13.5px;color:rgba(255,255,255,0.6);text-align:center;">8145 Valleywood Lane, Portage, MI 49024 &nbsp;·&nbsp; (269) 321-4774 &nbsp;·&nbsp; info@accessnowcare.com</div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { scrolled: false, mobileOpen: false, openFaq: 5 };
+
+  NAV_ITEMS = [
+    { label: 'Home', href: './AccessNow%20Nav.dc.html' },
+    { label: 'Urgent Care', href: './Urgent%20Care.dc.html', active: true },
+    { label: 'Family Medicine/Wellness', href: '#' },
+    { label: 'Weight Loss', href: '#' },
+    { label: 'Educate Yourself', href: '#' },
+    { label: 'Contact', href: '#' },
+    { label: 'Careers', href: '#' },
+    { label: 'Book Appointment', href: './Book-Appointment.dc.html' }
+  ];
+
+  SERVICES = ['Urgent Care', 'Family Health', 'Occupational Health', "Women's Health", 'Pediatric Care', 'Diagnostic Services'];
+
+  BENEFITS = [
+    'Treatment for minor illnesses and injuries',
+    'Walk-ins welcome, no appointment necessary',
+    'Convenient access with minimal wait times',
+    'On-site diagnostic support, including labs and X-rays',
+    'Care for sprains, strains, and minor injuries',
+    'Cold, flu, fever, and common infections',
+    'Basic physicals and health screenings',
+    'Clear follow-up guidance when further care is needed'
+  ];
+
+  FAQS = [
+    { q: 'Do I need an appointment for urgent care?', a: 'No appointment is required. Walk-ins are welcome during all open hours, and you can also book ahead online to shorten your wait.' },
+    { q: 'What conditions do you treat at urgent care?', a: 'We treat minor illnesses and injuries, including colds and flu, fevers, infections, sprains and strains, minor cuts, rashes, and similar non-emergency concerns.' },
+    { q: 'Do you accept insurance?', a: 'We accept most major insurance plans and also offer transparent self-pay pricing. Bring your insurance card and a photo ID to your visit.' },
+    { q: 'What are your hours of operation?', a: 'We are open 7 days a week, 12:00 PM to 8:00 PM, including most holidays.' },
+    { q: 'When should I go to the ER instead of urgent care?', a: 'Go to the emergency room or call 911 for chest pain, difficulty breathing, severe bleeding, stroke symptoms, major trauma, or any life-threatening condition.' },
+    { q: 'Need More Information?', a: 'If you have additional questions or need help choosing the right service, please contact our friendly team at (269) 321-4774. We are happy to help.' }
+  ];
+
+  toggleMobile = () => this.setState(s => ({ mobileOpen: !s.mobileOpen }));
+  toggleFaq = (i) => () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i }));
+
+  componentDidMount() {
+    if (super.componentDidMount) super.componentDidMount();
+    this.onScroll = () => {
+      const isScrolled = window.scrollY > 80;
+      if (isScrolled !== this.state.scrolled) this.setState({ scrolled: isScrolled });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    if (super.componentWillUnmount) super.componentWillUnmount();
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
+  renderVals() {
+    const scrolled = this.state.scrolled;
+    const topHeaderStyle = `background:#FFFFFF;width:100%;overflow:hidden;max-height:${scrolled ? '0px' : '160px'};opacity:${scrolled ? 0 : 1};transition:max-height 280ms ease, opacity 220ms ease;`;
+    const navRowStyle = `background:${scrolled ? 'rgba(255,255,255,0.98)' : '#FFFFFF'};width:100%;border-top:1px solid #EEEEEE;border-bottom:1px solid #EEEEEE;position:sticky;top:0;z-index:1000;transition:background 220ms ease;`;
+    const navLinks = this.NAV_ITEMS.map(l => ({
+      label: l.label, href: l.href,
+      activeClass: l.active ? 'anc-active' : '',
+      color: l.active ? '#155D72' : '#27354A'
+    }));
+
+    const services = this.SERVICES.map((label, i) => {
+      const active = i === 0;
+      return {
+        label,
+        href: active ? './Urgent%20Care.dc.html' : '#',
+        activeClass: active ? 'uc-active' : '',
+        style: `display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;border-radius:10px;text-decoration:none;border:1px solid ${active ? '#0B8995' : '#E4EBEE'};background:${active ? '#0B8995' : '#FFFFFF'};color:${active ? '#FFFFFF' : '#10264A'};`
+      };
+    });
+
+    const faqs = this.FAQS.map((f, i) => {
+      const open = this.state.openFaq === i;
+      return {
+        q: f.q, a: f.a, open,
+        toggle: this.toggleFaq(i),
+        rowStyle: `border-radius:12px;border:1px solid ${open ? '#BFDDE2' : '#E4EBEE'};background:#FFFFFF;overflow:hidden;box-shadow:${open ? '0 6px 18px rgba(20,70,85,0.07)' : 'none'};`,
+        btnStyle: `width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;background:${open ? '#0B8995' : '#FFFFFF'};color:${open ? '#FFFFFF' : '#10264A'};border:none;cursor:pointer;font-family:'Inter',Arial,sans-serif;font-size:16px;font-weight:600;text-align:left;`,
+        iconTransform: open ? 'rotate(180deg)' : 'rotate(0deg)'
+      };
+    });
+
+    return {
+      topHeaderStyle, navRowStyle, navLinks,
+      mobileOpen: this.state.mobileOpen,
+      toggleMobile: this.toggleMobile,
+      services, benefits: this.BENEFITS, faqs,
+      currentYear: new Date().getFullYear()
+    };
+  }
+}
+
+</script>
+</body>
+</html>
