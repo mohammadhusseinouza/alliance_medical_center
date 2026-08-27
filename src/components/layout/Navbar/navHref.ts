@@ -28,5 +28,7 @@ export function isNavItemActive(item: NavItem, pathname: string): boolean {
       return canonical.startsWith("/services/");
     case "occupational-health":
       return canonical === "/occupational-health";
+    case "contact":
+      return canonical === "/contact";
   }
 }

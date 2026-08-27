@@ -13,7 +13,6 @@ export const es: TranslationResource = {
     home: "Inicio",
     services: "Servicios",
     occupationalHealth: "Salud Ocupacional",
-    aboutUs: "Sobre Nosotros",
     contactUs: "Contáctanos",
     toggleMenu: "Alternar menú",
     primaryLabel: "Principal",
@@ -547,6 +546,93 @@ export const es: TranslationResource = {
       portraitAlt: "Proveedor de Salud Familiar listo para ayudar a los pacientes",
     },
   },
+  contact: {
+    sidebar: {
+      infoHeading: "Información de Contacto",
+      phoneLabel: "Teléfono",
+      phoneSupport: "Llámenos cuando lo necesite",
+      emailLabel: "Correo electrónico",
+      emailSupport: "Respondemos rápidamente",
+      addressLabel: "Dirección",
+      hoursLabel: "Horario",
+      hoursValue: "Abiertos los 7 Días de la Semana",
+      hoursSupport: "Vea el horario abajo",
+      cta: {
+        heading: "Estamos Aquí para Ayudarle",
+        description: "Su salud y bienestar son nuestra prioridad. Contáctenos hoy para recibir la atención que necesita.",
+        imageAlt: "Proveedor de salud amigable listo para atender a los pacientes",
+      },
+    },
+    hero: {
+      heading: "Contáctenos",
+      description: "Estamos aquí para responder sus preguntas y ayudarle a obtener la atención que necesita.",
+      imageAlt: "Miembro del equipo de AccessNow Care listo para atender a un paciente",
+    },
+    methods: {
+      heading: "Póngase en Contacto",
+      description: "Elija la mejor manera de comunicarse con nosotros. ¡Estamos aquí para ayudar!",
+      items: {
+        call: {
+          title: "Llámenos",
+          description: "Hable con los miembros de nuestro equipo",
+        },
+        email: {
+          title: "Envíenos un Correo",
+          description: "Envíenos un correo y le responderemos",
+        },
+        visit: {
+          title: "Visítenos",
+          description: "Pase por nuestra clínica en horario de atención",
+        },
+        bookOnline: {
+          title: "Reserve en Línea",
+          description: "Programe su cita en línea cuando quiera",
+          action: "Reservar Ahora",
+        },
+      },
+    },
+    form: {
+      heading: "Envíenos un Mensaje",
+      fields: {
+        firstName: { label: "Nombre", placeholder: "Nombre" },
+        lastName: { label: "Apellido", placeholder: "Apellido" },
+        email: { label: "Correo electrónico", placeholder: "su-correo@ejemplo.com" },
+        phone: { label: "Número de teléfono", placeholder: "Ingrese su número de teléfono" },
+        subject: { label: "Asunto", placeholder: "¿Sobre qué es su mensaje?" },
+        message: { label: "Mensaje", placeholder: "Cuéntenos cómo podemos ayudarle..." },
+      },
+      submit: "Enviar Mensaje",
+      validation: {
+        firstName: "El nombre es obligatorio.",
+        lastName: "El apellido es obligatorio.",
+        emailRequired: "El correo electrónico es obligatorio.",
+        emailInvalid: "Ingrese un correo electrónico válido.",
+        phoneInvalid: "Ingrese un número de teléfono válido.",
+        subject: "El asunto es obligatorio.",
+        message: "El mensaje es obligatorio.",
+      },
+      success: {
+        heading: "Mensaje Listo",
+        description:
+          "Su información se ha ingresado correctamente. Llámenos o envíenos un correo electrónico para hacer llegar su mensaje a nuestro equipo.",
+        callAction: "Llamar",
+        emailAction: "Correo",
+        newMessageAction: "Iniciar Nuevo Mensaje",
+      },
+    },
+    hours: {
+      heading: "Horario de Atención",
+      weekdayDays: "Lunes – Viernes",
+      weekendDays: "Sábado – Domingo",
+      daysOpenLabel: "Días Abiertos",
+      daysOpenValue: "7 Días a la Semana",
+      holidaysLabel: "Días Festivos",
+      holidaysValue: "Abiertos Todos los Días – llame con anticipación",
+      updateNote: "A partir del 1 de septiembre, el horario de fin de semana se amplía de 10:00 AM a 6:00 PM.",
+      emergencyLabel: "¿Necesita atención inmediata?",
+      emergencyAction: "Llamar a la Línea de Emergencia",
+    },
+  },
   about: {
     eyebrow: "Sobre Nosotros",
     headingLine1: "Atención Completa,",
@@ -1021,6 +1107,11 @@ export const es: TranslationResource = {
       title: "Servicios de Salud Familiar — AccessNow Care",
       description:
         "Atención primaria integral para toda su familia en Portage, Michigan, incluyendo exámenes físicos, manejo de enfermedades crónicas y detecciones preventivas.",
+    },
+    contact: {
+      title: "Contáctenos — AccessNow Care",
+      description:
+        "Póngase en contacto con AccessNow Care. Llame, envíe un correo, visite nuestra clínica o envíenos un mensaje y le responderemos.",
     },
   },
 };

@@ -7,6 +7,7 @@ import { DiagnosticServicesPage } from "./pages/DiagnosticServicesPage";
 import { WomensHealthPage } from "./pages/WomensHealthPage";
 import { PediatricCarePage } from "./pages/PediatricCarePage";
 import { FamilyHealthPage } from "./pages/FamilyHealthPage";
+import { ContactPage } from "./pages/ContactPage";
 import { useScrollToHash } from "./hooks/useScrollToHash";
 import { useScrollToTop } from "./hooks/useScrollToTop";
 import { useDocumentMeta } from "./hooks/useDocumentMeta";
@@ -28,6 +29,7 @@ function AppRoutes() {
       <Route path="/services/pediatric-care" element={<PediatricCarePage />} />
       <Route path="/services/family-health" element={<FamilyHealthPage />} />
       <Route path="/occupational-health" element={<OccupationalHealthPage />} />
+      <Route path="/contact" element={<ContactPage />} />
       <Route path="/es" element={<HomePage />} />
       <Route path="/es/book-appointment" element={<BookAppointmentPage />} />
       <Route path="/es/services/urgent-care" element={<UrgentCarePage />} />
@@ -36,6 +38,7 @@ function AppRoutes() {
       <Route path="/es/services/pediatric-care" element={<PediatricCarePage />} />
       <Route path="/es/services/family-health" element={<FamilyHealthPage />} />
       <Route path="/es/occupational-health" element={<OccupationalHealthPage />} />
+      <Route path="/es/contact" element={<ContactPage />} />
     </Routes>
   );
 }

@@ -26,10 +26,9 @@ export interface NavDropdownItem {
 /**
  * Which canonical (locale-stripped) route category makes this item's
  * underline active. Home-page hashes never factor in — only the pathname
- * itself decides, so exactly one top-level item can ever be active. Items
- * without a value (About Us, Contact Us) never show as active.
+ * itself decides, so exactly one top-level item can ever be active.
  */
-export type NavActiveMatch = "home" | "services" | "occupational-health";
+export type NavActiveMatch = "home" | "services" | "occupational-health" | "contact";
 
 export interface NavItem {
   label: string;
@@ -59,7 +58,10 @@ export function buildNavItems(t: TranslateFn, language: Language): NavItem[] {
       href: withLocale(SITE.occupationalHealthHref, language),
       activeMatch: "occupational-health",
     },
-    { label: t("navbar.aboutUs"), href: withLocale("/#about", language) },
-    { label: t("navbar.contactUs"), href: withLocale("/#contact", language) },
+    {
+      label: t("navbar.contactUs"),
+      href: withLocale(SITE.contactHref, language),
+      activeMatch: "contact",
+    },
   ];
 }

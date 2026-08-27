@@ -11,7 +11,6 @@ export const en = {
     home: "Home",
     services: "Services",
     occupationalHealth: "Occupational Health",
-    aboutUs: "About Us",
     contactUs: "Contact Us",
     toggleMenu: "Toggle menu",
     primaryLabel: "Primary",
@@ -543,6 +542,93 @@ export const en = {
       portraitAlt: "Family Health provider ready to help patients",
     },
   },
+  contact: {
+    sidebar: {
+      infoHeading: "Contact Information",
+      phoneLabel: "Phone",
+      phoneSupport: "Call us anytime",
+      emailLabel: "Email",
+      emailSupport: "We respond quickly",
+      addressLabel: "Address",
+      hoursLabel: "Hours",
+      hoursValue: "Open 7 Days a Week",
+      hoursSupport: "See hours below",
+      cta: {
+        heading: "We're Here to Help You",
+        description: "Your health and well-being are our priority. Contact us today to get the care you need.",
+        imageAlt: "Friendly healthcare provider ready to assist patients",
+      },
+    },
+    hero: {
+      heading: "Contact Us",
+      description: "We're here to answer your questions and help you get the care you need.",
+      imageAlt: "AccessNow Care team member ready to assist a patient",
+    },
+    methods: {
+      heading: "Get in Touch",
+      description: "Choose the best way to reach us. We're here to help!",
+      items: {
+        call: {
+          title: "Call Us",
+          description: "Speak with our friendly team members",
+        },
+        email: {
+          title: "Email Us",
+          description: "Send us an email and we'll get back to you",
+        },
+        visit: {
+          title: "Visit Us",
+          description: "Stop by our clinic during business hours",
+        },
+        bookOnline: {
+          title: "Book Online",
+          description: "Schedule your appointment online anytime",
+          action: "Book Now",
+        },
+      },
+    },
+    form: {
+      heading: "Send Us a Message",
+      fields: {
+        firstName: { label: "First name", placeholder: "First name" },
+        lastName: { label: "Last name", placeholder: "Last name" },
+        email: { label: "Email address", placeholder: "your-email@example.com" },
+        phone: { label: "Phone number", placeholder: "Enter phone number" },
+        subject: { label: "Subject", placeholder: "What is this regarding?" },
+        message: { label: "Message", placeholder: "Tell us how we can help..." },
+      },
+      submit: "Send Message",
+      validation: {
+        firstName: "First name is required.",
+        lastName: "Last name is required.",
+        emailRequired: "Email address is required.",
+        emailInvalid: "Enter a valid email address.",
+        phoneInvalid: "Enter a valid phone number.",
+        subject: "Subject is required.",
+        message: "Message is required.",
+      },
+      success: {
+        heading: "Message Ready",
+        description:
+          "Your information has been entered successfully. Please call or email us to send your message to our team.",
+        callAction: "Call",
+        emailAction: "Email",
+        newMessageAction: "Start New Message",
+      },
+    },
+    hours: {
+      heading: "Hours of Operation",
+      weekdayDays: "Monday – Friday",
+      weekendDays: "Saturday – Sunday",
+      daysOpenLabel: "Days Open",
+      daysOpenValue: "7 Days a Week",
+      holidaysLabel: "Holidays",
+      holidaysValue: "Open Daily – call ahead",
+      updateNote: "Starting September 1, weekend hours expand to 10:00 AM – 6:00 PM.",
+      emergencyLabel: "Need immediate care?",
+      emergencyAction: "Call Emergency Line",
+    },
+  },
   about: {
     eyebrow: "About Us",
     headingLine1: "Complete Care,",
@@ -1017,6 +1103,11 @@ export const en = {
       title: "Family Health Services — AccessNow Care",
       description:
         "Comprehensive primary care for your entire family in Portage, Michigan, including physicals, chronic disease management, and preventive screenings.",
+    },
+    contact: {
+      title: "Contact Us — AccessNow Care",
+      description:
+        "Get in touch with AccessNow Care. Call, email, or visit our clinic, or send us a message and we'll get back to you.",
     },
   },
 } as const;

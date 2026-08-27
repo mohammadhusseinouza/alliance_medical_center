@@ -11,6 +11,7 @@ const PAGE_BY_CANONICAL_PATH: Record<string, string> = {
   "/services/pediatric-care": "pediatricCare",
   "/services/family-health": "familyHealth",
   "/occupational-health": "occupationalHealth",
+  "/contact": "contact",
 };
 
 export function useDocumentMeta() {
