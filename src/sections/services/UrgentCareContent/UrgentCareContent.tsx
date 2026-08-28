@@ -28,7 +28,7 @@ export function UrgentCareContent() {
         loading="lazy"
       />
 
-      <h2 className="mt-[30px] text-[clamp(28px,2.4vw,32px)] font-bold leading-[1.2] tracking-[-0.8px] text-text-primary">
+      <h2 className="mt-[30px] font-heading text-[clamp(28px,2.4vw,32px)] font-bold leading-[1.2] tracking-[-0.8px] text-text-primary">
         {t("servicePage.urgentCare.heading")}
       </h2>
 
@@ -44,14 +44,14 @@ export function UrgentCareContent() {
         {BENEFIT_KEYS.map((key) => (
           <li key={key} className="flex items-start gap-[11px]">
             <CheckIcon size={18} strokeWidth={2.6} className="mt-[3px] flex-shrink-0 text-badge-text" />
-            <span className="text-[15.5px] leading-[1.55] text-[#41586D]">
+            <span className="text-[15.5px] leading-[1.55] text-service-detail-benefit-text">
               {t(`servicePage.urgentCare.benefits.${key}`)}
             </span>
           </li>
         ))}
       </ul>
 
-      <h2 className="mt-[42px] text-[clamp(24px,2vw,26px)] font-bold leading-[1.25] tracking-[-0.6px] text-text-primary">
+      <h2 className="mt-[42px] font-heading text-[clamp(24px,2vw,26px)] font-bold leading-[1.25] tracking-[-0.6px] text-text-primary">
         {t("servicePage.urgentCare.comprehensive.heading")}
       </h2>
 

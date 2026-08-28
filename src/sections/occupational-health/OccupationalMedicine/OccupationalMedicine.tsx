@@ -16,7 +16,7 @@ export function OccupationalMedicine() {
             {t("occupationalHealth.eyebrow")}
           </div>
 
-          <h1 className="mt-[18px] text-[clamp(34px,4vw,48px)] font-bold leading-[1.1] tracking-[-1px] text-text-primary">
+          <h1 className="mt-[18px] font-heading text-[clamp(34px,4vw,48px)] font-bold leading-[1.1] tracking-[-1px] text-text-primary">
             {t("occupationalHealth.heading")}
           </h1>
 

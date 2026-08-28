@@ -34,7 +34,7 @@ export function ServiceSidebar({ activeServiceId, activeHref, cta }: ServiceSide
 
   return (
     <aside className="sticky top-[84px] flex flex-col gap-6 mw-880:static mw-880:top-auto">
-      <div className="rounded-2xl border border-[#E3ECEF] bg-[#F7FAFB] p-3.5">
+      <div className="rounded-2xl border border-contact-page-sidebar-border bg-contact-page-sidebar-bg p-3.5">
         <h2 className="m-0 px-2 pb-3 pt-1.5 text-xs font-bold uppercase tracking-[0.8px] text-badge-text">
           {t("services.eyebrow")}
         </h2>
@@ -66,7 +66,7 @@ export function ServiceSidebar({ activeServiceId, activeHref, cta }: ServiceSide
               return (
                 <div
                   key={service.id}
-                  className="flex cursor-default items-center justify-between gap-3 rounded-[10px] border border-[#E4EBEE] bg-white px-[15px] py-[13px] text-[15px] font-semibold text-text-primary"
+                  className="flex cursor-default items-center justify-between gap-3 rounded-[10px] border border-contact-page-sidebar-row-border bg-white px-[15px] py-[13px] text-[15px] font-semibold text-text-primary"
                 >
                   <span className={labelClassName}>{label}</span>
                   {chevron("flex-shrink-0")}
@@ -78,7 +78,7 @@ export function ServiceSidebar({ activeServiceId, activeHref, cta }: ServiceSide
               <Link
                 key={service.id}
                 to={withLocale(href, language)}
-                className="group flex items-center justify-between gap-3 rounded-[10px] border border-[#E4EBEE] bg-white px-[15px] py-[13px] text-[15px] font-semibold text-text-primary no-underline [transition:background-color_180ms_ease,border-color_180ms_ease,color_180ms_ease] hover:border-badge-text hover:bg-[#EAF3F4] hover:text-brand-icon"
+                className="group flex items-center justify-between gap-3 rounded-[10px] border border-contact-page-sidebar-row-border bg-white px-[15px] py-[13px] text-[15px] font-semibold text-text-primary no-underline [transition:background-color_180ms_ease,border-color_180ms_ease,color_180ms_ease] hover:border-badge-text hover:bg-nav-hover hover:text-brand-icon"
               >
                 <span className={labelClassName}>{label}</span>
                 {chevron("flex-shrink-0 transition-transform duration-200 ease-out group-hover:translate-x-[3px]")}

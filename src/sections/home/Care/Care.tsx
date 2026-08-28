@@ -12,20 +12,20 @@ export function Care() {
   return (
     <section
       className="relative overflow-hidden px-6 pb-[25px] pt-[70px]"
-      style={{ background: "radial-gradient(circle at 50% 55%, rgba(23,170,180,0.04), transparent 42%), #F9FCFD" }}
+      style={{ background: "radial-gradient(circle at 50% 55%, var(--care-bg-glow), transparent 42%), var(--care-bg)" }}
     >
-      <div className="mx-auto flex w-fit animate-care-fade items-center gap-[7px] whitespace-nowrap rounded-full bg-[#E9F5F6] px-[15px] py-2 text-[12px] font-bold uppercase tracking-[0.8px] text-[#0B7F8B] motion-reduce:[animation-duration:0.01ms]">
+      <div className="mx-auto flex w-fit animate-care-fade items-center gap-[7px] whitespace-nowrap rounded-full bg-care-eyebrow-bg px-[15px] py-2 text-[12px] font-bold uppercase tracking-[0.8px] text-care-eyebrow-text motion-reduce:[animation-duration:0.01ms]">
         <ShieldCheckIcon size={14} />
         {t("care.eyebrow")}
       </div>
 
-      <h2 className="mx-auto mt-[18px] max-w-[1000px] animate-care-title text-center text-[clamp(42px,4vw,62px)] font-bold leading-[1.05] tracking-[-1.2px] text-text-primary motion-reduce:[animation-duration:0.01ms] mw-650:text-[32px]">
-        {t("care.headingLine1Before")} <span className="text-[#0B8F9B]">{t("care.headingHighlight")}</span>
+      <h2 className="mx-auto mt-[18px] max-w-[1000px] animate-care-title font-heading text-center text-[clamp(42px,4vw,62px)] font-bold leading-[1.05] tracking-[-1.2px] text-text-primary motion-reduce:[animation-duration:0.01ms] mw-650:text-[32px]">
+        {t("care.headingLine1Before")} <span className="text-care-highlight">{t("care.headingHighlight")}</span>
         <br />
         {t("care.headingLine2")}
       </h2>
 
-      <p className="mx-auto mt-[18px] max-w-[930px] animate-care-desc text-center text-[16px] leading-[1.65] text-[#566B81] motion-reduce:[animation-duration:0.01ms]">
+      <p className="mx-auto mt-[18px] max-w-[930px] animate-care-desc text-center text-[16px] leading-[1.65] text-care-body motion-reduce:[animation-duration:0.01ms]">
         {t("care.description")}
       </p>
 

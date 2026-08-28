@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
+import imagingImage from "../../../assets/diagnostic-services/Clinician performing an ultrasound examination.png";
+import mainPhotoImage from "../../../assets/diagnostic-services/Diagnostic imaging technician preparing a patient for a scan.png";
+import labImage from "../../../assets/diagnostic-services/Laboratory technician analyzing a blood sample.png";
 import { CheckIcon } from "../../../components/icons";
-import { ImagePlaceholder } from "../../../components/ui/ImagePlaceholder";
 import { DiagnosticServicesFaq } from "./DiagnosticServicesFaq";
 import { DIAGNOSTIC_SERVICE_ITEMS } from "./diagnosticServicesContent.data";
 
@@ -18,11 +20,14 @@ export function DiagnosticServicesContent() {
 
   return (
     <div className="min-w-0">
-      <div className="aspect-[16/8] w-full overflow-hidden rounded-2xl">
-        <ImagePlaceholder label={t("diagnosticServices.content.mainPhotoAlt")} className="h-full w-full" />
-      </div>
+      <img
+        src={mainPhotoImage}
+        alt={t("diagnosticServices.content.mainPhotoAlt")}
+        className="block aspect-[16/8] w-full rounded-2xl object-cover"
+        loading="lazy"
+      />
 
-      <h2 className="mt-[30px] text-[clamp(28px,2.4vw,32px)] font-bold leading-[1.2] tracking-[-0.8px] text-text-primary">
+      <h2 className="mt-[30px] font-heading text-[clamp(28px,2.4vw,32px)] font-bold leading-[1.2] tracking-[-0.8px] text-text-primary">
         {t("diagnosticServices.content.heading")}
       </h2>
 
@@ -54,7 +59,7 @@ export function DiagnosticServicesContent() {
         ))}
       </ul>
 
-      <h2 className="mt-[42px] text-[clamp(24px,2vw,26px)] font-bold leading-[1.25] tracking-[-0.6px] text-text-primary">
+      <h2 className="mt-[42px] font-heading text-[clamp(24px,2vw,26px)] font-bold leading-[1.25] tracking-[-0.6px] text-text-primary">
         {t("diagnosticServices.whyChoose.heading")}
       </h2>
 
@@ -62,7 +67,7 @@ export function DiagnosticServicesContent() {
         {WHY_CHOOSE_KEYS.map((key) => (
           <li key={key} className="flex items-start gap-[11px]">
             <CheckIcon size={18} strokeWidth={2.6} className="mt-[3px] flex-shrink-0 text-badge-text" />
-            <span className="text-[15.5px] leading-[1.55] text-[#41586D]">
+            <span className="text-[15.5px] leading-[1.55] text-service-detail-benefit-text">
               {t(`diagnosticServices.whyChoose.items.${key}`)}
             </span>
           </li>
@@ -70,12 +75,18 @@ export function DiagnosticServicesContent() {
       </ul>
 
       <div className="mt-5 grid grid-cols-2 gap-[22px] mw-880:grid-cols-1">
-        <div className="aspect-[4/3] w-full overflow-hidden rounded-[14px]">
-          <ImagePlaceholder label={t("diagnosticServices.content.pairAlt.lab")} className="h-full w-full" />
-        </div>
-        <div className="aspect-[4/3] w-full overflow-hidden rounded-[14px]">
-          <ImagePlaceholder label={t("diagnosticServices.content.pairAlt.imaging")} className="h-full w-full" />
-        </div>
+        <img
+          src={labImage}
+          alt={t("diagnosticServices.content.pairAlt.lab")}
+          className="block aspect-[4/3] w-full rounded-[14px] object-cover object-center"
+          loading="lazy"
+        />
+        <img
+          src={imagingImage}
+          alt={t("diagnosticServices.content.pairAlt.imaging")}
+          className="block aspect-[4/3] w-full rounded-[14px] object-cover object-center"
+          loading="lazy"
+        />
       </div>
 
       <DiagnosticServicesFaq />

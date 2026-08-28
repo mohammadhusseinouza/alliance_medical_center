@@ -50,22 +50,22 @@ export function BookingCalendar({ month, selectedDate, onSelectDate, onPrevMonth
   const cells = buildCalendarCells(month, selectedDate);
 
   return (
-    <div className="rounded-[9px] border border-[#DCE5EB] bg-white p-4">
+    <div className="rounded-[9px] border border-booking-border-panel bg-white p-4">
       <div className="flex items-center justify-between">
         <button
           type="button"
           onClick={onPrevMonth}
           aria-label={t("calendar.previousMonth")}
-          className="flex h-[30px] w-[30px] items-center justify-center rounded-md border-none bg-transparent text-[#374D62] transition-colors duration-150 hover:bg-[#EAF3F4]"
+          className="flex h-[30px] w-[30px] items-center justify-center rounded-md border-none bg-transparent text-booking-calendar-nav-icon transition-colors duration-150 hover:bg-nav-hover"
         >
           <ChevronIcon direction="left" size={16} strokeWidth={2.2} />
         </button>
-        <span className="text-[14.5px] font-bold text-[#10264A]">{monthLabel}</span>
+        <span className="text-[14.5px] font-bold text-text-primary">{monthLabel}</span>
         <button
           type="button"
           onClick={onNextMonth}
           aria-label={t("calendar.nextMonth")}
-          className="flex h-[30px] w-[30px] items-center justify-center rounded-md border-none bg-transparent text-[#374D62] transition-colors duration-150 hover:bg-[#EAF3F4]"
+          className="flex h-[30px] w-[30px] items-center justify-center rounded-md border-none bg-transparent text-booking-calendar-nav-icon transition-colors duration-150 hover:bg-nav-hover"
         >
           <ChevronIcon direction="right" size={16} strokeWidth={2.2} />
         </button>
@@ -73,7 +73,7 @@ export function BookingCalendar({ month, selectedDate, onSelectDate, onPrevMonth
 
       <div className="mt-3 grid grid-cols-7 gap-[2px] text-center">
         {weekdayLabels.map((wd) => (
-          <span key={wd} className="py-1 text-[11px] font-semibold text-[#8A97A3]">
+          <span key={wd} className="py-1 text-[11px] font-semibold text-text-muted">
             {wd}
           </span>
         ))}
@@ -85,10 +85,10 @@ export function BookingCalendar({ month, selectedDate, onSelectDate, onPrevMonth
             return <button key={`blank-${idx}`} type="button" disabled className="invisible h-9" />;
           }
           const stateClass = cell.selected
-            ? "bg-[#2E86EA] text-white cursor-pointer"
+            ? "bg-booking-blue text-white cursor-pointer"
             : cell.disabled
-              ? "bg-transparent text-[#AEBBC5] cursor-default"
-              : "bg-[#EDF6FF] text-[#214D7A] cursor-pointer hover:bg-[#DCECFF]";
+              ? "bg-transparent text-booking-calendar-disabled-text cursor-default"
+              : "bg-booking-calendar-available-bg text-booking-calendar-available-text cursor-pointer hover:bg-booking-calendar-available-hover-bg";
           return (
             <button
               key={cell.iso}
@@ -105,13 +105,13 @@ export function BookingCalendar({ month, selectedDate, onSelectDate, onPrevMonth
         })}
       </div>
 
-      <div className="mt-3.5 flex gap-4 text-[12px] text-[#687B8D]">
+      <div className="mt-3.5 flex gap-4 text-[12px] text-booking-text-muted-alt">
         <span className="flex items-center gap-1.5">
-          <span className="inline-block h-[9px] w-[9px] rounded-full bg-[#2E86EA]" />
+          <span className="inline-block h-[9px] w-[9px] rounded-full bg-booking-blue" />
           {t("calendar.selected")}
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="inline-block h-[9px] w-[9px] rounded-full border-[1.5px] border-[#214D7A]" />
+          <span className="inline-block h-[9px] w-[9px] rounded-full border-[1.5px] border-booking-calendar-available-text" />
           {t("calendar.available")}
         </span>
       </div>

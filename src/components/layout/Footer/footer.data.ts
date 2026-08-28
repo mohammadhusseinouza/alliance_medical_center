@@ -2,6 +2,7 @@ import { withLocale } from "../../../i18n/routing";
 import type { Language, TranslateFn } from "../../../i18n/types";
 import { SERVICES } from "../../../sections/home/Services/services.data";
 import { SITE } from "../../../lib/constants";
+import { CONTACT_ICON_COLORS } from "../../../lib/theme";
 import type { FooterContactRow, FooterLink } from "./Footer.types";
 
 /**
@@ -21,7 +22,7 @@ export const FOOTER_CONTACT_ROWS: FooterContactRow[] = [
   {
     id: "address",
     icon: "map-pin",
-    iconColor: "#48B9D1",
+    iconColor: CONTACT_ICON_COLORS.map,
     lines: [SITE.address.line1, SITE.address.line2],
     href: SITE.address.mapsHref,
     external: true,
@@ -29,20 +30,20 @@ export const FOOTER_CONTACT_ROWS: FooterContactRow[] = [
   {
     id: "phone",
     icon: "phone",
-    iconColor: "#55C7CE",
+    iconColor: CONTACT_ICON_COLORS.phone,
     lines: [SITE.phone],
     href: SITE.phoneHref,
   },
   {
     id: "fax",
     icon: "printer",
-    iconColor: "#A46DF4",
+    iconColor: CONTACT_ICON_COLORS.fax,
     lines: [SITE.fax],
   },
   {
     id: "email",
     icon: "mail",
-    iconColor: "#4D9CFF",
+    iconColor: CONTACT_ICON_COLORS.email,
     lines: [SITE.email],
     href: SITE.mailtoHref,
   },

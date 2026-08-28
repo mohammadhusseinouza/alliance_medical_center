@@ -16,16 +16,19 @@ export function Footer() {
   return (
     <footer
       className="relative overflow-visible text-white"
-      style={{ background: "linear-gradient(135deg, #103F48 0%, #124954 60%, #103F48 100%)" }}
+      style={{
+        background:
+          "linear-gradient(135deg, var(--color-brand-dark) 0%, var(--color-brand-dark-end) 60%, var(--color-brand-dark) 100%)",
+      }}
     >
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div
           className="absolute right-[-100px] top-[-250px] h-[500px] w-[500px] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(72,180,197,0.08), transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, var(--color-footer-glow-strong), transparent 70%)" }}
         />
         <div
           className="absolute bottom-[-200px] left-[-100px] h-[400px] w-[400px] rounded-full opacity-60"
-          style={{ background: "radial-gradient(circle, rgba(72,180,197,0.05), transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, var(--color-footer-glow-soft), transparent 70%)" }}
         />
       </div>
 
@@ -33,10 +36,9 @@ export function Footer() {
         <div className="grid grid-cols-[1.05fr_1fr_1.15fr_1.15fr] gap-[55px] mw-1000:grid-cols-2 mw-1000:gap-x-[35px] mw-1000:gap-y-[45px] mw-650:grid-cols-1 mw-650:gap-[38px]">
           <div className="animate-ft-col1 motion-reduce:[animation-duration:0.01ms]">
             <div className="flex items-center gap-2.5">
-              <Logo secondaryColor="#5FB6C4" />
+              <Logo />
               <div className="flex flex-col leading-[1.15]">
-                <span className="whitespace-nowrap text-[22px] font-bold text-white">{SITE.name}</span>
-                <span className="whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.4px] text-[#A9D85C]">
+                <span className="whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.4px] text-accent-lime">
                   {t("common.tagline")}
                 </span>
               </div>
@@ -47,7 +49,7 @@ export function Footer() {
           </div>
 
           <div className="animate-ft-col2 motion-reduce:[animation-duration:0.01ms]">
-            <div className="text-[21px] font-bold text-white">Access Now</div>
+            <div className="text-[21px] font-bold text-white">About Alliance</div>
             <p className="mt-[18px] text-[15px] leading-[1.7] text-white/[0.76]">
               {t("footer.aboutDescription")}
             </p>
@@ -55,28 +57,28 @@ export function Footer() {
               <a
                 href="#"
                 aria-label={t("footer.socialAria.facebook")}
-                className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.07] text-white/[0.65] no-underline transition-[transform,background-color,color,border-color] duration-[220ms] ease hover:-translate-y-[3px] hover:scale-[1.03] hover:border-white hover:bg-white hover:text-[#176D7C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
+                className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.07] text-white/[0.65] no-underline transition-[transform,background-color,color,border-color] duration-[220ms] ease hover:-translate-y-[3px] hover:scale-[1.03] hover:border-white hover:bg-white hover:text-footer-hover-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
               >
                 <FacebookIcon size={18} />
               </a>
               <a
                 href="#"
                 aria-label={t("footer.socialAria.twitter")}
-                className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.07] text-white/[0.65] no-underline transition-[transform,background-color,color,border-color] duration-[220ms] ease hover:-translate-y-[3px] hover:scale-[1.03] hover:border-white hover:bg-white hover:text-[#176D7C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
+                className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.07] text-white/[0.65] no-underline transition-[transform,background-color,color,border-color] duration-[220ms] ease hover:-translate-y-[3px] hover:scale-[1.03] hover:border-white hover:bg-white hover:text-footer-hover-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
               >
                 <TwitterIcon size={18} />
               </a>
               <a
                 href="#"
                 aria-label={t("footer.socialAria.instagram")}
-                className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.07] text-white/[0.65] no-underline transition-[transform,background-color,color,border-color] duration-[220ms] ease hover:-translate-y-[3px] hover:scale-[1.03] hover:border-white hover:bg-white hover:text-[#176D7C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
+                className="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.07] text-white/[0.65] no-underline transition-[transform,background-color,color,border-color] duration-[220ms] ease hover:-translate-y-[3px] hover:scale-[1.03] hover:border-white hover:bg-white hover:text-footer-hover-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
               >
                 <InstagramIcon size={18} />
               </a>
             </div>
             <Link
               to={withLocale(SITE.bookingHref, language)}
-              className="mt-[22px] inline-flex items-center gap-2 rounded-[9px] border border-white/[0.13] bg-white/[0.08] px-[18px] py-[11px] text-[13px] font-semibold text-white no-underline transition-colors duration-200 hover:bg-white hover:text-[#176D7C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
+              className="mt-[22px] inline-flex items-center gap-2 rounded-[9px] border border-white/[0.13] bg-white/[0.08] px-[18px] py-[11px] text-[13px] font-semibold text-white no-underline transition-colors duration-200 hover:bg-white hover:text-footer-hover-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
             >
               {t("footer.ctaText")}
             </Link>
@@ -104,7 +106,7 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="relative inline-flex w-fit items-center text-white/[0.78] no-underline transition-[color,transform] duration-200 before:h-[5px] before:w-0 before:flex-shrink-0 before:rounded-full before:bg-[#A9D85C] before:transition-[width,margin-right] before:duration-200 before:content-[''] hover:translate-x-1 hover:text-white hover:before:mr-[7px] hover:before:w-[5px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
+                  className="relative inline-flex w-fit items-center text-white/[0.78] no-underline transition-[color,transform] duration-200 before:h-[5px] before:w-0 before:flex-shrink-0 before:rounded-full before:bg-accent-lime before:transition-[width,margin-right] before:duration-200 before:content-[''] hover:translate-x-1 hover:text-white hover:before:mr-[7px] hover:before:w-[5px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
                 >
                   {link.label}
                 </a>
@@ -117,14 +119,14 @@ export function Footer() {
 
         <div className="flex items-center justify-between gap-5 pt-7 mw-650:flex-col mw-650:items-start mw-650:gap-4">
           <div className="text-[13.5px] text-white/[0.55]">
-            © {new Date().getFullYear()} Access Now URGENT CARE
+            © {new Date().getFullYear()} Alliance Medical Clinic
           </div>
           <div className="flex gap-[30px]">
             {footerLegalLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-[13.5px] text-white/[0.42] no-underline transition-colors duration-200 hover:text-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
+                className="text-[13.5px] text-white/[0.42] no-underline transition-colors duration-200 hover:text-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
               >
                 {link.label}
               </a>

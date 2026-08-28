@@ -5,11 +5,11 @@ import { SITE } from "../../../lib/constants";
 import { CONTACT_ADDRESS } from "../contact.data";
 import { ContactSidebarCta } from "./ContactSidebarCta";
 
-const infoRowClass = "flex items-start gap-3 border-t border-[#E4EBEE] py-4 first:border-t-0 first:pt-1.5";
+const infoRowClass = "flex items-start gap-3 border-t border-contact-page-sidebar-row-border py-4 first:border-t-0 first:pt-1.5";
 const iconCircleClass =
   "flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-badge-bg text-badge-text";
 const rowLinkClass =
-  "group block min-w-0 rounded-md no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#72C6D2]";
+  "group block min-w-0 rounded-md no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring";
 const rowValueClass =
   "block truncate text-[15px] font-bold text-text-primary transition-colors duration-150 group-hover:text-badge-text";
 const rowValueWrapClass =
@@ -23,7 +23,7 @@ export function ContactSidebar() {
 
   return (
     <aside className="sticky top-[84px] flex flex-col gap-6 mw-880:static mw-880:top-auto">
-      <div className="rounded-2xl border border-[#E3ECEF] bg-[#F7FAFB] p-5">
+      <div className="rounded-2xl border border-contact-page-sidebar-border bg-contact-page-sidebar-bg p-5">
         <h2 className="m-0 pb-3 text-xs font-bold uppercase tracking-[0.8px] text-badge-text">
           {t("contact.sidebar.infoHeading")}
         </h2>

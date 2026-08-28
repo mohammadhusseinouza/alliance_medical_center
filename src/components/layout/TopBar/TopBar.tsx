@@ -18,10 +18,9 @@ export function TopBar({ hamburger }: TopBarProps) {
     <div className="w-full bg-white">
       <Container className="flex min-h-[96px] flex-wrap items-center justify-between gap-4 px-[60px] py-4">
         <div className="flex flex-shrink-0 items-center gap-2.5">
-          <Logo />
+          <Logo className="mw-640:h-[42px] mw-640:w-auto" />
           <div className="flex flex-col leading-[1.15]">
-            <span className="whitespace-nowrap text-[20px] font-bold text-[#29364A]">{SITE.name}</span>
-            <span className="whitespace-nowrap text-[10.5px] font-semibold uppercase tracking-[0.4px] text-[#5B9A5E]">
+            <span className="whitespace-nowrap text-[10.5px] font-semibold uppercase tracking-[0.4px] text-text-tagline">
               {t("common.tagline")}
             </span>
           </div>
@@ -33,7 +32,7 @@ export function TopBar({ hamburger }: TopBarProps) {
               <ClockIcon size={20} />
             </span>
             <div className="flex flex-col leading-[1.3]">
-              <span className="whitespace-nowrap text-[15px] font-semibold text-[#29364A]">{t("common.openDays")}</span>
+              <span className="whitespace-nowrap text-[15px] font-semibold text-text-nav">{t("common.openDays")}</span>
               <span className="whitespace-nowrap text-[13px] font-normal text-text-muted">{SITE.hours.time}</span>
             </div>
           </div>
@@ -43,7 +42,7 @@ export function TopBar({ hamburger }: TopBarProps) {
               <PhoneIcon size={19} />
             </span>
             <div className="flex flex-col leading-[1.3]">
-              <a href={SITE.phoneHref} className="whitespace-nowrap text-[15px] font-semibold text-[#29364A]">
+              <a href={SITE.phoneHref} className="whitespace-nowrap text-[15px] font-semibold text-text-nav">
                 {SITE.phone}
               </a>
               <a href={SITE.mailtoHref} className="whitespace-nowrap text-[13px] font-normal text-text-muted">
@@ -62,7 +61,7 @@ export function TopBar({ hamburger }: TopBarProps) {
               <MapPinIcon size={19} />
             </span>
             <div className="flex flex-col leading-[1.3]">
-              <span className="whitespace-nowrap text-[15px] font-semibold text-[#29364A]">
+              <span className="whitespace-nowrap text-[15px] font-semibold text-text-nav">
                 {SITE.address.line1}
               </span>
               <span className="whitespace-nowrap text-[13px] font-normal text-text-muted">

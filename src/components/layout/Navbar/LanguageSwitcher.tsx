@@ -12,7 +12,7 @@ export interface LanguageSwitcherProps {
 function languageButtonClass(active: boolean) {
   return (
     "rounded px-1 py-0.5 text-[13px] font-bold uppercase tracking-[0.3px] transition-colors duration-150 " +
-    (active ? "text-[#155D72]" : "text-[#8A97A3] hover:text-[#29364A]")
+    (active ? "text-nav-active" : "text-text-muted hover:text-text-nav")
   );
 }
 
@@ -43,7 +43,7 @@ export function LanguageSwitcher({ className = "" }: LanguageSwitcherProps) {
       >
         EN
       </button>
-      <span aria-hidden="true" className="text-[#D6E0E7]">
+      <span aria-hidden="true" className="text-divider">
         |
       </span>
       <button

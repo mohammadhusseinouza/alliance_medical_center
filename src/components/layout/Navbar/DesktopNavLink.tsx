@@ -8,15 +8,15 @@ export interface DesktopNavLinkProps {
 }
 
 const linkClass =
-  "relative -mx-2.5 flex items-center gap-1 whitespace-nowrap rounded-md px-2.5 py-2 text-[15px] font-medium text-[#29364A] no-underline " +
-  "transition-colors duration-200 hover:bg-[#EAF3F4] hover:text-[#155D72] " +
+  "relative -mx-2.5 flex items-center gap-1 whitespace-nowrap rounded-md px-2.5 py-2 text-[15px] font-medium text-text-nav no-underline " +
+  "transition-colors duration-200 hover:bg-nav-hover hover:text-nav-active " +
   "mw-1300:text-[14px]";
 
 function labelClass(active: boolean) {
-  const color = active ? "text-[#155D72]" : "";
+  const color = active ? "text-nav-active" : "";
   const underline = active ? "after:scale-x-100" : "after:scale-x-0";
   return (
-    "relative inline-block after:absolute after:bottom-[-13px] after:left-0 after:right-0 after:h-[2px] after:origin-left after:bg-[#176477] after:transition-transform after:duration-200 after:content-[''] " +
+    "relative inline-block after:absolute after:bottom-[-13px] after:left-0 after:right-0 after:h-[2px] after:origin-left after:bg-nav-underline after:transition-transform after:duration-200 after:content-[''] " +
     color +
     " " +
     underline
@@ -56,8 +56,8 @@ export function DesktopNavLink({ item }: DesktopNavLinkProps) {
                 key={entry.label}
                 to={entry.href}
                 className={
-                  "block rounded-md px-3.5 py-2.5 text-[15px] font-medium no-underline transition-colors duration-150 hover:bg-[#EAF3F4] hover:text-brand-icon focus-visible:bg-[#EAF3F4] focus-visible:text-brand-icon " +
-                  (entryActive ? "bg-[#EAF3F4] text-brand-icon" : "text-[#27354A]")
+                  "block rounded-md px-3.5 py-2.5 text-[15px] font-medium no-underline transition-colors duration-150 hover:bg-nav-hover hover:text-brand-icon focus-visible:bg-nav-hover focus-visible:text-brand-icon " +
+                  (entryActive ? "bg-nav-hover text-brand-icon" : "text-text-nav-alt")
                 }
               >
                 {entry.label}

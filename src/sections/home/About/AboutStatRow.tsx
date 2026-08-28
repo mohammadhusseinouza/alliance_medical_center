@@ -23,7 +23,7 @@ export function AboutStatRow({ stat, showDivider }: AboutStatRowProps) {
       }`}
       style={{ animationDelay: `${stat.animationDelayMs}ms` }}
     >
-      <div className="flex h-[76px] w-[76px] flex-shrink-0 items-center justify-center rounded-full text-white mw-700:h-[62px] mw-700:w-[62px]" style={{ background: "linear-gradient(145deg, #1AA7AD, #0D6B78)" }}>
+      <div className="flex h-[76px] w-[76px] flex-shrink-0 items-center justify-center rounded-full text-white mw-700:h-[62px] mw-700:w-[62px]" style={{ background: "linear-gradient(145deg, var(--about-stat-icon-from), var(--about-stat-icon-to))" }}>
         <StatIcon icon={stat.icon} />
       </div>
       <div>

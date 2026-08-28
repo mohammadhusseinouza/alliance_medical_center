@@ -2,7 +2,7 @@ import type { TranslationResource } from "../types";
 
 export const es: TranslationResource = {
   common: {
-    tagline: "Atención de Urgencias y Salud Familiar",
+    tagline: "Atención compasiva. Una vida más saludable.",
     bookAppointment: "Reservar Cita",
     viewAllServices: "Ver Todos los Servicios",
     openDays: "Abiertos los 7 Días",
@@ -105,7 +105,7 @@ export const es: TranslationResource = {
     urgentCare: {
       heading: "Atención de Urgencias Profesional Cuando la Necesite",
       intro:
-        "AccessNow Care ofrece tratamiento el mismo día para enfermedades y lesiones menores, con la comodidad de la atención sin cita y tiempos de espera mínimos. Nuestro personal clínico brinda atención profesional y familiar, junto con indicaciones claras sobre los próximos pasos, para que pueda volver a sentirse usted mismo.",
+        "Alliance Medical Clinic ofrece tratamiento el mismo día para enfermedades y lesiones menores, con la comodidad de la atención sin cita y tiempos de espera mínimos. Nuestro personal clínico brinda atención profesional y familiar, junto con indicaciones claras sobre los próximos pasos, para que pueda volver a sentirse usted mismo.",
       whatsIncluded: "Qué Incluye",
       heroImageAlt: "Personal clínico conversando con un paciente en un consultorio luminoso",
       mainPhotoAlt: "Médico revisando resultados con un paciente",
@@ -566,7 +566,7 @@ export const es: TranslationResource = {
     hero: {
       heading: "Contáctenos",
       description: "Estamos aquí para responder sus preguntas y ayudarle a obtener la atención que necesita.",
-      imageAlt: "Miembro del equipo de AccessNow Care listo para atender a un paciente",
+      imageAlt: "Miembro del equipo de Alliance Medical Clinic listo para atender a un paciente",
     },
     methods: {
       heading: "Póngase en Contacto",
@@ -638,13 +638,13 @@ export const es: TranslationResource = {
     headingLine1: "Atención Completa,",
     headingLine2: "Todo en un Solo Lugar",
     description:
-      "Desde atención de urgencias y medicina familiar hasta diagnósticos y servicios preventivos, AccessNow Care ofrece atención coordinada diseñada para sus necesidades de salud cotidianas.",
+      "Desde atención de urgencias y medicina familiar hasta diagnósticos y servicios preventivos, Alliance Medical Clinic ofrece atención coordinada diseñada para sus necesidades de salud cotidianas.",
     feature: {
       title: "Atención Integral",
       description: "Una amplia gama de servicios ofrecidos bajo un mismo techo para mayor comodidad.",
     },
     cta: "Ver Servicios",
-    imageAlt: "Doctora conversando con un paciente en AccessNow Care",
+    imageAlt: "Doctora conversando con un paciente en Alliance Medical Clinic",
     stats: {
       openDays: {
         description: "12:00 PM – 8:00 PM, todos los días de la semana.",
@@ -971,14 +971,14 @@ export const es: TranslationResource = {
     },
   },
   footer: {
-    tagline: "Atención de urgencias y salud familiar para la comunidad de Portage.",
+    tagline: "Atención médica compasiva para la comunidad de Portage.",
     aboutDescription:
       "Brindamos servicios de calidad de atención de urgencias y salud familiar a la comunidad de Portage, Michigan, con compasión, experiencia y comodidad.",
     ctaText: "¿Necesita atención hoy? Reserve una Cita",
     socialAria: {
-      facebook: "Visite a AccessNow Care en Facebook",
-      twitter: "Visite a AccessNow Care en Twitter",
-      instagram: "Visite a AccessNow Care en Instagram",
+      facebook: "Visite a Alliance Medical Clinic en Facebook",
+      twitter: "Visite a Alliance Medical Clinic en Twitter",
+      instagram: "Visite a Alliance Medical Clinic en Instagram",
     },
     contactInfoHeading: "Información de Contacto",
     servicesHeading: "Servicios",
@@ -993,7 +993,7 @@ export const es: TranslationResource = {
       eyebrow: "CITA",
       heading: "Reserve Su Visita",
       description:
-        "Programe una visita conveniente con AccessNow Care. Elija su fecha y horario preferidos, luego proporcione sus datos para solicitar su cita.",
+        "Programe una visita conveniente con Alliance Medical Clinic. Elija su fecha y horario preferidos, luego proporcione sus datos para solicitar su cita.",
     },
     doctorAlt:
       "Doctor con bata blanca, camisa azul, corbata azul marino, estetoscopio, sonriendo, sosteniendo una tabla en blanco, señalando hacia el formulario",
@@ -1069,49 +1069,49 @@ export const es: TranslationResource = {
   },
   meta: {
     home: {
-      title: "AccessNow Care — Atención de Urgencias y Salud Familiar en Portage, MI",
+      title: "Alliance Medical Clinic — Atención de Urgencias y Salud Familiar en Portage, MI",
       description:
         "Servicios de atención de urgencias y salud familiar en Portage, Michigan. Abiertos los 7 días de la semana, de 12:00 PM a 8:00 PM. Venga sin cita o reserve una cita.",
     },
     booking: {
-      title: "Reservar una Cita — AccessNow Care",
+      title: "Reservar una Cita — Alliance Medical Clinic",
       description:
-        "Programe una visita con AccessNow Care en Portage, Michigan. Elija una fecha y hora, luego solicite su cita en línea.",
+        "Programe una visita con Alliance Medical Clinic en Portage, Michigan. Elija una fecha y hora, luego solicite su cita en línea.",
     },
     urgentCare: {
-      title: "Atención de Urgencias — AccessNow Care",
+      title: "Atención de Urgencias — Alliance Medical Clinic",
       description:
         "Atención de urgencias el mismo día en Portage, Michigan. Aceptamos pacientes sin cita, los 7 días de la semana de 12:00 PM a 8:00 PM. Conozca qué incluye una visita.",
     },
     occupationalHealth: {
-      title: "Salud Ocupacional — AccessNow Care",
+      title: "Salud Ocupacional — Alliance Medical Clinic",
       description:
         "Medicina ocupacional y servicios de salud laboral en Portage, Michigan, incluyendo exámenes físicos, atención de lesiones y programas de salud para empleados.",
     },
     diagnosticServices: {
-      title: "Servicios de Diagnóstico — AccessNow Care",
+      title: "Servicios de Diagnóstico — Alliance Medical Clinic",
       description:
         "Servicios avanzados de pruebas e imágenes para ayudar a diagnosticar y monitorear condiciones de salud.",
     },
     womensHealth: {
-      title: "Servicios de Salud de la Mujer — AccessNow Care",
+      title: "Servicios de Salud de la Mujer — Alliance Medical Clinic",
       description:
         "Servicios integrales de salud de la mujer en Portage, Michigan, incluyendo atención preventiva, atención prenatal y manejo del bienestar.",
     },
     pediatricCare: {
-      title: "Servicios de Atención Pediátrica — AccessNow Care",
+      title: "Servicios de Atención Pediátrica — Alliance Medical Clinic",
       description:
         "Atención médica especializada para bebés, niños y adolescentes en Portage, Michigan, incluyendo chequeos, inmunizaciones y tratamiento de enfermedades.",
     },
     familyHealth: {
-      title: "Servicios de Salud Familiar — AccessNow Care",
+      title: "Servicios de Salud Familiar — Alliance Medical Clinic",
       description:
         "Atención primaria integral para toda su familia en Portage, Michigan, incluyendo exámenes físicos, manejo de enfermedades crónicas y detecciones preventivas.",
     },
     contact: {
-      title: "Contáctenos — AccessNow Care",
+      title: "Contáctenos — Alliance Medical Clinic",
       description:
-        "Póngase en contacto con AccessNow Care. Llame, envíe un correo, visite nuestra clínica o envíenos un mensaje y le responderemos.",
+        "Póngase en contacto con Alliance Medical Clinic. Llame, envíe un correo, visite nuestra clínica o envíenos un mensaje y le responderemos.",
     },
   },
 };

@@ -35,8 +35,8 @@ export function FaqAccordion({ eyebrow, idPrefix, items, defaultOpenIndex }: Faq
               key={item.key}
               className={`overflow-hidden rounded-xl border bg-white [transition:border-color_180ms_ease,box-shadow_180ms_ease] ${
                 isOpen
-                  ? "border-[#BFDDE2] shadow-[0_6px_18px_rgba(20,70,85,0.07)]"
-                  : "border-[#E4EBEE] hover:border-[#BFDDE2]"
+                  ? "border-service-detail-faq-border shadow-service-detail-faq"
+                  : "border-contact-page-sidebar-row-border hover:border-service-detail-faq-border"
               }`}
             >
               <button
@@ -45,7 +45,7 @@ export function FaqAccordion({ eyebrow, idPrefix, items, defaultOpenIndex }: Faq
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => setOpenIndex(isOpen ? null : index)}
-                className={`flex w-full items-center justify-between gap-4 px-[22px] py-[18px] text-left text-base font-semibold [transition:background-color_180ms_ease,color_180ms_ease] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2] ${
+                className={`flex w-full items-center justify-between gap-4 px-[22px] py-[18px] text-left text-base font-semibold [transition:background-color_180ms_ease,color_180ms_ease] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring ${
                   isOpen ? "bg-badge-text text-white" : "bg-white text-text-primary hover:text-badge-text"
                 }`}
               >

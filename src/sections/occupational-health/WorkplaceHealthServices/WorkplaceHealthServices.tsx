@@ -27,7 +27,7 @@ export function WorkplaceHealthServices() {
           {t("occupationalHealth.services.eyebrow")}
         </div>
 
-        <h2 className="mx-auto mt-4 max-w-[640px] text-center text-[clamp(30px,3vw,40px)] font-bold leading-[1.14] tracking-[-1px] text-text-primary">
+        <h2 className="mx-auto mt-4 max-w-[640px] font-heading text-center text-[clamp(30px,3vw,40px)] font-bold leading-[1.14] tracking-[-1px] text-text-primary">
           {t("occupationalHealth.services.heading")}
         </h2>
 
@@ -45,7 +45,7 @@ export function WorkplaceHealthServices() {
                 <ServiceIcon icon={item.icon} />
               </div>
 
-              <h3 className="mt-[18px] text-[19px] font-bold leading-[1.3] text-text-primary">
+              <h3 className="mt-[18px] font-heading text-[19px] font-bold leading-[1.3] text-text-primary">
                 {t(`occupationalHealth.services.items.${item.translationKey}.title`)}
               </h3>
 

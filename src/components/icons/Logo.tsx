@@ -1,39 +1,32 @@
+import logoSrc from "../../assets/logo.png";
+
 export interface LogoProps {
   size?: number;
-  secondaryColor?: string;
   className?: string;
 }
 
-const BASE_WIDTH = 32;
-const BASE_HEIGHT = 38;
+/**
+ * Native asset is 2172x724 (exact 3:1). `size` is the rendered height in
+ * px; width is derived from the natural ratio so the lockup is never
+ * distorted. Default of 50 renders at 150x50.
+ */
+const NATURAL_WIDTH = 2172;
+const NATURAL_HEIGHT = 724;
+const DEFAULT_SIZE = 50;
 
-export function Logo({ size = BASE_WIDTH, secondaryColor = "#1D6778", className }: LogoProps) {
-  const height = Math.round((size * BASE_HEIGHT) / BASE_WIDTH);
+export function Logo({ size = DEFAULT_SIZE, className }: LogoProps) {
+  const width = Math.round((size * NATURAL_WIDTH) / NATURAL_HEIGHT);
 
   return (
-    <svg
-      width={size}
-      height={height}
-      viewBox="0 0 34 40"
-      fill="none"
-      className={className}
+    <img
+      src={logoSrc}
+      alt="Alliance Medical Clinic"
+      width={width}
+      height={size}
+      loading="eager"
+      decoding="async"
+      className={["object-contain", className].filter(Boolean).join(" ")}
       style={{ flexShrink: 0 }}
-      aria-hidden="true"
-    >
-      <path
-        d="M17 2C10 2 5 9 8 16c2.5 5.5 9 7 9 14 0-7 6.5-8.5 9-14 3-7-2-14-9-14z"
-        stroke="#8BC59A"
-        strokeWidth={2.4}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M17 8C13 8 10 12 12 16.5c1.5 3.5 5 4.5 5 9.5 0-5 3.5-6 5-9.5C24 12 21 8 17 8z"
-        stroke={secondaryColor}
-        strokeWidth={2.4}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    />
   );
 }

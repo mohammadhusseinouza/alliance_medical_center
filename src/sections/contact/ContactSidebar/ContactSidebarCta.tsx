@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ctaImage from "../../../assets/contact/helpyou.png";
 import { ArrowRightIcon } from "../../../components/icons";
-import { ImagePlaceholder } from "../../../components/ui/ImagePlaceholder";
 import { withLocale } from "../../../i18n/routing";
 import { useLanguage } from "../../../i18n/useLanguage";
 import { SITE } from "../../../lib/constants";
@@ -12,9 +12,11 @@ export function ContactSidebarCta() {
 
   return (
     <div className="relative min-h-[380px] overflow-hidden rounded-2xl text-white">
-      <ImagePlaceholder
-        label={t("contact.sidebar.cta.imageAlt")}
-        className="absolute inset-0 z-0 h-full w-full"
+      <img
+        src={ctaImage}
+        alt={t("contact.sidebar.cta.imageAlt")}
+        className="absolute inset-0 z-0 h-full w-full object-cover"
+        loading="lazy"
       />
 
       <div
@@ -26,7 +28,7 @@ export function ContactSidebarCta() {
       />
 
       <div className="relative z-[2] px-6 pt-[26px] pb-6">
-        <h3 className="m-0 text-[20px] font-bold leading-[1.2] tracking-[-0.4px]">
+        <h3 className="m-0 font-heading text-[20px] font-bold leading-[1.2] tracking-[-0.4px]">
           {t("contact.sidebar.cta.heading")}
         </h3>
         <p className="mt-2.5 text-[14px] leading-[1.6] text-white/[0.82]">
@@ -34,7 +36,7 @@ export function ContactSidebarCta() {
         </p>
         <Link
           to={withLocale(SITE.bookingHref, language)}
-          className="group mt-4 inline-flex h-11 items-center gap-2 rounded-lg bg-white px-5 text-[14.5px] font-bold text-[#0B5F6B] no-underline [transition:background-color_250ms_ease,color_250ms_ease,transform_200ms_ease,box-shadow_250ms_ease] hover:-translate-y-px hover:bg-[#1A5560] hover:text-white hover:shadow-[0_6px_14px_rgba(18,63,72,0.22)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
+          className="group mt-4 inline-flex h-11 items-center gap-2 rounded-lg bg-white px-5 text-[14.5px] font-bold text-contact-page-cta-text no-underline [transition:background-color_250ms_ease,color_250ms_ease,transform_200ms_ease,box-shadow_250ms_ease] hover:-translate-y-px hover:bg-cta-hover hover:text-white hover:shadow-nav-cta-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
         >
           {t("common.bookAppointment")}
           <ArrowRightIcon

@@ -12,9 +12,9 @@ import { VisitDetailsFields } from "./VisitDetailsFields";
 import type { BookingErrors, BookingFormValues, BookingStep } from "./BookingForm.types";
 
 const primaryBtnClass =
-  "min-h-[50px] rounded-[7px] border-none px-6 text-sm font-bold text-white transition-[transform,box-shadow] duration-200 hover:-translate-y-px hover:shadow-[0_10px_22px_rgba(46,134,234,0.28)]";
+  "min-h-[50px] rounded-[7px] border-none px-6 text-sm font-bold text-white transition-[transform,box-shadow] duration-200 hover:-translate-y-px hover:shadow-booking-cta-hover";
 const secondaryBtnClass =
-  "flex min-h-[50px] items-center justify-center gap-2 rounded-[7px] border border-[#BFCBD5] bg-white px-6 text-sm font-bold text-[#36526B] transition-colors duration-200 hover:bg-[#F5F9FC]";
+  "flex min-h-[50px] items-center justify-center gap-2 rounded-[7px] border border-booking-button-secondary-border bg-white px-6 text-sm font-bold text-booking-button-secondary-text transition-colors duration-200 hover:bg-booking-button-secondary-hover-bg";
 
 function currentMonthStart(): Date {
   const now = new Date();
@@ -64,11 +64,11 @@ export function BookingForm() {
   return (
     <div
       id="bk-form"
-      className="rounded-2xl border border-[#DFE8EE] bg-white p-[30px] shadow-[0_4px_24px_rgba(25,65,85,0.08)] mw-1100:p-6"
+      className="rounded-2xl border border-booking-border-card bg-white p-[30px] shadow-booking-card mw-1100:p-6"
     >
       {!submitted && (
         <form onSubmit={handleSubmit}>
-          <h2 className="text-[26px] font-bold text-[#10264A]">{t("booking.formHeading")}</h2>
+          <h2 className="font-heading text-[26px] font-bold text-text-primary">{t("booking.formHeading")}</h2>
           <StepIndicator step={step} />
 
           {step === 1 && (
@@ -86,7 +86,7 @@ export function BookingForm() {
               <VisitDetailsFields values={values} errors={errors} onFieldChange={handleFieldChange} />
 
               <div className="mt-[30px] flex gap-3.5 mw-700:flex-col mw-700:[&>*]:w-full">
-                <button type="submit" className={primaryBtnClass} style={{ background: "linear-gradient(90deg,#117F8D,#2E86EA)" }}>
+                <button type="submit" className={primaryBtnClass} style={{ background: "linear-gradient(90deg,var(--booking-cta-from),var(--booking-blue))" }}>
                   {t("booking.requestAppointment")}
                 </button>
                 <button type="button" onClick={() => setStep(2)} className={secondaryBtnClass}>
@@ -102,7 +102,7 @@ export function BookingForm() {
               <InsuranceFields values={values} onFieldChange={handleFieldChange} />
 
               <div className="mt-[30px] flex gap-3.5 mw-700:flex-col mw-700:[&>*]:w-full">
-                <button type="submit" className={primaryBtnClass} style={{ background: "linear-gradient(90deg,#117F8D,#2E86EA)" }}>
+                <button type="submit" className={primaryBtnClass} style={{ background: "linear-gradient(90deg,var(--booking-cta-from),var(--booking-blue))" }}>
                   {t("booking.requestAppointment")}
                 </button>
                 <button type="button" onClick={() => setStep(1)} className={secondaryBtnClass}>

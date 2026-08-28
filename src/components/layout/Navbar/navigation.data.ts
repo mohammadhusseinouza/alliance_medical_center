@@ -49,7 +49,7 @@ export function buildNavItems(t: TranslateFn, language: Language): NavItem[] {
     { label: t("navbar.home"), href: withLocale("/", language), activeMatch: "home" },
     {
       label: t("navbar.services"),
-      href: withLocale("/#services", language),
+      href: withLocale(SITE.urgentCareHref, language),
       dropdown: servicesDropdown,
       activeMatch: "services",
     },

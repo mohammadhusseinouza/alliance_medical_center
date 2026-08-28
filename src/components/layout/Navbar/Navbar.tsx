@@ -11,7 +11,7 @@ import { MobileNavItem } from "./MobileNavItem";
 import { buildNavItems } from "./navigation.data";
 
 const ctaTransition =
-  "[transition:background-color_250ms_ease,transform_200ms_ease,box-shadow_250ms_ease] hover:-translate-y-px hover:bg-[#1A5560] hover:shadow-[0_6px_14px_rgba(18,63,72,0.22)]";
+  "[transition:background-color_250ms_ease,transform_200ms_ease,box-shadow_250ms_ease] hover:-translate-y-px hover:bg-cta-hover hover:shadow-nav-cta-hover";
 
 export interface NavbarProps {
   mobileOpen: boolean;
@@ -27,8 +27,8 @@ export function Navbar({ mobileOpen }: NavbarProps) {
   return (
     <div
       className={
-        "sticky top-0 z-[1000] w-full border-y border-[#EEEEEE] bg-white [transition:box-shadow_220ms_ease,background-color_220ms_ease,backdrop-filter_220ms_ease] " +
-        (scrolled ? "bg-white/[.98] shadow-[0_4px_18px_rgba(16,38,74,0.08)] backdrop-blur-[10px]" : "")
+        "sticky top-0 z-[1000] w-full border-y border-border-nav bg-white [transition:box-shadow_220ms_ease,background-color_220ms_ease,backdrop-filter_220ms_ease] " +
+        (scrolled ? "bg-white/[.98] shadow-nav-scrolled backdrop-blur-[10px]" : "")
       }
     >
       <Container className="flex h-16 items-center justify-between px-[60px]">
@@ -55,7 +55,7 @@ export function Navbar({ mobileOpen }: NavbarProps) {
       {mobileOpen && (
         <nav
           aria-label={t("navbar.mobileLabel")}
-          className="w-full animate-mobile-fade border-t border-[#EDF1F2] bg-white px-6 pb-6 pt-3.5 shadow-[0_16px_32px_rgba(18,63,72,0.12)]"
+          className="w-full animate-mobile-fade border-t border-border-nav-mobile bg-white px-6 pb-6 pt-3.5 shadow-nav-mobile-panel"
         >
           <LanguageSwitcher className="mb-3.5" />
           {navItems.map((item) => (

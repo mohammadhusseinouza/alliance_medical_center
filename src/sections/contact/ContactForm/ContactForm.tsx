@@ -8,13 +8,13 @@ import { validateContactForm } from "./validate";
 import type { ContactFormErrors, ContactFormValues } from "./ContactForm.types";
 
 function contactInputClass(hasError: boolean): string {
-  const borderColor = hasError ? "border-[#DC5962]" : "border-[#D6E0E7]";
-  return `h-[52px] w-full rounded-[7px] border bg-white px-[14px] text-sm text-[#10264A] outline-none placeholder:text-[#98A9B8] focus:border-[#0B8995] focus:shadow-[0_0_0_3px_rgba(11,137,149,0.10)] ${borderColor}`;
+  const borderColor = hasError ? "border-error" : "border-divider";
+  return `h-[52px] w-full rounded-[7px] border bg-white px-[14px] text-sm text-text-primary outline-none placeholder:text-booking-text-placeholder focus:border-badge-text focus:shadow-booking-focus-ring ${borderColor}`;
 }
 
 function contactTextareaClass(hasError: boolean): string {
-  const borderColor = hasError ? "border-[#DC5962]" : "border-[#D6E0E7]";
-  return `w-full rounded-[7px] border bg-white px-[14px] py-3 font-sans text-sm text-[#10264A] outline-none placeholder:text-[#98A9B8] focus:border-[#0B8995] focus:shadow-[0_0_0_3px_rgba(11,137,149,0.10)] resize-y ${borderColor}`;
+  const borderColor = hasError ? "border-error" : "border-divider";
+  return `w-full rounded-[7px] border bg-white px-[14px] py-3 font-sans text-sm text-text-primary outline-none placeholder:text-booking-text-placeholder focus:border-badge-text focus:shadow-booking-focus-ring resize-y ${borderColor}`;
 }
 
 export function ContactForm() {
@@ -73,12 +73,12 @@ export function ContactForm() {
   }
 
   return (
-    <section className="rounded-2xl border border-[#E1EAED] bg-white p-7 shadow-card mw-640:p-5">
+    <section className="rounded-2xl border border-reach-us-info-card-border bg-white p-7 shadow-card mw-640:p-5">
       {submitted ? (
         <ContactFormSuccess onReset={handleReset} />
       ) : (
         <>
-          <h2 className="m-0 text-[clamp(24px,2vw,28px)] font-bold leading-[1.25] tracking-[-0.6px] text-text-primary">
+          <h2 className="m-0 font-heading text-[clamp(24px,2vw,28px)] font-bold leading-[1.25] tracking-[-0.6px] text-text-primary">
             {t("contact.form.heading")}
           </h2>
 
@@ -212,7 +212,7 @@ export function ContactForm() {
 
             <button
               type="submit"
-              className="group mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-cta px-7 text-[14.5px] font-semibold text-white shadow-[0_4px_8px_rgba(0,0,0,0.16)] [transition:background-color_250ms_ease,transform_200ms_ease,box-shadow_250ms_ease] hover:-translate-y-px hover:bg-[#1A5560] hover:shadow-[0_6px_14px_rgba(18,63,72,0.22)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
+              className="group mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-cta px-7 text-[14.5px] font-semibold text-white shadow-[0_4px_8px_rgba(0,0,0,0.16)] [transition:background-color_250ms_ease,transform_200ms_ease,box-shadow_250ms_ease] hover:-translate-y-px hover:bg-cta-hover hover:shadow-nav-cta-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
             >
               {t("contact.form.submit")}
               <ArrowRightIcon size={15} className="transition-transform duration-200 ease-out group-hover:translate-x-[3px]" />

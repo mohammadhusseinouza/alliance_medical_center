@@ -3,6 +3,83 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /*
+     * Identity values consumed OUTSIDE Tailwind's class system (inline SVG
+     * `stroke` attributes, inline-style gradient/radial-gradient
+     * backgrounds) — these contexts can't reference a Tailwind color token
+     * via className, so they're re-exported here as CSS custom properties.
+     * Every value below is derived from Tailwind's `theme()` function, NOT
+     * re-declared as an independent literal — tailwind.config.ts is the one
+     * canonical source; these variables just expose selected tokens to the
+     * two non-className contexts above.
+     */
+    --color-brand-icon: theme("colors.brand.icon");
+    --color-brand-icon-leaf: theme("colors.brand.icon-leaf");
+    --color-footer-logo-accent: theme("colors.footer.logo-accent");
+    --color-brand-dark: theme("colors.brand.dark.DEFAULT");
+    --color-brand-dark-end: theme("colors.brand.dark.end");
+    --color-footer-glow-strong: theme("colors.footer.glow-strong");
+    --color-footer-glow-soft: theme("colors.footer.glow-soft");
+
+    /* Phase 2 (Home): identity values used inside inline-style gradients
+       across Hero, HeroInfoCards, Services, About, Care, Team,
+       AppointmentReferral, and ReachUs. Same derive-from-theme() rule. */
+    --brand-teal-700: theme("colors.brand.teal.700");
+    --brand-teal-600: theme("colors.brand.teal.600");
+    --brand-teal-500: theme("colors.brand.teal.500");
+    --brand-navy: theme("colors.brand.navy.DEFAULT");
+    --brand-navy-light: theme("colors.brand.navy.light");
+    --bright-cta-from: theme("colors.bright-cta.from");
+    --bright-cta-to: theme("colors.bright-cta.to");
+    --hero-info-urgent-from: theme("colors.hero-info.urgent-from");
+    --hero-info-urgent-to: theme("colors.hero-info.urgent-to");
+    --hero-info-hours-from: theme("colors.hero-info.hours-from");
+    --hero-info-hours-to: theme("colors.hero-info.hours-to");
+    --surface-pale-1: theme("colors.surface.pale-1");
+    --surface-pale-2: theme("colors.surface.pale-2");
+    --services-bg-end: theme("colors.services.bg-end");
+    --services-hover-bg: theme("colors.services.hover-bg");
+    --about-bg-to: theme("colors.about.bg-to");
+    --about-panel-bg: theme("colors.about.panel-bg");
+    --about-feature-gradient-from: theme("colors.about.feature-gradient-from");
+    --about-feature-gradient-to: theme("colors.about.feature-gradient-to");
+    --about-cta-gradient-from: theme("colors.about.cta-gradient-from");
+    --about-cta-gradient-to: theme("colors.about.cta-gradient-to");
+    --about-stats-deep: theme("colors.about.stats-deep");
+    --about-stat-icon-from: theme("colors.about.stat-icon-from");
+    --about-stat-icon-to: theme("colors.about.stat-icon-to");
+    --care-bg-glow: theme("colors.care.bg-glow");
+    --care-bg: theme("colors.care.bg");
+    --team-bg-to: theme("colors.team.bg-to");
+    --team-overlay-from: theme("colors.team.overlay-from");
+    --team-overlay-to: theme("colors.team.overlay-to");
+    --reach-us-bg-glow: theme("colors.reach-us.bg-glow");
+
+    /* Phase 3 (Book Appointment): identity values used inside inline-style
+       gradients in BookingForm (CTA) and DoctorPanel (decorative glow).
+       Same derive-from-theme() rule. */
+    --booking-cta-from: theme("colors.booking.cta.from");
+    --booking-blue: theme("colors.booking.blue.DEFAULT");
+    --booking-doctor-glow: theme("colors.booking.doctor.glow");
+
+    /* Phase 4 (Contact): identity value used inside an inline-style
+       decorative glow in ContactHero. Same derive-from-theme() rule.
+       ContactHours' gradient reuses the existing --brand-teal-700/600/500
+       vars above (Phase 2) rather than duplicating them. */
+    --contact-page-hero-glow: theme("colors.contact-page.hero-glow");
+
+    /* Phase 5 (Service Detail): identity values used inside an inline-style
+       gradient scrim in ServicePageHero. Same derive-from-theme() rule.
+       ServicePageHero's decorative circle glow reuses the existing
+       --contact-page-hero-glow var above (Phase 4) rather than duplicating
+       it — same exact value, same decorative-glow role. */
+    --service-detail-hero-scrim-1: theme("colors.service-detail.hero.scrim-1");
+    --service-detail-hero-scrim-2: theme("colors.service-detail.hero.scrim-2");
+    --service-detail-hero-scrim-3: theme("colors.service-detail.hero.scrim-3");
+    --service-detail-hero-scrim-4: theme("colors.service-detail.hero.scrim-4");
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -11,6 +88,6 @@
     margin: 0;
     overflow-x: hidden;
     background: #ffffff;
-    font-family: "Inter", Arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
   }
 }

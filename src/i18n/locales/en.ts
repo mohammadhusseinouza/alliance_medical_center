@@ -1,6 +1,6 @@
 export const en = {
   common: {
-    tagline: "Urgent Care & Family Health",
+    tagline: "Compassionate Care. Healthier You.",
     bookAppointment: "Book Appointment",
     viewAllServices: "View All Services",
     openDays: "Open 7 Days",
@@ -103,7 +103,7 @@ export const en = {
     urgentCare: {
       heading: "Professional Urgent Care When You Need It",
       intro:
-        "AccessNow Care provides same-day treatment for minor illnesses and injuries, with walk-in convenience and minimal wait times. Our clinicians deliver professional, family-friendly care and clear guidance on next steps, so you can get back to feeling like yourself.",
+        "Alliance Medical Clinic provides same-day treatment for minor illnesses and injuries, with walk-in convenience and minimal wait times. Our clinicians deliver professional, family-friendly care and clear guidance on next steps, so you can get back to feeling like yourself.",
       whatsIncluded: "What's Included",
       heroImageAlt: "Clinician talking with a patient in a bright exam room",
       mainPhotoAlt: "Doctor reviewing results with a patient",
@@ -562,7 +562,7 @@ export const en = {
     hero: {
       heading: "Contact Us",
       description: "We're here to answer your questions and help you get the care you need.",
-      imageAlt: "AccessNow Care team member ready to assist a patient",
+      imageAlt: "Alliance Medical Clinic team member ready to assist a patient",
     },
     methods: {
       heading: "Get in Touch",
@@ -634,13 +634,13 @@ export const en = {
     headingLine1: "Complete Care,",
     headingLine2: "All in One Place",
     description:
-      "From urgent care and family medicine to diagnostics and preventive services, AccessNow Care offers coordinated care designed around your everyday health needs.",
+      "From urgent care and family medicine to diagnostics and preventive services, Alliance Medical Clinic offers coordinated care designed around your everyday health needs.",
     feature: {
       title: "Comprehensive Care",
       description: "A broad range of services delivered under one roof for greater convenience.",
     },
     cta: "Explore Services",
-    imageAlt: "Doctor consulting with a patient at AccessNow Care",
+    imageAlt: "Doctor consulting with a patient at Alliance Medical Clinic",
     stats: {
       openDays: {
         // Title intentionally omitted — this stat reuses the shared
@@ -968,14 +968,14 @@ export const en = {
     },
   },
   footer: {
-    tagline: "Urgent care and family health for the Portage community.",
+    tagline: "Compassionate medical care for the Portage community.",
     aboutDescription:
       "Providing quality urgent care and family health services to the Portage, Michigan community with compassion, expertise, and convenience.",
     ctaText: "Need care today? Book Appointment",
     socialAria: {
-      facebook: "Visit AccessNow Care on Facebook",
-      twitter: "Visit AccessNow Care on Twitter",
-      instagram: "Visit AccessNow Care on Instagram",
+      facebook: "Visit Alliance Medical Clinic on Facebook",
+      twitter: "Visit Alliance Medical Clinic on Twitter",
+      instagram: "Visit Alliance Medical Clinic on Instagram",
     },
     contactInfoHeading: "Contact Info",
     servicesHeading: "Services",
@@ -990,7 +990,7 @@ export const en = {
       eyebrow: "APPOINTMENT",
       heading: "Book Your Visit",
       description:
-        "Schedule a convenient visit with AccessNow Care. Choose your preferred date and available time, then provide your details to request your appointment.",
+        "Schedule a convenient visit with Alliance Medical Clinic. Choose your preferred date and available time, then provide your details to request your appointment.",
     },
     doctorAlt:
       "Male doctor in white coat, blue shirt, navy tie, stethoscope, smiling, holding a blank clipboard, pointing toward the form",
@@ -1066,48 +1066,48 @@ export const en = {
   },
   meta: {
     home: {
-      title: "AccessNow Care — Urgent Care & Family Health in Portage, MI",
+      title: "Alliance Medical Clinic — Urgent Care & Family Health in Portage, MI",
       description:
         "Urgent care and family health services in Portage, Michigan. Open 7 days a week, 12:00 PM - 8:00 PM. Walk in or book an appointment.",
     },
     booking: {
-      title: "Book an Appointment — AccessNow Care",
+      title: "Book an Appointment — Alliance Medical Clinic",
       description:
-        "Schedule a visit with AccessNow Care in Portage, Michigan. Choose a date and time, then request your appointment online.",
+        "Schedule a visit with Alliance Medical Clinic in Portage, Michigan. Choose a date and time, then request your appointment online.",
     },
     urgentCare: {
-      title: "Urgent Care Services — AccessNow Care",
+      title: "Urgent Care Services — Alliance Medical Clinic",
       description:
         "Same-day urgent care in Portage, Michigan. Walk-ins welcome, 7 days a week from 12:00 PM to 8:00 PM. See what's included in a visit.",
     },
     occupationalHealth: {
-      title: "Occupational Health — AccessNow Care",
+      title: "Occupational Health — Alliance Medical Clinic",
       description:
         "Occupational medicine and workplace health services in Portage, Michigan, including physicals, injury care, and employee health programs.",
     },
     diagnosticServices: {
-      title: "Diagnostic Services — AccessNow Care",
+      title: "Diagnostic Services — Alliance Medical Clinic",
       description: "Advanced testing and imaging services to help diagnose and monitor health conditions.",
     },
     womensHealth: {
-      title: "Women's Health Services — AccessNow Care",
+      title: "Women's Health Services — Alliance Medical Clinic",
       description:
         "Comprehensive women's health services in Portage, Michigan, including preventive care, prenatal care, and wellness management.",
     },
     pediatricCare: {
-      title: "Pediatric Care Services — AccessNow Care",
+      title: "Pediatric Care Services — Alliance Medical Clinic",
       description:
         "Specialized healthcare for infants, children, and adolescents in Portage, Michigan, including checkups, immunizations, and illness treatment.",
     },
     familyHealth: {
-      title: "Family Health Services — AccessNow Care",
+      title: "Family Health Services — Alliance Medical Clinic",
       description:
         "Comprehensive primary care for your entire family in Portage, Michigan, including physicals, chronic disease management, and preventive screenings.",
     },
     contact: {
-      title: "Contact Us — AccessNow Care",
+      title: "Contact Us — Alliance Medical Clinic",
       description:
-        "Get in touch with AccessNow Care. Call, email, or visit our clinic, or send us a message and we'll get back to you.",
+        "Get in touch with Alliance Medical Clinic. Call, email, or visit our clinic, or send us a message and we'll get back to you.",
     },
   },
 } as const;

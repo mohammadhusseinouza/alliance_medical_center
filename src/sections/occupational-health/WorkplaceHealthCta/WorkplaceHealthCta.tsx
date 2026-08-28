@@ -20,7 +20,7 @@ export function WorkplaceHealthCta() {
           </div>
 
           <div>
-            <h2 className="text-[clamp(26px,2.6vw,34px)] font-bold leading-[1.2] tracking-[-0.6px] text-white">
+            <h2 className="font-heading text-[clamp(26px,2.6vw,34px)] font-bold leading-[1.2] tracking-[-0.6px] text-white">
               {t("occupationalHealth.cta.heading")}
             </h2>
 
@@ -31,7 +31,7 @@ export function WorkplaceHealthCta() {
             <div className="mt-6 flex flex-wrap gap-[14px] mw-880:justify-center">
               <Link
                 to={withLocale(SITE.bookingHref, language)}
-                className="inline-flex h-12 items-center rounded-lg bg-white px-6 text-[15px] font-bold text-[#0B5F6B] no-underline [transition:background-color_250ms_ease,color_250ms_ease] hover:bg-[#1A5560] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
+                className="inline-flex h-12 items-center rounded-lg bg-white px-6 text-[15px] font-bold text-contact-page-cta-text no-underline [transition:background-color_250ms_ease,color_250ms_ease] hover:bg-cta-hover hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
               >
                 {t("occupationalHealth.cta.requestConsultation")}
               </Link>

@@ -21,26 +21,26 @@ function ContactRowItem({ row }: { row: ContactRow }) {
   const { t } = useTranslation();
   const hoverValueClass = row.href
     ? row.hoverUnderline
-      ? "group-hover:text-[#176D7C] group-hover:underline"
-      : "group-hover:text-[#176D7C]"
-    : "group-hover:text-[#334D61]";
+      ? "group-hover:text-footer-hover-text group-hover:underline"
+      : "group-hover:text-footer-hover-text"
+    : "group-hover:text-reach-us-hover-alt";
 
   const content = (
     <>
-      <span className="flex h-[42px] w-[42px] flex-shrink-0 items-center justify-center rounded-full bg-[#EDF8F9] text-[#0B8794] transition-transform duration-[220ms] group-hover:-translate-y-0.5 group-hover:scale-[1.04]">
+      <span className="flex h-[42px] w-[42px] flex-shrink-0 items-center justify-center rounded-full bg-teal-icon-bg text-teal-icon transition-transform duration-[220ms] group-hover:-translate-y-0.5 group-hover:scale-[1.04]">
         <ContactRowIcon icon={row.icon} />
       </span>
-      <span className="whitespace-nowrap text-[13px] font-bold text-[#0B8794]">
+      <span className="whitespace-nowrap text-[13px] font-bold text-teal-icon">
         {t(`reachUs.labels.${row.translationKey}`)}
       </span>
-      <span className={`text-[14px] leading-[1.5] text-[#4F657A] transition-colors duration-[220ms] ${hoverValueClass}`}>
+      <span className={`text-[14px] leading-[1.5] text-reach-us-value-text transition-colors duration-[220ms] ${hoverValueClass}`}>
         {row.value}
       </span>
     </>
   );
 
   const sharedClass =
-    "group grid animate-ru-row grid-cols-[44px_auto_1fr] items-center gap-3 border-t border-[#EDF2F4] py-[18px] no-underline motion-reduce:duration-[0.01ms] motion-reduce:[animation-duration:0.01ms] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-[rgba(35,145,165,0.25)]" +
+    "group grid animate-ru-row grid-cols-[44px_auto_1fr] items-center gap-3 border-t border-reach-us-row-border py-[18px] no-underline motion-reduce:duration-[0.01ms] motion-reduce:[animation-duration:0.01ms] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-focus-ring-teal" +
     (row.id === "address" ? " mt-1.5" : "");
 
   if (row.href) {
@@ -95,7 +95,7 @@ function ActionItem({ action, index }: { action: ReachAction; index: number }) {
 function InfoCard({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <div
-      className={`rounded-[20px] border border-[#E1EAED] bg-white transition-shadow duration-[220ms] ${className}`}
+      className={`rounded-[20px] border border-reach-us-info-card-border bg-white transition-shadow duration-[220ms] ${className}`}
     >
       {children}
     </div>
@@ -107,9 +107,9 @@ export function ReachUsDetails() {
 
   return (
     <div className="flex animate-ru-side flex-col gap-[18px] motion-reduce:[animation-duration:0.01ms] mw-850:order-2">
-      <InfoCard className="px-[30px] py-7 shadow-[0_12px_30px_rgba(20,65,85,0.07)]">
+      <InfoCard className="px-[30px] py-7 shadow-reach-info-card-1">
         <div className="flex items-center gap-[14px]">
-          <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#EDF8F9] text-[#0B8794]">
+          <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-teal-icon-bg text-teal-icon">
             <UserIcon size={20} />
           </span>
           <div className="text-[22px] font-bold text-text-primary">{t("reachUs.contactDetailsTitle")}</div>
@@ -120,9 +120,9 @@ export function ReachUsDetails() {
         ))}
       </InfoCard>
 
-      <InfoCard className="grid grid-cols-[1fr_auto] items-center gap-[18px] px-7 py-6 shadow-[0_12px_28px_rgba(20,65,85,0.06)] mw-650:grid-cols-1">
+      <InfoCard className="grid grid-cols-[1fr_auto] items-center gap-[18px] px-7 py-6 shadow-reach-info-card-2 mw-650:grid-cols-1">
         <div className="flex items-center gap-[14px]">
-          <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#EDF8F9] text-[#0B8794]">
+          <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-teal-icon-bg text-teal-icon">
             <StopwatchIcon size={20} />
           </span>
           <div>
@@ -139,8 +139,8 @@ export function ReachUsDetails() {
       </InfoCard>
 
       <div
-        className="grid min-h-[122px] grid-cols-2 items-center overflow-hidden rounded-[20px] px-[26px] py-[22px] text-white shadow-[0_14px_32px_rgba(8,90,100,0.16)] mw-650:grid-cols-1 mw-650:gap-4"
-        style={{ background: "linear-gradient(120deg, #0B5664 0%, #087B87 55%, #0C8F98 100%)" }}
+        className="grid min-h-[122px] grid-cols-2 items-center overflow-hidden rounded-[20px] px-[26px] py-[22px] text-white shadow-reach-cta mw-650:grid-cols-1 mw-650:gap-4"
+        style={{ background: "linear-gradient(120deg, var(--brand-teal-700) 0%, var(--brand-teal-600) 55%, var(--brand-teal-500) 100%)" }}
       >
         {REACH_ACTIONS.map((action, index) => (
           <ActionItem key={action.id} action={action} index={index} />

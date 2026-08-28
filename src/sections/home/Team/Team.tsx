@@ -19,7 +19,7 @@ const START_TRACK_POSITION = BAND_START + START_LOGICAL;
 const RECENTER_FALLBACK_MS = 650;
 
 const arrowButtonClass =
-  "absolute top-[150px] z-[5] flex h-[52px] w-[52px] items-center justify-center rounded-full border-none bg-white text-[#168394] shadow-[0_7px_20px_rgba(20,70,90,0.10)] transition-[transform,background-color,color] duration-[220ms] ease hover:scale-[1.06] hover:bg-[#168394] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-[rgba(38,150,170,0.25)] mw-700:h-11 mw-700:w-11";
+  "absolute top-[150px] z-[5] flex h-[52px] w-[52px] items-center justify-center rounded-full border-none bg-white text-team-arrow shadow-team-arrow transition-[transform,background-color,color] duration-[220ms] ease hover:scale-[1.06] hover:bg-team-arrow hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-team-arrow-focus mw-700:h-11 mw-700:w-11";
 
 // Mirrors the CSS mw-1100 / mw-700 breakpoints (the same ones driving
 // --per-page) purely so accessibility state knows how many cards are
@@ -130,18 +130,18 @@ export function Team() {
   return (
     <section
       className="relative px-6 pb-[105px] pt-[95px]"
-      style={{ background: "linear-gradient(180deg, #FBFDFE 0%, #F3F8FA 100%)" }}
+      style={{ background: "linear-gradient(180deg, var(--surface-pale-2) 0%, var(--team-bg-to) 100%)" }}
     >
       <div className="mx-auto max-w-[1320px]">
-        <div className="mx-auto w-fit animate-team-badge rounded-[5px] bg-[#E6F4F7] px-[14px] py-2 text-[12px] font-bold uppercase tracking-[0.7px] text-[#168397] motion-reduce:[animation-duration:0.01ms]">
+        <div className="mx-auto w-fit animate-team-badge rounded-[5px] bg-team-eyebrow-bg px-[14px] py-2 text-[12px] font-bold uppercase tracking-[0.7px] text-team-eyebrow-text motion-reduce:[animation-duration:0.01ms]">
           {t("team.eyebrow")}
         </div>
 
-        <h2 className="mt-[18px] animate-team-title text-center text-[clamp(42px,4vw,58px)] font-bold leading-[1.08] tracking-[-1.2px] text-[#10203B] motion-reduce:[animation-duration:0.01ms]">
+        <h2 className="mt-[18px] animate-team-title font-heading text-center text-[clamp(42px,4vw,58px)] font-bold leading-[1.08] tracking-[-1.2px] text-team-heading motion-reduce:[animation-duration:0.01ms]">
           {t("team.heading")}
         </h2>
 
-        <p className="mx-auto mt-[18px] max-w-[760px] animate-team-desc text-center text-[16px] leading-[1.65] text-[#5E7186] motion-reduce:[animation-duration:0.01ms]">
+        <p className="mx-auto mt-[18px] max-w-[760px] animate-team-desc text-center text-[16px] leading-[1.65] text-team-body motion-reduce:[animation-duration:0.01ms]">
           {t("team.description")}
         </p>
 
@@ -223,7 +223,7 @@ export function Team() {
                   aria-label={t("team.goToMember", { index: i + 1 })}
                   aria-current={active || undefined}
                   onClick={() => goToIndex(i)}
-                  className={`h-2 rounded-full border-none p-0 ${active ? "w-5 bg-[#168899]" : "w-2 bg-[#D1DDE1]"}`}
+                  className={`h-2 rounded-full border-none p-0 ${active ? "w-5 bg-team-dot-active" : "w-2 bg-team-dot-inactive"}`}
                 />
               );
             })}

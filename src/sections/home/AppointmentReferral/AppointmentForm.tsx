@@ -41,7 +41,7 @@ export function AppointmentForm() {
 
       <button
         type="submit"
-        className="mt-[30px] h-[56px] w-[180px] cursor-pointer rounded-[3px] border-none bg-white font-sans text-[13px] font-medium uppercase tracking-[0.4px] text-[#0B5664] hover:bg-[#F4F4F4]"
+        className="mt-[30px] h-[56px] w-[180px] cursor-pointer rounded-[3px] border-none bg-white font-sans text-[13px] font-medium uppercase tracking-[0.4px] text-brand-teal-700 hover:bg-appointment-referral-submit-hover"
       >
         {t("appointmentReferral.submit")}
       </button>

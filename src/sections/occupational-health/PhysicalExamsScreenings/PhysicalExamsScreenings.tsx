@@ -27,7 +27,7 @@ export function PhysicalExamsScreenings() {
   return (
     <section className="bg-white px-6 py-20 mw-650:px-[18px] mw-650:py-[50px]">
       <div className="mx-auto max-w-[1380px]">
-        <h2 className="mx-auto max-w-[640px] text-center text-[clamp(30px,3vw,40px)] font-bold leading-[1.14] tracking-[-1px] text-text-primary">
+        <h2 className="mx-auto max-w-[640px] font-heading text-center text-[clamp(30px,3vw,40px)] font-bold leading-[1.14] tracking-[-1px] text-text-primary">
           {t("occupationalHealth.exams.heading")}
         </h2>
 
@@ -51,7 +51,7 @@ export function PhysicalExamsScreenings() {
                 <ExamIcon icon={item.icon} />
               </div>
 
-              <h3 className="mt-[14px] text-[17px] font-bold leading-[1.3] text-text-primary">
+              <h3 className="mt-[14px] font-heading text-[17px] font-bold leading-[1.3] text-text-primary">
                 {t(`occupationalHealth.exams.items.${item.translationKey}.title`)}
               </h3>
 

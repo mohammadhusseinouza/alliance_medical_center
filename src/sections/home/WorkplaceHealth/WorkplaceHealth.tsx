@@ -4,6 +4,7 @@ import workplaceHealthImage from "../../../assets/home/workplace-health.webp";
 import { ArrowRightIcon, BriefcaseIcon } from "../../../components/icons";
 import { withLocale } from "../../../i18n/routing";
 import { useLanguage } from "../../../i18n/useLanguage";
+import { SITE } from "../../../lib/constants";
 import { WORKPLACE_HEALTH_SERVICES } from "./workplaceHealth.data";
 import { WorkplaceHealthCard } from "./WorkplaceHealthCard";
 
@@ -21,7 +22,7 @@ export function WorkplaceHealth() {
               {t("workplaceHealth.eyebrow")}
             </div>
 
-            <h2 className="mt-[18px] text-[clamp(34px,4vw,48px)] font-bold leading-[1.1] tracking-[-1px] text-text-primary">
+            <h2 className="mt-[18px] font-heading text-[clamp(34px,4vw,48px)] font-bold leading-[1.1] tracking-[-1px] text-text-primary">
               {t("workplaceHealth.heading")}
             </h2>
 
@@ -48,9 +49,9 @@ export function WorkplaceHealth() {
 
         <div className="mt-10 flex animate-about-fade-up justify-center motion-reduce:[animation-duration:0.01ms]">
           <Link
-            to={withLocale("/#services", language)}
-            className="inline-flex min-h-[50px] items-center gap-[9px] rounded-[7px] px-[26px] text-[14px] font-semibold text-white shadow-[0_8px_20px_rgba(10,120,140,0.16)] [transition:background_220ms_ease,transform_220ms_ease,box-shadow_220ms_ease] hover:-translate-y-0.5 hover:shadow-[0_12px_25px_rgba(10,120,140,0.22)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]"
-            style={{ background: "linear-gradient(90deg, #087E8D, #0594A1)" }}
+            to={withLocale(SITE.occupationalHealthHref, language)}
+            className="inline-flex min-h-[50px] items-center gap-[9px] rounded-[7px] px-[26px] text-[14px] font-semibold text-white shadow-bright-cta [transition:background_220ms_ease,transform_220ms_ease,box-shadow_220ms_ease] hover:-translate-y-0.5 hover:shadow-bright-cta-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
+            style={{ background: "linear-gradient(90deg, var(--bright-cta-from), var(--bright-cta-to))" }}
           >
             {t("workplaceHealth.cta")}
             <ArrowRightIcon size={15} />

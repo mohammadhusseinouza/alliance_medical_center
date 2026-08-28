@@ -9,7 +9,7 @@ export function PulseLineIcon({ className }: PulseLineIconProps) {
       height={20}
       viewBox="0 0 76 20"
       fill="none"
-      stroke="#0B8995"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"

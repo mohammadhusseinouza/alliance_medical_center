@@ -42,27 +42,27 @@ export function CareCard({ item }: CareCardProps) {
     <a
       href="#"
       tabIndex={0}
-      className={`group relative grid min-h-[116px] w-full grid-cols-[66px_1fr_26px] items-center gap-4 rounded-2xl border border-[#E2EAED] bg-white px-5 py-[18px] shadow-[0_12px_30px_rgba(25,70,90,0.07)] no-underline [transition:transform_220ms_ease,box-shadow_220ms_ease,border-color_220ms_ease] hover:-translate-y-[3px] hover:border-[rgba(15,135,150,0.28)] hover:shadow-[0_18px_36px_rgba(25,70,90,0.11)] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-[rgba(15,135,150,0.25)] motion-reduce:duration-[0.01ms] motion-reduce:[animation-duration:0.01ms] ${entranceAnimation} mw-1100:max-w-[340px] mw-650:grid-cols-[56px_1fr_auto] mw-650:min-h-[100px] mw-650:p-4`}
+      className={`group relative grid min-h-[116px] w-full grid-cols-[66px_1fr_26px] items-center gap-4 rounded-2xl border border-border-subtle bg-white px-5 py-[18px] shadow-care-card no-underline [transition:transform_220ms_ease,box-shadow_220ms_ease,border-color_220ms_ease] hover:-translate-y-[3px] hover:border-care-card-hover-border hover:shadow-care-card-hover focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-care-card-focus-ring motion-reduce:duration-[0.01ms] motion-reduce:[animation-duration:0.01ms] ${entranceAnimation} mw-1100:max-w-[340px] mw-650:grid-cols-[56px_1fr_auto] mw-650:min-h-[100px] mw-650:p-4`}
       style={{ animationDelay: `${item.animationDelayMs}ms` }}
     >
       <div
         aria-hidden="true"
-        className={`pointer-events-none absolute top-1/2 h-0 w-[25px] -translate-y-1/2 border-t-[1.2px] border-dashed border-[#9FDDE2] opacity-65 mw-850:hidden ${connectorSide}`}
+        className={`pointer-events-none absolute top-1/2 h-0 w-[25px] -translate-y-1/2 border-t-[1.2px] border-dashed border-care-connector-dash opacity-65 mw-850:hidden ${connectorSide}`}
       />
       <div
         aria-hidden="true"
-        className={`absolute top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0B8F9A] shadow-[0_0_0_5px_rgba(13,145,155,0.08)] ${connectorSide}`}
+        className={`absolute top-1/2 h-[10px] w-[10px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-care-connector-dot shadow-care-dot-ring ${connectorSide}`}
       />
 
-      <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-[#EDF8F9] text-[#0B8E99] mw-1100:h-[52px] mw-1100:w-[52px]">
+      <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-teal-icon-bg text-care-icon-text mw-1100:h-[52px] mw-1100:w-[52px]">
         <CardIcon icon={item.icon} />
       </div>
 
       <div>
-        <h3 className="text-[18px] font-bold leading-[1.25] text-text-primary">
+        <h3 className="font-heading text-[18px] font-bold leading-[1.25] text-text-primary">
           {t(`care.items.${item.translationKey}.title`)}
         </h3>
-        <p className="mt-[6px] text-[13.5px] leading-[1.55] text-[#566D82]">
+        <p className="mt-[6px] text-[13.5px] leading-[1.55] text-care-desc">
           {t(`care.items.${item.translationKey}.description`)}
         </p>
       </div>
@@ -71,7 +71,7 @@ export function CareCard({ item }: CareCardProps) {
         direction="right"
         size={22}
         strokeWidth={2}
-        className="text-[#0B8794] transition-transform duration-200 group-hover:translate-x-[3px]"
+        className="text-teal-icon transition-transform duration-200 group-hover:translate-x-[3px]"
       />
     </a>
   );

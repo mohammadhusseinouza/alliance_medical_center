@@ -26,8 +26,8 @@ export function DateTimeFields({
 
   return (
     <div className="mt-7">
-      <span className="mb-1.5 block text-xs font-semibold text-[#374D62]">
-        {t("booking.dateTimeLabel")} <span className="text-[#DC5962]">*</span>
+      <span className="mb-1.5 block text-xs font-semibold text-form-label">
+        {t("booking.dateTimeLabel")} <span className="text-error">*</span>
       </span>
       <div className="mt-2 grid grid-cols-2 gap-4 mw-1100:grid-cols-1">
         <BookingCalendar
@@ -39,7 +39,7 @@ export function DateTimeFields({
         />
         <TimeSlots selectedDate={values.date} selectedTime={values.time} onSelectTime={onSelectTime} />
       </div>
-      {errors.dateTime && <div className="mt-2 text-xs text-[#DC5962]">{t(`validation.${errors.dateTime}`)}</div>}
+      {errors.dateTime && <div className="mt-2 text-xs text-error">{t(`validation.${errors.dateTime}`)}</div>}
     </div>
   );
 }

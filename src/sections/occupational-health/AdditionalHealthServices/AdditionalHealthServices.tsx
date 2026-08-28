@@ -21,7 +21,7 @@ export function AdditionalHealthServices() {
   return (
     <section className="bg-white px-6 pb-20 pt-5 mw-650:px-[18px] mw-650:pb-[50px] mw-650:pt-4">
       <div className="mx-auto max-w-[1380px]">
-        <h2 className="mx-auto text-center text-[clamp(28px,2.6vw,34px)] font-bold leading-[1.16] tracking-[-0.8px] text-text-primary">
+        <h2 className="mx-auto font-heading text-center text-[clamp(28px,2.6vw,34px)] font-bold leading-[1.16] tracking-[-0.8px] text-text-primary">
           {t("occupationalHealth.additionalServices.heading")}
         </h2>
 
@@ -45,7 +45,7 @@ export function AdditionalHealthServices() {
                 <ServiceIcon icon={item.icon} />
               </div>
 
-              <h3 className="mt-[14px] text-[17px] font-bold leading-[1.3] text-text-primary">
+              <h3 className="mt-[14px] font-heading text-[17px] font-bold leading-[1.3] text-text-primary">
                 {t(`occupationalHealth.additionalServices.items.${item.translationKey}.title`)}
               </h3>
 

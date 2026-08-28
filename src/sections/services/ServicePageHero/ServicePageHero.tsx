@@ -28,18 +28,18 @@ export function ServicePageHero({ currentServiceLabel, heroImage, heroImageAlt }
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(90deg, rgba(241,249,251,0.96) 0%, rgba(234,245,248,0.82) 32%, rgba(230,243,246,0.38) 62%, rgba(230,243,246,0.08) 100%)",
+            "linear-gradient(90deg, var(--service-detail-hero-scrim-1) 0%, var(--service-detail-hero-scrim-2) 32%, var(--service-detail-hero-scrim-3) 62%, var(--service-detail-hero-scrim-4) 100%)",
         }}
       />
 
       <div
         className="pointer-events-none absolute -left-[90px] -bottom-[120px] z-[2] h-[320px] w-[320px] rounded-full"
-        style={{ background: "rgba(11,137,149,0.06)" }}
+        style={{ background: "var(--contact-page-hero-glow)" }}
       />
 
       <div className="relative z-[3] mx-auto w-[min(1320px,calc(100%-64px))] py-[38px] mw-600:w-[calc(100%-32px)]">
         <div className="max-w-[640px]">
-          <h1 className="m-0 text-[clamp(36px,4.2vw,52px)] font-bold leading-[1.08] tracking-[-1.4px] text-text-primary mw-600:text-[34px]">
+          <h1 className="m-0 font-heading text-[clamp(36px,4.2vw,52px)] font-bold leading-[1.08] tracking-[-1.4px] text-text-primary mw-600:text-[34px]">
             {t("services.eyebrow")}
           </h1>
           <ServiceBreadcrumb currentServiceLabel={currentServiceLabel} />

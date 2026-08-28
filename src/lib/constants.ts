@@ -1,6 +1,6 @@
 export const SITE = {
-  name: "AccessNow Care",
-  tagline: "Urgent Care & Family Health",
+  name: "Alliance Medical Clinic",
+  tagline: "Compassionate Care. Healthier You.",
   phone: "(269) 321-4774",
   phoneHref: "tel:+12693214774",
   fax: "(269) 222-2582",

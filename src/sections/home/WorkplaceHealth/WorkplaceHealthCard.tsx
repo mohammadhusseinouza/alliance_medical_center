@@ -33,7 +33,7 @@ export function WorkplaceHealthCard({ item }: WorkplaceHealthCardProps) {
       <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-badge-bg text-badge-text">
         <CardIcon icon={item.icon} />
       </div>
-      <h3 className="text-[16px] font-bold leading-[1.3] text-text-primary">
+      <h3 className="font-heading text-[16px] font-bold leading-[1.3] text-text-primary">
         {t(`workplaceHealth.items.${item.translationKey}.title`)}
       </h3>
       <p className="text-[13.5px] leading-[1.55] text-text-secondary">

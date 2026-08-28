@@ -15,7 +15,7 @@ export function DotPhysicalExaminations() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-[#F4F6F8] px-6 py-[76px] mw-650:px-[18px] mw-650:py-[50px]">
+    <section className="bg-appointment-referral-section-bg px-6 py-[76px] mw-650:px-[18px] mw-650:py-[50px]">
       <div className="mx-auto grid max-w-[1380px] grid-cols-2 items-center gap-[56px] mw-880:grid-cols-1 mw-880:gap-8">
         <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-card">
           <img
@@ -27,7 +27,7 @@ export function DotPhysicalExaminations() {
         </div>
 
         <div>
-          <h2 className="text-[clamp(28px,2.6vw,36px)] font-bold leading-[1.15] tracking-[-0.8px] text-text-primary">
+          <h2 className="font-heading text-[clamp(28px,2.6vw,36px)] font-bold leading-[1.15] tracking-[-0.8px] text-text-primary">
             {t("occupationalHealth.dotPhysical.heading")}
           </h2>
 

@@ -1,10 +1,11 @@
+import { SERVICE_ACCENT } from "../../../lib/theme";
 import type { ServiceItem } from "./Services.types";
 
 export const SERVICES: ServiceItem[] = [
   {
     id: "urgent-care",
     icon: "medical-kit",
-    accentColor: "#12899F",
+    accentColor: SERVICE_ACCENT.service1,
     href: "#",
     animationDelayMs: 80,
     translationKey: "urgentCare",
@@ -12,7 +13,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "family-health",
     icon: "users",
-    accentColor: "#12A673",
+    accentColor: SERVICE_ACCENT.service2,
     href: "#",
     animationDelayMs: 130,
     translationKey: "familyHealth",
@@ -20,7 +21,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "occupational-health",
     icon: "briefcase",
-    accentColor: "#7546E8",
+    accentColor: SERVICE_ACCENT.service4,
     href: "#",
     animationDelayMs: 230,
     titleNoWrap: true,
@@ -29,7 +30,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "womens-health",
     icon: "heart",
-    accentColor: "#F13C6C",
+    accentColor: SERVICE_ACCENT.service5,
     href: "#",
     animationDelayMs: 280,
     translationKey: "womensHealth",
@@ -37,7 +38,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "pediatric-care",
     icon: "teddy-bear",
-    accentColor: "#F29400",
+    accentColor: SERVICE_ACCENT.service6,
     href: "#",
     animationDelayMs: 330,
     translationKey: "pediatricCare",
@@ -45,7 +46,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "diagnostic-services",
     icon: "flask",
-    accentColor: "#6248E8",
+    accentColor: SERVICE_ACCENT.service7,
     href: "#",
     animationDelayMs: 380,
     translationKey: "diagnosticServices",

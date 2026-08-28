@@ -25,7 +25,7 @@ export function ServiceBreadcrumb({ currentServiceLabel }: ServiceBreadcrumbProp
           </Link>
         </li>
         <li role="presentation" aria-hidden="true" className="flex items-center">
-          <ChevronIcon direction="right" size={13} strokeWidth={2.2} className="text-[#9DB0BF]" />
+          <ChevronIcon direction="right" size={13} strokeWidth={2.2} className="text-service-detail-breadcrumb-chevron" />
         </li>
         <li>
           <Link
@@ -36,7 +36,7 @@ export function ServiceBreadcrumb({ currentServiceLabel }: ServiceBreadcrumbProp
           </Link>
         </li>
         <li role="presentation" aria-hidden="true" className="flex items-center">
-          <ChevronIcon direction="right" size={13} strokeWidth={2.2} className="text-[#9DB0BF]" />
+          <ChevronIcon direction="right" size={13} strokeWidth={2.2} className="text-service-detail-breadcrumb-chevron" />
         </li>
         <li aria-current="page" className="text-badge-text">
           {currentServiceLabel}

@@ -6,7 +6,7 @@ export interface ImagePlaceholderProps {
 export function ImagePlaceholder({ label, className = "" }: ImagePlaceholderProps) {
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-2 border border-dashed border-border-subtle bg-[#F7FAFB] text-text-muted ${className}`}
+      className={`flex flex-col items-center justify-center gap-2 border border-dashed border-border-subtle bg-contact-page-sidebar-bg text-text-muted ${className}`}
     >
       <svg
         width="28"

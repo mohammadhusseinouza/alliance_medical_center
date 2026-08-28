@@ -15,9 +15,9 @@ export function MobileNavItem({ item }: MobileNavItemProps) {
 
   if (!item.dropdown) {
     return (
-      <Link to={item.href} className="block border-b border-[#F0F3F4] no-underline">
+      <Link to={item.href} className="block border-b border-border-nav-item no-underline">
         <div className="flex items-center justify-between px-1 py-4">
-          <span className={`text-[17px] font-semibold ${active ? "text-[#155D72]" : "text-[#29364A]"}`}>
+          <span className={`text-[17px] font-semibold ${active ? "text-nav-active" : "text-text-nav"}`}>
             {item.label}
           </span>
         </div>
@@ -26,21 +26,21 @@ export function MobileNavItem({ item }: MobileNavItemProps) {
   }
 
   return (
-    <details className="group block border-b border-[#F0F3F4]">
+    <details className="group block border-b border-border-nav-item">
       <summary className="flex cursor-pointer list-none items-center justify-between px-1 py-4 [&::-webkit-details-marker]:hidden">
-        <span className={`text-[17px] font-semibold ${active ? "text-[#155D72]" : "text-[#29364A]"}`}>
+        <span className={`text-[17px] font-semibold ${active ? "text-nav-active" : "text-text-nav"}`}>
           {item.label}
         </span>
         <ChevronDownIcon
           size={16}
           strokeWidth={2.5}
-          className="text-[#27354A] transition-transform duration-200 group-open:rotate-180"
+          className="text-text-nav-alt transition-transform duration-200 group-open:rotate-180"
         />
       </summary>
       <div className="flex flex-col gap-1 pb-3 pl-3.5 pr-1">
         <Link
           to={item.href}
-          className="rounded-md px-2.5 py-2 text-[15px] font-semibold text-[#155D72] no-underline transition-colors hover:bg-[#EAF3F4] hover:text-brand-icon"
+          className="rounded-md px-2.5 py-2 text-[15px] font-semibold text-nav-active no-underline transition-colors hover:bg-nav-hover hover:text-brand-icon"
         >
           {t("common.viewAllServices")}
         </Link>
@@ -52,8 +52,8 @@ export function MobileNavItem({ item }: MobileNavItemProps) {
               key={entry.label}
               to={entry.href}
               className={
-                "rounded-md px-2.5 py-2 text-[15px] no-underline transition-colors hover:bg-[#EAF3F4] hover:text-brand-icon " +
-                (entryActive ? "bg-[#EAF3F4] text-brand-icon" : "text-[#5B6B78]")
+                "rounded-md px-2.5 py-2 text-[15px] no-underline transition-colors hover:bg-nav-hover hover:text-brand-icon " +
+                (entryActive ? "bg-nav-hover text-brand-icon" : "text-nav-entry-text")
               }
             >
               {entry.label}

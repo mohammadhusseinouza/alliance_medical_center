@@ -11,8 +11,8 @@ import type { ContactMethodIcon, ContactMethodItem } from "./contactMethods.data
 const cardBaseClass = "flex flex-col items-start gap-3 rounded-2xl border bg-white p-6 shadow-card";
 const cardInteractiveClass =
   cardBaseClass +
-  " group border-[#E1EAED] no-underline [transition:transform_220ms_ease,box-shadow_220ms_ease,border-color_220ms_ease] hover:-translate-y-[3px] hover:border-badge-text hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#72C6D2]";
-const cardStaticClass = cardBaseClass + " border-[#E1EAED]";
+  " group border-reach-us-info-card-border no-underline [transition:transform_220ms_ease,box-shadow_220ms_ease,border-color_220ms_ease] hover:-translate-y-[3px] hover:border-badge-text hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring";
+const cardStaticClass = cardBaseClass + " border-reach-us-info-card-border";
 const iconCircleClass = "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-badge-bg text-badge-text";
 const titleClass = "text-[17px] font-bold text-text-primary";
 const descriptionClass = "mt-1 text-[13.5px] leading-[1.5] text-text-secondary";
@@ -101,7 +101,7 @@ export function ContactMethods() {
 
   return (
     <section className="mt-[70px]">
-      <h2 className="m-0 text-[clamp(26px,2.4vw,32px)] font-bold leading-[1.2] tracking-[-0.6px] text-text-primary">
+      <h2 className="m-0 font-heading text-[clamp(26px,2.4vw,32px)] font-bold leading-[1.2] tracking-[-0.6px] text-text-primary">
         {t("contact.methods.heading")}
       </h2>
       <p className="mt-2.5 max-w-[620px] text-[15.5px] leading-[1.6] text-text-secondary">
