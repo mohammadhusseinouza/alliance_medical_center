@@ -29,6 +29,14 @@ export function WorkplaceHealth() {
             <p className="mt-[18px] max-w-[560px] text-[17px] leading-[1.7] text-text-secondary">
               {t("workplaceHealth.description")}
             </p>
+
+            <p className="mt-4 max-w-[560px] text-[15.5px] leading-[1.7] text-text-secondary">
+              {t("workplaceHealth.descriptionSecondary")}
+            </p>
+
+            <p className="mt-4 max-w-[560px] text-[15.5px] leading-[1.7] text-text-secondary">
+              {t("workplaceHealth.descriptionTertiary")}
+            </p>
           </div>
 
           <div className="animate-about-fade-img aspect-[3/2] w-full overflow-hidden rounded-2xl shadow-card motion-reduce:[animation-duration:0.01ms]">

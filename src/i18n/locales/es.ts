@@ -568,29 +568,6 @@ export const es: TranslationResource = {
       description: "Estamos aquí para responder sus preguntas y ayudarle a obtener la atención que necesita.",
       imageAlt: "Miembro del equipo de Alliance Medical Clinic listo para atender a un paciente",
     },
-    methods: {
-      heading: "Póngase en Contacto",
-      description: "Elija la mejor manera de comunicarse con nosotros. ¡Estamos aquí para ayudar!",
-      items: {
-        call: {
-          title: "Llámenos",
-          description: "Hable con los miembros de nuestro equipo",
-        },
-        email: {
-          title: "Envíenos un Correo",
-          description: "Envíenos un correo y le responderemos",
-        },
-        visit: {
-          title: "Visítenos",
-          description: "Pase por nuestra clínica en horario de atención",
-        },
-        bookOnline: {
-          title: "Reserve en Línea",
-          description: "Programe su cita en línea cuando quiera",
-          action: "Reservar Ahora",
-        },
-      },
-    },
     form: {
       heading: "Envíenos un Mensaje",
       fields: {
@@ -699,6 +676,10 @@ export const es: TranslationResource = {
     heading: "Soluciones de Salud Laboral",
     description:
       "Servicios integrales de salud ocupacional para mantener a su equipo seguro, saludable y productivo.",
+    descriptionSecondary:
+      "Desde exámenes previos al empleo y evaluaciones de regreso al trabajo hasta la atención de lesiones laborales y la vigilancia médica continua, nuestro equipo brinda un apoyo sanitario práctico diseñado en función de las necesidades de los empleadores y su personal.",
+    descriptionTertiary:
+      "Facilitamos el acceso a la atención médica laboral, ayudando a las organizaciones a apoyar el bienestar de los empleados, reducir las interrupciones y mantener un lugar de trabajo más saludable y productivo.",
     imageAlt: "Clínico de salud ocupacional conversando con un empleado",
     cta: "Explorar Todos los Servicios",
     items: {
@@ -730,6 +711,14 @@ export const es: TranslationResource = {
     description:
       "Nuestro programa de medicina ocupacional ofrece servicios de salud integrales diseñados en función de las necesidades de los empleadores y su fuerza laboral. Ayudamos a fomentar un lugar de trabajo más seguro y saludable mediante exámenes convenientes, pruebas, atención de lesiones laborales y servicios continuos de salud para empleados.",
     imageAlt: "Clínico de salud ocupacional conversando con un empleado",
+    hero: {
+      partnerCta: "Colabore Con Nosotros",
+      learnMoreCta: "Más Información",
+      accents: {
+        saferWorkplaces: "Lugares de Trabajo Más Seguros",
+        employeeWellness: "Bienestar del Empleado",
+      },
+    },
     benefits: {
       preEmployment: {
         title: "Exámenes Previos al Empleo",

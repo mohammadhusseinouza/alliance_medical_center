@@ -4,7 +4,6 @@ import { Navbar, MobileMenuButton } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
 import { ContactSidebar } from "../sections/contact/ContactSidebar";
 import { ContactHero } from "../sections/contact/ContactHero";
-import { ContactMethods } from "../sections/contact/ContactMethods";
 import { ContactForm } from "../sections/contact/ContactForm";
 import { ContactHours } from "../sections/contact/ContactHours";
 
@@ -24,7 +23,6 @@ export function ContactPage() {
           <ContactSidebar />
           <div className="min-w-0">
             <ContactHero />
-            <ContactMethods />
             <div className="mt-[70px] grid grid-cols-[minmax(0,1.4fr)_minmax(0,0.8fr)] items-start gap-8 mw-1000:grid-cols-1 mw-1000:gap-[50px]">
               <ContactForm />
               <ContactHours />

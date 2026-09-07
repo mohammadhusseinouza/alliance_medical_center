@@ -564,29 +564,6 @@ export const en = {
       description: "We're here to answer your questions and help you get the care you need.",
       imageAlt: "Alliance Medical Clinic team member ready to assist a patient",
     },
-    methods: {
-      heading: "Get in Touch",
-      description: "Choose the best way to reach us. We're here to help!",
-      items: {
-        call: {
-          title: "Call Us",
-          description: "Speak with our friendly team members",
-        },
-        email: {
-          title: "Email Us",
-          description: "Send us an email and we'll get back to you",
-        },
-        visit: {
-          title: "Visit Us",
-          description: "Stop by our clinic during business hours",
-        },
-        bookOnline: {
-          title: "Book Online",
-          description: "Schedule your appointment online anytime",
-          action: "Book Now",
-        },
-      },
-    },
     form: {
       heading: "Send Us a Message",
       fields: {
@@ -697,6 +674,10 @@ export const en = {
     heading: "Workplace Health Solutions",
     description:
       "Comprehensive occupational health services to keep your team safe, healthy, and productive.",
+    descriptionSecondary:
+      "From pre-employment physicals and return-to-work evaluations to workplace injury care and ongoing medical surveillance, our team provides practical healthcare support designed around the needs of employers and their workforce.",
+    descriptionTertiary:
+      "We make workplace healthcare easier to access, helping organizations support employee well-being, reduce disruption, and maintain a healthier, more productive workplace.",
     imageAlt: "Occupational health clinician consulting with a workplace employee",
     cta: "Explore All Services",
     items: {
@@ -728,6 +709,14 @@ export const en = {
     description:
       "Our occupational medicine program provides comprehensive healthcare services designed around the needs of employers and their workforce. We help support a safer, healthier workplace through convenient examinations, testing, work-related injury care, and ongoing employee health services.",
     imageAlt: "Occupational health clinician consulting with a workplace employee",
+    hero: {
+      partnerCta: "Partner With Us",
+      learnMoreCta: "Learn More",
+      accents: {
+        saferWorkplaces: "Safer Workplaces",
+        employeeWellness: "Employee Wellness",
+      },
+    },
     benefits: {
       preEmployment: {
         title: "Pre-Employment Physicals",
