@@ -18,7 +18,7 @@ export function ServiceSidebarCta({ heading, description, portraitAlt, portraitI
   const language = useLanguage();
 
   return (
-    <div className="relative min-h-[520px] overflow-hidden rounded-2xl text-white">
+    <div className="relative flex min-h-[520px] flex-col justify-center overflow-hidden rounded-2xl text-white">
       {portraitImage ? (
         <img
           src={portraitImage}
@@ -34,11 +34,11 @@ export function ServiceSidebarCta({ heading, description, portraitAlt, portraitI
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.32) 28%, rgba(0,0,0,0.12) 48%, rgba(0,0,0,0) 68%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.36) 38%, rgba(0,0,0,0.36) 62%, rgba(0,0,0,0.50) 100%)",
         }}
       />
 
-      <div className="relative z-[2] px-6 pt-[26px]">
+      <div className="relative z-[2] px-6 py-8 text-center">
         <h3 className="m-0 font-heading text-[22px] font-bold leading-[1.2] tracking-[-0.4px]">{heading}</h3>
         <p className="mt-2.5 text-[14.5px] leading-[1.6] text-white/[0.82]">{description}</p>
         <Link
