@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon } from "../../../components/icons";
 import { SITE } from "../../../lib/constants";
@@ -66,11 +65,12 @@ export function ContactSidebar() {
           <span className={iconCircleClass} aria-hidden="true">
             <ClockIcon size={18} />
           </span>
-          <Link to="#hours" className={rowLinkClass}>
+          {/* Plain in-page anchor — a router link to a hash re-routes instead of scrolling. */}
+          <a href="#hours" className={rowLinkClass}>
             <span className="sr-only">{t("contact.sidebar.hoursLabel")}: </span>
             <span className={rowValueWrapClass}>{t("contact.sidebar.hoursValue")}</span>
             <span className={rowSupportClass}>{t("contact.sidebar.hoursSupport")}</span>
-          </Link>
+          </a>
         </div>
       </div>
 

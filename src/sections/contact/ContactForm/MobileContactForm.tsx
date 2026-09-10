@@ -5,7 +5,17 @@ import { contactInputClass, contactTextareaClass } from "./contactFieldStyles";
 import { ContactFormSuccess } from "./ContactFormSuccess";
 import { useContactForm } from "./useContactForm";
 
-export function ContactForm() {
+/** Distinct id prefix so the mobile controls never collide with the hidden desktop `ContactForm`. */
+const ID = (field: string) => `m-contact-${field}`;
+
+/**
+ * Mobile presentation of the Contact form (handoff 4a): a white card with
+ * a paired First/Last name row and the remaining fields stacked. It shares
+ * ALL behaviour with the desktop `ContactForm` via `useContactForm`
+ * (validation rules, field set, submit, focus-first-invalid, success
+ * state) — nothing about the form's business logic is duplicated here.
+ */
+export function MobileContactForm() {
   const { t } = useTranslation();
   const { values, errors, submitted, fieldRefs, handleFieldChange, handleSubmit, handleReset } = useContactForm();
   const {
@@ -17,27 +27,29 @@ export function ContactForm() {
     message: messageRef,
   } = fieldRefs;
 
+  const validationError = (code: string | undefined) => (code ? t(`contact.form.validation.${code}`) : undefined);
+
   return (
-    <section className="rounded-2xl border border-reach-us-info-card-border bg-white p-7 shadow-card mw-640:p-5">
+    <div className="rounded-2xl border border-reach-us-info-card-border bg-white p-4 pt-5 shadow-card">
       {submitted ? (
         <ContactFormSuccess onReset={handleReset} />
       ) : (
         <>
-          <h2 className="m-0 font-heading text-[clamp(24px,2vw,28px)] font-bold leading-[1.25] tracking-[-0.6px] text-text-primary">
+          <h2 className="m-0 font-heading text-[24px] font-bold leading-[1.25] tracking-[-0.5px] text-text-primary">
             {t("contact.form.heading")}
           </h2>
 
-          <form className="mt-6" onSubmit={handleSubmit} noValidate>
-            <div className="grid grid-cols-2 gap-x-5 gap-y-[18px] mw-640:grid-cols-1">
+          <form className="mt-5" onSubmit={handleSubmit} noValidate>
+            <div className="grid grid-cols-2 gap-3">
               <FormField
                 label={t("contact.form.fields.firstName.label")}
-                htmlFor="contact-first-name"
+                htmlFor={ID("first-name")}
                 required
-                error={errors.firstName ? t(`contact.form.validation.${errors.firstName}`) : undefined}
+                error={validationError(errors.firstName)}
               >
                 <input
                   ref={firstNameRef}
-                  id="contact-first-name"
+                  id={ID("first-name")}
                   name="firstName"
                   type="text"
                   required
@@ -47,18 +59,18 @@ export function ContactForm() {
                   placeholder={t("contact.form.fields.firstName.placeholder")}
                   className={contactInputClass(Boolean(errors.firstName))}
                   aria-invalid={Boolean(errors.firstName)}
-                  aria-describedby={errors.firstName ? "contact-first-name-error" : undefined}
+                  aria-describedby={errors.firstName ? `${ID("first-name")}-error` : undefined}
                 />
               </FormField>
               <FormField
                 label={t("contact.form.fields.lastName.label")}
-                htmlFor="contact-last-name"
+                htmlFor={ID("last-name")}
                 required
-                error={errors.lastName ? t(`contact.form.validation.${errors.lastName}`) : undefined}
+                error={validationError(errors.lastName)}
               >
                 <input
                   ref={lastNameRef}
-                  id="contact-last-name"
+                  id={ID("last-name")}
                   name="lastName"
                   type="text"
                   required
@@ -68,18 +80,21 @@ export function ContactForm() {
                   placeholder={t("contact.form.fields.lastName.placeholder")}
                   className={contactInputClass(Boolean(errors.lastName))}
                   aria-invalid={Boolean(errors.lastName)}
-                  aria-describedby={errors.lastName ? "contact-last-name-error" : undefined}
+                  aria-describedby={errors.lastName ? `${ID("last-name")}-error` : undefined}
                 />
               </FormField>
+            </div>
+
+            <div className="mt-4 flex flex-col gap-4">
               <FormField
                 label={t("contact.form.fields.email.label")}
-                htmlFor="contact-email"
+                htmlFor={ID("email")}
                 required
-                error={errors.email ? t(`contact.form.validation.${errors.email}`) : undefined}
+                error={validationError(errors.email)}
               >
                 <input
                   ref={emailRef}
-                  id="contact-email"
+                  id={ID("email")}
                   name="email"
                   type="email"
                   required
@@ -89,17 +104,17 @@ export function ContactForm() {
                   placeholder={t("contact.form.fields.email.placeholder")}
                   className={contactInputClass(Boolean(errors.email))}
                   aria-invalid={Boolean(errors.email)}
-                  aria-describedby={errors.email ? "contact-email-error" : undefined}
+                  aria-describedby={errors.email ? `${ID("email")}-error` : undefined}
                 />
               </FormField>
               <FormField
                 label={t("contact.form.fields.phone.label")}
-                htmlFor="contact-phone"
-                error={errors.phone ? t(`contact.form.validation.${errors.phone}`) : undefined}
+                htmlFor={ID("phone")}
+                error={validationError(errors.phone)}
               >
                 <input
                   ref={phoneRef}
-                  id="contact-phone"
+                  id={ID("phone")}
                   name="phone"
                   type="tel"
                   autoComplete="tel"
@@ -108,19 +123,18 @@ export function ContactForm() {
                   placeholder={t("contact.form.fields.phone.placeholder")}
                   className={contactInputClass(Boolean(errors.phone))}
                   aria-invalid={Boolean(errors.phone)}
-                  aria-describedby={errors.phone ? "contact-phone-error" : undefined}
+                  aria-describedby={errors.phone ? `${ID("phone")}-error` : undefined}
                 />
               </FormField>
               <FormField
                 label={t("contact.form.fields.subject.label")}
-                htmlFor="contact-subject"
+                htmlFor={ID("subject")}
                 required
-                error={errors.subject ? t(`contact.form.validation.${errors.subject}`) : undefined}
-                className="col-span-2"
+                error={validationError(errors.subject)}
               >
                 <input
                   ref={subjectRef}
-                  id="contact-subject"
+                  id={ID("subject")}
                   name="subject"
                   type="text"
                   required
@@ -129,19 +143,18 @@ export function ContactForm() {
                   placeholder={t("contact.form.fields.subject.placeholder")}
                   className={contactInputClass(Boolean(errors.subject))}
                   aria-invalid={Boolean(errors.subject)}
-                  aria-describedby={errors.subject ? "contact-subject-error" : undefined}
+                  aria-describedby={errors.subject ? `${ID("subject")}-error` : undefined}
                 />
               </FormField>
               <FormField
                 label={t("contact.form.fields.message.label")}
-                htmlFor="contact-message"
+                htmlFor={ID("message")}
                 required
-                error={errors.message ? t(`contact.form.validation.${errors.message}`) : undefined}
-                className="col-span-2"
+                error={validationError(errors.message)}
               >
                 <textarea
                   ref={messageRef}
-                  id="contact-message"
+                  id={ID("message")}
                   name="message"
                   rows={5}
                   required
@@ -150,21 +163,21 @@ export function ContactForm() {
                   placeholder={t("contact.form.fields.message.placeholder")}
                   className={contactTextareaClass(Boolean(errors.message))}
                   aria-invalid={Boolean(errors.message)}
-                  aria-describedby={errors.message ? "contact-message-error" : undefined}
+                  aria-describedby={errors.message ? `${ID("message")}-error` : undefined}
                 />
               </FormField>
             </div>
 
             <button
               type="submit"
-              className="group mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-cta px-7 text-[14.5px] font-semibold text-white shadow-[0_4px_8px_rgba(0,0,0,0.16)] [transition:background-color_250ms_ease,transform_200ms_ease,box-shadow_250ms_ease] hover:-translate-y-px hover:bg-cta-hover hover:shadow-nav-cta-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
+              className="mt-5 flex h-[52px] w-full items-center justify-center gap-2 rounded-lg bg-cta text-[15.5px] font-semibold text-white shadow-[0_4px_8px_rgba(0,0,0,0.16)] [transition:background-color_250ms_ease] hover:bg-cta-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
             >
               {t("contact.form.submit")}
-              <ArrowRightIcon size={15} className="transition-transform duration-200 ease-out group-hover:translate-x-[3px]" />
+              <ArrowRightIcon size={15} />
             </button>
           </form>
         </>
       )}
-    </section>
+    </div>
   );
 }
