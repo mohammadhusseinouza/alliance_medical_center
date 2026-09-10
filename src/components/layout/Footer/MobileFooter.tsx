@@ -18,13 +18,21 @@ import { FooterContactRowItem } from "./FooterContactRow";
 const headerRow =
   "flex w-full min-h-[56px] items-center justify-between border-t border-white/[0.12] bg-transparent py-[18px] px-0.5 text-left text-[16px] font-bold text-white";
 
+/** Service-detail pages show a trimmed Contact Info list (phone + address only). */
+const SERVICE_CONTACT_ROW_IDS = new Set(["phone", "address"]);
+
+export interface MobileFooterProps {
+  /** `"service"` trims the Contact Info rows to phone + address (mobile service-detail handoff). */
+  variant?: "default" | "service";
+}
+
 /**
  * Accordion footer for phones (handoff design 1a): Contact Info always
  * open, Services and About Alliance collapsed by default. Shares the
  * Logo, the `footer.data` link builders and the SITE constants with the
  * desktop footer — no duplicated footer content.
  */
-export function MobileFooter() {
+export function MobileFooter({ variant = "default" }: MobileFooterProps) {
   const { t } = useTranslation();
   const language = useLanguage();
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -34,6 +42,10 @@ export function MobileFooter() {
 
   const serviceLinks = buildFooterServiceLinks(t, language);
   const legalLinks = buildFooterLegalLinks(t);
+  const contactRows =
+    variant === "service"
+      ? FOOTER_CONTACT_ROWS.filter((row) => SERVICE_CONTACT_ROW_IDS.has(row.id))
+      : FOOTER_CONTACT_ROWS;
 
   return (
     <footer className="bg-brand-navy px-[22px] pb-[26px] pt-[30px] text-white">
@@ -49,13 +61,15 @@ export function MobileFooter() {
           {t("footer.contactInfoHeading")}
         </div>
         <div className="flex flex-col gap-3 px-0.5 pb-[18px]">
-          {FOOTER_CONTACT_ROWS.map((row) => (
+          {contactRows.map((row) => (
             <FooterContactRowItem key={row.id} row={row} />
           ))}
-          <div className="flex items-center gap-2.5 text-[13.5px] text-white/70">
-            <ClockDialIcon size={16} strokeWidth={2} className="flex-shrink-0" />
-            {t("common.hoursSummary", { time: SITE.hours.time })}
-          </div>
+          {variant !== "service" && (
+            <div className="flex items-center gap-2.5 text-[13.5px] text-white/70">
+              <ClockDialIcon size={16} strokeWidth={2} className="flex-shrink-0" />
+              {t("common.hoursSummary", { time: SITE.hours.time })}
+            </div>
+          )}
         </div>
 
         {/* Services — collapsed */}
