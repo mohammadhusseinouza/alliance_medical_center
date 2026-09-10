@@ -41,7 +41,14 @@ function buildCalendarCells(month: Date, selectedIso: string | null): CalendarCe
   });
 }
 
-export function BookingCalendar({ month, selectedDate, onSelectDate, onPrevMonth, onNextMonth }: BookingCalendarProps) {
+export function BookingCalendar({
+  month,
+  selectedDate,
+  onSelectDate,
+  onPrevMonth,
+  onNextMonth,
+  variant = "desktop",
+}: BookingCalendarProps) {
   const { t } = useTranslation();
   const language = useLanguage();
   const localeTag = INTL_LOCALE_TAGS[language];
@@ -49,24 +56,19 @@ export function BookingCalendar({ month, selectedDate, onSelectDate, onPrevMonth
   const weekdayLabels = t("calendar.weekdaysShort", { returnObjects: true }) as string[];
   const cells = buildCalendarCells(month, selectedDate);
 
+  const mobile = variant === "mobile";
+  const navBtnClass = `flex ${mobile ? "h-[34px] w-[34px]" : "h-[30px] w-[30px]"} items-center justify-center rounded-md border-none bg-transparent text-booking-calendar-nav-icon transition-colors duration-150 hover:bg-nav-hover`;
+  const dateGridGap = mobile ? "gap-[3px]" : "gap-[2px]";
+  const cellHeight = mobile ? "h-[38px]" : "h-9";
+
   return (
     <div className="rounded-[9px] border border-booking-border-panel bg-white p-4">
       <div className="flex items-center justify-between">
-        <button
-          type="button"
-          onClick={onPrevMonth}
-          aria-label={t("calendar.previousMonth")}
-          className="flex h-[30px] w-[30px] items-center justify-center rounded-md border-none bg-transparent text-booking-calendar-nav-icon transition-colors duration-150 hover:bg-nav-hover"
-        >
+        <button type="button" onClick={onPrevMonth} aria-label={t("calendar.previousMonth")} className={navBtnClass}>
           <ChevronIcon direction="left" size={16} strokeWidth={2.2} />
         </button>
         <span className="text-[14.5px] font-bold text-text-primary">{monthLabel}</span>
-        <button
-          type="button"
-          onClick={onNextMonth}
-          aria-label={t("calendar.nextMonth")}
-          className="flex h-[30px] w-[30px] items-center justify-center rounded-md border-none bg-transparent text-booking-calendar-nav-icon transition-colors duration-150 hover:bg-nav-hover"
-        >
+        <button type="button" onClick={onNextMonth} aria-label={t("calendar.nextMonth")} className={navBtnClass}>
           <ChevronIcon direction="right" size={16} strokeWidth={2.2} />
         </button>
       </div>
@@ -79,10 +81,10 @@ export function BookingCalendar({ month, selectedDate, onSelectDate, onPrevMonth
         ))}
       </div>
 
-      <div className="mt-[2px] grid grid-cols-7 gap-[2px]">
+      <div className={`mt-[2px] grid grid-cols-7 ${dateGridGap}`}>
         {cells.map((cell, idx) => {
           if (!cell.date) {
-            return <button key={`blank-${idx}`} type="button" disabled className="invisible h-9" />;
+            return <button key={`blank-${idx}`} type="button" disabled className={`invisible ${cellHeight}`} />;
           }
           const stateClass = cell.selected
             ? "bg-booking-blue text-white cursor-pointer"
@@ -97,7 +99,7 @@ export function BookingCalendar({ month, selectedDate, onSelectDate, onPrevMonth
               aria-selected={cell.selected}
               aria-label={cell.date.toLocaleDateString(localeTag, { weekday: "long", month: "long", day: "numeric" })}
               onClick={cell.disabled ? undefined : () => onSelectDate(cell.iso)}
-              className={`h-9 rounded-[7px] border-none text-[13px] font-semibold transition-colors duration-150 ${stateClass}`}
+              className={`${cellHeight} rounded-[7px] border-none text-[13px] font-semibold transition-colors duration-150 ${stateClass}`}
             >
               {cell.label}
             </button>

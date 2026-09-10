@@ -1035,6 +1035,15 @@ export const en = {
       heading: "Appointment Request Received",
       description: "Thank you. Our team will contact you if any additional information is needed.",
       bookAnother: "Book Another Appointment",
+      slot: "{{date}} at {{time}}",
+    },
+    summary: {
+      prompt: "Choose a date, then an available time.",
+      datePicked: "{{date}} — pick a time below.",
+      selected: "Selected: {{date}} at {{time}}",
+    },
+    walkIn: {
+      heading: "Prefer to walk in?",
     },
   },
   validation: {

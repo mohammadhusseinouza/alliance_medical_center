@@ -1038,6 +1038,15 @@ export const es: TranslationResource = {
       heading: "Solicitud de Cita Recibida",
       description: "Gracias. Nuestro equipo se pondrá en contacto si se necesita información adicional.",
       bookAnother: "Reservar Otra Cita",
+      slot: "{{date}} a las {{time}}",
+    },
+    summary: {
+      prompt: "Elija una fecha y luego un horario disponible.",
+      datePicked: "{{date}} — elija un horario abajo.",
+      selected: "Seleccionado: {{date}} a las {{time}}",
+    },
+    walkIn: {
+      heading: "¿Prefiere venir sin cita?",
     },
   },
   validation: {
