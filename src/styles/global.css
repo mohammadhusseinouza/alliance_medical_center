@@ -91,3 +91,20 @@
     font-family: "Lato", Arial, sans-serif;
   }
 }
+
+@layer utilities {
+  /*
+   * Hidden-scrollbar helper for the mobile horizontal snap rails
+   * (highlight carousel, team rail). Scrolling stays fully functional —
+   * only the visual scrollbar is suppressed. Named to match the mobile
+   * Home handoff's `.om-scroll` prototype class.
+   */
+  .om-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .om-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}

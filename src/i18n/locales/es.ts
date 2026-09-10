@@ -6,8 +6,12 @@ export const es: TranslationResource = {
     bookAppointment: "Reservar Cita",
     viewAllServices: "Ver Todos los Servicios",
     openDays: "Abiertos los 7 Días",
+    openDaysShort: "Abiertos los 7 Días · 12–8 PM",
     hoursDaysRange: "Lunes – Domingo",
     hoursSummary: "Abiertos los 7 Días · {{time}}",
+    cityShort: "Portage, MI",
+    call: "Llamar",
+    callClinicAria: "Llamar a la clínica",
   },
   navbar: {
     home: "Inicio",
@@ -45,6 +49,7 @@ export const es: TranslationResource = {
     },
     previousSlide: "Diapositiva anterior",
     nextSlide: "Diapositiva siguiente",
+    goToSlide: "Ir a la diapositiva {{index}}",
   },
   heroInfoCards: {
     urgentCare: {
@@ -643,6 +648,7 @@ export const es: TranslationResource = {
     headingLine2: "Tratamiento para necesidades cotidianas.",
     description:
       "Ya sea que traiga a su hijo, reporte una lesión laboral o necesite ayuda el mismo día para una enfermedad común, estamos aquí para las familias, trabajadores y empleadores de Portage.",
+    learnMore: "Más información",
     imageAlt: "Doctor de frente, con los brazos cruzados",
     items: {
       familiesIndividuals: {
@@ -915,6 +921,7 @@ export const es: TranslationResource = {
     goToMember: "Ir al miembro del equipo {{index}}",
     photoAlt: "Foto de {{name}}",
     viewFullProfile: "Ver Perfil Completo",
+    swipeHint: "Desliza para conocer al equipo",
     roles: {
       mahmoudKassir: "Médico Familiar y Cofundador",
       dalalKassir: "Directora Médica y Médica de Medicina Familiar",
@@ -971,6 +978,7 @@ export const es: TranslationResource = {
     },
     contactInfoHeading: "Información de Contacto",
     servicesHeading: "Servicios",
+    aboutHeading: "Acerca de Alliance",
     legalLinks: {
       privacyPolicy: "Política de Privacidad",
       termsOfService: "Términos de Servicio",

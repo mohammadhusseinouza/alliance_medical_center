@@ -4,8 +4,12 @@ export const en = {
     bookAppointment: "Book Appointment",
     viewAllServices: "View All Services",
     openDays: "Open 7 Days",
+    openDaysShort: "Open 7 Days · 12–8 PM",
     hoursDaysRange: "Monday – Sunday",
     hoursSummary: "Open 7 Days · {{time}}",
+    cityShort: "Portage, MI",
+    call: "Call",
+    callClinicAria: "Call the clinic",
   },
   navbar: {
     home: "Home",
@@ -43,6 +47,7 @@ export const en = {
     },
     previousSlide: "Previous hero slide",
     nextSlide: "Next hero slide",
+    goToSlide: "Go to hero slide {{index}}",
   },
   heroInfoCards: {
     urgentCare: {
@@ -641,6 +646,7 @@ export const en = {
     headingLine2: "Treatment for everyday needs.",
     description:
       "Whether you are bringing in your child, reporting a work injury, or need same-day help for a common illness—we are built for Portage families, workers, and employers alike.",
+    learnMore: "Learn more",
     imageAlt: "Doctor facing forward, arms crossed",
     items: {
       familiesIndividuals: {
@@ -912,6 +918,7 @@ export const en = {
     goToMember: "Go to team member {{index}}",
     photoAlt: "Photo of {{name}}",
     viewFullProfile: "View Full Profile",
+    swipeHint: "Swipe to meet the team",
     roles: {
       mahmoudKassir: "Family Physician & Co-Founder",
       dalalKassir: "Medical Director & Family Medicine Physician",
@@ -968,6 +975,7 @@ export const en = {
     },
     contactInfoHeading: "Contact Info",
     servicesHeading: "Services",
+    aboutHeading: "About Alliance",
     legalLinks: {
       privacyPolicy: "Privacy Policy",
       termsOfService: "Terms of Service",
