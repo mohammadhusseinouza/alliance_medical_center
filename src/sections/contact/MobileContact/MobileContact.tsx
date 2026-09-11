@@ -14,11 +14,11 @@ import { MobileContactForm } from "../ContactForm";
 export const MOBILE_HOURS_ANCHOR = "mobile-contact-hours";
 
 const HERO_SCRIM =
-  "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.12) 48%, rgba(255,255,255,0.60) 84%, rgba(255,255,255,0.95) 100%)";
+  "linear-gradient(180deg, rgba(255,255,255,0) 35%, rgba(255,255,255,0.65) 62%, rgba(255,255,255,0.95) 100%)";
 const IMMEDIATE_CARE_GRADIENT =
   "linear-gradient(120deg, var(--brand-teal-700) 0%, var(--brand-teal-600) 55%, var(--brand-teal-500) 100%)";
 const PHOTO_CTA_SCRIM =
-  "linear-gradient(180deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.34) 30%, rgba(0,0,0,0.10) 54%, rgba(0,0,0,0) 74%)";
+  "linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.58) 50%, rgba(0,0,0,0.30) 100%)";
 
 const cardClass = "rounded-2xl border border-border-subtle bg-white p-4 pt-5 shadow-card";
 
@@ -69,18 +69,18 @@ export function MobileContact() {
 
   return (
     <>
-      {/* 3. Hero */}
-      <section>
-        <div className="relative h-[180px] w-full overflow-hidden">
-          <img
-            src={heroImage}
-            alt={t("contact.hero.imageAlt")}
-            className="absolute inset-0 h-full w-full object-cover object-[58%_30%]"
-            loading="eager"
-          />
-          <div aria-hidden="true" className="pointer-events-none absolute inset-0" style={{ background: HERO_SCRIM }} />
-        </div>
-        <div className="relative -mt-3.5 bg-white px-4 pb-[26px]">
+      {/* 3. Hero — one continuous image; the heading/description sit over
+          its lower portion (bottom fade for readability) rather than in a
+          separate white block below the photo. */}
+      <section className="relative flex min-h-[300px] w-full flex-col justify-end overflow-hidden">
+        <img
+          src={heroImage}
+          alt={t("contact.hero.imageAlt")}
+          className="absolute inset-0 h-full w-full object-cover object-[58%_24%]"
+          loading="eager"
+        />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0" style={{ background: HERO_SCRIM }} />
+        <div className="relative z-[1] px-4 pb-5">
           <h1 className="m-0 font-heading text-[34px] font-bold leading-[1.08] tracking-[-1.2px] text-brand-navy [text-wrap:pretty]">
             {t("contact.hero.heading")}
           </h1>
@@ -177,7 +177,7 @@ export function MobileContact() {
       </section>
 
       {/* 8. Photo CTA */}
-      <section className="relative h-[320px] w-full overflow-hidden">
+      <section className="relative flex h-[320px] w-full items-center overflow-hidden">
         <img
           src={ctaImage}
           alt={t("contact.sidebar.cta.imageAlt")}
@@ -185,11 +185,11 @@ export function MobileContact() {
           loading="lazy"
         />
         <div aria-hidden="true" className="pointer-events-none absolute inset-0" style={{ background: PHOTO_CTA_SCRIM }} />
-        <div className="relative z-[1] px-5 pt-6 text-white">
+        <div className="relative z-[1] w-full px-5 text-center text-white">
           <h3 className="m-0 font-heading text-[22px] font-bold leading-[1.2] [text-wrap:pretty]">
             {t("contact.sidebar.cta.heading")}
           </h3>
-          <p className="mt-2 max-w-[300px] text-[14px] leading-[1.55] text-white/90 [text-wrap:pretty]">
+          <p className="mx-auto mt-2 max-w-[300px] text-[14px] leading-[1.55] text-white/90 [text-wrap:pretty]">
             {t("contact.sidebar.cta.description")}
           </p>
           <Link
