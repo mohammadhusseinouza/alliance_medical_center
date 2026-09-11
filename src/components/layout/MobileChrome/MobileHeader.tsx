@@ -11,9 +11,17 @@ import { isNavItemActive, parseNavHref } from "../Navbar/navHref";
 
 /**
  * Sticky mobile header + expandable navigation drawer (handoff design 1a).
- * Rendered below the `md` breakpoint only; the desktop TopBar / Navbar are
- * untouched. Reuses the shared Logo, LanguageSwitcher, route table
- * (`buildNavItems`) and SITE constants rather than duplicating any of them.
+ * Rendered below the `md` breakpoint only (hides itself via `md:hidden`
+ * below); the desktop TopBar / Navbar are untouched. Reuses the shared
+ * Logo, LanguageSwitcher, route table (`buildNavItems`) and SITE constants
+ * rather than duplicating any of them.
+ *
+ * Callers must render this as a direct sibling of page content, NOT inside
+ * a div that only wraps mobile chrome (e.g. alongside MobileUtilityStrip) —
+ * a `position: sticky` element can't stick past the bottom of its own
+ * containing block, so a wrapper that's only as tall as its children would
+ * cap the header's sticky range at that wrapper's height and it would
+ * scroll away with it instead of pinning to the viewport.
  */
 export function MobileHeader() {
   const { t } = useTranslation();
@@ -35,7 +43,7 @@ export function MobileHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 flex h-16 items-center justify-between gap-3 border-b border-border-subtle bg-white px-4">
+      <header className="sticky top-0 z-40 flex h-16 items-center justify-between gap-3 border-b border-border-subtle bg-white px-4 md:hidden">
         <Link to={withLocale("/", language)} onClick={closeMenu} className="flex">
           <Logo size={41} />
         </Link>
@@ -64,7 +72,7 @@ export function MobileHeader() {
         <nav
           id={drawerId}
           aria-label={t("navbar.mobileLabel")}
-          className="sticky top-16 z-[39] animate-mobile-fade border-b border-border-subtle bg-white px-4 pb-5 pt-3.5 shadow-nav-mobile-panel"
+          className="sticky top-16 z-[39] animate-mobile-fade border-b border-border-subtle bg-white px-4 pb-5 pt-3.5 shadow-nav-mobile-panel md:hidden"
         >
           <LanguageSwitcher className="pb-3" />
 

@@ -21,7 +21,7 @@ export function MobileUtilityStrip({ right = "location" }: MobileUtilityStripPro
   const { t } = useTranslation();
 
   return (
-    <div className="flex h-[34px] items-center justify-between gap-2.5 bg-brand-navy px-4 text-white">
+    <div className="flex h-[34px] items-center justify-between gap-2.5 bg-brand-navy px-4 text-white md:hidden">
       <span className="inline-flex items-center gap-1.5 text-[11.5px] font-bold leading-none tracking-[0.3px]">
         <ClockIcon size={13} strokeWidth={2} />
         {t("common.openDaysShort")}

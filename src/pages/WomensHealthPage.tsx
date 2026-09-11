@@ -21,18 +21,14 @@ export function WomensHealthPage() {
 
   return (
     <>
-      <div className="md:hidden">
-        <MobileUtilityStrip right="phone" />
-        <MobileHeader />
-      </div>
-      <div className="hidden md:block">
-        <header>
-          <TopBar
-            hamburger={<MobileMenuButton isOpen={mobileOpen} onToggle={() => setMobileOpen((open) => !open)} />}
-          />
-        </header>
-        <Navbar mobileOpen={mobileOpen} />
-      </div>
+      <MobileUtilityStrip right="phone" />
+      <MobileHeader />
+      <header className="hidden md:block">
+        <TopBar
+          hamburger={<MobileMenuButton isOpen={mobileOpen} onToggle={() => setMobileOpen((open) => !open)} />}
+        />
+      </header>
+      <Navbar mobileOpen={mobileOpen} />
 
       <main>
         <div className="md:hidden">

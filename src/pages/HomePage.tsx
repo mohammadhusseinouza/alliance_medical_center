@@ -29,21 +29,18 @@ export function HomePage() {
 
   return (
     <>
-      {/* Chrome — mobile */}
-      <div className="md:hidden">
-        <MobileUtilityStrip />
-        <MobileHeader />
-      </div>
+      {/* Chrome — mobile (each component hides itself at md+ via md:hidden;
+          not wrapped in a shared div — see MobileHeader.tsx for why) */}
+      <MobileUtilityStrip />
+      <MobileHeader />
 
       {/* Chrome — approved desktop / tablet, unchanged */}
-      <div className="hidden md:block">
-        <header>
-          <TopBar
-            hamburger={<MobileMenuButton isOpen={mobileOpen} onToggle={() => setMobileOpen((open) => !open)} />}
-          />
-        </header>
-        <Navbar mobileOpen={mobileOpen} />
-      </div>
+      <header className="hidden md:block">
+        <TopBar
+          hamburger={<MobileMenuButton isOpen={mobileOpen} onToggle={() => setMobileOpen((open) => !open)} />}
+        />
+      </header>
+      <Navbar mobileOpen={mobileOpen} />
 
       <main>
         <div className="md:hidden">
