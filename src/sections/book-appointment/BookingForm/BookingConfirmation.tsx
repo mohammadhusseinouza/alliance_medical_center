@@ -3,9 +3,16 @@ import { CheckIcon } from "../../../components/icons";
 
 export interface BookingConfirmationProps {
   onReset: () => void;
+  /**
+   * Optional confirmed-slot echo (e.g. "Thu, Sep 10 at 14:30"), shown
+   * between the message and the reset button. The mobile presentation
+   * passes it; the desktop presentation omits it, so desktop output is
+   * unchanged.
+   */
+  slotSummary?: string;
 }
 
-export function BookingConfirmation({ onReset }: BookingConfirmationProps) {
+export function BookingConfirmation({ onReset, slotSummary }: BookingConfirmationProps) {
   const { t } = useTranslation();
 
   return (
@@ -17,6 +24,7 @@ export function BookingConfirmation({ onReset }: BookingConfirmationProps) {
       <p className="mx-auto mt-3 max-w-[420px] text-[15px] leading-[1.65] text-booking-text-body">
         {t("booking.confirmation.description")}
       </p>
+      {slotSummary && <p className="mt-3 text-[14px] font-bold text-badge-text">{slotSummary}</p>}
       <button
         type="button"
         onClick={onReset}

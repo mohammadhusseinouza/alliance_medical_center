@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import heroImage from "../../../assets/contact/AccessNow Care team member ready to assist a patient.png";
+import heroImage from "../../../assets/contact/team-member-ready-to-assist.png";
 
 /**
  * Desktop readability wash — strong white on the left, a pale Alliance-blue

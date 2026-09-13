@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #EDEFF2; font-family: "Lato", Arial, sans-serif; }
+  a { color: #1976D2; }
+  a:hover { color: #0D47A1; }
+  .om-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+  .om-scroll::-webkit-scrollbar { display: none; }
+</style>
+</helmet>
+
+<section style="display:flex;flex-direction:column;gap:28px;padding:40px;background:#EDEFF2">
+
+  <div style="display:flex;align-items:baseline;gap:14px;font-family:Lato,Arial,sans-serif">
+    <span style="display:inline-flex;align-items:center;justify-content:center;height:26px;min-width:34px;border-radius:6px;background:#0D47A1;color:#fff;font-size:13px;font-weight:700;letter-spacing:0.4px">1a</span>
+    <h1 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;color:#0D47A1">Alliance Medical Clinic — mobile Home, 390px</h1>
+    <span style="font-size:13px;color:#5B6470">Same identity, layout composed for the phone. Variations for header, hero, services, team and footer are in <a href="#1b" style="font-weight:700">1b</a>.</span>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:36px">
+
+    <div id="1a" style="flex:0 0 auto">
+      <div style="width:390px;overflow:hidden;border-radius:26px;border:1px solid #D6DAE0;background:#fff;box-shadow:0 24px 60px rgba(13,71,161,0.14)">
+
+        <div style="display:flex;align-items:center;gap:8px;background:#F5F5F5;border-bottom:1px solid #E0E0E0;padding:10px 14px">
+          <span style="height:9px;width:9px;border-radius:9999px;background:#D6DAE0"></span>
+          <span style="height:9px;width:9px;border-radius:9999px;background:#D6DAE0"></span>
+          <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border-radius:6px;background:#fff;border:1px solid #E0E0E0;padding:4px 10px;font-size:11px;color:#9E9E9E">alliancemedicalclinic.com</span>
+        </div>
+
+        <div style="position:relative;height:760px;overflow-y:auto;overflow-x:hidden;background:#fff" class="om-scroll">
+
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;background:#0D47A1;padding:0 16px;height:34px">
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:0.3px;color:#fff">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+              Open 7 Days · 12–8 PM
+            </span>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=8145+Valleywood+Lane+Portage+MI+49024" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;color:#90CAF9;text-decoration:none">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Portage, MI
+            </a>
+          </div>
+
+          <div style="position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #E0E0E0;background:#fff;padding:0 16px;height:64px">
+            <img src="assets/logo.png" alt="Alliance Medical Clinic" width="123" height="41" style="object-fit:contain;flex-shrink:0" />
+            <div style="display:flex;align-items:center;gap:6px">
+              <a href="tel:+12693214774" aria-label="Call the clinic" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:10px;border:1.5px solid #1976D2;color:#1976D2;text-decoration:none">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </a>
+              <button type="button" aria-label="Toggle menu" onClick="{{ toggleMenu }}" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:10px;border:none;background:#E3F2FD;color:#0D47A1;cursor:pointer">{{ menuIcon }}</button>
+            </div>
+          </div>
+
+          <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+            <nav aria-label="Mobile" style="position:sticky;top:64px;z-index:39;border-bottom:1px solid #E0E0E0;background:#fff;padding:14px 16px 20px;box-shadow:0 16px 32px rgba(13,71,161,0.12)">
+              <div style="display:flex;align-items:center;gap:6px;padding-bottom:12px">
+                <button type="button" style="border:none;background:none;border-radius:4px;padding:4px 6px;font-family:Lato,Arial,sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;color:#1976D2;cursor:pointer">EN</button>
+                <span style="color:#E0E0E0">|</span>
+                <button type="button" style="border:none;background:none;border-radius:4px;padding:4px 6px;font-family:Lato,Arial,sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;color:#424242;cursor:pointer">ES</button>
+              </div>
+              <a href="#" style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid #E0E0E0;padding:16px 4px;font-size:17px;font-weight:700;color:#1976D2;text-decoration:none">Home</a>
+              <button type="button" onClick="{{ toggleServices }}" style="display:flex;width:100%;align-items:center;justify-content:space-between;border:none;border-top:1px solid #E0E0E0;background:none;padding:16px 4px;font-family:Lato,Arial,sans-serif;font-size:17px;font-weight:700;color:#424242;cursor:pointer;text-align:left">
+                Services
+                {{ servicesChevron }}
+              </button>
+              <sc-if value="{{ servicesOpen }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-direction:column;gap:2px;padding:0 4px 14px 14px">
+                  <a href="#" style="border-radius:8px;padding:12px 10px;font-size:15px;font-weight:700;color:#1976D2;text-decoration:none">View All Services</a>
+                  <a href="#" style="border-radius:8px;padding:12px 10px;font-size:15px;color:#424242;text-decoration:none">Urgent Care</a>
+                  <a href="#" style="border-radius:8px;padding:12px 10px;font-size:15px;color:#424242;text-decoration:none">Family Health</a>
+                  <a href="#" style="border-radius:8px;padding:12px 10px;font-size:15px;color:#424242;text-decoration:none">Women's Health</a>
+                  <a href="#" style="border-radius:8px;padding:12px 10px;font-size:15px;color:#424242;text-decoration:none">Pediatric Care</a>
+                  <a href="#" style="border-radius:8px;padding:12px 10px;font-size:15px;color:#424242;text-decoration:none">Diagnostic Services</a>
+                </div>
+              </sc-if>
+              <a href="#" style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid #E0E0E0;padding:16px 4px;font-size:17px;font-weight:700;color:#424242;text-decoration:none">Occupational Health</a>
+              <a href="#" style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid #E0E0E0;border-bottom:1px solid #E0E0E0;padding:16px 4px;font-size:17px;font-weight:700;color:#424242;text-decoration:none">Contact Us</a>
+              <a href="#" style="margin-top:18px;display:flex;height:52px;width:100%;align-items:center;justify-content:center;border-radius:8px;background:#1976D2;font-size:16px;font-weight:600;color:#fff;text-decoration:none">Book Appointment</a>
+            </nav>
+          </sc-if>
+
+          <section style="background:#fff">
+            <div style="position:relative;height:300px;width:100%;overflow:hidden">
+              <sc-for list="{{ heroSlides }}" as="slide" hint-placeholder-count="1">
+                <div style="position:absolute;inset:0;transition:opacity 700ms ease;background-size:cover;background-position:50% 28%;opacity:{{ slide.opacity }};background-image:{{ slide.bg }}"></div>
+              </sc-for>
+              <div style="pointer-events:none;position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 45%, rgba(255,255,255,0.72) 88%, #FFFFFF 100%)"></div>
+              <div style="position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:4px">
+                <sc-for list="{{ heroDots }}" as="dot" hint-placeholder-count="3">
+                  <button type="button" aria-label="{{ dot.label }}" onClick="{{ dot.onClick }}" style="display:flex;height:44px;min-width:44px;align-items:center;justify-content:center;border:none;background:none;padding:0;cursor:pointer">
+                    <span style="display:block;height:8px;border-radius:9999px;width:{{ dot.width }};background:{{ dot.background }}"></span>
+                  </button>
+                </sc-for>
+              </div>
+            </div>
+            <div style="padding:4px 22px 34px">
+              <h1 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:700;line-height:1.08;letter-spacing:-0.9px;color:#0D47A1;text-wrap:pretty">{{ heroHeading }}</h1>
+              <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:#424242;text-wrap:pretty">{{ heroDescription }}</p>
+              <a href="#" style="margin-top:22px;display:flex;height:54px;width:100%;align-items:center;justify-content:center;gap:9px;border-radius:7px;font-size:16px;font-weight:600;color:#fff;text-decoration:none;background:linear-gradient(90deg,#1976D2,#42A5F5);box-shadow:0 8px 20px rgba(25,118,210,0.16)">
+                Book Appointment
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="tel:+12693214774" style="margin-top:10px;display:flex;height:54px;width:100%;align-items:center;justify-content:center;gap:9px;border-radius:7px;border:1.5px solid #1976D2;font-size:16px;font-weight:600;color:#1976D2;text-decoration:none">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Call (269) 321-4774
+              </a>
+            </div>
+          </section>
+
+          <div style="display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 22px 26px;background:#fff" class="om-scroll">
+            <article style="position:relative;flex:0 0 300px;scroll-snap-align:center;overflow:hidden;border-radius:14px;padding:26px 22px;color:#fff;background:linear-gradient(145deg,#42A5F5,#1976D2)">
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;right:16px;top:18px;opacity:0.14"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:rgba(255,255,255,0.95)"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><path d="M12 12v4M10 14h4"></path></svg>
+              <h2 style="margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;line-height:1.2;color:#fff">Urgent Care</h2>
+              <p style="margin:10px 0 0;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,0.82)">Walk-in care for illnesses, minor injuries, and non-life-threatening conditions.</p>
+              <a href="tel:+12693214774" style="margin-top:18px;display:inline-flex;min-height:44px;align-items:center;gap:12px;font-size:16px;font-weight:700;color:#fff;text-decoration:none">
+                <span style="display:flex;height:40px;width:40px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;background:rgba(255,255,255,0.18)">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </span>
+                (269) 321-4774
+              </a>
+            </article>
+            <article style="position:relative;flex:0 0 300px;scroll-snap-align:center;overflow:hidden;border-radius:14px;padding:26px 22px;color:#fff;background:linear-gradient(145deg,#1976D2,#0D47A1)">
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;right:16px;top:18px;opacity:0.14"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:rgba(255,255,255,0.95)"><path d="M18 21a6 6 0 0 0-12 0"></path><circle cx="12" cy="10" r="4"></circle><path d="M21 21a4 4 0 0 0-3-3.87"></path><path d="M3 21a4 4 0 0 1 3-3.87"></path></svg>
+              <h2 style="margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;line-height:1.2;color:#fff">Family Health</h2>
+              <p style="margin:10px 0 0;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,0.82)">Preventive and personalized healthcare services for children, adults, and the whole family.</p>
+              <a href="#" style="margin-top:18px;display:inline-flex;height:48px;width:100%;align-items:center;justify-content:center;gap:8px;border-radius:6px;background:#fff;font-size:15px;font-weight:600;color:#424242;text-decoration:none">
+                Book Appointment
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </article>
+            <article style="position:relative;flex:0 0 300px;scroll-snap-align:center;overflow:hidden;border-radius:14px;padding:26px 22px;color:#fff;background:linear-gradient(145deg,#90CAF9,#42A5F5)">
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;right:16px;top:18px;opacity:0.14"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:rgba(255,255,255,0.95)"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+              <h2 style="margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;line-height:1.2;color:#fff">Opening Hours</h2>
+              <div style="margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14.5px;color:rgba(255,255,255,0.9)">
+                <span>Monday – Sunday</span>
+                <span>12:00 PM – 8:00 PM</span>
+              </div>
+              <div style="margin-top:14px;border-top:1px solid rgba(255,255,255,0.25);padding-top:14px;font-size:13.5px;font-weight:600;color:rgba(255,255,255,0.92)">Open 7 Days</div>
+            </article>
+          </div>
+
+          <section id="services" style="padding:44px 22px 48px;background:linear-gradient(180deg,#FFFFFF 0%,#F5F5F5 70%,#F5F5F5 100%)">
+            <div style="margin:0 auto;display:flex;width:fit-content;align-items:center;gap:8px;border-radius:9999px;background:#E3F2FD;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#1976D2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              Our Services
+            </div>
+            <h2 style="margin:14px 0 0;font-family:'Playfair Display',Georgia,serif;text-align:center;font-size:34px;font-weight:700;line-height:1.1;letter-spacing:-0.8px;color:#424242;text-wrap:pretty">Your <span style="color:#1976D2">Health</span> Journey Starts Here</h2>
+            <div style="margin:16px auto 0;display:flex;width:200px;align-items:center;gap:10px">
+              <div style="height:1px;flex:1;background:#90CAF9"></div>
+              <svg width="76" height="20" viewBox="0 0 76 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#1976D2;flex-shrink:0"><path d="M2 10h14l5-7 6 14 5-7h12l5-7 6 14 5-7h14"></path></svg>
+              <div style="height:1px;flex:1;background:#90CAF9"></div>
+            </div>
+            <p style="margin:16px 0 0;text-align:center;font-size:15.5px;line-height:1.6;color:#424242;text-wrap:pretty">Compassionate care, trusted expertise, and personalized support for every stage of your health and wellness.</p>
+
+            <div style="margin-top:26px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;column-gap:12px;row-gap:14px">
+              <sc-for list="{{ services }}" as="svc" hint-placeholder-count="6">
+                <a href="#" style="position:relative;display:flex;height:236px;flex-direction:column;align-items:flex-start;overflow:hidden;border-radius:20px;border:1px solid #ECEFF1;background:#fff;padding:18px 16px 16px;box-shadow:0 14px 32px rgba(13,71,161,0.08);text-decoration:none;margin-top:{{ svc.offset }}">
+                  <div style="position:absolute;left:0;right:0;top:0;height:3px;background:{{ svc.accent }}"></div>
+                  <div style="position:absolute;right:-6px;top:-14px;font-family:'Playfair Display',Georgia,serif;font-size:66px;font-weight:700;line-height:1;color:#F1F5F9">{{ svc.num }}</div>
+                  <div style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:14px;background:#F5F9FF;color:#1976D2">{{ svc.iconElMid }}</div>
+                  <h3 style="margin:14px 0 0;font-family:'Playfair Display',Georgia,serif;font-size:16.5px;font-weight:700;line-height:1.25;color:#424242">{{ svc.title }}</h3>
+                  <p style="margin:6px 0 0;font-size:12.5px;line-height:1.5;color:#616161">{{ svc.description }}</p>
+                  <span style="margin-top:auto;display:flex;height:30px;width:30px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;background:#1976D2;color:#fff">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </span>
+                </a>
+              </sc-for>
+            </div>
+
+            <a href="#" style="margin:24px auto 0;display:flex;height:50px;width:100%;align-items:center;justify-content:center;gap:8px;border-radius:7px;border:1.5px solid #1976D2;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;color:#1976D2;text-decoration:none">
+              View All Services
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </section>
+
+          <section id="about" style="background:#fff">
+            <div style="padding:40px 22px 30px;background:linear-gradient(160deg,#FFFFFF 0%,#F5F5F5 100%)">
+              <div style="width:fit-content;border-radius:4px;background:#E3F2FD;padding:7px 11px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#1976D2">About Us</div>
+              <h2 style="margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:700;line-height:1.06;letter-spacing:-0.8px;color:#424242">Complete Care,<br />All in One Place</h2>
+              <p style="margin:16px 0 0;font-size:15.5px;line-height:1.7;color:#424242;text-wrap:pretty">From urgent care and family medicine to diagnostics and preventive services, Alliance Medical Clinic offers coordinated care designed around your everyday health needs.</p>
+            </div>
+            <div style="height:230px;width:100%;overflow:hidden">
+              <img src="assets/about-us.webp" alt="Doctor consulting with a patient at Alliance Medical Clinic" style="display:block;height:100%;width:100%;object-fit:cover;object-position:50% 32%" />
+            </div>
+            <div style="padding:26px 22px 32px;background:#fff">
+              <div style="display:flex;align-items:flex-start;gap:16px">
+                <div style="display:flex;height:58px;width:58px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;color:#fff;box-shadow:0 7px 18px rgba(25,118,210,0.15);background:linear-gradient(145deg,#42A5F5,#1976D2)">
+                  <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path><path d="M8 12h2l1.5 3L13 9l1.5 3H16"></path></svg>
+                </div>
+                <div>
+                  <h3 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:19px;font-weight:700;color:#424242">Comprehensive Care</h3>
+                  <p style="margin:5px 0 0;font-size:14px;line-height:1.6;color:#424242">A broad range of services delivered under one roof for greater convenience.</p>
+                </div>
+              </div>
+              <a href="#" style="margin-top:24px;display:flex;height:54px;width:100%;align-items:center;justify-content:center;gap:14px;border-radius:6px;font-size:13.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;color:#fff;text-decoration:none;background:linear-gradient(90deg,#1976D2,#42A5F5)">
+                Explore Services
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+            <div style="display:flex;flex-direction:column;padding:8px 22px;color:#fff;background:#0D47A1">
+              <div style="display:flex;align-items:center;gap:16px;padding:20px 0">
+                <div style="display:flex;height:60px;width:60px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;color:#fff;background:linear-gradient(145deg,#42A5F5,#1976D2)">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                </div>
+                <div>
+                  <p style="margin:0;font-size:18px;font-weight:700;letter-spacing:0.2px;color:#fff">Open 7 Days</p>
+                  <p style="margin:6px 0 0;font-size:13px;line-height:1.5;color:rgba(255,255,255,0.72)">12:00 PM – 8:00 PM, every day of the week.</p>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.13)">
+                <div style="display:flex;height:60px;width:60px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;color:#fff;background:linear-gradient(145deg,#42A5F5,#1976D2)">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V2"></path><line x1="9" y1="2" x2="15" y2="2"></line></svg>
+                </div>
+                <div>
+                  <p style="margin:0;font-size:18px;font-weight:700;letter-spacing:0.2px;color:#fff">On-Site Diagnostics</p>
+                  <p style="margin:6px 0 0;font-size:13px;line-height:1.5;color:rgba(255,255,255,0.72)">Labs, X-rays, and testing available without extra stops.</p>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.13)">
+                <div style="display:flex;height:60px;width:60px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;color:#fff;background:linear-gradient(145deg,#42A5F5,#1976D2)">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <p style="margin:0;font-size:18px;font-weight:700;letter-spacing:0.2px;color:#fff">Portage, Michigan</p>
+                  <p style="margin:6px 0 0;font-size:13px;line-height:1.5;color:rgba(255,255,255,0.72)">Convenient, local access for families and employers.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section style="padding:42px 22px 40px;background:radial-gradient(circle at 50% 22%, rgba(25,118,210,0.05), transparent 46%), #F5F5F5">
+            <div style="margin:0 auto;display:flex;width:fit-content;align-items:center;gap:7px;border-radius:9999px;background:#E3F2FD;padding:8px 15px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:#1976D2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              Our care
+            </div>
+            <h2 style="margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;text-align:center;font-size:32px;font-weight:700;line-height:1.08;letter-spacing:-0.7px;color:#424242;text-wrap:pretty">Care for <span style="color:#1976D2">everyone.</span><br />Treatment for everyday needs.</h2>
+            <p style="margin:14px 0 0;text-align:center;font-size:15.5px;line-height:1.6;color:#424242;text-wrap:pretty">Whether you are bringing in your child, reporting a work injury, or need same-day help for a common illness—we are built for Portage families, workers, and employers alike.</p>
+            <div style="margin-top:14px;display:grid;grid-template-columns:56px 1fr 56px;grid-template-rows:repeat(3,1fr);align-items:center;justify-items:center;gap:8px;min-height:212px">
+              <div style="grid-column:2;grid-row:1 / span 3;display:flex;height:200px;align-items:flex-end;justify-content:center;overflow:hidden">
+                <img src="assets/care-doctor.webp" alt="Doctor facing forward, arms crossed" style="height:200px;width:auto;max-width:100%;object-fit:contain" />
+              </div>
+              <sc-for list="{{ careLeft }}" as="item" hint-placeholder-count="3">
+                <button type="button" aria-label="{{ item.title }}" onClick="{{ item.onClick }}" style="grid-row:{{ item.row }};grid-column:1;display:flex;height:52px;width:52px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid {{ item.ringColor }};background:{{ item.bgColor }};color:{{ item.iconColor }};box-shadow:0 6px 16px rgba(13,71,161,0.10);cursor:pointer;transition:background 160ms,color 160ms,transform 160ms;transform:{{ item.scale }}">{{ item.iconEl }}</button>
+              </sc-for>
+              <sc-for list="{{ careRight }}" as="item" hint-placeholder-count="3">
+                <button type="button" aria-label="{{ item.title }}" onClick="{{ item.onClick }}" style="grid-row:{{ item.row }};grid-column:3;display:flex;height:52px;width:52px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid {{ item.ringColor }};background:{{ item.bgColor }};color:{{ item.iconColor }};box-shadow:0 6px 16px rgba(13,71,161,0.10);cursor:pointer;transition:background 160ms,color 160ms,transform 160ms;transform:{{ item.scale }}">{{ item.iconEl }}</button>
+              </sc-for>
+            </div>
+            <div style="margin-top:6px;border-radius:16px;border:1px solid #E0E0E0;background:#fff;padding:18px 18px 16px;box-shadow:0 12px 30px rgba(13,71,161,0.07);text-align:center">
+              <h3 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:19px;font-weight:700;line-height:1.2;color:#424242">{{ careTitle }}</h3>
+              <p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#616161;text-wrap:pretty">{{ careDesc }}</p>
+              <a href="#" style="margin-top:12px;display:inline-flex;min-height:44px;align-items:center;justify-content:center;gap:7px;font-size:14.5px;font-weight:700;color:#1976D2;text-decoration:none">
+                Learn more
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </section>
+
+          <section style="background:#fff;padding:44px 22px 46px">
+            <div style="display:flex;width:fit-content;align-items:center;gap:8px;border-radius:9999px;background:#E3F2FD;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#1976D2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              For Employers
+            </div>
+            <h2 style="margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;line-height:1.1;letter-spacing:-0.7px;color:#424242">Workplace Health Solutions</h2>
+            <div style="margin-top:20px;aspect-ratio:3 / 2;width:100%;overflow:hidden;border-radius:14px;box-shadow:0 10px 28px rgba(13,71,161,0.07)">
+              <img src="assets/workplace-health.webp" alt="Occupational health clinician consulting with a workplace employee" style="display:block;height:100%;width:100%;object-fit:cover" />
+            </div>
+            <p style="margin:20px 0 0;font-size:16px;line-height:1.7;color:#424242;text-wrap:pretty">Comprehensive occupational health services to keep your team safe, healthy, and productive.</p>
+            <p style="margin:14px 0 0;font-size:15px;line-height:1.7;color:#424242;text-wrap:pretty">From pre-employment physicals and return-to-work evaluations to workplace injury care and ongoing medical surveillance, our team provides practical healthcare support designed around the needs of employers and their workforce.</p>
+            <p style="margin:14px 0 0;font-size:15px;line-height:1.7;color:#424242;text-wrap:pretty">We make workplace healthcare easier to access, helping organizations support employee well-being, reduce disruption, and maintain a healthier, more productive workplace.</p>
+
+            <ul style="margin:26px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+              <sc-for list="{{ workplaceItems }}" as="item" hint-placeholder-count="5">
+                <li style="display:grid;grid-template-columns:44px 1fr;align-items:start;gap:14px;border-radius:14px;border:1px solid #E0E0E0;background:#fff;padding:18px;box-shadow:0 10px 28px rgba(13,71,161,0.07)">
+                  <div style="display:flex;height:44px;width:44px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;background:#E3F2FD;color:#1976D2">{{ item.iconEl }}</div>
+                  <div>
+                    <h3 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;line-height:1.3;color:#424242">{{ item.title }}</h3>
+                    <p style="margin:5px 0 0;font-size:13.5px;line-height:1.55;color:#424242">{{ item.description }}</p>
+                  </div>
+                </li>
+              </sc-for>
+            </ul>
+
+            <a href="#" style="margin-top:24px;display:flex;height:54px;width:100%;align-items:center;justify-content:center;gap:9px;border-radius:7px;font-size:15px;font-weight:600;color:#fff;text-decoration:none;background:linear-gradient(90deg,#1976D2,#42A5F5);box-shadow:0 8px 20px rgba(25,118,210,0.16)">
+              Explore All Services
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </section>
+
+          <section style="padding:44px 0 46px;background:#F5F5F5">
+            <div style="padding:0 22px">
+              <div style="margin:0 auto;width:fit-content;border-radius:5px;background:#E3F2FD;padding:8px 14px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#1976D2">Our Team</div>
+              <h2 style="margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;text-align:center;font-size:32px;font-weight:700;line-height:1.1;letter-spacing:-0.7px;color:#424242;text-wrap:pretty">Meet Our Expert Medical Team</h2>
+              <p style="margin:14px 0 0;text-align:center;font-size:15.5px;line-height:1.6;color:#424242;text-wrap:pretty">Meet the professionals dedicated to providing compassionate urgent care, family medicine, and convenient healthcare services to our community.</p>
+            </div>
+            <div style="margin-top:26px;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 22px" class="om-scroll">
+              <sc-for list="{{ team }}" as="member" hint-placeholder-count="6">
+                <div style="position:relative;flex:0 0 288px;scroll-snap-align:center;min-height:380px;overflow:hidden;border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(13,71,161,0.07)">
+                  <div style="position:absolute;inset:0;overflow:hidden">
+                    <div role="img" aria-label="{{ member.photoAlt }}" style="height:100%;width:100%;background-size:cover;background-position:50% 22%;background-image:{{ member.photoBg }}"></div>
+                  </div>
+                  <div style="pointer-events:none;position:absolute;inset:0;background:linear-gradient(180deg, rgba(13,71,161,0) 42%, rgba(13,71,161,0.78) 100%)"></div>
+                  <div style="position:absolute;left:0;right:0;bottom:0;padding:22px">
+                    <h3 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;line-height:1.2;color:#fff">{{ member.name }}</h3>
+                    <p style="margin:5px 0 0;font-size:13.5px;font-weight:600;color:#90CAF9">{{ member.role }}</p>
+                    <a href="#" style="margin-top:12px;display:inline-flex;min-height:44px;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#fff;text-decoration:none">
+                      View Full Profile
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+            <p style="margin:16px 22px 0;text-align:center;font-size:12.5px;color:#9E9E9E">Swipe to meet the team</p>
+          </section>
+
+          <section style="padding:0 0 40px;background:#F5F5F5">
+            <div style="position:relative;overflow:hidden;background:linear-gradient(150deg,#0D47A1 0%,#1976D2 55%,#42A5F5 100%)">
+              <div style="position:relative;padding:34px 22px 36px">
+                <div style="display:inline-block;border-radius:3px;background:rgba(255,255,255,0.15);padding:7px 11px;font-size:12.5px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;color:#fff">Appointment</div>
+                <h2 style="margin:14px 0 0;font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:400;line-height:1.12;color:#fff">Apply For Free Treatments</h2>
+                <div style="margin-top:22px;display:grid;grid-template-columns:minmax(0,1fr) 132px;align-items:stretch;gap:14px">
+                <div style="display:flex;flex-direction:column;gap:10px">
+                  <input type="text" placeholder="Your Name" style="height:54px;width:100%;border-radius:3px;border:none;background:rgba(255,255,255,0.13);padding:0 16px;font-family:Lato,Arial,sans-serif;font-size:16px;color:#fff;outline:none" />
+                  <input type="email" placeholder="Your Email" style="height:54px;width:100%;border-radius:3px;border:none;background:rgba(255,255,255,0.13);padding:0 16px;font-family:Lato,Arial,sans-serif;font-size:16px;color:#fff;outline:none" />
+                  <input type="text" placeholder="Your Doctor Name" style="height:54px;width:100%;border-radius:3px;border:none;background:rgba(255,255,255,0.13);padding:0 16px;font-family:Lato,Arial,sans-serif;font-size:16px;color:#fff;outline:none" />
+                  <input type="text" placeholder="Your Disease Name" style="height:54px;width:100%;border-radius:3px;border:none;background:rgba(255,255,255,0.13);padding:0 16px;font-family:Lato,Arial,sans-serif;font-size:16px;color:#fff;outline:none" />
+                </div>
+                <img src="assets/apply-for-treatment.webp" alt="Doctor portrait, arms crossed" style="display:block;width:132px;height:100%;object-fit:cover;object-position:50% 15%" />
+                </div>
+                <button type="button" style="margin-top:18px;height:54px;width:100%;cursor:pointer;border-radius:3px;border:none;background:#fff;font-family:Lato,Arial,sans-serif;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:0.4px;color:#0D47A1">Send Message</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact" style="padding:40px 22px 46px;background:linear-gradient(180deg,#F5F5F5 0%,#FFFFFF 100%)">
+            <div style="text-align:center">
+              <div style="margin:0 auto;display:inline-flex;align-items:center;gap:8px;border-radius:9999px;background:#E3F2FD;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#1976D2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Location
+              </div>
+              <h2 style="margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:700;line-height:1.08;letter-spacing:-0.8px;color:#424242">Reach Us in Portage</h2>
+              <p style="margin:14px 0 0;font-size:15.5px;line-height:1.6;color:#424242;text-wrap:pretty">Walk in, call ahead, or get directions—we are here in Portage with convenient parking and a welcoming clinic ready to help your family.</p>
+            </div>
+
+            <div style="margin-top:24px;position:relative;height:260px;overflow:hidden;border-radius:18px;border:1px solid #E0E0E0;background:#E3F2FD;box-shadow:0 18px 38px rgba(13,71,161,0.09)">
+              <iframe title="Map showing Alliance Medical Clinic at 8145 Valleywood Lane, Portage, MI 49024" src="https://www.google.com/maps?q=8145+Valleywood+Lane,+Portage,+MI+49024&amp;output=embed" width="100%" height="100%" style="position:absolute;inset:0;border:0" loading="lazy"></iframe>
+            </div>
+
+            <div style="margin-top:12px;display:flex;align-items:center;gap:14px;border-radius:16px;border:1px solid #E0E0E0;background:#fff;padding:16px;box-shadow:0 12px 28px rgba(13,71,161,0.08)">
+              <div style="display:flex;height:52px;width:52px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;background:#E3F2FD;color:#1976D2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path><rect x="4" y="4" width="16" height="16" rx="3"></rect></svg>
+              </div>
+              <div>
+                <div style="font-size:16px;font-weight:700;color:#424242">Alliance Medical Clinic</div>
+                <div style="margin-top:3px;font-size:13px;line-height:1.5;color:#424242">8145 Valleywood Lane, Portage, MI 49024</div>
+              </div>
+            </div>
+
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=8145+Valleywood+Lane+Portage+MI+49024" target="_blank" rel="noopener" style="margin-top:12px;display:flex;min-height:64px;align-items:center;gap:14px;border-radius:16px;border:1px solid #E0E0E0;background:#fff;padding:16px;text-decoration:none;box-shadow:0 10px 24px rgba(13,71,161,0.08)">
+              <div style="display:flex;height:44px;width:44px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;background:#E3F2FD;color:#1976D2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"></path><circle cx="6.5" cy="16.5" r="2.5"></circle><circle cx="16.5" cy="16.5" r="2.5"></circle></svg>
+              </div>
+              <div>
+                <div style="font-size:15px;font-weight:700;color:#424242">Convenient parking</div>
+                <div style="margin-top:2px;font-size:13px;color:#424242">available on-site</div>
+              </div>
+            </a>
+
+            <div style="margin-top:12px;border-radius:18px;border:1px solid #E0E0E0;background:#fff;padding:20px;box-shadow:0 12px 30px rgba(13,71,161,0.07)">
+              <div style="display:flex;align-items:center;gap:14px">
+                <span style="display:flex;height:44px;width:44px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;background:#E3F2FD;color:#1976D2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </span>
+                <div style="font-size:20px;font-weight:700;color:#424242">Contact Details</div>
+              </div>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=8145+Valleywood+Lane+Portage+MI+49024" target="_blank" rel="noopener" style="margin-top:6px;display:grid;grid-template-columns:42px 1fr;align-items:center;gap:12px;border-top:1px solid #E0E0E0;padding:16px 0;text-decoration:none">
+                <span style="display:flex;height:42px;width:42px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;background:#E3F2FD;color:#1976D2">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </span>
+                <span>
+                  <span style="display:block;font-size:12.5px;font-weight:700;color:#1976D2">Address</span>
+                  <span style="display:block;margin-top:2px;font-size:14px;line-height:1.5;color:#424242">8145 Valleywood Lane, Portage, MI 49024</span>
+                </span>
+              </a>
+              <a href="tel:+12693214774" style="display:grid;grid-template-columns:42px 1fr;align-items:center;gap:12px;border-top:1px solid #E0E0E0;padding:16px 0;text-decoration:none">
+                <span style="display:flex;height:42px;width:42px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;background:#E3F2FD;color:#1976D2">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </span>
+                <span>
+                  <span style="display:block;font-size:12.5px;font-weight:700;color:#1976D2">Phone</span>
+                  <span style="display:block;margin-top:2px;font-size:14px;line-height:1.5;color:#424242">(269) 321-4774</span>
+                </span>
+              </a>
+              <div style="display:grid;grid-template-columns:42px 1fr;align-items:center;gap:12px;border-top:1px solid #E0E0E0;padding:16px 0 4px">
+                <span style="display:flex;height:42px;width:42px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;background:#E3F2FD;color:#1976D2">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                </span>
+                <span>
+                  <span style="display:block;font-size:12.5px;font-weight:700;color:#1976D2">Fax</span>
+                  <span style="display:block;margin-top:2px;font-size:14px;line-height:1.5;color:#424242">(269) 222-2582</span>
+                </span>
+              </div>
+            </div>
+
+            <div style="margin-top:12px;display:flex;flex-direction:column;gap:14px;border-radius:18px;border:1px solid #E0E0E0;background:#fff;padding:20px;box-shadow:0 12px 28px rgba(13,71,161,0.06)">
+              <div style="display:flex;align-items:center;gap:14px">
+                <span style="display:flex;height:44px;width:44px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;background:#E3F2FD;color:#1976D2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l3 2"></path><path d="M9 2h6"></path></svg>
+                </span>
+                <div>
+                  <div style="font-size:16px;font-weight:700;color:#424242">Hours &amp; Availability</div>
+                  <div style="margin-top:3px;font-size:13.5px;color:#424242">Monday – Sunday: 12:00 PM – 8:00 PM</div>
+                </div>
+              </div>
+              <div style="display:inline-flex;width:fit-content;align-items:center;gap:7px;border-radius:9999px;background:#F1F8D9;padding:11px 18px;font-size:12px;font-weight:700;color:#65832A">
+                <span style="height:7px;width:7px;border-radius:9999px;background:#7CA62E"></span>
+                Open 7 Days a Week
+              </div>
+            </div>
+
+            <div style="margin-top:12px;display:flex;flex-direction:column;gap:16px;overflow:hidden;border-radius:18px;padding:22px;color:#fff;box-shadow:0 14px 32px rgba(13,71,161,0.16);background:linear-gradient(140deg,#0D47A1 0%,#1976D2 55%,#42A5F5 100%)">
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=8145+Valleywood+Lane+Portage+MI+49024" target="_blank" rel="noopener" style="display:flex;min-height:58px;align-items:center;gap:14px;color:#fff;text-decoration:none">
+                <span style="display:flex;height:56px;width:56px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,0.45);background:rgba(255,255,255,0.06)">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="9 5 19 5 19 15"></polyline></svg>
+                </span>
+                <span>
+                  <span style="display:block;font-size:16px;font-weight:700">Get Directions</span>
+                  <span style="display:block;margin-top:2px;font-size:13px;color:rgba(255,255,255,0.82)">Find the fastest route</span>
+                </span>
+              </a>
+              <a href="tel:+12693214774" style="display:flex;min-height:58px;align-items:center;gap:14px;border-top:1px solid rgba(255,255,255,0.20);padding-top:16px;color:#fff;text-decoration:none">
+                <span style="display:flex;height:56px;width:56px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,0.45);background:rgba(255,255,255,0.06)">
+                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </span>
+                <span>
+                  <span style="display:block;font-size:16px;font-weight:700">Call Now</span>
+                  <span style="display:block;margin-top:2px;font-size:13px;color:rgba(255,255,255,0.82)">(269) 321-4774</span>
+                </span>
+              </a>
+            </div>
+          </section>
+
+          <footer style="background:#0D47A1;padding:30px 22px 26px;color:#fff">
+            <img src="assets/logo.png" alt="Alliance Medical Clinic" width="135" height="45" style="object-fit:contain" />
+            <div style="margin-top:8px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.4px;color:#42A5F5">Compassionate Care. Healthier You.</div>
+            <p style="margin:14px 0 0;font-size:14px;line-height:1.65;color:rgba(255,255,255,0.72)">Compassionate medical care for the Portage community.</p>
+
+            <div style="margin-top:22px">
+              <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.12);padding:18px 2px;font-size:16px;font-weight:700">
+                Contact Info
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:#90CAF9;transform:rotate(180deg)"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:12px;padding:0 2px 18px">
+                <a href="tel:+12693214774" style="display:flex;min-height:44px;align-items:center;gap:12px;font-size:14.5px;color:rgba(255,255,255,0.82);text-decoration:none">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#42A5F5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  (269) 321-4774
+                </a>
+                <div style="display:flex;min-height:44px;align-items:center;gap:12px;font-size:14.5px;color:rgba(255,255,255,0.82)">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#42A5F5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                  (269) 222-2582
+                </div>
+                <a href="mailto:info@accessnowcare.com" style="display:flex;min-height:44px;align-items:center;gap:12px;font-size:14.5px;color:rgba(255,255,255,0.82);text-decoration:none">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#90CAF9"><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6z"></path><path d="m22 6-10 7L2 6"></path></svg>
+                  info@accessnowcare.com
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=8145+Valleywood+Lane+Portage+MI+49024" target="_blank" rel="noopener" style="display:flex;min-height:44px;align-items:center;gap:12px;font-size:14.5px;line-height:1.5;color:rgba(255,255,255,0.82);text-decoration:none">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#90CAF9"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>8145 Valleywood Lane, Portage, MI 49024</span>
+                </a>
+                <div style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(255,255,255,0.7)">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:rgba(255,255,255,0.7)"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                  Open 7 Days · 12:00 PM – 8:00 PM
+                </div>
+              </div>
+
+              <button type="button" onClick="{{ toggleFtServices }}" aria-expanded="{{ ftServices }}" style="display:flex;width:100%;min-height:56px;align-items:center;justify-content:space-between;border:none;border-top:1px solid rgba(255,255,255,0.12);background:none;padding:18px 2px;font-family:Lato,Arial,sans-serif;font-size:16px;font-weight:700;color:#fff;text-align:left;cursor:pointer">
+                Services
+                <span style="display:flex;flex-shrink:0;color:#90CAF9">{{ ftServicesChevron }}</span>
+              </button>
+              <sc-if value="{{ ftServices }}" hint-placeholder-val="{{ false }}">
+                <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:14px;row-gap:2px;padding:0 2px 14px;font-size:14.5px">
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Urgent Care</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Family Health</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Occupational Health</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Women's Health</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Pediatric Care</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Diagnostic Services</a>
+                </div>
+              </sc-if>
+
+              <button type="button" onClick="{{ toggleFtAbout }}" aria-expanded="{{ ftAbout }}" style="display:flex;width:100%;min-height:56px;align-items:center;justify-content:space-between;border:none;border-top:1px solid rgba(255,255,255,0.12);background:none;padding:18px 2px;font-family:Lato,Arial,sans-serif;font-size:16px;font-weight:700;color:#fff;text-align:left;cursor:pointer">
+                About Alliance
+                <span style="display:flex;flex-shrink:0;color:#90CAF9">{{ ftAboutChevron }}</span>
+              </button>
+              <sc-if value="{{ ftAbout }}" hint-placeholder-val="{{ false }}">
+                <div style="padding:0 2px 16px">
+                  <p style="margin:0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,0.72)">Providing quality urgent care and family health services to the Portage, Michigan community with compassion, expertise, and convenience.</p>
+                  <a href="#" style="margin-top:14px;display:flex;height:52px;align-items:center;justify-content:center;gap:8px;border-radius:9px;border:1px solid rgba(255,255,255,0.20);background:rgba(255,255,255,0.10);font-size:14px;font-weight:600;color:#fff;text-decoration:none">Need care today? Book Appointment</a>
+                </div>
+              </sc-if>
+
+              <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:20px">
+                <div style="display:flex;gap:12px">
+                  <a href="#" aria-label="Visit Alliance Medical Clinic on Facebook" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);text-decoration:none">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"></path></svg>
+                  </a>
+                  <a href="#" aria-label="Visit Alliance Medical Clinic on Twitter" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);text-decoration:none">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.7.35-1.5.6-2.3.7a4 4 0 0 0 1.75-2.2c-.8.45-1.65.8-2.55 1a4 4 0 0 0-6.8 3.6A11.4 11.4 0 0 1 3.5 4.6a4 4 0 0 0 1.24 5.3 4 4 0 0 1-1.8-.5 4 4 0 0 0 3.2 3.9 4 4 0 0 1-1.8.07 4 4 0 0 0 3.7 2.8A11.4 11.4 0 0 1 2 18.5a11.4 11.4 0 0 0 6.2 1.8c7.4 0 11.5-6.2 11.5-11.5v-.5c.8-.55 1.5-1.25 2.3-2.4z"></path></svg>
+                  </a>
+                  <a href="#" aria-label="Visit Alliance Medical Clinic on Instagram" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);text-decoration:none">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+                  </a>
+                </div>
+                <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:6px 20px">
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none">Privacy Policy</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none">Terms of Service</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none">HIPAA Notice</a>
+                </div>
+                <div style="margin-top:6px;font-size:12.5px;color:rgba(255,255,255,0.55)">© 2026 Alliance Medical Clinic</div>
+              </div>
+            </div>
+          </footer>
+
+          <div style="height:78px"></div>
+
+          <div style="position:sticky;bottom:0;z-index:50;display:grid;grid-template-columns:96px 1fr;gap:10px;border-top:1px solid #E0E0E0;background:rgba(255,255,255,0.97);padding:11px 16px;box-shadow:0 -6px 20px rgba(13,71,161,0.10);backdrop-filter:blur(8px);margin-top:-78px">
+            <a href="tel:+12693214774" style="display:flex;height:50px;align-items:center;justify-content:center;gap:7px;border-radius:8px;border:1.5px solid #1976D2;font-size:14.5px;font-weight:700;color:#1976D2;text-decoration:none">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Call
+            </a>
+            <a href="#" style="display:flex;height:50px;align-items:center;justify-content:center;gap:8px;border-radius:8px;background:#1976D2;font-size:15.5px;font-weight:600;color:#fff;text-decoration:none;box-shadow:0 4px 8px rgba(0,0,0,0.16)">
+              Book Appointment
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <div style="margin-top:12px;width:390px;font-size:12.5px;line-height:1.5;color:#5B6470">
+        <strong style="color:#0D47A1">1a — recommended direction.</strong> Utility strip + 64px sticky header with tap-to-call and menu; hero image cropped to 300px with copy on white below it and two stacked CTAs; the three gradient cards become a snap carousel; services in a 2-up hairline grid; Care's centre portrait moves above its card list; team is a swipe rail; footer is the accordion version — contact open, Services and About collapsed; persistent Call / Book bar at the bottom.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:24px;padding:0 40px 60px;background:#EDEFF2">
+  <div id="1b" style="display:flex;align-items:baseline;gap:14px">
+    <span style="display:inline-flex;align-items:center;justify-content:center;height:26px;min-width:34px;border-radius:6px;background:#0D47A1;color:#fff;font-size:13px;font-weight:700;letter-spacing:0.4px">1b</span>
+    <h2 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:#0D47A1">Variations — the B option for each area</h2>
+    <span style="font-size:13px;color:#5B6470">The A option of each is what's built into <a href="#1a" style="font-weight:700">1a</a>.</span>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:28px">
+
+    <div style="width:390px">
+      <div style="margin-bottom:10px;font-size:13px;font-weight:700;color:#0D47A1">Header B — full-screen drawer</div>
+      <div style="overflow:hidden;border-radius:18px;border:1px solid #D6DAE0;background:#fff;box-shadow:0 16px 40px rgba(13,71,161,0.12)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #E0E0E0;background:#fff;padding:0 16px;height:64px">
+          <img src="assets/logo.png" alt="Alliance Medical Clinic" width="123" height="41" style="object-fit:contain" />
+          <button type="button" aria-label="Close menu" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:10px;border:none;background:#E3F2FD;color:#0D47A1;cursor:pointer">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+          </button>
+        </div>
+        <div style="height:520px;background:#0D47A1;padding:26px 22px;color:#fff">
+          <div style="display:flex;align-items:center;gap:6px">
+            <button type="button" style="border:none;background:none;border-radius:4px;padding:4px 6px;font-family:Lato,Arial,sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;color:#fff;cursor:pointer">EN</button>
+            <span style="color:rgba(255,255,255,0.35)">|</span>
+            <button type="button" style="border:none;background:none;border-radius:4px;padding:4px 6px;font-family:Lato,Arial,sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;color:rgba(255,255,255,0.65);cursor:pointer">ES</button>
+          </div>
+          <a href="#" style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.14);padding:18px 2px;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:#fff;text-decoration:none">Home</a>
+          <a href="#" style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.14);padding:18px 2px;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:#fff;text-decoration:none">
+            Services
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:#90CAF9"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="#" style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.14);padding:18px 2px;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:#fff;text-decoration:none">Occupational Health</a>
+          <a href="#" style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.14);padding:18px 2px;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:#fff;text-decoration:none">Contact Us</a>
+          <a href="#" style="margin-top:24px;display:flex;height:54px;align-items:center;justify-content:center;border-radius:8px;background:#fff;font-size:16px;font-weight:600;color:#0D47A1;text-decoration:none">Book Appointment</a>
+          <a href="tel:+12693214774" style="margin-top:10px;display:flex;height:54px;align-items:center;justify-content:center;gap:9px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.45);font-size:16px;font-weight:600;color:#fff;text-decoration:none">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            (269) 321-4774
+          </a>
+          <div style="margin-top:20px;font-size:13px;color:rgba(255,255,255,0.7)">Open 7 Days · 12:00 PM – 8:00 PM</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;font-size:12px;line-height:1.5;color:#5B6470">Deep-blue overlay panel, Playfair nav labels, both actions in the drawer. More brand presence; heavier than the white inline panel in 1a.</div>
+    </div>
+
+    <div style="width:390px">
+      <div style="margin-bottom:10px;font-size:13px;font-weight:700;color:#0D47A1">Hero B — overlay on a taller crop</div>
+      <div style="overflow:hidden;border-radius:18px;border:1px solid #D6DAE0;background:#fff;box-shadow:0 16px 40px rgba(13,71,161,0.12)">
+        <div style="position:relative;height:520px;overflow:hidden">
+          <img src="assets/hero-1.webp" alt="Doctor with patient in a bright exam room" style="height:100%;width:100%;object-fit:cover;object-position:62% 25%" />
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,0.86) 0%, rgba(255,255,255,0.55) 34%, rgba(13,71,161,0.10) 62%, rgba(13,71,161,0.55) 100%)"></div>
+          <div style="position:absolute;left:0;right:0;top:0;padding:26px 22px 0">
+            <h1 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:38px;font-weight:700;line-height:1.05;letter-spacing:-1px;color:#0D47A1">Quality Care<br />When You Need<br />It Most</h1>
+            <p style="margin:12px 0 0;font-size:15.5px;line-height:1.55;color:#424242">Compassionate urgent care and family health services for every stage of life in Portage, Michigan.</p>
+          </div>
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:0 22px 24px">
+            <a href="#" style="display:flex;height:54px;align-items:center;justify-content:center;gap:9px;border-radius:7px;font-size:16px;font-weight:600;color:#fff;text-decoration:none;background:linear-gradient(90deg,#1976D2,#42A5F5);box-shadow:0 8px 20px rgba(13,71,161,0.28)">
+              Book Appointment
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <div style="margin-top:16px;display:flex;justify-content:center;gap:7px">
+              <span style="height:8px;width:20px;border-radius:9999px;background:#fff"></span>
+              <span style="height:8px;width:8px;border-radius:9999px;background:rgba(255,255,255,0.55)"></span>
+              <span style="height:8px;width:8px;border-radius:9999px;background:rgba(255,255,255,0.55)"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:8px;font-size:12px;line-height:1.5;color:#5B6470">Keeps the desktop's text-over-photo composition, rotated to a vertical crop. More dramatic; the copy sits on a scrim rather than clean white.</div>
+    </div>
+
+    <div style="width:390px">
+      <div style="margin-bottom:10px;font-size:13px;font-weight:700;color:#0D47A1">Services B — single-column list</div>
+      <div style="overflow:hidden;border-radius:18px;border:1px solid #D6DAE0;background:#F5F5F5;box-shadow:0 16px 40px rgba(13,71,161,0.12);padding:22px">
+        <div style="border-top:1px solid #E0E0E0;background:#fff">
+          <sc-for list="{{ services }}" as="svc" hint-placeholder-count="6">
+            <a href="#" style="display:grid;grid-template-columns:56px 1fr 18px;align-items:center;gap:14px;border-bottom:1px solid #E0E0E0;padding:18px 16px;text-decoration:none">
+              <div style="display:flex;height:56px;width:56px;align-items:center;justify-content:center;border-radius:9999px;background:#E3F2FD;color:{{ svc.accent }}">{{ svc.iconElSmall }}</div>
+              <div>
+                <h3 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:17px;font-weight:700;line-height:1.25;color:#424242">{{ svc.title }}</h3>
+                <p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#424242">{{ svc.description }}</p>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#1976D2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+      <div style="margin-top:8px;font-size:12px;line-height:1.5;color:#5B6470">Follows the codebase's existing mw-650 behaviour: full-width rows, left-aligned, whole row tappable. Easier to scan, but loses the icon scale that carries the section on desktop.</div>
+    </div>
+
+    <div style="width:390px">
+      <div style="margin-bottom:10px;font-size:13px;font-weight:700;color:#0D47A1">Team B — 2-up grid, no swiping</div>
+      <div style="overflow:hidden;border-radius:18px;border:1px solid #D6DAE0;background:#F5F5F5;box-shadow:0 16px 40px rgba(13,71,161,0.12);padding:22px">
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+          <sc-for list="{{ teamFour }}" as="member" hint-placeholder-count="4">
+            <div style="position:relative;height:230px;overflow:hidden;border-radius:14px;background:#fff">
+              <div role="img" aria-label="{{ member.photoAlt }}" style="position:absolute;inset:0;background-size:cover;background-position:50% 20%;background-image:{{ member.photoBg }}"></div>
+              <div style="pointer-events:none;position:absolute;inset:0;background:linear-gradient(180deg, rgba(13,71,161,0) 40%, rgba(13,71,161,0.80) 100%)"></div>
+              <div style="position:absolute;left:0;right:0;bottom:0;padding:14px">
+                <h3 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:15px;font-weight:700;line-height:1.2;color:#fff">{{ member.name }}</h3>
+                <p style="margin:3px 0 0;font-size:11.5px;font-weight:600;line-height:1.35;color:#90CAF9">{{ member.role }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <a href="#" style="margin-top:14px;display:flex;height:50px;align-items:center;justify-content:center;gap:8px;border-radius:7px;border:1.5px solid #1976D2;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;color:#1976D2;text-decoration:none">See All 6 Team Members</a>
+      </div>
+      <div style="margin-top:8px;font-size:12px;line-height:1.5;color:#5B6470">Four visible, rest behind a link — nothing hidden off-screen, but the portraits get small and "View Full Profile" moves into the card tap.</div>
+    </div>
+
+    <div style="width:390px">
+      <div style="margin-bottom:10px;font-size:13px;font-weight:700;color:#0D47A1">Footer A — stacked full columns</div>
+      <div style="overflow:hidden;border-radius:18px;border:1px solid #D6DAE0;box-shadow:0 16px 40px rgba(13,71,161,0.12);position:relative;color:#fff;background:#0D47A1">
+            <div style="pointer-events:none;position:absolute;right:-90px;top:-140px;height:320px;width:320px;border-radius:9999px;background:radial-gradient(circle, rgba(25,118,210,0.10), transparent 70%)"></div>
+            <div style="position:relative;padding:34px 22px 26px">
+              <img src="assets/logo.png" alt="Alliance Medical Clinic" width="135" height="45" style="object-fit:contain" />
+              <div style="margin-top:8px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.4px;color:#42A5F5">Compassionate Care. Healthier You.</div>
+              <div style="margin-top:18px;font-size:18px;font-weight:700;color:#fff">About Alliance</div>
+              <p style="margin:10px 0 0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,0.72)">Providing quality urgent care and family health services to the Portage, Michigan community with compassion, expertise, and convenience.</p>
+
+              <a href="#" style="margin-top:20px;display:flex;height:52px;width:100%;align-items:center;justify-content:center;gap:8px;border-radius:9px;border:1px solid rgba(255,255,255,0.20);background:rgba(255,255,255,0.10);font-size:14px;font-weight:600;color:#fff;text-decoration:none">Need care today? Book Appointment</a>
+
+              <div style="margin-top:26px;border-top:1px solid rgba(255,255,255,0.10);padding-top:22px">
+                <div style="font-size:18px;font-weight:700;color:#fff">Contact Info</div>
+                <div style="margin-top:14px;display:flex;flex-direction:column;gap:14px">
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query=8145+Valleywood+Lane+Portage+MI+49024" target="_blank" rel="noopener" style="display:flex;min-height:44px;align-items:center;gap:13px;font-size:14.5px;line-height:1.55;color:rgba(255,255,255,0.82);text-decoration:none">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#90CAF9"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>8145 Valleywood Lane, Portage, MI 49024</span>
+                  </a>
+                  <a href="tel:+12693214774" style="display:flex;min-height:44px;align-items:center;gap:13px;font-size:14.5px;color:rgba(255,255,255,0.82);text-decoration:none">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#42A5F5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>(269) 321-4774</span>
+                  </a>
+                  <div style="display:flex;min-height:44px;align-items:center;gap:13px;font-size:14.5px;color:rgba(255,255,255,0.82)">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#42A5F5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    <span>(269) 222-2582</span>
+                  </div>
+                  <a href="mailto:info@accessnowcare.com" style="display:flex;min-height:44px;align-items:center;gap:13px;font-size:14.5px;color:rgba(255,255,255,0.82);text-decoration:none">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#90CAF9"><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6z"></path><path d="m22 6-10 7L2 6"></path></svg>
+                    <span>info@accessnowcare.com</span>
+                  </a>
+                </div>
+                <div style="margin-top:18px;display:flex;align-items:center;gap:10px;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:rgba(255,255,255,0.7)"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                  <span style="font-size:13.5px;color:rgba(255,255,255,0.7)">Open 7 Days · 12:00 PM – 8:00 PM</span>
+                </div>
+              </div>
+
+              <div style="margin-top:24px;border-top:1px solid rgba(255,255,255,0.10);padding-top:22px">
+                <div style="font-size:18px;font-weight:700;color:#fff">Services</div>
+                <div style="margin-top:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:14px;row-gap:2px;font-size:14.5px">
+                  <a href="#" style="min-height:44px;display:flex;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Urgent Care</a>
+                  <a href="#" style="min-height:44px;display:flex;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Family Health</a>
+                  <a href="#" style="min-height:44px;display:flex;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Occupational Health</a>
+                  <a href="#" style="min-height:44px;display:flex;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Women's Health</a>
+                  <a href="#" style="min-height:44px;display:flex;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Pediatric Care</a>
+                  <a href="#" style="min-height:44px;display:flex;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Diagnostic Services</a>
+                </div>
+              </div>
+
+              <div style="margin-top:24px;display:flex;gap:12px;border-top:1px solid rgba(255,255,255,0.10);padding-top:22px">
+                <a href="#" aria-label="Visit Alliance Medical Clinic on Facebook" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);text-decoration:none">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"></path></svg>
+                </a>
+                <a href="#" aria-label="Visit Alliance Medical Clinic on Twitter" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);text-decoration:none">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.7.35-1.5.6-2.3.7a4 4 0 0 0 1.75-2.2c-.8.45-1.65.8-2.55 1a4 4 0 0 0-6.8 3.6A11.4 11.4 0 0 1 3.5 4.6a4 4 0 0 0 1.24 5.3 4 4 0 0 1-1.8-.5 4 4 0 0 0 3.2 3.9 4 4 0 0 1-1.8.07 4 4 0 0 0 3.7 2.8A11.4 11.4 0 0 1 2 18.5a11.4 11.4 0 0 0 6.2 1.8c7.4 0 11.5-6.2 11.5-11.5v-.5c.8-.55 1.5-1.25 2.3-2.4z"></path></svg>
+                </a>
+                <a href="#" aria-label="Visit Alliance Medical Clinic on Instagram" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);text-decoration:none">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+                </a>
+              </div>
+
+              <div style="margin-top:22px;border-top:1px solid rgba(255,255,255,0.09);padding-top:18px">
+                <div style="display:flex;flex-wrap:wrap;gap:6px 20px">
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none">Privacy Policy</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none">Terms of Service</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none">HIPAA Notice</a>
+                </div>
+                <div style="margin-top:8px;font-size:13px;color:rgba(255,255,255,0.55)">© 2026 Alliance Medical Clinic</div>
+              </div>
+            </div>
+      </div>
+      <div style="margin-top:8px;font-size:12px;line-height:1.5;color:#5B6470">Everything expanded: brand, contact, full service list, social. Nothing hidden, but it runs long — roughly two screens of scroll.</div>
+    </div>
+
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const HERO = [
+  { image: "assets/hero-1.webp", heading: "Quality Care When You Need It Most", desc: "Compassionate urgent care and family health services for every stage of life in Portage, Michigan." },
+  { image: "assets/hero-2.webp", heading: "Care for Your Whole Family", desc: "Convenient primary, preventive, and same-day healthcare for children, adults, and families." },
+  { image: "assets/hero-3.webp", heading: "Healthcare That Fits Your Schedule", desc: "Walk in, call ahead, or schedule an appointment with convenient care available seven days a week." },
+];
+
+const svg = (children, props) => React.createElement("svg", Object.assign({
+  viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true",
+}, props), children);
+const p = (d) => React.createElement("path", { d: d, key: d });
+const rct = (x, y, w, h, r) => React.createElement("rect", { x: x, y: y, width: w, height: h, rx: r, key: "r" + x + y });
+const cir = (cx, cy, r) => React.createElement("circle", { cx: cx, cy: cy, r: r, key: "c" + cx + cy + r });
+const ln = (x1, y1, x2, y2) => React.createElement("line", { x1: x1, y1: y1, x2: x2, y2: y2, key: "l" + x1 + y1 + x2 + y2 });
+
+function icon(name, size, strokeWidth) {
+  const props = { width: size, height: size, strokeWidth: strokeWidth };
+  switch (name) {
+    case "medical-kit": return svg([rct(3, 6, 18, 14, 2), p("M12 10v4M10 12h4"), p("M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2")], props);
+    case "users": return svg([p("M18 21a6 6 0 0 0-12 0"), cir(12, 10, 4), p("M21 21a4 4 0 0 0-3-3.87"), p("M3 21a4 4 0 0 1 3-3.87")], props);
+    case "briefcase": return svg([rct(2, 7, 20, 14, 2), p("M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16")], props);
+    case "heart": return svg([p("M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z")], props);
+    case "heart-pulse": return svg([p("M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"), p("M8 12h2l1.5 3L13 9l1.5 3H16")], props);
+    case "teddy-bear": return svg([p("M9 12h.01M15 12h.01M9.5 16c.6.6 1.5 1 2.5 1s1.9-.4 2.5-1"), p("M8 3.5a2 2 0 0 1 3.6-1.2 2 2 0 0 1 3.6 1.2c1.7.3 3 1.8 3 3.6 0 1-.4 1.9-1 2.6.6.6 1 1.6 1 2.6a3.7 3.7 0 0 1-3.7 3.7H8.7A3.7 3.7 0 0 1 5 12.3c0-1 .4-2 1-2.6-.6-.7-1-1.6-1-2.6 0-1.8 1.3-3.3 3-3.6z")], props);
+    case "flask": return svg([p("M9 2v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V2"), ln(9, 2, 15, 2), ln(8, 13, 16, 13)], props);
+    case "user-group": return svg([p("M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"), cir(9, 7, 4), p("M23 21v-2a4 4 0 0 0-3-3.87"), p("M16 3.13a4 4 0 0 1 0 7.75")], props);
+    case "bag": return svg([rct(4, 8, 16, 13, 1), p("M9 8V5a3 3 0 0 1 6 0v3")], props);
+    case "activity": return svg([p("M22 12h-4l-3 9L9 3l-3 9H2")], props);
+    case "thermometer": return svg([p("M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z")], props);
+    case "first-aid-box": return svg([rct(3, 6, 18, 14, 2), p("M12 10v4M10 12h4")], props);
+    case "user": return svg([p("M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"), cir(12, 7, 4)], props);
+    case "shield-check": return svg([p("M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"), p("m9 12 2 2 4-4")], props);
+    case "video": return svg([rct(2, 5, 14, 14, 2), p("m22 8-6 4 6 4V8z")], props);
+    case "menu": return svg([ln(3, 6, 21, 6), ln(3, 12, 21, 12), ln(3, 18, 21, 18)], props);
+    case "close": return svg([ln(4, 4, 20, 20), ln(20, 4, 4, 20)], props);
+    case "chevron-down": return svg([React.createElement("polyline", { points: "6 9 12 15 18 9", key: "cd" })], props);
+    case "chevron-up": return svg([React.createElement("polyline", { points: "18 15 12 9 6 15", key: "cu" })], props);
+    default: return null;
+  }
+}
+
+const SERVICES = [
+  { icon: "medical-kit", accent: "#0D47A1", title: "Urgent Care", description: "Same-day care for illnesses, minor injuries, and immediate medical needs." },
+  { icon: "users", accent: "#1976D2", title: "Family Health", description: "Ongoing primary and preventive care for children, adults, and families." },
+  { icon: "briefcase", accent: "#90CAF9", title: "Occupational Health", description: "Workplace health services, physicals, testing, and employer care." },
+  { icon: "heart", accent: "#0D47A1", title: "Women's Health", description: "Supportive preventive and everyday healthcare for women." },
+  { icon: "teddy-bear", accent: "#1976D2", title: "Pediatric Care", description: "Convenient care for children and common childhood health concerns." },
+  { icon: "flask", accent: "#42A5F5", title: "Diagnostic Services", description: "On-site labs, X-rays, testing, and diagnostic support." },
+];
+
+const CARE = [
+  { icon: "user-group", title: "Families & Individuals", description: "Kids, Adults, and Families of every size." },
+  { icon: "bag", title: "Work & School", description: "Employers, Workers, School employees, and Small businesses." },
+  { icon: "activity", title: "Active People", description: "Athletes and active lifestyles deserve expert care." },
+  { icon: "thermometer", title: "Everyday Illnesses", description: "Cough, fever, sore throat, ear pain, rash, and UTI care." },
+  { icon: "first-aid-box", title: "Minor Injuries", description: "Minor injuries, sprains, cuts, and work injuries." },
+  { icon: "flask", title: "On-Site Services", description: "Labs, X-rays, physicals, and vaccines." },
+];
+
+const WORKPLACE = [
+  { icon: "user", title: "Physical Exams", description: "Pre-employment, DOT physicals, and return-to-work evaluations." },
+  { icon: "shield-check", title: "Injury Care", description: "Immediate treatment and case management for work-related injuries." },
+  { icon: "flask", title: "Drug Testing", description: "5-panel, 10-panel, and breath alcohol testing with fast results." },
+  { icon: "video", title: "Telemedicine", description: "Virtual consultations for convenient access to occupational care." },
+  { icon: "heart-pulse", title: "Wellness Programs", description: "Preventive workplace wellness support for a healthier team." },
+];
+
+const TEAM = [
+  { photo: "assets/team-1.webp", name: "Dr. Mahmoud Kassir", role: "Family Physician & Co-Founder" },
+  { photo: "assets/team-2.webp", name: "Dr. Dalal Kassir", role: "Medical Director & Family Medicine Physician" },
+  { photo: "assets/team-3.webp", name: "Amy Meints", role: "Family Nurse Practitioner" },
+  { photo: "assets/team-4.webp", name: "Robin Kuiper", role: "Family Nurse Practitioner" },
+  { photo: "assets/team-5.webp", name: "Amanda Kerwin", role: "Practice Manager" },
+  { photo: "assets/team-6.webp", name: "BreiAnn Church", role: "Registered Medical Assistant" },
+];
+
+class Component extends DCLogic {
+  state = { hero: 0, care: 0, menuOpen: false, servicesOpen: true, ftServices: false, ftAbout: false };
+
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState((s) => ({ hero: (s.hero + 1) % HERO.length })), 6500);
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  renderVals() {
+    const h = HERO[this.state.hero];
+    const team = TEAM.map((m) => Object.assign({}, m, { photoAlt: "Photo of " + m.name, photoBg: 'url("' + m.photo + '")' }));
+    const careIdx = this.state.care || 0;
+    const careSel = CARE[careIdx];
+    const careChips = CARE.map((c, i) => ({
+      title: c.title,
+      iconEl: icon(c.icon, 24, 1.9),
+      bgColor: i === careIdx ? "#1976D2" : "#FFFFFF",
+      iconColor: i === careIdx ? "#FFFFFF" : "#1976D2",
+      ringColor: i === careIdx ? "#1976D2" : "#E0E0E0",
+      scale: i === careIdx ? "scale(1.08)" : "scale(1)",
+      row: (i % 3) + 1,
+      onClick: () => this.setState({ care: i }),
+    }));
+    return {
+      menuOpen: this.state.menuOpen,
+      servicesOpen: this.state.servicesOpen,
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      toggleServices: () => this.setState((s) => ({ servicesOpen: !s.servicesOpen })),
+      menuIcon: icon(this.state.menuOpen ? "close" : "menu", 22, 2.2),
+      servicesChevron: icon(this.state.servicesOpen ? "chevron-up" : "chevron-down", 16, 2.5),
+      ftServices: this.state.ftServices,
+      ftAbout: this.state.ftAbout,
+      toggleFtServices: () => this.setState((s) => ({ ftServices: !s.ftServices })),
+      toggleFtAbout: () => this.setState((s) => ({ ftAbout: !s.ftAbout })),
+      ftServicesChevron: icon(this.state.ftServices ? "chevron-up" : "chevron-down", 16, 2.2),
+      ftAboutChevron: icon(this.state.ftAbout ? "chevron-up" : "chevron-down", 16, 2.2),
+      heroSlides: HERO.map((s, i) => ({ bg: 'url("' + s.image + '")', opacity: i === this.state.hero ? 1 : 0 })),
+      heroHeading: h.heading,
+      heroDescription: h.desc,
+      heroDots: HERO.map((s, i) => ({
+        label: "Go to hero slide " + (i + 1),
+        width: i === this.state.hero ? "22px" : "8px",
+        background: i === this.state.hero ? "#1976D2" : "rgba(66,165,245,0.45)",
+        onClick: () => this.setState({ hero: i }),
+      })),
+      services: SERVICES.map((s, i) => Object.assign({}, s, {
+        iconEl: icon(s.icon, 44, 1.7),
+        iconElMid: icon(s.icon, 24, 1.8),
+        iconElSmall: icon(s.icon, 26, 1.8),
+        num: "0" + (i + 1),
+        offset: i % 2 === 0 ? "20px" : "0px",
+      })),
+      careLeft: careChips.slice(0, 3),
+      careRight: careChips.slice(3, 6),
+      careTitle: careSel.title,
+      careDesc: careSel.description,
+      workplaceItems: WORKPLACE.map((w) => Object.assign({}, w, { iconEl: icon(w.icon, 22, 1.8) })),
+      team: team,
+      teamFour: team.slice(0, 4),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

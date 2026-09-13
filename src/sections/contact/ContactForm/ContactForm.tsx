@@ -1,76 +1,21 @@
-import { useEffect, useRef, useState, type FormEvent, type RefObject } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowRightIcon } from "../../../components/icons";
 import { FormField } from "../../../components/ui/FormField";
-import { EMPTY_CONTACT_VALUES } from "./contactForm.data";
+import { contactInputClass, contactTextareaClass } from "./contactFieldStyles";
 import { ContactFormSuccess } from "./ContactFormSuccess";
-import { validateContactForm } from "./validate";
-import type { ContactFormErrors, ContactFormValues } from "./ContactForm.types";
-
-function contactInputClass(hasError: boolean): string {
-  const borderColor = hasError ? "border-error" : "border-divider";
-  return `h-[52px] w-full rounded-[7px] border bg-white px-[14px] text-sm text-text-primary outline-none placeholder:text-booking-text-placeholder focus:border-badge-text focus:shadow-booking-focus-ring ${borderColor}`;
-}
-
-function contactTextareaClass(hasError: boolean): string {
-  const borderColor = hasError ? "border-error" : "border-divider";
-  return `w-full rounded-[7px] border bg-white px-[14px] py-3 font-sans text-sm text-text-primary outline-none placeholder:text-booking-text-placeholder focus:border-badge-text focus:shadow-booking-focus-ring resize-y ${borderColor}`;
-}
+import { useContactForm } from "./useContactForm";
 
 export function ContactForm() {
   const { t } = useTranslation();
-  const [values, setValues] = useState<ContactFormValues>(EMPTY_CONTACT_VALUES);
-  const [errors, setErrors] = useState<ContactFormErrors>({});
-  const [submitted, setSubmitted] = useState(false);
-
-  const firstNameRef = useRef<HTMLInputElement>(null);
-  const lastNameRef = useRef<HTMLInputElement>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
-  const phoneRef = useRef<HTMLInputElement>(null);
-  const subjectRef = useRef<HTMLInputElement>(null);
-  const messageRef = useRef<HTMLTextAreaElement>(null);
-
-  const isFirstRender = useRef(true);
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
-    if (!submitted) {
-      firstNameRef.current?.focus();
-    }
-  }, [submitted]);
-
-  function handleFieldChange(field: keyof ContactFormValues, value: string) {
-    setValues((prev) => ({ ...prev, [field]: value }));
-    setErrors((prev) => ({ ...prev, [field]: undefined }));
-  }
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const nextErrors = validateContactForm(values);
-    if (Object.keys(nextErrors).length > 0) {
-      setErrors(nextErrors);
-      const fieldOrder: { field: keyof ContactFormValues; ref: RefObject<HTMLElement | null> }[] = [
-        { field: "firstName", ref: firstNameRef },
-        { field: "lastName", ref: lastNameRef },
-        { field: "email", ref: emailRef },
-        { field: "phone", ref: phoneRef },
-        { field: "subject", ref: subjectRef },
-        { field: "message", ref: messageRef },
-      ];
-      const firstInvalid = fieldOrder.find((entry) => nextErrors[entry.field]);
-      firstInvalid?.ref.current?.focus();
-      return;
-    }
-    setSubmitted(true);
-  }
-
-  function handleReset() {
-    setValues(EMPTY_CONTACT_VALUES);
-    setErrors({});
-    setSubmitted(false);
-  }
+  const { values, errors, submitted, fieldRefs, handleFieldChange, handleSubmit, handleReset } = useContactForm();
+  const {
+    firstName: firstNameRef,
+    lastName: lastNameRef,
+    email: emailRef,
+    phone: phoneRef,
+    subject: subjectRef,
+    message: messageRef,
+  } = fieldRefs;
 
   return (
     <section className="rounded-2xl border border-reach-us-info-card-border bg-white p-7 shadow-card mw-640:p-5">

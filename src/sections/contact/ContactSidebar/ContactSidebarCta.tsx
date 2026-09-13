@@ -11,7 +11,7 @@ export function ContactSidebarCta() {
   const language = useLanguage();
 
   return (
-    <div className="relative min-h-[380px] overflow-hidden rounded-2xl text-white">
+    <div className="relative flex min-h-[380px] flex-col justify-center overflow-hidden rounded-2xl text-white">
       <img
         src={ctaImage}
         alt={t("contact.sidebar.cta.imageAlt")}
@@ -23,11 +23,11 @@ export function ContactSidebarCta() {
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.32) 28%, rgba(0,0,0,0.12) 48%, rgba(0,0,0,0) 68%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.36) 38%, rgba(0,0,0,0.36) 62%, rgba(0,0,0,0.50) 100%)",
         }}
       />
 
-      <div className="relative z-[2] px-6 pt-[26px] pb-6">
+      <div className="relative z-[2] px-6 py-8 text-center">
         <h3 className="m-0 font-heading text-[20px] font-bold leading-[1.2] tracking-[-0.4px]">
           {t("contact.sidebar.cta.heading")}
         </h3>

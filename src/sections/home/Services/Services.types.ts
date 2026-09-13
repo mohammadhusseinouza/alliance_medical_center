@@ -22,7 +22,10 @@ export interface ServiceItem {
   translationKey: ServiceTranslationKey;
   icon: ServiceIconName;
   accentColor: string;
-  href: string;
+  /** Anchor/fallback destination. Omitted for cards with no navigation at all. */
+  href?: string;
   animationDelayMs: number;
   titleNoWrap?: boolean;
+  /** No dedicated page yet — render this card without any link, anywhere. */
+  disableLink?: boolean;
 }

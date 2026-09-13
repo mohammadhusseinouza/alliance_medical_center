@@ -17,6 +17,17 @@ export interface NavbarProps {
   mobileOpen: boolean;
 }
 
+/**
+ * Desktop/tablet navbar (hides itself below `md` via `md:hidden`). Sticks
+ * to `top: 0` on its own via `position: sticky`.
+ *
+ * Callers must render this as a direct sibling of page content, NOT inside
+ * a div that only wraps the desktop chrome (e.g. alongside the TopBar
+ * `<header>`) — a `position: sticky` element can't stick past the bottom
+ * of its own containing block, so a wrapper that's only as tall as
+ * TopBar + Navbar would cap the sticky range at that wrapper's height and
+ * it would scroll away with it instead of pinning to the viewport.
+ */
 export function Navbar({ mobileOpen }: NavbarProps) {
   const scrolled = useScrolled();
   const { t } = useTranslation();
@@ -27,7 +38,7 @@ export function Navbar({ mobileOpen }: NavbarProps) {
   return (
     <div
       className={
-        "sticky top-0 z-[1000] w-full border-y border-border-nav bg-white [transition:box-shadow_220ms_ease,background-color_220ms_ease,backdrop-filter_220ms_ease] " +
+        "sticky top-0 z-[1000] hidden w-full border-y border-border-nav bg-white [transition:box-shadow_220ms_ease,background-color_220ms_ease,backdrop-filter_220ms_ease] md:block " +
         (scrolled ? "bg-white/[.98] shadow-nav-scrolled backdrop-blur-[10px]" : "")
       }
     >

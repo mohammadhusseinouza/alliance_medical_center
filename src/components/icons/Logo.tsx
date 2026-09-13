@@ -1,4 +1,5 @@
 import logoSrc from "../../assets/logo.png";
+import { SITE } from "../../lib/constants";
 
 export interface LogoProps {
   size?: number;
@@ -20,7 +21,7 @@ export function Logo({ size = DEFAULT_SIZE, className }: LogoProps) {
   return (
     <img
       src={logoSrc}
-      alt="Alliance Medical Clinic"
+      alt={SITE.name}
       width={width}
       height={size}
       loading="eager"

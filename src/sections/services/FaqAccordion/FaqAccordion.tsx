@@ -12,14 +12,16 @@ export interface FaqAccordionProps {
   idPrefix: string;
   items: FaqAccordionItem[];
   defaultOpenIndex?: number;
+  /** Overrides the outer `<section>` spacing (default `"mt-[42px]"`, used by the desktop service pages). */
+  className?: string;
 }
 
-export function FaqAccordion({ eyebrow, idPrefix, items, defaultOpenIndex }: FaqAccordionProps) {
+export function FaqAccordion({ eyebrow, idPrefix, items, defaultOpenIndex, className = "mt-[42px]" }: FaqAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(defaultOpenIndex ?? items.length - 1);
   const headingId = `${idPrefix}-faq-heading`;
 
   return (
-    <section aria-labelledby={headingId} className="mt-[42px]">
+    <section aria-labelledby={headingId} className={className}>
       <p id={headingId} className="m-0 text-xs font-bold uppercase tracking-[0.8px] text-badge-text">
         {eyebrow}
       </p>

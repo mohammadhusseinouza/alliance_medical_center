@@ -15,7 +15,6 @@ const OCCUPATIONAL_HEALTH_SERVICE_ID = "occupational-health";
  * there directly instead of only the active one being clickable.
  */
 const SERVICE_HREFS: Record<string, string> = {
-  "urgent-care": SITE.urgentCareHref,
   "family-health": SITE.familyHealthHref,
   "womens-health": SITE.womensHealthHref,
   "pediatric-care": SITE.pediatricCareHref,

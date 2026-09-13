@@ -1,1 +1,0 @@
-export { UrgentCareContent } from "./UrgentCareContent";

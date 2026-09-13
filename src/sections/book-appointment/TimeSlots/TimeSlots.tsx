@@ -15,8 +15,13 @@ function buildTimeSlots(selectedTime: string | null): TimeSlot[] {
   }));
 }
 
-export function TimeSlots({ selectedDate, selectedTime, onSelectTime }: TimeSlotsProps) {
+export function TimeSlots({ selectedDate, selectedTime, onSelectTime, variant = "desktop" }: TimeSlotsProps) {
   const { t } = useTranslation();
+
+  const gridLayout =
+    variant === "mobile"
+      ? "max-h-[214px] grid-cols-3"
+      : "max-h-[290px] grid-cols-4 mw-700:grid-cols-3 mw-420:grid-cols-2";
 
   return (
     <div className="box-border h-[348px] w-full max-w-full overflow-hidden rounded-[9px] border border-booking-border-panel bg-white p-4 mw-1100:h-auto">
@@ -27,7 +32,9 @@ export function TimeSlots({ selectedDate, selectedTime, onSelectTime }: TimeSlot
       )}
 
       {selectedDate && (
-        <div className="grid max-h-[290px] grid-cols-4 gap-2 overflow-y-auto [scrollbar-color:theme(colors.badge.text)_theme(colors.booking.badge-bg)] [scrollbar-width:thin] mw-700:grid-cols-3 mw-420:grid-cols-2 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-lg [&::-webkit-scrollbar-thumb]:bg-badge-text [&::-webkit-scrollbar-track]:rounded-lg [&::-webkit-scrollbar-track]:bg-booking-badge-bg">
+        <div
+          className={`grid gap-2 overflow-y-auto [scrollbar-color:theme(colors.badge.text)_theme(colors.booking.badge-bg)] [scrollbar-width:thin] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-lg [&::-webkit-scrollbar-thumb]:bg-badge-text [&::-webkit-scrollbar-track]:rounded-lg [&::-webkit-scrollbar-track]:bg-booking-badge-bg ${gridLayout}`}
+        >
           {buildTimeSlots(selectedTime).map((slot) => {
             const stateClass = slot.selected
               ? "border-booking-blue bg-booking-blue text-white cursor-pointer"

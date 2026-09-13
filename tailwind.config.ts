@@ -22,6 +22,7 @@ const config: Config = {
         "mw-700": { max: "700px" },
         "mw-650": { max: "650px" },
         "mw-640": { max: "640px" },
+        "mw-600": { max: "600px" },
         "mw-420": { max: "420px" },
       },
       fontFamily: {
@@ -30,7 +31,7 @@ const config: Config = {
       },
       /**
        * ============================================================
-       * ALLIANCE MEDICAL CLINIC — Phase 7.1 color migration
+       * ALLIANCE MEDICAL CENTER — Phase 7.1 color migration
        * ============================================================
        * Every leaf value below has been remapped from the old
        * AccessNow Care teal/navy identity to the approved Alliance
@@ -366,6 +367,14 @@ const config: Config = {
           from: { opacity: "0", transform: "scale(1.025)" },
           to: { opacity: "1", transform: "scale(1)" },
         },
+        "hero-clinic-in": {
+          from: { opacity: "0", transform: "scale(0.98)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+        "hero-frame-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
         "about-fade-up": {
           from: { opacity: "0", transform: "translateY(10px)" },
           to: { opacity: "1", transform: "translateY(0)" },
@@ -420,6 +429,8 @@ const config: Config = {
         "about-fade-l": "about-fade-l 600ms cubic-bezier(0.22,1,0.36,1) both",
         "about-fade-r": "about-fade-r 650ms cubic-bezier(0.22,1,0.36,1) 180ms both",
         "about-fade-img": "about-fade-img 650ms cubic-bezier(0.22,1,0.36,1) 100ms both",
+        "hero-clinic-in": "hero-clinic-in 700ms cubic-bezier(0.22,1,0.36,1) 120ms both",
+        "hero-frame-in": "hero-frame-in 700ms ease both",
         "about-fade-up": "about-fade-up 500ms ease both",
         "care-fade": "about-fade-up 500ms ease both",
         "care-title": "care-move 550ms ease 80ms both",

@@ -24,6 +24,8 @@ export function isNavItemActive(item: NavItem, pathname: string): boolean {
   switch (item.activeMatch) {
     case "home":
       return canonical === "/";
+    case "urgent-care":
+      return canonical === "/urgent-care";
     case "services":
       return canonical.startsWith("/services/");
     case "occupational-health":
