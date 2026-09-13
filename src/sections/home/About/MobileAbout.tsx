@@ -4,7 +4,6 @@ import aboutImage from "../../../assets/home/about-us.webp";
 import { ArrowRightIcon, ClockDialIcon, FlaskBasicIcon, HeartPulseIcon, MapPinIcon } from "../../../components/icons";
 import { withLocale } from "../../../i18n/routing";
 import { useLanguage } from "../../../i18n/useLanguage";
-import { SITE } from "../../../lib/constants";
 import { ABOUT_STATS } from "./about.data";
 import type { AboutStatIcon } from "./About.types";
 
@@ -68,7 +67,7 @@ export function MobileAbout() {
           </div>
         </div>
         <Link
-          to={withLocale(SITE.urgentCareHref, language)}
+          to={withLocale("/#services", language)}
           className="mt-6 flex h-[54px] w-full items-center justify-center gap-3.5 rounded-md text-[13.5px] font-bold uppercase tracking-[0.3px] text-white no-underline"
           style={{ background: "linear-gradient(90deg, var(--about-cta-gradient-from), var(--about-cta-gradient-to))" }}
         >

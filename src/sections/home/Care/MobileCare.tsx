@@ -25,9 +25,6 @@ import type { CareIconName } from "./Care.types";
 const CARE_LEARN_MORE_HREFS: Record<string, string> = {
   "families-individuals": SITE.familyHealthHref,
   "work-school": SITE.occupationalHealthHref,
-  "active-people": SITE.urgentCareHref,
-  "everyday-illnesses": SITE.urgentCareHref,
-  "minor-injuries": SITE.urgentCareHref,
   "on-site-services": SITE.diagnosticServicesHref,
 };
 
@@ -129,7 +126,7 @@ export function MobileCare() {
           {t(`care.items.${active.translationKey}.description`)}
         </p>
         <Link
-          to={withLocale(CARE_LEARN_MORE_HREFS[active.id] ?? SITE.urgentCareHref, language)}
+          to={withLocale(CARE_LEARN_MORE_HREFS[active.id] ?? "/#services", language)}
           className="mt-3 inline-flex min-h-[44px] items-center justify-center gap-[7px] text-[14.5px] font-bold text-brand-icon no-underline"
         >
           {t("care.learnMore")}

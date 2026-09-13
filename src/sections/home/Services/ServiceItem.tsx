@@ -87,7 +87,12 @@ export function ServiceItem({ service }: ServiceItemProps) {
       <p className="mt-3 max-w-[245px] text-[14px] leading-[1.55] text-services-desc mw-650:max-w-none">
         {t(`services.items.${service.translationKey}.description`)}
       </p>
-      {dedicatedHref ? (
+      {service.disableLink ? (
+        <span className={exploreClassName}>
+          {t("services.exploreService")}
+          {exploreArrow}
+        </span>
+      ) : dedicatedHref ? (
         <Link to={withLocale(dedicatedHref, language)} className={exploreClassName}>
           {t("services.exploreService")}
           {exploreArrow}

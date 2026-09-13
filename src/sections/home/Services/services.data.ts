@@ -3,14 +3,6 @@ import type { ServiceItem } from "./Services.types";
 
 export const SERVICES: ServiceItem[] = [
   {
-    id: "urgent-care",
-    icon: "medical-kit",
-    accentColor: SERVICE_ACCENT.service1,
-    href: "#",
-    animationDelayMs: 80,
-    translationKey: "urgentCare",
-  },
-  {
     id: "family-health",
     icon: "users",
     accentColor: SERVICE_ACCENT.service2,

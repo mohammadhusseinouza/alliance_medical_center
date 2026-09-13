@@ -9,12 +9,13 @@ export const es: TranslationResource = {
     openDaysShort: "Abiertos los 7 Días · 12–8 PM",
     hoursDaysRange: "Lunes – Domingo",
     hoursSummary: "Abiertos los 7 Días · {{time}}",
-    cityShort: "Portage, MI",
+    cityShort: "Pontiac, MI",
     call: "Llamar",
     callClinicAria: "Llamar a la clínica",
   },
   navbar: {
     home: "Inicio",
+    urgentCare: "Atención de Urgencias",
     services: "Servicios",
     occupationalHealth: "Salud Ocupacional",
     contactUs: "Contáctanos",
@@ -30,7 +31,7 @@ export const es: TranslationResource = {
         headingLine1: "Atención de Calidad",
         headingLine2: "Cuando Más la Necesita",
         description:
-          "Servicios compasivos de atención de urgencias y salud familiar para cada etapa de la vida en Portage, Michigan.",
+          "Servicios compasivos de atención de urgencias y salud familiar para cada etapa de la vida en Pontiac, Michigan.",
         ariaLabel: "Doctora atendiendo a un paciente en un consultorio luminoso",
       },
       wholeFamily: {
@@ -110,7 +111,7 @@ export const es: TranslationResource = {
     urgentCare: {
       heading: "Atención de Urgencias Profesional Cuando la Necesite",
       intro:
-        "Alliance Medical Clinic ofrece tratamiento el mismo día para enfermedades y lesiones menores, con la comodidad de la atención sin cita y tiempos de espera mínimos. Nuestro personal clínico brinda atención profesional y familiar, junto con indicaciones claras sobre los próximos pasos, para que pueda volver a sentirse usted mismo.",
+        "Alliance Medical Center ofrece tratamiento el mismo día para enfermedades y lesiones menores, con la comodidad de la atención sin cita y tiempos de espera mínimos. Nuestro personal clínico brinda atención profesional y familiar, junto con indicaciones claras sobre los próximos pasos, para que pueda volver a sentirse usted mismo.",
       whatsIncluded: "Qué Incluye",
       heroImageAlt: "Personal clínico conversando con un paciente en un consultorio luminoso",
       mainPhotoAlt: "Médico revisando resultados con un paciente",
@@ -571,7 +572,7 @@ export const es: TranslationResource = {
     hero: {
       heading: "Contáctenos",
       description: "Estamos aquí para responder sus preguntas y ayudarle a obtener la atención que necesita.",
-      imageAlt: "Miembro del equipo de Alliance Medical Clinic listo para atender a un paciente",
+      imageAlt: "Miembro del equipo de Alliance Medical Center listo para atender a un paciente",
     },
     form: {
       heading: "Envíenos un Mensaje",
@@ -615,18 +616,53 @@ export const es: TranslationResource = {
       emergencyAction: "Llamar a la Línea de Emergencia",
     },
   },
+  urgentCare: {
+    hero: {
+      eyebrow: "Atención de Urgencias",
+      headingLine1: "Cuando Necesita",
+      headingLine2Before: "Atención",
+      headingHighlight: "Ahora",
+      description:
+        "Atención rápida y compasiva para necesidades médicas no urgentes, con tiempos de espera más cortos.",
+      clinicImageAlt: "Entrada de atención de urgencias de Alliance Medical Center en Pontiac, Michigan",
+      quickInfo: {
+        walkIns: { line1: "Sin Cita", line2: "Previa" },
+        hours: { line1: "Horario", line2: "Extendido" },
+        allAges: { line1: "Todas las Edades", line2: "(6 meses+)" },
+      },
+    },
+    ctaButton: "Obtener Atención de Urgencias",
+    conditions: {
+      heading: "Afecciones Comunes que Tratamos",
+      items: {
+        coldFlu: "Resfriado y Gripe",
+        strepThroat: "Faringitis Estreptocócica",
+        earInfections: "Infecciones de Oído",
+        minorInjuries: "Lesiones Menores",
+        allergies: "Alergias",
+        skinConditions: "Afecciones de la Piel",
+        utis: "Infecciones Urinarias",
+        andMore: "Y Más",
+      },
+    },
+    cta: {
+      headingLine1: "Rápido. Conveniente.",
+      headingLine2: "Atención Confiable.",
+      description: "Reciba la atención que necesita, para que pueda volver a lo que más importa.",
+    },
+  },
   about: {
     eyebrow: "Sobre Nosotros",
     headingLine1: "Atención Completa,",
     headingLine2: "Todo en un Solo Lugar",
     description:
-      "Desde atención de urgencias y medicina familiar hasta diagnósticos y servicios preventivos, Alliance Medical Clinic ofrece atención coordinada diseñada para sus necesidades de salud cotidianas.",
+      "Desde atención de urgencias y medicina familiar hasta diagnósticos y servicios preventivos, Alliance Medical Center ofrece atención coordinada diseñada para sus necesidades de salud cotidianas.",
     feature: {
       title: "Atención Integral",
       description: "Una amplia gama de servicios ofrecidos bajo un mismo techo para mayor comodidad.",
     },
     cta: "Ver Servicios",
-    imageAlt: "Doctora conversando con un paciente en Alliance Medical Clinic",
+    imageAlt: "Doctora conversando con un paciente en Alliance Medical Center",
     stats: {
       openDays: {
         description: "12:00 PM – 8:00 PM, todos los días de la semana.",
@@ -636,7 +672,7 @@ export const es: TranslationResource = {
         description: "Laboratorio, radiografías y pruebas disponibles sin necesidad de otra visita.",
       },
       location: {
-        title: "Portage, Michigan",
+        title: "Pontiac, Michigan",
         description: "Acceso local y conveniente para familias y empleadores.",
       },
     },
@@ -647,7 +683,7 @@ export const es: TranslationResource = {
     headingHighlight: "todos.",
     headingLine2: "Tratamiento para necesidades cotidianas.",
     description:
-      "Ya sea que traiga a su hijo, reporte una lesión laboral o necesite ayuda el mismo día para una enfermedad común, estamos aquí para las familias, trabajadores y empleadores de Portage.",
+      "Ya sea que traiga a su hijo, reporte una lesión laboral o necesite ayuda el mismo día para una enfermedad común, estamos aquí para las familias, trabajadores y empleadores de Pontiac.",
     learnMore: "Más información",
     imageAlt: "Doctor de frente, con los brazos cruzados",
     items: {
@@ -923,12 +959,12 @@ export const es: TranslationResource = {
     viewFullProfile: "Ver Perfil Completo",
     swipeHint: "Desliza para conocer al equipo",
     roles: {
-      mahmoudKassir: "Médico Familiar y Cofundador",
-      dalalKassir: "Directora Médica y Médica de Medicina Familiar",
-      amyMeints: "Enfermera Practicante Familiar",
-      robinKuiper: "Enfermera Practicante Familiar",
-      amandaKerwin: "Gerente de la Práctica",
-      breiannChurch: "Asistente Médica Certificada",
+      emilyCarter: "Médico Familiar y Cofundador",
+      michaelReed: "Directora Médica y Médica de Medicina Familiar",
+      sophiaBennett: "Enfermera Practicante Familiar",
+      danielBrooks: "Enfermera Practicante Familiar",
+      oliviaHayes: "Gerente de la Práctica",
+      ethanCollins: "Asistente Médica Certificada",
     },
   },
   appointmentReferral: {
@@ -946,9 +982,9 @@ export const es: TranslationResource = {
   },
   reachUs: {
     eyebrow: "Ubicación",
-    heading: "Visítenos en Portage",
+    heading: "Visítenos en Pontiac",
     description:
-      "Venga sin cita, llame con anticipación o pida indicaciones; estamos aquí en Portage con estacionamiento conveniente y una clínica acogedora lista para ayudar a su familia.",
+      "Venga sin cita, llame con anticipación o pida indicaciones; estamos aquí en Pontiac con estacionamiento conveniente y una clínica acogedora lista para ayudar a su familia.",
     mapTitle: "Mapa que muestra {{business}} en {{address}}",
     parkingTitle: "Estacionamiento conveniente",
     parkingSubtitle: "disponible en el lugar",
@@ -967,14 +1003,14 @@ export const es: TranslationResource = {
     },
   },
   footer: {
-    tagline: "Atención médica compasiva para la comunidad de Portage.",
+    tagline: "Atención médica compasiva para la comunidad de Pontiac.",
     aboutDescription:
-      "Brindamos servicios de calidad de atención de urgencias y salud familiar a la comunidad de Portage, Michigan, con compasión, experiencia y comodidad.",
+      "Brindamos servicios de calidad de atención de urgencias y salud familiar a la comunidad de Pontiac, Michigan, con compasión, experiencia y comodidad.",
     ctaText: "¿Necesita atención hoy? Reserve una Cita",
     socialAria: {
-      facebook: "Visite a Alliance Medical Clinic en Facebook",
-      twitter: "Visite a Alliance Medical Clinic en Twitter",
-      instagram: "Visite a Alliance Medical Clinic en Instagram",
+      facebook: "Visite a Alliance Medical Center en Facebook",
+      twitter: "Visite a Alliance Medical Center en Twitter",
+      instagram: "Visite a Alliance Medical Center en Instagram",
     },
     contactInfoHeading: "Información de Contacto",
     servicesHeading: "Servicios",
@@ -990,7 +1026,7 @@ export const es: TranslationResource = {
       eyebrow: "CITA",
       heading: "Reserve Su Visita",
       description:
-        "Programe una visita conveniente con Alliance Medical Clinic. Elija su fecha y horario preferidos, luego proporcione sus datos para solicitar su cita.",
+        "Programe una visita conveniente con Alliance Medical Center. Elija su fecha y horario preferidos, luego proporcione sus datos para solicitar su cita.",
     },
     doctorAlt:
       "Doctor con bata blanca, camisa azul, corbata azul marino, estetoscopio, sonriendo, sosteniendo una tabla en blanco, señalando hacia el formulario",
@@ -1075,49 +1111,49 @@ export const es: TranslationResource = {
   },
   meta: {
     home: {
-      title: "Alliance Medical Clinic — Atención de Urgencias y Salud Familiar en Portage, MI",
+      title: "Alliance Medical Center — Atención de Urgencias y Salud Familiar en Pontiac, MI",
       description:
-        "Servicios de atención de urgencias y salud familiar en Portage, Michigan. Abiertos los 7 días de la semana, de 12:00 PM a 8:00 PM. Venga sin cita o reserve una cita.",
+        "Servicios de atención de urgencias y salud familiar en Pontiac, Michigan. Abiertos los 7 días de la semana, de 12:00 PM a 8:00 PM. Venga sin cita o reserve una cita.",
     },
     booking: {
-      title: "Reservar una Cita — Alliance Medical Clinic",
+      title: "Reservar una Cita — Alliance Medical Center",
       description:
-        "Programe una visita con Alliance Medical Clinic en Portage, Michigan. Elija una fecha y hora, luego solicite su cita en línea.",
+        "Programe una visita con Alliance Medical Center en Pontiac, Michigan. Elija una fecha y hora, luego solicite su cita en línea.",
     },
     urgentCare: {
-      title: "Atención de Urgencias — Alliance Medical Clinic",
+      title: "Atención de Urgencias — Alliance Medical Center",
       description:
-        "Atención de urgencias el mismo día en Portage, Michigan. Aceptamos pacientes sin cita, los 7 días de la semana de 12:00 PM a 8:00 PM. Conozca qué incluye una visita.",
+        "Atención de urgencias rápida y sin cita en Pontiac, Michigan. Tiempos de espera más cortos para enfermedades y lesiones no urgentes, los 7 días de la semana.",
     },
     occupationalHealth: {
-      title: "Salud Ocupacional — Alliance Medical Clinic",
+      title: "Salud Ocupacional — Alliance Medical Center",
       description:
-        "Medicina ocupacional y servicios de salud laboral en Portage, Michigan, incluyendo exámenes físicos, atención de lesiones y programas de salud para empleados.",
+        "Medicina ocupacional y servicios de salud laboral en Pontiac, Michigan, incluyendo exámenes físicos, atención de lesiones y programas de salud para empleados.",
     },
     diagnosticServices: {
-      title: "Servicios de Diagnóstico — Alliance Medical Clinic",
+      title: "Servicios de Diagnóstico — Alliance Medical Center",
       description:
         "Servicios avanzados de pruebas e imágenes para ayudar a diagnosticar y monitorear condiciones de salud.",
     },
     womensHealth: {
-      title: "Servicios de Salud de la Mujer — Alliance Medical Clinic",
+      title: "Servicios de Salud de la Mujer — Alliance Medical Center",
       description:
-        "Servicios integrales de salud de la mujer en Portage, Michigan, incluyendo atención preventiva, atención prenatal y manejo del bienestar.",
+        "Servicios integrales de salud de la mujer en Pontiac, Michigan, incluyendo atención preventiva, atención prenatal y manejo del bienestar.",
     },
     pediatricCare: {
-      title: "Servicios de Atención Pediátrica — Alliance Medical Clinic",
+      title: "Servicios de Atención Pediátrica — Alliance Medical Center",
       description:
-        "Atención médica especializada para bebés, niños y adolescentes en Portage, Michigan, incluyendo chequeos, inmunizaciones y tratamiento de enfermedades.",
+        "Atención médica especializada para bebés, niños y adolescentes en Pontiac, Michigan, incluyendo chequeos, inmunizaciones y tratamiento de enfermedades.",
     },
     familyHealth: {
-      title: "Servicios de Salud Familiar — Alliance Medical Clinic",
+      title: "Servicios de Salud Familiar — Alliance Medical Center",
       description:
-        "Atención primaria integral para toda su familia en Portage, Michigan, incluyendo exámenes físicos, manejo de enfermedades crónicas y detecciones preventivas.",
+        "Atención primaria integral para toda su familia en Pontiac, Michigan, incluyendo exámenes físicos, manejo de enfermedades crónicas y detecciones preventivas.",
     },
     contact: {
-      title: "Contáctenos — Alliance Medical Clinic",
+      title: "Contáctenos — Alliance Medical Center",
       description:
-        "Póngase en contacto con Alliance Medical Clinic. Llame, envíe un correo, visite nuestra clínica o envíenos un mensaje y le responderemos.",
+        "Póngase en contacto con Alliance Medical Center. Llame, envíe un correo, visite nuestra clínica o envíenos un mensaje y le responderemos.",
     },
   },
 };

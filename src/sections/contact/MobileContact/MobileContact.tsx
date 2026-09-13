@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import heroImage from "../../../assets/contact/AccessNow Care team member ready to assist a patient.png";
+import heroImage from "../../../assets/contact/team-member-ready-to-assist.png";
 import ctaImage from "../../../assets/contact/helpyou.png";
 import { ArrowRightIcon, ChevronIcon, ClockIcon, MailIcon, MapPinIcon, PhoneIcon } from "../../../components/icons";
 import { withLocale } from "../../../i18n/routing";

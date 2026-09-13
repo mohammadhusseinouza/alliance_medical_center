@@ -1,10 +1,10 @@
 export type TeamRoleTranslationKey =
-  | "mahmoudKassir"
-  | "dalalKassir"
-  | "amyMeints"
-  | "robinKuiper"
-  | "amandaKerwin"
-  | "breiannChurch";
+  | "emilyCarter"
+  | "michaelReed"
+  | "sophiaBennett"
+  | "danielBrooks"
+  | "oliviaHayes"
+  | "ethanCollins";
 
 export interface TeamMember {
   id: string;

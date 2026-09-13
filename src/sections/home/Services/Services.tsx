@@ -3,8 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ArrowRightIcon, PlusIcon, PulseLineIcon } from "../../../components/icons";
 import { withLocale } from "../../../i18n/routing";
 import { useLanguage } from "../../../i18n/useLanguage";
-import { SITE } from "../../../lib/constants";
-import { SERVICES } from "./services.data";
+import { HOME_SERVICES } from "./homeServices.data";
 import { ServiceItem } from "./ServiceItem";
 
 export function Services() {
@@ -38,13 +37,13 @@ export function Services() {
         </p>
 
         <div className="mx-auto mt-[50px] grid max-w-[1035px] grid-cols-3 border-l border-t border-services-border mw-1050:max-w-none mw-1050:grid-cols-2 mw-650:grid-cols-1">
-          {SERVICES.map((service) => (
+          {HOME_SERVICES.map((service) => (
             <ServiceItem key={service.id} service={service} />
           ))}
         </div>
 
         <Link
-          to={withLocale(SITE.urgentCareHref, language)}
+          to={withLocale("/#services", language)}
           className="group relative z-[3] mx-auto mt-7 inline-flex w-fit items-center justify-center gap-2 text-[12px] font-bold uppercase tracking-[0.4px] text-services-link no-underline"
         >
           {t("common.viewAllServices")}

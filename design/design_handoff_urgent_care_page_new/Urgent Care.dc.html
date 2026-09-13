@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script src="./image-slot.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; }
+  body { font-family: "Lato", Arial, sans-serif; background: #ffffff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #1976D2; }
+  a:hover { color: #0D47A1; }
+  @keyframes mobile-fade { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes ft-fade { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes about-fade-l { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes about-fade-img { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+  @keyframes hero-frame-in { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; } }
+  @media (max-width: 1100px) { [data-om="conditions-grid"] { grid-template-columns: repeat(3, minmax(0,1fr)) !important; } }
+  @media (max-width: 1000px) { [data-om="hero"] { aspect-ratio: auto !important; display: flex !important; flex-direction: column !important; } [data-om="hero-frame"] { display: none !important; } [data-om="hero-clinic"] { position: static !important; order: 2 !important; width: min(86%, 460px) !important; margin: 8px auto 0 !important; border-radius: 14px !important; } [data-om="hero-grid"] { position: static !important; grid-template-columns: 1fr !important; gap: 0 !important; padding: 30px 0 8px !important; } [data-om="cta-panel"] { grid-template-columns: auto minmax(0,1fr) !important; row-gap: 28px !important; } [data-om="cta-panel"] > a { grid-column: 1 / -1 !important; justify-self: start !important; } }
+  @media (max-width: 900px) { [data-om="conditions-grid"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; } }
+  @media (max-width: 600px) { [data-om="hero-grid"], [data-om="conditions-grid"] { width: auto !important; } [data-om="cta-panel"] { grid-template-columns: 1fr !important; padding: 32px 24px !important; gap: 20px !important; } [data-om="conditions-grid"] { gap: 14px !important; } }
+  /* Breakpoints ported from the project's tailwind config (md = 768, mw-1300/1100/980/1000/650/640). Media queries are the one thing inline styles cannot express. */
+  @media (min-width: 768px) { [data-om="mobile"] { display: none !important; } }
+  @media (max-width: 767px) { [data-om="desktop"] { display: none !important; } }
+  @media (max-width: 1300px) { [data-om="nav-list"] { gap: 22px !important; } [data-om="topbar-groups"] { gap: 26px !important; } }
+  @media (max-width: 1100px) { [data-om="topbar-hours"] { display: none !important; } }
+  @media (max-width: 980px) { [data-om="nav-list"], [data-om="nav-actions"] { display: none !important; } [data-om="hamburger"] { display: flex !important; } }
+  @media (max-width: 1000px) { [data-om="footer-grid"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; column-gap: 35px !important; row-gap: 45px !important; } }
+  @media (max-width: 700px) { main > section > div:not([aria-hidden]) { width: calc(100% - 32px) !important; } }
+  @media (max-width: 650px) { [data-om="footer-grid"] { grid-template-columns: 1fr !important; gap: 38px !important; } [data-om="footer-inner"] { padding-left: 20px !important; padding-right: 20px !important; padding-bottom: 30px !important; } [data-om="footer-legal"] { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; } }
+</style>
+</helmet>
+
+<div data-screen-label="Urgent Care" style="min-height: 100vh; background: #ffffff;">
+
+  <!-- Mobile utility strip -->
+  <div data-om="mobile" style="display: flex; height: 34px; align-items: center; justify-content: space-between; gap: 10px; background: #0D47A1; padding: 0 16px; color: #ffffff;">
+    <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; line-height: 1; letter-spacing: 0.3px;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+      Open 7 Days · 12–8 PM
+    </span>
+    <a href="tel:+12693214774" style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; line-height: 1; color: #90CAF9; text-decoration: none;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      (269) 321-4774
+    </a>
+  </div>
+
+  <!-- Mobile sticky header -->
+  <header data-om="mobile" style="position: sticky; top: 0; z-index: 40; display: flex; height: 64px; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid #E0E0E0; background: #ffffff; padding: 0 16px;">
+    <a href="/" style="display: flex;">
+      <img src="assets/logo.png" alt="Alliance Medical Clinic" width="123" height="41" style="object-fit: contain; flex-shrink: 0;" />
+    </a>
+    <div style="display: flex; align-items: center; gap: 6px;">
+      <a href="tel:+12693214774" aria-label="Call the clinic" style="display: flex; height: 46px; width: 46px; align-items: center; justify-content: center; border-radius: 10px; border: 1.5px solid #1976D2; color: #1976D2;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      </a>
+      <button type="button" onClick="{{ toggleDrawer }}" aria-label="Toggle menu" style="display: flex; height: 46px; width: 46px; align-items: center; justify-content: center; border: none; border-radius: 10px; background: #E3F2FD; color: #0D47A1;">
+        <sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+        </sc-if>
+        <sc-if value="{{ drawerClosed }}" hint-placeholder-val="{{ true }}">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </sc-if>
+      </button>
+    </div>
+  </header>
+
+  <sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
+    <nav data-om="mobile" aria-label="Mobile" style="position: sticky; top: 64px; z-index: 39; animation: mobile-fade 0.25s ease forwards; border-bottom: 1px solid #E0E0E0; background: #ffffff; padding: 14px 16px 20px; box-shadow: 0 16px 32px rgba(13,71,161,0.12);">
+      <div style="display: flex; align-items: center; gap: 6px; padding-bottom: 12px;">
+        <button type="button" aria-label="Switch to English" style="border: none; background: none; border-radius: 4px; padding: 2px 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: #1976D2;">EN</button>
+        <span aria-hidden="true" style="color: #E0E0E0;">|</span>
+        <button type="button" aria-label="Switch to Spanish" style="border: none; background: none; border-radius: 4px; padding: 2px 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: #424242;">ES</button>
+      </div>
+      <a href="/" style="display: flex; width: 100%; align-items: center; justify-content: space-between; border-top: 1px solid #E0E0E0; padding: 16px 4px; font-size: 17px; font-weight: 600; color: #424242; text-decoration: none;">Home</a>
+      <a href="/urgent-care" style="display: flex; width: 100%; align-items: center; justify-content: space-between; border-top: 1px solid #E0E0E0; padding: 16px 4px; font-size: 17px; font-weight: 600; color: #1976D2; text-decoration: none;">Urgent Care</a>
+      <button type="button" onClick="{{ toggleDrawerServices }}" style="display: flex; width: 100%; align-items: center; justify-content: space-between; border: none; border-top: 1px solid #E0E0E0; background: transparent; padding: 16px 4px; text-align: left; font-family: inherit; font-size: 17px; font-weight: 600; color: #424242;">
+        Services
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <sc-if value="{{ drawerServicesOpen }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; flex-direction: column; gap: 2px; padding: 0 4px 14px 14px;">
+          <a href="/services/urgent-care" style="border-radius: 8px; padding: 12px 10px; font-size: 15px; font-weight: 700; color: #1976D2; text-decoration: none;">View All Services</a>
+          <a href="/services/urgent-care" style="border-radius: 8px; padding: 12px 10px; font-size: 15px; color: #424242; text-decoration: none;">Urgent Care</a>
+          <a href="/services/family-health" style="border-radius: 8px; padding: 12px 10px; font-size: 15px; color: #424242; text-decoration: none;">Family Health</a>
+          <a href="/services/womens-health" style="border-radius: 8px; padding: 12px 10px; font-size: 15px; color: #424242; text-decoration: none;">Women's Health</a>
+          <a href="/services/pediatric-care" style="border-radius: 8px; padding: 12px 10px; font-size: 15px; color: #424242; text-decoration: none;">Pediatric Care</a>
+          <a href="/services/diagnostic-services" style="border-radius: 8px; padding: 12px 10px; font-size: 15px; color: #424242; text-decoration: none;">Diagnostic Services</a>
+        </div>
+      </sc-if>
+      <a href="/occupational-health" style="display: flex; width: 100%; align-items: center; justify-content: space-between; border-top: 1px solid #E0E0E0; padding: 16px 4px; font-size: 17px; font-weight: 600; color: #424242; text-decoration: none;">Occupational Health</a>
+      <a href="/contact" style="display: flex; width: 100%; align-items: center; justify-content: space-between; border-top: 1px solid #E0E0E0; padding: 16px 4px; font-size: 17px; font-weight: 600; color: #424242; text-decoration: none;">Contact Us</a>
+      <a href="/book-appointment" style="margin-top: 18px; display: flex; height: 52px; width: 100%; align-items: center; justify-content: center; border-radius: 8px; background: #1976D2; font-size: 16px; font-weight: 600; color: #ffffff; text-decoration: none;">Book Appointment</a>
+    </nav>
+  </sc-if>
+
+  <!-- Desktop TopBar -->
+  <header data-om="desktop" style="display: block;">
+    <div style="width: 100%; background: #ffffff;">
+      <div style="margin: 0 auto; width: 100%; max-width: 1660px; display: flex; min-height: 96px; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 60px;">
+        <div style="display: flex; flex-shrink: 0; align-items: center; gap: 10px;">
+          <img src="assets/logo.png" alt="Alliance Medical Clinic" width="150" height="50" style="object-fit: contain; flex-shrink: 0;" />
+          <div style="display: flex; flex-direction: column; line-height: 1.15;">
+            <span style="white-space: nowrap; font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; color: #1976D2;">Compassionate Care. Healthier You.</span>
+          </div>
+        </div>
+
+        <div data-om="topbar-groups" style="display: flex; align-items: center; gap: 40px;">
+          <div data-om="topbar-hours" style="display: flex; align-items: center; gap: 12px;">
+            <span style="display: flex; height: 44px; width: 44px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 9999px; border: 1.5px solid #1976D2; color: #1976D2;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+            </span>
+            <div style="display: flex; flex-direction: column; line-height: 1.3;">
+              <span style="white-space: nowrap; font-size: 15px; font-weight: 600; color: #424242;">Open 7 Days</span>
+              <span style="white-space: nowrap; font-size: 13px; font-weight: 400; color: #424242;">12:00 PM – 8:00 PM</span>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="display: flex; height: 44px; width: 44px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 9999px; border: 1.5px solid #1976D2; color: #1976D2;">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </span>
+            <div style="display: flex; flex-direction: column; line-height: 1.3;">
+              <a href="tel:+12693214774" style="white-space: nowrap; font-size: 15px; font-weight: 600; color: #424242; text-decoration: none;">(269) 321-4774</a>
+              <a href="mailto:info@accessnowcare.com" style="white-space: nowrap; font-size: 13px; font-weight: 400; color: #424242; text-decoration: none;">info@accessnowcare.com</a>
+            </div>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=8145+Valleywood+Lane+Portage+MI+49024" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+            <span style="display: flex; height: 44px; width: 44px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 9999px; border: 1.5px solid #1976D2; color: #1976D2;">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            <div style="display: flex; flex-direction: column; line-height: 1.3;">
+              <span style="white-space: nowrap; font-size: 15px; font-weight: 600; color: #424242;">8145 Valleywood Lane</span>
+              <span style="white-space: nowrap; font-size: 13px; font-weight: 400; color: #424242;">Portage, MI 49024</span>
+            </div>
+          </a>
+        </div>
+
+        <button type="button" data-om="hamburger" onClick="{{ toggleMobileNav }}" aria-label="Toggle menu" style="margin-left: auto; display: none; height: 44px; width: 44px; flex-shrink: 0; align-items: center; justify-content: center; border: none; background: transparent; color: #424242;">
+          <sc-if value="{{ mobileNavOpen }}" hint-placeholder-val="{{ false }}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+          </sc-if>
+          <sc-if value="{{ mobileNavClosed }}" hint-placeholder-val="{{ true }}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </sc-if>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Desktop Navbar -->
+  <div data-om="desktop" ref="{{ navRef }}" style="position: sticky; top: 0; z-index: 1000; display: block; width: 100%; border-top: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0; background: #ffffff; transition: box-shadow 220ms ease, background-color 220ms ease, backdrop-filter 220ms ease;">
+    <div style="margin: 0 auto; width: 100%; max-width: 1660px; display: flex; height: 64px; align-items: center; justify-content: space-between; padding: 0 60px;">
+      <nav data-om="nav-list" aria-label="Primary" style="display: flex; align-items: center; gap: 28px;">
+        <div style="position: relative;">
+          <a href="/" style="position: relative; margin: 0 -10px; display: flex; align-items: center; gap: 4px; white-space: nowrap; border-radius: 6px; padding: 8px 10px; font-size: 15px; font-weight: 500; color: #424242; text-decoration: none; transition: color 200ms ease, background-color 200ms ease;" style-hover="background: #E3F2FD; color: #1976D2;">Home</a>
+        </div>
+        <div style="position: relative;">
+          <a href="/urgent-care" style="position: relative; margin: 0 -10px; display: flex; align-items: center; gap: 4px; white-space: nowrap; border-radius: 6px; padding: 8px 10px; font-size: 15px; font-weight: 500; color: #1976D2; text-decoration: none; transition: color 200ms ease, background-color 200ms ease;" style-hover="background: #E3F2FD; color: #1976D2;">
+            <span style="position: relative; display: inline-block;" style-after="content: ''; position: absolute; bottom: -13px; left: 0; right: 0; height: 2px; background: #1976D2; transform: scaleX(1); transform-origin: left; transition: transform 200ms ease;">Urgent Care</span>
+          </a>
+        </div>
+        <div style="position: relative;" onMouseEnter="{{ openServices }}" onMouseLeave="{{ closeServices }}">
+          <a href="/services/urgent-care" style="position: relative; margin: 0 -10px; display: flex; align-items: center; gap: 4px; white-space: nowrap; border-radius: 6px; padding: 8px 10px; font-size: 15px; font-weight: 500; color: #424242; text-decoration: none; transition: color 200ms ease, background-color 200ms ease;" style-hover="background: #E3F2FD; color: #1976D2;">
+            Services
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ref="{{ chevronRef }}" style="transition: transform 200ms ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <sc-if value="{{ servicesOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="position: absolute; left: 0; top: 100%; z-index: 50; width: 250px; padding-top: 12px;">
+              <div style="border-radius: 8px; background: #ffffff; padding: 10px; box-shadow: 0 12px 32px rgba(13,71,161,0.16);">
+                <a href="/services/urgent-care" style="display: block; border-radius: 6px; padding: 10px 14px; font-size: 15px; font-weight: 500; color: #424242; text-decoration: none; transition: background-color 150ms ease, color 150ms ease;" style-hover="background: #E3F2FD; color: #1976D2;">Urgent Care</a>
+                <a href="/services/family-health" style="display: block; border-radius: 6px; padding: 10px 14px; font-size: 15px; font-weight: 500; color: #424242; text-decoration: none; transition: background-color 150ms ease, color 150ms ease;" style-hover="background: #E3F2FD; color: #1976D2;">Family Health</a>
+                <a href="/services/womens-health" style="display: block; border-radius: 6px; padding: 10px 14px; font-size: 15px; font-weight: 500; color: #424242; text-decoration: none; transition: background-color 150ms ease, color 150ms ease;" style-hover="background: #E3F2FD; color: #1976D2;">Women's Health</a>
+                <a href="/services/pediatric-care" style="display: block; border-radius: 6px; padding: 10px 14px; font-size: 15px; font-weight: 500; color: #424242; text-decoration: none; transition: background-color 150ms ease, color 150ms ease;" style-hover="background: #E3F2FD; color: #1976D2;">Pediatric Care</a>
+                <a href="/services/diagnostic-services" style="display: block; border-radius: 6px; padding: 10px 14px; font-size: 15px; font-weight: 500; color: #424242; text-decoration: none; transition: background-color 150ms ease, color 150ms ease;" style-hover="background: #E3F2FD; color: #1976D2;">Diagnostic Services</a>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+        <div style="position: relative;">
+          <a href="/occupational-health" style="position: relative; margin: 0 -10px; display: flex; align-items: center; gap: 4px; white-space: nowrap; border-radius: 6px; padding: 8px 10px; font-size: 15px; font-weight: 500; color: #424242; text-decoration: none; transition: color 200ms ease, background-color 200ms ease;" style-hover="background: #E3F2FD; color: #1976D2;">Occupational Health</a>
+        </div>
+        <div style="position: relative;">
+          <a href="/contact" style="position: relative; margin: 0 -10px; display: flex; align-items: center; gap: 4px; white-space: nowrap; border-radius: 6px; padding: 8px 10px; font-size: 15px; font-weight: 500; color: #424242; text-decoration: none; transition: color 200ms ease, background-color 200ms ease;" style-hover="background: #E3F2FD; color: #1976D2;">Contact Us</a>
+        </div>
+      </nav>
+
+      <div data-om="nav-actions" style="display: flex; flex-shrink: 0; align-items: center; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <button type="button" aria-label="Switch to English" style="border: none; background: none; border-radius: 4px; padding: 2px 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: #1976D2;">EN</button>
+          <span aria-hidden="true" style="color: #E0E0E0;">|</span>
+          <button type="button" aria-label="Switch to Spanish" style="border: none; background: none; border-radius: 4px; padding: 2px 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: #424242;" style-hover="color: #424242;">ES</button>
+        </div>
+        <a href="/book-appointment" style="display: inline-flex; height: 44px; min-width: 190px; align-items: center; justify-content: center; border-radius: 8px; background: #1976D2; padding: 0 22px; font-size: 14.5px; font-weight: 600; color: #ffffff; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.16); transition: background-color 250ms ease, transform 200ms ease, box-shadow 250ms ease;" style-hover="background: #0D47A1; transform: translateY(-1px); box-shadow: 0 6px 14px rgba(13,71,161,0.22);">Book Appointment</a>
+      </div>
+    </div>
+
+    <sc-if value="{{ mobileNavOpen }}" hint-placeholder-val="{{ false }}">
+      <nav aria-label="Mobile" style="width: 100%; animation: mobile-fade 0.25s ease forwards; border-top: 1px solid #E0E0E0; background: #ffffff; padding: 14px 24px 24px; box-shadow: 0 16px 32px rgba(13,71,161,0.12);">
+        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 14px;">
+          <button type="button" aria-label="Switch to English" style="border: none; background: none; border-radius: 4px; padding: 2px 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: #1976D2;">EN</button>
+          <span aria-hidden="true" style="color: #E0E0E0;">|</span>
+          <button type="button" aria-label="Switch to Spanish" style="border: none; background: none; border-radius: 4px; padding: 2px 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: #424242;">ES</button>
+        </div>
+        <a href="/" style="display: block; border-bottom: 1px solid #E0E0E0; text-decoration: none;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px;">
+            <span style="font-size: 17px; font-weight: 600; color: #424242;">Home</span>
+          </div>
+        </a>
+        <a href="/urgent-care" style="display: block; border-bottom: 1px solid #E0E0E0; text-decoration: none;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px;">
+            <span style="font-size: 17px; font-weight: 600; color: #1976D2;">Urgent Care</span>
+          </div>
+        </a>
+        <details style="display: block; border-bottom: 1px solid #E0E0E0;">
+          <summary style="display: flex; cursor: pointer; list-style: none; align-items: center; justify-content: space-between; padding: 16px 4px;">
+            <span style="font-size: 17px; font-weight: 600; color: #424242;">Services</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: #424242;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px 12px 14px;">
+            <a href="/services/urgent-care" style="border-radius: 6px; padding: 8px 10px; font-size: 15px; font-weight: 600; color: #1976D2; text-decoration: none;">View All Services</a>
+            <a href="/services/urgent-care" style="border-radius: 6px; padding: 8px 10px; font-size: 15px; color: #424242; text-decoration: none;">Urgent Care</a>
+            <a href="/services/family-health" style="border-radius: 6px; padding: 8px 10px; font-size: 15px; color: #424242; text-decoration: none;">Family Health</a>
+            <a href="/services/womens-health" style="border-radius: 6px; padding: 8px 10px; font-size: 15px; color: #424242; text-decoration: none;">Women's Health</a>
+            <a href="/services/pediatric-care" style="border-radius: 6px; padding: 8px 10px; font-size: 15px; color: #424242; text-decoration: none;">Pediatric Care</a>
+            <a href="/services/diagnostic-services" style="border-radius: 6px; padding: 8px 10px; font-size: 15px; color: #424242; text-decoration: none;">Diagnostic Services</a>
+          </div>
+        </details>
+        <a href="/occupational-health" style="display: block; border-bottom: 1px solid #E0E0E0; text-decoration: none;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px;">
+            <span style="font-size: 17px; font-weight: 600; color: #424242;">Occupational Health</span>
+          </div>
+        </a>
+        <a href="/contact" style="display: block; border-bottom: 1px solid #E0E0E0; text-decoration: none;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 4px;">
+            <span style="font-size: 17px; font-weight: 600; color: #424242;">Contact Us</span>
+          </div>
+        </a>
+        <a href="/book-appointment" style="margin-top: 18px; display: flex; height: 52px; width: 100%; align-items: center; justify-content: center; border-radius: 8px; background: #1976D2; font-size: 16px; font-weight: 600; color: #ffffff; text-decoration: none;">Book Appointment</a>
+      </nav>
+    </sc-if>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section data-om="hero" style="position: relative; overflow: hidden; aspect-ratio: 1672 / 941; background: #ffffff;">
+      <img data-om="hero-clinic" src="assets/uc-clinic.png" alt="Alliance Medical Clinic urgent care entrance in Portage, Michigan" style="position: absolute; z-index: 10; left: 49.5%; top: 8%; width: 52%; height: auto; animation: about-fade-img 700ms cubic-bezier(0.22,1,0.36,1) 120ms both;" loading="eager" />
+      <img data-om="hero-frame" src="assets/uc-hero-frame.png" alt="" aria-hidden="true" style="pointer-events: none; position: absolute; z-index: 20; inset: 0; display: block; width: 100%; height: 100%; animation: hero-frame-in 700ms ease both;" loading="eager" />
+      <div data-om="hero-grid" style="position: absolute; inset: 0; z-index: 30; margin: 0 auto; width: min(1320px, calc(100% - 64px)); display: grid; grid-template-columns: minmax(0, 44%) minmax(0, 1fr); align-items: center; gap: 56px;">
+        <div style="position: relative; z-index: 1; min-width: 0; animation: about-fade-l 600ms cubic-bezier(0.22,1,0.36,1) both;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span aria-hidden="true" style="display: block; height: 2px; width: 26px; background: #1976D2;"></span>
+            <span style="font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: #1976D2;">Urgent Care</span>
+          </div>
+
+          <h1 style="margin: 14px 0 0; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(40px, 4.4vw, 58px); font-weight: 700; line-height: 1.06; letter-spacing: -1.6px; color: #0D47A1; text-wrap: pretty;">
+            When You<br />Need Care <span style="color: #1976D2;">Now</span>
+          </h1>
+
+          <p style="margin: 20px 0 0; max-width: 460px; font-size: 17.5px; line-height: 1.7; color: #424242; text-wrap: pretty;">Fast, compassionate care for non-emergency medical needs — with shorter wait times.</p>
+
+          <div data-om="hero-features" style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 28px;">
+            <div style="display: flex; align-items: center; gap: 11px;">
+              <img src="assets/uc-icon-walkins.png" alt="" aria-hidden="true" style="display: block; height: 42px; width: 42px; flex-shrink: 0;" />
+              <span style="font-size: 15px; font-weight: 600; line-height: 1.3; color: #424242;">Walk-ins<br />Welcome</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 11px;">
+              <img src="assets/uc-icon-hours.png" alt="" aria-hidden="true" style="display: block; height: 42px; width: 42px; flex-shrink: 0;" />
+              <span style="font-size: 15px; font-weight: 600; line-height: 1.3; color: #424242;">Extended<br />Hours</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 11px;">
+              <img src="assets/uc-icon-allages.png" alt="" aria-hidden="true" style="display: block; height: 42px; width: 42px; flex-shrink: 0;" />
+              <span style="font-size: 15px; font-weight: 600; line-height: 1.3; color: #424242;">All Ages<br />(6 months+)</span>
+            </div>
+          </div>
+
+          <a href="/book-appointment" style="margin-top: 32px; display: inline-flex; height: 56px; align-items: center; justify-content: center; gap: 12px; border-radius: 10px; background: #1976D2; padding: 0 34px; font-size: 16.5px; font-weight: 600; color: #ffffff; text-decoration: none; box-shadow: 0 8px 20px rgba(25,118,210,0.16); transition: background-color 250ms ease, transform 200ms ease, box-shadow 250ms ease;" style-hover="background: #0D47A1; transform: translateY(-1px); box-shadow: 0 12px 25px rgba(13,71,161,0.22);">
+            Get Urgent Care
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <div aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Common Conditions We Treat -->
+    <section style="position: relative; background: #ffffff; padding: 20px 0 70px;">
+      <div style="margin: 0 auto; width: min(1320px, calc(100% - 64px));">
+        <h2 style="margin: 0; text-align: center; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(30px, 3vw, 40px); font-weight: 700; line-height: 1.2; letter-spacing: -1px; color: #0D47A1;">Common Conditions We Treat</h2>
+
+        <div data-om="conditions-grid" style="margin-top: 34px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; border-radius: 10px; background: #E3F2FD; padding: 28px 20px; transition: transform 220ms ease, box-shadow 220ms ease;" style-hover="transform: translateY(-3px); box-shadow: 0 12px 30px rgba(13,71,161,0.07);">
+            <img src="assets/cond-cold-flu.png" alt="" aria-hidden="true" style="display: block; height: 104px; width: 104px; flex-shrink: 0;" />
+            <span style="font-size: 16px; font-weight: 600; color: #424242;">Cold &amp; Flu</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; border-radius: 10px; background: #E3F2FD; padding: 28px 20px; transition: transform 220ms ease, box-shadow 220ms ease;" style-hover="transform: translateY(-3px); box-shadow: 0 12px 30px rgba(13,71,161,0.07);">
+            <img src="assets/cond-strep-throat.png" alt="" aria-hidden="true" style="display: block; height: 104px; width: 104px; flex-shrink: 0;" />
+            <span style="font-size: 16px; font-weight: 600; color: #424242;">Strep Throat</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; border-radius: 10px; background: #E3F2FD; padding: 28px 20px; transition: transform 220ms ease, box-shadow 220ms ease;" style-hover="transform: translateY(-3px); box-shadow: 0 12px 30px rgba(13,71,161,0.07);">
+            <img src="assets/cond-ear-infections.png" alt="" aria-hidden="true" style="display: block; height: 104px; width: 104px; flex-shrink: 0;" />
+            <span style="font-size: 16px; font-weight: 600; color: #424242;">Ear Infections</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; border-radius: 10px; background: #E3F2FD; padding: 28px 20px; transition: transform 220ms ease, box-shadow 220ms ease;" style-hover="transform: translateY(-3px); box-shadow: 0 12px 30px rgba(13,71,161,0.07);">
+            <img src="assets/cond-minor-injuries.png" alt="" aria-hidden="true" style="display: block; height: 104px; width: 104px; flex-shrink: 0;" />
+            <span style="font-size: 16px; font-weight: 600; color: #424242;">Minor Injuries</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; border-radius: 10px; background: #E3F2FD; padding: 28px 20px; transition: transform 220ms ease, box-shadow 220ms ease;" style-hover="transform: translateY(-3px); box-shadow: 0 12px 30px rgba(13,71,161,0.07);">
+            <img src="assets/cond-allergies.png" alt="" aria-hidden="true" style="display: block; height: 104px; width: 104px; flex-shrink: 0;" />
+            <span style="font-size: 16px; font-weight: 600; color: #424242;">Allergies</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; border-radius: 10px; background: #E3F2FD; padding: 28px 20px; transition: transform 220ms ease, box-shadow 220ms ease;" style-hover="transform: translateY(-3px); box-shadow: 0 12px 30px rgba(13,71,161,0.07);">
+            <img src="assets/cond-skin-conditions.png" alt="" aria-hidden="true" style="display: block; height: 104px; width: 104px; flex-shrink: 0;" />
+            <span style="font-size: 16px; font-weight: 600; color: #424242;">Skin Conditions</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; border-radius: 10px; background: #E3F2FD; padding: 28px 20px; transition: transform 220ms ease, box-shadow 220ms ease;" style-hover="transform: translateY(-3px); box-shadow: 0 12px 30px rgba(13,71,161,0.07);">
+            <img src="assets/cond-utis.png" alt="" aria-hidden="true" style="display: block; height: 104px; width: 104px; flex-shrink: 0;" />
+            <span style="font-size: 16px; font-weight: 600; color: #424242;">UTIs</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; border-radius: 10px; background: #E3F2FD; padding: 28px 20px; transition: transform 220ms ease, box-shadow 220ms ease;" style-hover="transform: translateY(-3px); box-shadow: 0 12px 30px rgba(13,71,161,0.07);">
+            <img src="assets/cond-and-more.png" alt="" aria-hidden="true" style="display: block; height: 104px; width: 104px; flex-shrink: 0;" />
+            <span style="font-size: 16px; font-weight: 600; color: #424242;">And More</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick. Convenient. Trusted Care. -->
+    <section style="background: #ffffff; padding: 0 0 80px;">
+      <div style="margin: 0 auto; width: min(1320px, calc(100% - 64px));">
+        <div data-om="cta-panel" style="position: relative; overflow: hidden; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 40px; border-radius: 20px; background: #E3F2FD; padding: 48px 52px;">
+          <div aria-hidden="true" style="pointer-events: none; position: absolute; right: -80px; bottom: -140px; height: 320px; width: 320px; border-radius: 9999px; background: radial-gradient(circle, rgba(25,118,210,0.08), transparent 70%);"></div>
+
+          <span style="display: flex; height: 104px; width: 104px; flex-shrink: 0; align-items: center; justify-content: center; color: #1976D2;">
+            <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+          </span>
+
+          <div style="position: relative; min-width: 0;">
+            <h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(26px, 2.6vw, 34px); font-weight: 700; line-height: 1.2; letter-spacing: -0.8px; color: #0D47A1;">Quick. Convenient.<br />Trusted Care.</h2>
+            <p style="margin: 14px 0 0; max-width: 420px; font-size: 16.5px; line-height: 1.7; color: #424242; text-wrap: pretty;">Get the care you need, so you can get back to what matters.</p>
+          </div>
+
+          <a href="/book-appointment" style="position: relative; display: inline-flex; height: 56px; flex-shrink: 0; align-items: center; justify-content: center; gap: 12px; border-radius: 10px; background: #1976D2; padding: 0 34px; font-size: 16.5px; font-weight: 600; color: #ffffff; text-decoration: none; box-shadow: 0 8px 20px rgba(25,118,210,0.16); transition: background-color 250ms ease, transform 200ms ease, box-shadow 250ms ease;" style-hover="background: #0D47A1; transform: translateY(-1px); box-shadow: 0 12px 25px rgba(13,71,161,0.22);">
+            Get Urgent Care
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile footer -->
+  <footer data-om="mobile" style="background: #0D47A1; padding: 30px 22px 26px; color: #ffffff;">
+    <img src="assets/logo.png" alt="Alliance Medical Clinic" width="135" height="45" style="object-fit: contain; flex-shrink: 0;" />
+    <div style="margin-top: 8px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; color: #42A5F5;">Compassionate Care. Healthier You.</div>
+    <p style="margin: 14px 0 0; font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.72);">Compassionate medical care for the Portage community.</p>
+    <div style="margin-top: 22px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.12); padding: 18px 2px; font-size: 16px; font-weight: 700;">Contact Info</div>
+      <div style="display: flex; flex-direction: column; gap: 12px; padding: 0 2px 18px;">
+        <a href="tel:+12693214774" style="display: flex; align-items: flex-start; gap: 13px; font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.78); text-decoration: none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top: 2px; flex-shrink: 0; color: #1976D2;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>(269) 321-4774</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=8145+Valleywood+Lane+Portage+MI+49024" target="_blank" rel="noopener" style="display: flex; align-items: flex-start; gap: 13px; font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.78); text-decoration: none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top: 2px; flex-shrink: 0; color: #0D47A1;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>8145 Valleywood Lane<br />Portage, MI 49024</span>
+        </a>
+      </div>
+      <button type="button" onClick="{{ toggleFooterServices }}" style="display: flex; width: 100%; min-height: 56px; align-items: center; justify-content: space-between; border: none; border-top: 1px solid rgba(255,255,255,0.12); background: transparent; padding: 18px 2px; text-align: left; font-family: inherit; font-size: 16px; font-weight: 700; color: #ffffff;">
+        Services
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; color: #90CAF9;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <sc-if value="{{ footerServicesOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); column-gap: 14px; padding: 0 2px 14px; font-size: 14.5px;">
+          <a href="/services/urgent-care" style="display: flex; min-height: 44px; align-items: center; color: rgba(255,255,255,0.82); text-decoration: none;">Urgent Care</a>
+          <a href="/services/family-health" style="display: flex; min-height: 44px; align-items: center; color: rgba(255,255,255,0.82); text-decoration: none;">Family Health</a>
+          <a href="/occupational-health" style="display: flex; min-height: 44px; align-items: center; color: rgba(255,255,255,0.82); text-decoration: none;">Occupational Health</a>
+          <a href="/services/womens-health" style="display: flex; min-height: 44px; align-items: center; color: rgba(255,255,255,0.82); text-decoration: none;">Women's Health</a>
+          <a href="/services/pediatric-care" style="display: flex; min-height: 44px; align-items: center; color: rgba(255,255,255,0.82); text-decoration: none;">Pediatric Care</a>
+          <a href="/services/diagnostic-services" style="display: flex; min-height: 44px; align-items: center; color: rgba(255,255,255,0.82); text-decoration: none;">Diagnostic Services</a>
+        </div>
+      </sc-if>
+      <button type="button" onClick="{{ toggleFooterAbout }}" style="display: flex; width: 100%; min-height: 56px; align-items: center; justify-content: space-between; border: none; border-top: 1px solid rgba(255,255,255,0.12); background: transparent; padding: 18px 2px; text-align: left; font-family: inherit; font-size: 16px; font-weight: 700; color: #ffffff;">
+        About Alliance
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; color: #90CAF9;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <sc-if value="{{ footerAboutOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="padding: 0 2px 16px;">
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.65; color: rgba(255,255,255,0.72);">Providing quality urgent care and family health services to the Portage, Michigan community with compassion, expertise, and convenience.</p>
+          <a href="/book-appointment" style="margin-top: 14px; display: flex; height: 52px; align-items: center; justify-content: center; gap: 8px; border-radius: 9px; border: 1px solid rgba(255,255,255,0.20); background: rgba(255,255,255,0.10); font-size: 14px; font-weight: 600; color: #ffffff; text-decoration: none;">Need care today? Book Appointment</a>
+        </div>
+      </sc-if>
+      <div style="border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px;">
+        <div style="display: flex; gap: 12px;">
+          <a href="#" aria-label="Visit Alliance Medical Clinic on Facebook" style="display: flex; height: 46px; width: 46px; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75); text-decoration: none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"></path></svg>
+          </a>
+          <a href="#" aria-label="Visit Alliance Medical Clinic on Twitter" style="display: flex; height: 46px; width: 46px; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75); text-decoration: none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.9c-.7.35-1.5.6-2.3.7a4 4 0 0 0 1.75-2.2c-.8.45-1.65.8-2.55 1a4 4 0 0 0-6.8 3.6A11.4 11.4 0 0 1 3.5 4.6a4 4 0 0 0 1.24 5.3 4 4 0 0 1-1.8-.5 4 4 0 0 0 3.2 3.9 4 4 0 0 1-1.8.07 4 4 0 0 0 3.7 2.8A11.4 11.4 0 0 1 2 18.5a11.4 11.4 0 0 0 6.2 1.8c7.4 0 11.5-6.2 11.5-11.5v-.5c.8-.55 1.5-1.25 2.3-2.4z"></path></svg>
+          </a>
+          <a href="#" aria-label="Visit Alliance Medical Clinic on Instagram" style="display: flex; height: 46px; width: 46px; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75); text-decoration: none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+          </a>
+        </div>
+        <div style="margin-top: 18px; display: flex; flex-wrap: wrap; column-gap: 20px; row-gap: 6px;">
+          <a href="#" style="display: flex; min-height: 44px; align-items: center; font-size: 13px; color: rgba(255,255,255,0.6); text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="display: flex; min-height: 44px; align-items: center; font-size: 13px; color: rgba(255,255,255,0.6); text-decoration: none;">Terms of Service</a>
+          <a href="#" style="display: flex; min-height: 44px; align-items: center; font-size: 13px; color: rgba(255,255,255,0.6); text-decoration: none;">HIPAA Notice</a>
+        </div>
+        <div style="margin-top: 6px; font-size: 12.5px; color: rgba(255,255,255,0.55);">© 2026 Alliance Medical Clinic</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Desktop footer -->
+  <footer data-om="desktop" style="position: relative; overflow: visible; color: #ffffff; background: linear-gradient(135deg, #0D47A1 0%, #0D47A1 60%, #0D47A1 100%);">
+    <div aria-hidden="true" style="pointer-events: none; position: absolute; inset: 0; z-index: 0; overflow: hidden;">
+      <div style="position: absolute; right: -100px; top: -250px; height: 500px; width: 500px; border-radius: 9999px; background: radial-gradient(circle, rgba(25,118,210,0.08), transparent 70%);"></div>
+      <div style="position: absolute; bottom: -200px; left: -100px; height: 400px; width: 400px; border-radius: 9999px; opacity: 0.6; background: radial-gradient(circle, rgba(25,118,210,0.05), transparent 70%);"></div>
+    </div>
+
+    <div data-om="footer-inner" style="position: relative; margin: 0 auto; max-width: 1320px; padding: 45px 24px;">
+      <div data-om="footer-grid" style="display: grid; grid-template-columns: 1.05fr 1fr 1.15fr 1.15fr; gap: 55px;">
+        <div style="animation: ft-fade 450ms ease both;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/logo.png" alt="Alliance Medical Clinic" width="150" height="50" style="object-fit: contain; flex-shrink: 0;" />
+            <div style="display: flex; flex-direction: column; line-height: 1.15;">
+              <span style="white-space: nowrap; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; color: #42A5F5;">Compassionate Care. Healthier You.</span>
+            </div>
+          </div>
+          <p style="margin: 20px 0 0; max-width: 260px; font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.68);">Compassionate medical care for the Portage community.</p>
+        </div>
+
+        <div style="animation: ft-fade 450ms ease 70ms both;">
+          <div style="font-size: 21px; font-weight: 700; color: #ffffff;">About Alliance</div>
+          <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.76);">Providing quality urgent care and family health services to the Portage, Michigan community with compassion, expertise, and convenience.</p>
+          <div style="margin-top: 24px; display: flex; gap: 12px;">
+            <a href="#" aria-label="Visit Alliance Medical Clinic on Facebook" style="display: flex; height: 42px; width: 42px; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.65); text-decoration: none; transition: transform 220ms ease, background-color 220ms ease, color 220ms ease, border-color 220ms ease;" style-hover="transform: translateY(-3px) scale(1.03); border-color: #ffffff; background: #ffffff; color: #42A5F5;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"></path></svg>
+            </a>
+            <a href="#" aria-label="Visit Alliance Medical Clinic on Twitter" style="display: flex; height: 42px; width: 42px; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.65); text-decoration: none; transition: transform 220ms ease, background-color 220ms ease, color 220ms ease, border-color 220ms ease;" style-hover="transform: translateY(-3px) scale(1.03); border-color: #ffffff; background: #ffffff; color: #42A5F5;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.9c-.7.35-1.5.6-2.3.7a4 4 0 0 0 1.75-2.2c-.8.45-1.65.8-2.55 1a4 4 0 0 0-6.8 3.6A11.4 11.4 0 0 1 3.5 4.6a4 4 0 0 0 1.24 5.3 4 4 0 0 1-1.8-.5 4 4 0 0 0 3.2 3.9 4 4 0 0 1-1.8.07 4 4 0 0 0 3.7 2.8A11.4 11.4 0 0 1 2 18.5a11.4 11.4 0 0 0 6.2 1.8c7.4 0 11.5-6.2 11.5-11.5v-.5c.8-.55 1.5-1.25 2.3-2.4z"></path></svg>
+            </a>
+            <a href="#" aria-label="Visit Alliance Medical Clinic on Instagram" style="display: flex; height: 42px; width: 42px; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.65); text-decoration: none; transition: transform 220ms ease, background-color 220ms ease, color 220ms ease, border-color 220ms ease;" style-hover="transform: translateY(-3px) scale(1.03); border-color: #ffffff; background: #ffffff; color: #42A5F5;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+            </a>
+          </div>
+          <a href="/book-appointment" style="margin-top: 22px; display: inline-flex; align-items: center; gap: 8px; border-radius: 9px; border: 1px solid rgba(255,255,255,0.13); background: rgba(255,255,255,0.08); padding: 11px 18px; font-size: 13px; font-weight: 600; color: #ffffff; text-decoration: none; transition: background-color 200ms ease, color 200ms ease;" style-hover="background: #ffffff; color: #42A5F5;">Need care today? Book Appointment</a>
+        </div>
+
+        <div style="animation: ft-fade 450ms ease 140ms both;">
+          <div style="font-size: 21px; font-weight: 700; color: #ffffff;">Contact Info</div>
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 17px;">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=8145+Valleywood+Lane+Portage+MI+49024" target="_blank" rel="noopener" style="display: flex; align-items: flex-start; gap: 13px; font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.78); text-decoration: none; transition: color 200ms ease;" style-hover="color: #ffffff;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top: 2px; flex-shrink: 0; color: #0D47A1;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>8145 Valleywood Lane<br />Portage, MI 49024</span>
+            </a>
+            <a href="tel:+12693214774" style="display: flex; align-items: flex-start; gap: 13px; font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.78); text-decoration: none; transition: color 200ms ease;" style-hover="color: #ffffff;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top: 2px; flex-shrink: 0; color: #1976D2;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(269) 321-4774</span>
+            </a>
+            <div style="display: flex; align-items: flex-start; gap: 13px; font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.78);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top: 2px; flex-shrink: 0; color: #42A5F5;"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              <span>(269) 222-2582</span>
+            </div>
+            <a href="mailto:info@accessnowcare.com" style="display: flex; align-items: flex-start; gap: 13px; font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.78); text-decoration: none; transition: color 200ms ease;" style-hover="color: #ffffff;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top: 2px; flex-shrink: 0; color: #90CAF9;"><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6z"></path><path d="m22 6-10 7L2 6"></path></svg>
+              <span>info@accessnowcare.com</span>
+            </a>
+          </div>
+          <div style="margin-top: 22px; display: flex; align-items: center; gap: 10px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 18px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: rgba(255,255,255,0.7);"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+            <span style="font-size: 13.5px; color: rgba(255,255,255,0.7);">Open 7 Days · 12:00 PM – 8:00 PM</span>
+          </div>
+        </div>
+
+        <div style="animation: ft-fade 450ms ease 210ms both;">
+          <div style="font-size: 21px; font-weight: 700; color: #ffffff;">Services</div>
+          <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); column-gap: 28px; row-gap: 13px; font-size: 14.5px;">
+            <a href="/services/urgent-care" style="position: relative; display: inline-flex; width: fit-content; align-items: center; color: rgba(255,255,255,0.78); text-decoration: none; transition: color 200ms ease, transform 200ms ease;" style-hover="transform: translateX(4px); color: #ffffff;">Urgent Care</a>
+            <a href="/services/family-health" style="position: relative; display: inline-flex; width: fit-content; align-items: center; color: rgba(255,255,255,0.78); text-decoration: none; transition: color 200ms ease, transform 200ms ease;" style-hover="transform: translateX(4px); color: #ffffff;">Family Health</a>
+            <a href="/occupational-health" style="position: relative; display: inline-flex; width: fit-content; align-items: center; color: rgba(255,255,255,0.78); text-decoration: none; transition: color 200ms ease, transform 200ms ease;" style-hover="transform: translateX(4px); color: #ffffff;">Occupational Health</a>
+            <a href="/services/womens-health" style="position: relative; display: inline-flex; width: fit-content; align-items: center; color: rgba(255,255,255,0.78); text-decoration: none; transition: color 200ms ease, transform 200ms ease;" style-hover="transform: translateX(4px); color: #ffffff;">Women's Health</a>
+            <a href="/services/pediatric-care" style="position: relative; display: inline-flex; width: fit-content; align-items: center; color: rgba(255,255,255,0.78); text-decoration: none; transition: color 200ms ease, transform 200ms ease;" style-hover="transform: translateX(4px); color: #ffffff;">Pediatric Care</a>
+            <a href="/services/diagnostic-services" style="position: relative; display: inline-flex; width: fit-content; align-items: center; color: rgba(255,255,255,0.78); text-decoration: none; transition: color 200ms ease, transform 200ms ease;" style-hover="transform: translateX(4px); color: #ffffff;">Diagnostic Services</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 48px; border-top: 1px solid rgba(255,255,255,0.09);"></div>
+
+      <div data-om="footer-legal" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 28px;">
+        <div style="font-size: 13.5px; color: rgba(255,255,255,0.55);">© 2026 Alliance Medical Clinic</div>
+        <div style="display: flex; gap: 30px;">
+          <a href="#" style="font-size: 13.5px; color: rgba(255,255,255,0.42); text-decoration: none; transition: color 200ms ease;" style-hover="color: rgba(255,255,255,0.9);">Privacy Policy</a>
+          <a href="#" style="font-size: 13.5px; color: rgba(255,255,255,0.42); text-decoration: none; transition: color 200ms ease;" style-hover="color: rgba(255,255,255,0.9);">Terms of Service</a>
+          <a href="#" style="font-size: 13.5px; color: rgba(255,255,255,0.42); text-decoration: none; transition: color 200ms ease;" style-hover="color: rgba(255,255,255,0.9);">HIPAA Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Spacer reserving room for the fixed mobile action bar -->
+  <div data-om="mobile" aria-hidden="true" style="height: calc(72px + env(safe-area-inset-bottom));"></div>
+
+  <!-- Mobile action bar -->
+  <div data-om="mobile" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: 96px 1fr; gap: 10px; border-top: 1px solid #E0E0E0; background: rgba(255,255,255,0.97); padding: 11px 16px calc(11px + env(safe-area-inset-bottom)); box-shadow: 0 -6px 20px rgba(13,71,161,0.10); backdrop-filter: blur(8px);">
+    <a href="tel:+12693214774" style="display: flex; height: 50px; align-items: center; justify-content: center; gap: 7px; border-radius: 8px; border: 1.5px solid #1976D2; font-size: 14.5px; font-weight: 700; color: #1976D2; text-decoration: none;">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Call
+    </a>
+    <a href="/book-appointment" style="display: flex; height: 50px; align-items: center; justify-content: center; gap: 8px; border-radius: 8px; background: #1976D2; font-size: 15.5px; font-weight: 600; color: #ffffff; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.16);">
+      Book Appointment
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = {
+    drawerOpen: false,
+    drawerServicesOpen: true,
+    mobileNavOpen: false,
+    servicesOpen: false,
+    footerServicesOpen: false,
+    footerAboutOpen: false,
+  };
+
+  navRef = React.createRef();
+  chevronRef = React.createRef();
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const el = this.navRef.current;
+      if (!el) return;
+      const scrolled = window.scrollY > 80;
+      el.style.backgroundColor = scrolled ? "rgba(255,255,255,0.98)" : "#ffffff";
+      el.style.boxShadow = scrolled ? "0 4px 18px rgba(13,71,161,0.08)" : "none";
+      el.style.backdropFilter = scrolled ? "blur(10px)" : "none";
+    };
+    this.onScroll();
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+  }
+
+  setChevron(open) {
+    if (this.chevronRef.current) {
+      this.chevronRef.current.style.transform = open ? "rotate(180deg)" : "rotate(0deg)";
+    }
+  }
+
+  renderVals() {
+    const s = this.state;
+    return {
+      navRef: this.navRef,
+      chevronRef: this.chevronRef,
+      drawerOpen: s.drawerOpen,
+      drawerClosed: !s.drawerOpen,
+      drawerServicesOpen: s.drawerServicesOpen,
+      mobileNavOpen: s.mobileNavOpen,
+      mobileNavClosed: !s.mobileNavOpen,
+      servicesOpen: s.servicesOpen,
+      footerServicesOpen: s.footerServicesOpen,
+      footerAboutOpen: s.footerAboutOpen,
+      toggleDrawer: () => this.setState((p) => ({ drawerOpen: !p.drawerOpen })),
+      toggleDrawerServices: () => this.setState((p) => ({ drawerServicesOpen: !p.drawerServicesOpen })),
+      toggleMobileNav: () => this.setState((p) => ({ mobileNavOpen: !p.mobileNavOpen })),
+      openServices: () => { this.setChevron(true); this.setState({ servicesOpen: true }); },
+      closeServices: () => { this.setChevron(false); this.setState({ servicesOpen: false }); },
+      toggleFooterServices: () => this.setState((p) => ({ footerServicesOpen: !p.footerServicesOpen })),
+      toggleFooterAbout: () => this.setState((p) => ({ footerAboutOpen: !p.footerAboutOpen })),
+    };
+  }
+}
+</script>
+</body>
+</html>

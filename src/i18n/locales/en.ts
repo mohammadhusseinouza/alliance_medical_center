@@ -7,12 +7,13 @@ export const en = {
     openDaysShort: "Open 7 Days · 12–8 PM",
     hoursDaysRange: "Monday – Sunday",
     hoursSummary: "Open 7 Days · {{time}}",
-    cityShort: "Portage, MI",
+    cityShort: "Pontiac, MI",
     call: "Call",
     callClinicAria: "Call the clinic",
   },
   navbar: {
     home: "Home",
+    urgentCare: "Urgent Care",
     services: "Services",
     occupationalHealth: "Occupational Health",
     contactUs: "Contact Us",
@@ -28,7 +29,7 @@ export const en = {
         headingLine1: "Quality Care",
         headingLine2: "When You Need It Most",
         description:
-          "Compassionate urgent care and family health services for every stage of life in Portage, Michigan.",
+          "Compassionate urgent care and family health services for every stage of life in Pontiac, Michigan.",
         ariaLabel: "Doctor with patient in a bright exam room",
       },
       wholeFamily: {
@@ -108,7 +109,7 @@ export const en = {
     urgentCare: {
       heading: "Professional Urgent Care When You Need It",
       intro:
-        "Alliance Medical Clinic provides same-day treatment for minor illnesses and injuries, with walk-in convenience and minimal wait times. Our clinicians deliver professional, family-friendly care and clear guidance on next steps, so you can get back to feeling like yourself.",
+        "Alliance Medical Center provides same-day treatment for minor illnesses and injuries, with walk-in convenience and minimal wait times. Our clinicians deliver professional, family-friendly care and clear guidance on next steps, so you can get back to feeling like yourself.",
       whatsIncluded: "What's Included",
       heroImageAlt: "Clinician talking with a patient in a bright exam room",
       mainPhotoAlt: "Doctor reviewing results with a patient",
@@ -567,7 +568,7 @@ export const en = {
     hero: {
       heading: "Contact Us",
       description: "We're here to answer your questions and help you get the care you need.",
-      imageAlt: "Alliance Medical Clinic team member ready to assist a patient",
+      imageAlt: "Alliance Medical Center team member ready to assist a patient",
     },
     form: {
       heading: "Send Us a Message",
@@ -611,18 +612,52 @@ export const en = {
       emergencyAction: "Call Emergency Line",
     },
   },
+  urgentCare: {
+    hero: {
+      eyebrow: "Urgent Care",
+      headingLine1: "When You",
+      headingLine2Before: "Need Care",
+      headingHighlight: "Now",
+      description: "Fast, compassionate care for non-emergency medical needs — with shorter wait times.",
+      clinicImageAlt: "Alliance Medical Center urgent care entrance in Pontiac, Michigan",
+      quickInfo: {
+        walkIns: { line1: "Walk-ins", line2: "Welcome" },
+        hours: { line1: "Extended", line2: "Hours" },
+        allAges: { line1: "All Ages", line2: "(6 months+)" },
+      },
+    },
+    ctaButton: "Get Urgent Care",
+    conditions: {
+      heading: "Common Conditions We Treat",
+      items: {
+        coldFlu: "Cold & Flu",
+        strepThroat: "Strep Throat",
+        earInfections: "Ear Infections",
+        minorInjuries: "Minor Injuries",
+        allergies: "Allergies",
+        skinConditions: "Skin Conditions",
+        utis: "UTIs",
+        andMore: "And More",
+      },
+    },
+    cta: {
+      headingLine1: "Quick. Convenient.",
+      headingLine2: "Trusted Care.",
+      description: "Get the care you need, so you can get back to what matters.",
+    },
+  },
   about: {
     eyebrow: "About Us",
     headingLine1: "Complete Care,",
     headingLine2: "All in One Place",
     description:
-      "From urgent care and family medicine to diagnostics and preventive services, Alliance Medical Clinic offers coordinated care designed around your everyday health needs.",
+      "From urgent care and family medicine to diagnostics and preventive services, Alliance Medical Center offers coordinated care designed around your everyday health needs.",
     feature: {
       title: "Comprehensive Care",
       description: "A broad range of services delivered under one roof for greater convenience.",
     },
     cta: "Explore Services",
-    imageAlt: "Doctor consulting with a patient at Alliance Medical Clinic",
+    imageAlt: "Doctor consulting with a patient at Alliance Medical Center",
     stats: {
       openDays: {
         // Title intentionally omitted — this stat reuses the shared
@@ -634,7 +669,7 @@ export const en = {
         description: "Labs, X-rays, and testing available without extra stops.",
       },
       location: {
-        title: "Portage, Michigan",
+        title: "Pontiac, Michigan",
         description: "Convenient, local access for families and employers.",
       },
     },
@@ -645,7 +680,7 @@ export const en = {
     headingHighlight: "everyone.",
     headingLine2: "Treatment for everyday needs.",
     description:
-      "Whether you are bringing in your child, reporting a work injury, or need same-day help for a common illness—we are built for Portage families, workers, and employers alike.",
+      "Whether you are bringing in your child, reporting a work injury, or need same-day help for a common illness—we are built for Pontiac families, workers, and employers alike.",
     learnMore: "Learn more",
     imageAlt: "Doctor facing forward, arms crossed",
     items: {
@@ -920,12 +955,12 @@ export const en = {
     viewFullProfile: "View Full Profile",
     swipeHint: "Swipe to meet the team",
     roles: {
-      mahmoudKassir: "Family Physician & Co-Founder",
-      dalalKassir: "Medical Director & Family Medicine Physician",
-      amyMeints: "Family Nurse Practitioner",
-      robinKuiper: "Family Nurse Practitioner",
-      amandaKerwin: "Practice Manager",
-      breiannChurch: "Registered Medical Assistant",
+      emilyCarter: "Family Physician & Co-Founder",
+      michaelReed: "Medical Director & Family Medicine Physician",
+      sophiaBennett: "Family Nurse Practitioner",
+      danielBrooks: "Family Nurse Practitioner",
+      oliviaHayes: "Practice Manager",
+      ethanCollins: "Registered Medical Assistant",
     },
   },
   appointmentReferral: {
@@ -943,9 +978,9 @@ export const en = {
   },
   reachUs: {
     eyebrow: "Location",
-    heading: "Reach Us in Portage",
+    heading: "Reach Us in Pontiac",
     description:
-      "Walk in, call ahead, or get directions—we are here in Portage with convenient parking and a welcoming clinic ready to help your family.",
+      "Walk in, call ahead, or get directions—we are here in Pontiac with convenient parking and a welcoming clinic ready to help your family.",
     mapTitle: "Map showing {{business}} at {{address}}",
     parkingTitle: "Convenient parking",
     parkingSubtitle: "available on-site",
@@ -964,14 +999,14 @@ export const en = {
     },
   },
   footer: {
-    tagline: "Compassionate medical care for the Portage community.",
+    tagline: "Compassionate medical care for the Pontiac community.",
     aboutDescription:
-      "Providing quality urgent care and family health services to the Portage, Michigan community with compassion, expertise, and convenience.",
+      "Providing quality urgent care and family health services to the Pontiac, Michigan community with compassion, expertise, and convenience.",
     ctaText: "Need care today? Book Appointment",
     socialAria: {
-      facebook: "Visit Alliance Medical Clinic on Facebook",
-      twitter: "Visit Alliance Medical Clinic on Twitter",
-      instagram: "Visit Alliance Medical Clinic on Instagram",
+      facebook: "Visit Alliance Medical Center on Facebook",
+      twitter: "Visit Alliance Medical Center on Twitter",
+      instagram: "Visit Alliance Medical Center on Instagram",
     },
     contactInfoHeading: "Contact Info",
     servicesHeading: "Services",
@@ -987,7 +1022,7 @@ export const en = {
       eyebrow: "APPOINTMENT",
       heading: "Book Your Visit",
       description:
-        "Schedule a convenient visit with Alliance Medical Clinic. Choose your preferred date and available time, then provide your details to request your appointment.",
+        "Schedule a convenient visit with Alliance Medical Center. Choose your preferred date and available time, then provide your details to request your appointment.",
     },
     doctorAlt:
       "Male doctor in white coat, blue shirt, navy tie, stethoscope, smiling, holding a blank clipboard, pointing toward the form",
@@ -1072,48 +1107,48 @@ export const en = {
   },
   meta: {
     home: {
-      title: "Alliance Medical Clinic — Urgent Care & Family Health in Portage, MI",
+      title: "Alliance Medical Center — Urgent Care & Family Health in Pontiac, MI",
       description:
-        "Urgent care and family health services in Portage, Michigan. Open 7 days a week, 12:00 PM - 8:00 PM. Walk in or book an appointment.",
+        "Urgent care and family health services in Pontiac, Michigan. Open 7 days a week, 12:00 PM - 8:00 PM. Walk in or book an appointment.",
     },
     booking: {
-      title: "Book an Appointment — Alliance Medical Clinic",
+      title: "Book an Appointment — Alliance Medical Center",
       description:
-        "Schedule a visit with Alliance Medical Clinic in Portage, Michigan. Choose a date and time, then request your appointment online.",
+        "Schedule a visit with Alliance Medical Center in Pontiac, Michigan. Choose a date and time, then request your appointment online.",
     },
     urgentCare: {
-      title: "Urgent Care Services — Alliance Medical Clinic",
+      title: "Urgent Care — Alliance Medical Center",
       description:
-        "Same-day urgent care in Portage, Michigan. Walk-ins welcome, 7 days a week from 12:00 PM to 8:00 PM. See what's included in a visit.",
+        "Fast, walk-in urgent care in Pontiac, Michigan. Shorter wait times for non-emergency illnesses and injuries, 7 days a week.",
     },
     occupationalHealth: {
-      title: "Occupational Health — Alliance Medical Clinic",
+      title: "Occupational Health — Alliance Medical Center",
       description:
-        "Occupational medicine and workplace health services in Portage, Michigan, including physicals, injury care, and employee health programs.",
+        "Occupational medicine and workplace health services in Pontiac, Michigan, including physicals, injury care, and employee health programs.",
     },
     diagnosticServices: {
-      title: "Diagnostic Services — Alliance Medical Clinic",
+      title: "Diagnostic Services — Alliance Medical Center",
       description: "Advanced testing and imaging services to help diagnose and monitor health conditions.",
     },
     womensHealth: {
-      title: "Women's Health Services — Alliance Medical Clinic",
+      title: "Women's Health Services — Alliance Medical Center",
       description:
-        "Comprehensive women's health services in Portage, Michigan, including preventive care, prenatal care, and wellness management.",
+        "Comprehensive women's health services in Pontiac, Michigan, including preventive care, prenatal care, and wellness management.",
     },
     pediatricCare: {
-      title: "Pediatric Care Services — Alliance Medical Clinic",
+      title: "Pediatric Care Services — Alliance Medical Center",
       description:
-        "Specialized healthcare for infants, children, and adolescents in Portage, Michigan, including checkups, immunizations, and illness treatment.",
+        "Specialized healthcare for infants, children, and adolescents in Pontiac, Michigan, including checkups, immunizations, and illness treatment.",
     },
     familyHealth: {
-      title: "Family Health Services — Alliance Medical Clinic",
+      title: "Family Health Services — Alliance Medical Center",
       description:
-        "Comprehensive primary care for your entire family in Portage, Michigan, including physicals, chronic disease management, and preventive screenings.",
+        "Comprehensive primary care for your entire family in Pontiac, Michigan, including physicals, chronic disease management, and preventive screenings.",
     },
     contact: {
-      title: "Contact Us — Alliance Medical Clinic",
+      title: "Contact Us — Alliance Medical Center",
       description:
-        "Get in touch with Alliance Medical Clinic. Call, email, or visit our clinic, or send us a message and we'll get back to you.",
+        "Get in touch with Alliance Medical Center. Call, email, or visit our clinic, or send us a message and we'll get back to you.",
     },
   },
 } as const;

@@ -8,7 +8,7 @@
  * tailwind.config.ts. `services.data.ts` and `tailwind.config.ts` both
  * import from here so there is one definition, not two.
  *
- * Alliance Medical Clinic migration (Phase 7.1): all eight now cycle
+ * Alliance Medical Center migration (Phase 7.1): all eight now cycle
  * through the four interactive Alliance blues (Deep, Primary, Bright,
  * Light) instead of the old unrelated teal/green/purple/pink/orange set.
  */
@@ -28,7 +28,7 @@ export const SERVICE_ACCENT = {
  * `footer.data.ts` and `tailwind.config.ts` both import from here so there
  * is one definition, not two — same pattern as `SERVICE_ACCENT` above.
  *
- * Alliance Medical Clinic migration (Phase 7.1): the four Footer contact
+ * Alliance Medical Center migration (Phase 7.1): the four Footer contact
  * rows (address/phone/fax/email) now use four distinct Alliance blues
  * instead of the old cyan/teal/purple/blue mixture, preserving the
  * per-row color-coding that helps scan the four rows at a glance.

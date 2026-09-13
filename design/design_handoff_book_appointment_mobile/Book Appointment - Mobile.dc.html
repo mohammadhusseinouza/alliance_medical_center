@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #EDEFF2; font-family: "Lato", Arial, sans-serif; }
+  a { color: #1976D2; }
+  a:hover { color: #0D47A1; }
+  .om-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+  .om-scroll::-webkit-scrollbar { display: none; }
+  input::placeholder, textarea::placeholder { color: #9E9E9E; }
+  .bk-slots { scrollbar-width: thin; scrollbar-color: #1976D2 #E3F2FD; }
+  .bk-slots::-webkit-scrollbar { width: 8px; }
+  .bk-slots::-webkit-scrollbar-thumb { border-radius: 8px; background: #1976D2; }
+  .bk-slots::-webkit-scrollbar-track { border-radius: 8px; background: #E3F2FD; }
+</style>
+</helmet>
+
+<section style="display:flex;flex-direction:column;gap:28px;padding:40px;background:#EDEFF2">
+
+  <div style="display:flex;align-items:baseline;gap:14px;font-family:Lato,Arial,sans-serif">
+    <span style="display:inline-flex;align-items:center;justify-content:center;height:26px;min-width:34px;border-radius:6px;background:#0D47A1;color:#fff;font-size:13px;font-weight:700;letter-spacing:0.4px">5a</span>
+    <h1 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;color:#0D47A1">Book an Appointment — mobile, 390px</h1>
+    <span style="font-size:13px;color:#5B6470">Two-step booking form: appointment details, then optional insurance. Calendar and time slots stack.</span>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:36px">
+
+    <div id="5a" style="flex:0 0 auto">
+      <div style="width:390px;overflow:hidden;border-radius:26px;border:1px solid #D6DAE0;background:#fff;box-shadow:0 24px 60px rgba(13,71,161,0.14)">
+
+        <div style="display:flex;align-items:center;gap:8px;background:#F5F5F5;border-bottom:1px solid #E0E0E0;padding:10px 14px">
+          <span style="height:9px;width:9px;border-radius:9999px;background:#D6DAE0"></span>
+          <span style="height:9px;width:9px;border-radius:9999px;background:#D6DAE0"></span>
+          <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border-radius:6px;background:#fff;border:1px solid #E0E0E0;padding:4px 10px;font-size:11px;color:#9E9E9E">alliancemedicalclinic.com/book-appointment</span>
+        </div>
+
+        <div style="position:relative;height:800px;overflow-y:auto;overflow-x:hidden;background:#fff" class="om-scroll">
+
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;background:#0D47A1;padding:0 16px;height:34px">
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:0.3px;color:#fff">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+              Open 7 Days · 12–8 PM
+            </span>
+            <a href="tel:+12693214774" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;color:#90CAF9;text-decoration:none">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              (269) 321-4774
+            </a>
+          </div>
+
+          <div style="position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #E0E0E0;background:#fff;padding:0 16px;height:64px">
+            <img src="assets/logo.png" alt="Alliance Medical Clinic" width="123" height="41" style="object-fit:contain;flex-shrink:0" />
+            <div style="display:flex;align-items:center;gap:6px">
+              <a href="tel:+12693214774" aria-label="Call the clinic" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:10px;border:1.5px solid #1976D2;color:#1976D2;text-decoration:none">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </a>
+              <button type="button" aria-label="Open menu" style="display:flex;height:46px;width:46px;align-items:center;justify-content:center;border-radius:10px;border:none;background:#E3F2FD;color:#0D47A1;cursor:pointer">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg>
+              </button>
+            </div>
+          </div>
+
+          <section style="background:#fff;padding:26px 16px 0;text-align:center">
+            <span style="display:inline-block;border-radius:20px;background:#E3F2FD;padding:7px 16px;font-size:12.5px;font-weight:700;letter-spacing:0.6px;color:#1976D2">APPOINTMENT</span>
+            <h1 style="margin:16px 0 0;font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:700;line-height:1.12;letter-spacing:-1px;color:#424242">Book Your Visit</h1>
+            <p style="margin:12px 0 0;font-size:15.5px;line-height:1.65;color:#424242;text-wrap:pretty">Schedule a convenient visit with Alliance Medical Clinic. Choose your preferred date and available time, then provide your details to request your appointment.</p>
+          </section>
+
+          <sc-if value="{{ showDoctor }}" hint-placeholder-val="{{ true }}">
+            <div style="background:#fff;padding:14px 16px 0">
+              <div style="position:relative;height:232px;overflow:hidden">
+                <div style="position:absolute;inset:8% 0 4%;background:radial-gradient(circle, rgba(25,118,210,0.10), transparent 68%);pointer-events:none"></div>
+                <img src="assets/booking-doctor.webp" alt="Doctor in a white coat holding a clipboard, pointing toward the booking form" style="position:relative;display:block;height:232px;width:100%;object-fit:cover;object-position:50% 12%;filter:brightness(1.07) contrast(1.02);-webkit-mask-image:linear-gradient(to right, transparent 0, #000 9%, #000 91%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 6%, #000 92%, transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right, transparent 0, #000 9%, #000 91%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 6%, #000 92%, transparent 100%);mask-composite:intersect" />
+              </div>
+            </div>
+          </sc-if>
+
+          <section id="bk-form" style="background:#F5F5F5;padding:22px 16px 30px">
+            <div style="border-radius:16px;border:1px solid #E0E0E0;background:#fff;padding:20px 16px;box-shadow:0 4px 24px rgba(13,71,161,0.08)">
+
+              <sc-if value="{{ formVisible }}" hint-placeholder-val="{{ true }}">
+                <div>
+                  <h2 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;line-height:1.25;color:#424242">Book your visit</h2>
+
+                  <div style="margin-top:18px;display:grid;grid-template-columns:32px 1fr;align-items:center;column-gap:12px;row-gap:10px">
+                    <button type="button" onClick="{{ goStep1 }}" style="display:flex;height:32px;width:32px;align-items:center;justify-content:center;border:none;border-radius:9999px;font-family:Lato,Arial,sans-serif;font-size:14px;font-weight:700;cursor:pointer;background:{{ step1Bg }};color:{{ step1Fg }}">1</button>
+                    <span style="font-size:13px;font-weight:600;color:{{ step1Label }}">Appointment Details</span>
+                    <button type="button" onClick="{{ goStep2 }}" style="display:flex;height:32px;width:32px;align-items:center;justify-content:center;border:none;border-radius:9999px;font-family:Lato,Arial,sans-serif;font-size:14px;font-weight:700;cursor:pointer;background:{{ step2Bg }};color:{{ step2Fg }}">2</button>
+                    <span style="font-size:13px;font-weight:600;color:{{ step2Label }}">Insurance &amp; Medical Info</span>
+                  </div>
+
+                  <sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ true }}">
+                    <div>
+                      <div style="margin-top:22px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+                        <div>
+                          <label for="bk-first" style="display:block;font-size:13.5px;font-weight:700;color:#424242">First name<span style="color:#DC5962"> *</span></label>
+                          <input id="bk-first" type="text" placeholder="First name" style="margin-top:7px;display:block;height:52px;width:100%;min-width:0;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 12px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none" />
+                        </div>
+                        <div>
+                          <label for="bk-last" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Last name<span style="color:#DC5962"> *</span></label>
+                          <input id="bk-last" type="text" placeholder="Last name" style="margin-top:7px;display:block;height:52px;width:100%;min-width:0;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 12px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none" />
+                        </div>
+                      </div>
+
+                      <div style="margin-top:16px;display:flex;flex-direction:column;gap:16px">
+                        <div>
+                          <label for="bk-email" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Email<span style="color:#DC5962"> *</span></label>
+                          <input id="bk-email" type="email" placeholder="your-email@example.com" style="margin-top:7px;display:block;height:52px;width:100%;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 14px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none" />
+                        </div>
+                        <div>
+                          <label for="bk-phone" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Phone<span style="color:#DC5962"> *</span></label>
+                          <input id="bk-phone" type="tel" placeholder="Enter phone number" style="margin-top:7px;display:block;height:52px;width:100%;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 14px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none" />
+                        </div>
+                      </div>
+
+                      <div style="margin-top:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+                        <div>
+                          <label for="bk-dob" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Date of birth<span style="color:#DC5962"> *</span></label>
+                          <input id="bk-dob" type="date" style="margin-top:7px;display:block;height:52px;width:100%;min-width:0;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 12px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none" />
+                        </div>
+                        <div>
+                          <label for="bk-gender" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Gender<span style="color:#DC5962"> *</span></label>
+                          <select id="bk-gender" style="margin-top:7px;display:block;height:52px;width:100%;min-width:0;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 10px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none">
+                            <option value="">Select gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not">Prefer not to say</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div style="margin-top:16px;display:flex;flex-direction:column;gap:16px">
+                        <div>
+                          <label for="bk-address" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Street address<span style="color:#DC5962"> *</span></label>
+                          <input id="bk-address" type="text" placeholder="123 Main Street" style="margin-top:7px;display:block;height:52px;width:100%;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 14px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none" />
+                        </div>
+                        <div>
+                          <label for="bk-zip" style="display:block;font-size:13.5px;font-weight:700;color:#424242">ZIP<span style="color:#DC5962"> *</span></label>
+                          <input id="bk-zip" type="text" placeholder="Enter ZIP code" style="margin-top:7px;display:block;height:52px;width:100%;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 14px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none" />
+                        </div>
+                      </div>
+
+                      <div style="margin-top:24px">
+                        <div style="font-size:13.5px;font-weight:700;color:#424242">Date &amp; time<span style="color:#DC5962"> *</span></div>
+
+                        <div style="margin-top:8px;border-radius:9px;border:1px solid #E0E0E0;background:#fff;padding:14px">
+                          <div style="display:flex;align-items:center;justify-content:space-between">
+                            <button type="button" onClick="{{ prevMonth }}" aria-label="Previous month" style="display:flex;height:34px;width:34px;align-items:center;justify-content:center;border:none;border-radius:8px;background:transparent;color:#424242;cursor:pointer">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            </button>
+                            <span style="font-size:14.5px;font-weight:700;color:#424242">{{ monthLabel }}</span>
+                            <button type="button" onClick="{{ nextMonth }}" aria-label="Next month" style="display:flex;height:34px;width:34px;align-items:center;justify-content:center;border:none;border-radius:8px;background:transparent;color:#424242;cursor:pointer">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </button>
+                          </div>
+
+                          <div style="margin-top:10px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;text-align:center">
+                            <span style="padding:4px 0;font-size:11px;font-weight:600;color:#78909C">Sun</span>
+                            <span style="padding:4px 0;font-size:11px;font-weight:600;color:#78909C">Mon</span>
+                            <span style="padding:4px 0;font-size:11px;font-weight:600;color:#78909C">Tue</span>
+                            <span style="padding:4px 0;font-size:11px;font-weight:600;color:#78909C">Wed</span>
+                            <span style="padding:4px 0;font-size:11px;font-weight:600;color:#78909C">Thu</span>
+                            <span style="padding:4px 0;font-size:11px;font-weight:600;color:#78909C">Fri</span>
+                            <span style="padding:4px 0;font-size:11px;font-weight:600;color:#78909C">Sat</span>
+                          </div>
+
+                          <div style="margin-top:3px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px">
+                            <sc-for list="{{ cells }}" as="cell" hint-placeholder-count="35">
+                              <button type="button" aria-label="{{ cell.label }}" onClick="{{ cell.onClick }}" style="height:38px;border:none;border-radius:8px;font-family:Lato,Arial,sans-serif;font-size:13px;font-weight:600;transition:background 140ms;visibility:{{ cell.visibility }};background:{{ cell.bg }};color:{{ cell.fg }};cursor:{{ cell.cursor }}">{{ cell.day }}</button>
+                            </sc-for>
+                          </div>
+
+                          <div style="margin-top:12px;display:flex;gap:16px;font-size:12px;color:#424242">
+                            <span style="display:flex;align-items:center;gap:6px">
+                              <span style="display:inline-block;height:9px;width:9px;border-radius:9999px;background:#1976D2"></span>
+                              Selected
+                            </span>
+                            <span style="display:flex;align-items:center;gap:6px">
+                              <span style="display:inline-block;height:9px;width:9px;border-radius:9999px;border:1.5px solid #1976D2"></span>
+                              Available
+                            </span>
+                          </div>
+                        </div>
+
+                        <div style="margin-top:12px;border-radius:9px;border:1px solid #E0E0E0;background:#fff;padding:14px">
+                          <div style="font-size:14.5px;font-weight:700;color:#424242">Available times</div>
+                          <sc-if value="{{ noDate }}" hint-placeholder-val="{{ false }}">
+                            <div style="padding:26px 0;text-align:center;font-size:13.5px;color:#78909C">Select a date to see available times.</div>
+                          </sc-if>
+                          <sc-if value="{{ hasDate }}" hint-placeholder-val="{{ true }}">
+                            <div class="bk-slots" style="margin-top:10px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-height:214px;overflow-y:auto;padding-right:4px">
+                              <sc-for list="{{ slots }}" as="slot" hint-placeholder-count="24">
+                                <button type="button" aria-label="{{ slot.aria }}" onClick="{{ slot.onClick }}" style="min-height:40px;border-radius:7px;padding:8px 4px;font-family:Lato,Arial,sans-serif;font-size:12.5px;font-weight:600;transition:background 140ms,border-color 140ms;border:1px solid {{ slot.border }};background:{{ slot.bg }};color:{{ slot.fg }};opacity:{{ slot.opacity }};cursor:{{ slot.cursor }}">{{ slot.label }}</button>
+                              </sc-for>
+                            </div>
+                          </sc-if>
+                        </div>
+
+                        <div style="margin-top:10px;font-size:13.5px;line-height:1.5;color:{{ summaryColor }}">{{ summary }}</div>
+                      </div>
+
+                      <div style="margin-top:22px;display:flex;flex-direction:column;gap:16px">
+                        <div>
+                          <label for="bk-visit" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Visit type<span style="color:#DC5962"> *</span></label>
+                          <select id="bk-visit" style="margin-top:7px;display:block;height:52px;width:100%;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 12px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none">
+                            <option value="">Select visit type</option>
+                            <option value="urgent">Urgent Care</option>
+                            <option value="family">Family Medicine / Wellness</option>
+                            <option value="weightloss">Weight Loss</option>
+                            <option value="physical">Physical Exam</option>
+                            <option value="followup">Follow-up Visit</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label for="bk-reason" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Reason for visit<span style="color:#DC5962"> *</span></label>
+                          <input id="bk-reason" type="text" placeholder="What brings you in?" style="margin-top:7px;display:block;height:52px;width:100%;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 14px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none" />
+                        </div>
+                      </div>
+
+                      <button type="button" onClick="{{ submit }}" style="margin-top:24px;display:flex;height:52px;width:100%;align-items:center;justify-content:center;gap:8px;border:none;border-radius:7px;font-family:Lato,Arial,sans-serif;font-size:15.5px;font-weight:700;color:#fff;cursor:pointer;background:linear-gradient(90deg,#0D47A1,#1976D2);box-shadow:0 4px 8px rgba(0,0,0,0.16)">
+                        Request Appointment
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                      </button>
+                      <button type="button" onClick="{{ goStep2 }}" style="margin-top:10px;display:flex;height:52px;width:100%;align-items:center;justify-content:center;gap:8px;border-radius:7px;border:1px solid #1976D2;background:#fff;font-family:Lato,Arial,sans-serif;font-size:14px;font-weight:700;color:#1976D2;cursor:pointer;text-align:center">
+                        Add Insurance &amp; Medical Info (Optional)
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                      </button>
+                    </div>
+                  </sc-if>
+
+                  <sc-if value="{{ isStep2 }}" hint-placeholder-val="{{ false }}">
+                    <div>
+                      <div style="margin-top:22px;display:flex;flex-direction:column;gap:16px">
+                        <div>
+                          <label for="bk-insurer" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Insurance provider</label>
+                          <input id="bk-insurer" type="text" placeholder="e.g. Blue Cross Blue Shield" style="margin-top:7px;display:block;height:52px;width:100%;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 14px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none" />
+                        </div>
+                        <div>
+                          <label for="bk-policy" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Policy number</label>
+                          <input id="bk-policy" type="text" placeholder="Policy / member ID" style="margin-top:7px;display:block;height:52px;width:100%;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:0 14px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;outline:none" />
+                        </div>
+                        <div>
+                          <label for="bk-notes" style="display:block;font-size:13.5px;font-weight:700;color:#424242">Medical notes / conditions</label>
+                          <textarea id="bk-notes" rows="4" placeholder="Allergies, current medications, relevant history..." style="margin-top:7px;display:block;width:100%;border-radius:7px;border:1px solid #E0E0E0;background:#fff;padding:12px 14px;font-family:Lato,Arial,sans-serif;font-size:15px;color:#424242;resize:vertical;outline:none"></textarea>
+                        </div>
+                      </div>
+
+                      <button type="button" onClick="{{ submit }}" style="margin-top:24px;display:flex;height:52px;width:100%;align-items:center;justify-content:center;gap:8px;border:none;border-radius:7px;font-family:Lato,Arial,sans-serif;font-size:15.5px;font-weight:700;color:#fff;cursor:pointer;background:linear-gradient(90deg,#0D47A1,#1976D2);box-shadow:0 4px 8px rgba(0,0,0,0.16)">
+                        Request Appointment
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                      </button>
+                      <button type="button" onClick="{{ goStep1 }}" style="margin-top:10px;display:flex;height:52px;width:100%;align-items:center;justify-content:center;border-radius:7px;border:1px solid #1976D2;background:#fff;font-family:Lato,Arial,sans-serif;font-size:14px;font-weight:700;color:#1976D2;cursor:pointer">Back</button>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+                <div style="padding:34px 4px;text-align:center">
+                  <div style="margin:0 auto;display:flex;height:64px;width:64px;align-items:center;justify-content:center;border-radius:9999px;background:#E3F2FD;color:#1976D2">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <h2 style="margin:22px 0 0;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;line-height:1.25;color:#424242">Appointment Request Received</h2>
+                  <p style="margin:12px 0 0;font-size:15px;line-height:1.65;color:#424242;text-wrap:pretty">Thank you. Our team will contact you if any additional information is needed.</p>
+                  <div style="margin-top:14px;font-size:14px;line-height:1.5;font-weight:700;color:#1976D2">{{ confirmedSlot }}</div>
+                  <button type="button" onClick="{{ reset }}" style="margin-top:24px;display:flex;height:50px;width:100%;align-items:center;justify-content:center;border-radius:7px;border:1px solid #1976D2;background:#fff;font-family:Lato,Arial,sans-serif;font-size:14px;font-weight:700;color:#1976D2;cursor:pointer">Book Another Appointment</button>
+                </div>
+              </sc-if>
+            </div>
+
+            <div style="margin-top:14px;border-radius:16px;padding:18px 16px;color:#fff;background:linear-gradient(120deg,#0D47A1 0%,#1976D2 55%,#42A5F5 100%);box-shadow:0 12px 30px rgba(13,71,161,0.18)">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span style="display:flex;height:44px;width:44px;flex-shrink:0;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,0.45);background:rgba(255,255,255,0.06)">
+                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </span>
+                <div>
+                  <div style="font-family:'Playfair Display',Georgia,serif;font-size:17px;font-weight:700;color:#fff">Prefer to walk in?</div>
+                  <div style="margin-top:3px;font-size:13px;line-height:1.5;color:rgba(255,255,255,0.85)">No appointment needed for urgent care.</div>
+                </div>
+              </div>
+              <a href="tel:+12693214774" style="margin-top:14px;display:flex;height:50px;align-items:center;justify-content:center;border-radius:8px;background:#fff;font-size:14.5px;font-weight:700;color:#0D47A1;text-decoration:none">Call (269) 321-4774</a>
+            </div>
+          </section>
+
+          <footer style="background:#0D47A1;padding:30px 22px 26px;color:#fff">
+            <img src="assets/logo.png" alt="Alliance Medical Clinic" width="135" height="45" style="object-fit:contain" />
+            <div style="margin-top:8px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.4px;color:#42A5F5">Compassionate Care. Healthier You.</div>
+            <div style="margin-top:22px">
+              <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.12);padding:18px 2px;font-size:16px;font-weight:700">
+                Contact Info
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:#90CAF9;transform:rotate(180deg)"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:12px;padding:0 2px 18px">
+                <a href="tel:+12693214774" style="display:flex;min-height:44px;align-items:center;gap:12px;font-size:14.5px;color:rgba(255,255,255,0.82);text-decoration:none">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#42A5F5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  (269) 321-4774
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=8145+Valleywood+Lane+Portage+MI+49024" target="_blank" rel="noopener" style="display:flex;min-height:44px;align-items:center;gap:12px;font-size:14.5px;line-height:1.5;color:rgba(255,255,255,0.82);text-decoration:none">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:#90CAF9"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>8145 Valleywood Lane, Portage, MI 49024</span>
+                </a>
+              </div>
+              <button type="button" onClick="{{ toggleFtServices }}" aria-expanded="{{ ftServices }}" style="display:flex;width:100%;min-height:56px;align-items:center;justify-content:space-between;border:none;border-top:1px solid rgba(255,255,255,0.12);background:none;padding:18px 2px;font-family:Lato,Arial,sans-serif;font-size:16px;font-weight:700;color:#fff;text-align:left;cursor:pointer">
+                Services
+                <span style="display:flex;flex-shrink:0;color:#90CAF9">{{ ftServicesChevron }}</span>
+              </button>
+              <sc-if value="{{ ftServices }}" hint-placeholder-val="{{ false }}">
+                <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:14px;row-gap:2px;padding:0 2px 14px;font-size:14.5px">
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Urgent Care</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Family Health</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Occupational Health</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Women's Health</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Pediatric Care</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;color:rgba(255,255,255,0.82);text-decoration:none">Diagnostic Services</a>
+                </div>
+              </sc-if>
+              <button type="button" onClick="{{ toggleFtAbout }}" aria-expanded="{{ ftAbout }}" style="display:flex;width:100%;min-height:56px;align-items:center;justify-content:space-between;border:none;border-top:1px solid rgba(255,255,255,0.12);background:none;padding:18px 2px;font-family:Lato,Arial,sans-serif;font-size:16px;font-weight:700;color:#fff;text-align:left;cursor:pointer">
+                About Alliance
+                <span style="display:flex;flex-shrink:0;color:#90CAF9">{{ ftAboutChevron }}</span>
+              </button>
+              <sc-if value="{{ ftAbout }}" hint-placeholder-val="{{ false }}">
+                <div style="padding:0 2px 16px">
+                  <p style="margin:0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,0.72)">Providing quality urgent care and family health services to the Portage, Michigan community with compassion, expertise, and convenience.</p>
+                </div>
+              </sc-if>
+              <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:18px">
+                <div style="display:flex;flex-wrap:wrap;gap:6px 20px">
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none">Privacy Policy</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none">Terms of Service</a>
+                  <a href="#" style="display:flex;min-height:44px;align-items:center;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none">HIPAA Notice</a>
+                </div>
+                <div style="margin-top:6px;font-size:12.5px;color:rgba(255,255,255,0.55)">© 2026 Alliance Medical Clinic</div>
+              </div>
+            </div>
+          </footer>
+
+        </div>
+      </div>
+      <div style="margin-top:12px;width:390px;font-size:12.5px;line-height:1.5;color:#5B6470">
+        <strong style="color:#0D47A1">5a.</strong> Same shell as the other mobile pages. The desktop two-column layout (sticky doctor panel beside the form) collapses: the doctor image becomes a masked band above the card, the calendar and time slots stack instead of sitting side by side, and slots drop to a 3-up scrolling grid. The step indicator wraps to two rows so both labels stay readable. Both steps and the confirmation state are live — pick a date and time, then Request Appointment.
+      </div>
+    </div>
+
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showDoctor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+const WEEKDAY_FMT = { weekday: "short", month: "short", day: "numeric" };
+
+function chevron(up, size, sw) {
+  return React.createElement(
+    "svg",
+    { width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: sw, strokeLinecap: "round", strokeLinejoin: "round", style: { transform: up ? "rotate(180deg)" : "none", transition: "transform 200ms ease" } },
+    React.createElement("polyline", { points: "6 9 12 15 18 9" })
+  );
+}
+
+function isBooked(date) {
+  return (date.getDate() + date.getMonth()) % 7 === 0;
+}
+
+function slotLabels() {
+  const out = [];
+  for (let h = 9; h < 20; h += 1) {
+    for (let m = 0; m < 60; m += 15) {
+      out.push(String(h).padStart(2, "0") + ":" + String(m).padStart(2, "0"));
+    }
+  }
+  return out;
+}
+
+class Component extends DCLogic {
+  state = {
+    step: 1,
+    submitted: false,
+    month: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
+    date: null,
+    time: null,
+    error: false,
+    ftServices: false,
+    ftAbout: false,
+  };
+
+  buildCells() {
+    const m = this.state.month;
+    const year = m.getFullYear();
+    const idx = m.getMonth();
+    const start = new Date(year, idx, 1).getDay();
+    const days = new Date(year, idx + 1, 0).getDate();
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const dates = [];
+    for (let i = 0; i < start; i += 1) dates.push(null);
+    for (let d = 1; d <= days; d += 1) dates.push(new Date(year, idx, d));
+    while (dates.length % 7 !== 0) dates.push(null);
+
+    return dates.map((date, i) => {
+      if (!date) {
+        return { key: "b" + i, visibility: "hidden", day: "", label: "", bg: "transparent", fg: "#9E9E9E", cursor: "default", onClick: undefined };
+      }
+      const iso = date.getFullYear() + "-" + String(date.getMonth() + 1).padStart(2, "0") + "-" + String(date.getDate()).padStart(2, "0");
+      const disabled = date < today || isBooked(date);
+      const selected = iso === this.state.date;
+      return {
+        key: iso,
+        visibility: "visible",
+        day: String(date.getDate()),
+        label: date.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" }) + (disabled ? " (unavailable)" : ""),
+        bg: selected ? "#1976D2" : disabled ? "transparent" : "#E3F2FD",
+        fg: selected ? "#FFFFFF" : disabled ? "#9E9E9E" : "#1976D2",
+        cursor: disabled ? "default" : "pointer",
+        onClick: disabled ? undefined : () => this.setState({ date: iso, time: null, error: false }),
+      };
+    });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const showDoctor = this.props.showDoctor !== false;
+    const hasDate = Boolean(s.date);
+    const selectedDate = hasDate ? new Date(s.date + "T00:00:00") : null;
+
+    const slots = slotLabels().map((label, i) => {
+      const disabled = i % 5 === 0;
+      const selected = label === s.time;
+      return {
+        label: label,
+        aria: label + (disabled ? " (unavailable)" : ""),
+        border: selected ? "#1976D2" : "#E0E0E0",
+        bg: selected ? "#1976D2" : "#FFFFFF",
+        fg: selected ? "#FFFFFF" : "#424242",
+        opacity: disabled ? 0.45 : 1,
+        cursor: disabled ? "not-allowed" : "pointer",
+        onClick: disabled ? undefined : () => this.setState({ time: label, error: false }),
+      };
+    });
+
+    let summary = "Choose a date, then an available time.";
+    let summaryColor = "#78909C";
+    if (s.error) {
+      summary = s.date ? "Please select an appointment time." : "Please choose an available date.";
+      summaryColor = "#A8323A";
+    } else if (s.date && s.time) {
+      summary = "Selected: " + selectedDate.toLocaleDateString("en-US", WEEKDAY_FMT) + " at " + s.time;
+      summaryColor = "#1976D2";
+    } else if (s.date) {
+      summary = selectedDate.toLocaleDateString("en-US", WEEKDAY_FMT) + " — pick a time below.";
+      summaryColor = "#424242";
+    }
+
+    return {
+      showDoctor: showDoctor,
+      formVisible: !s.submitted,
+      submitted: s.submitted,
+      isStep1: !s.submitted && s.step === 1,
+      isStep2: !s.submitted && s.step === 2,
+      step1Bg: s.step === 1 ? "#1976D2" : "#E0E0E0",
+      step1Fg: s.step === 1 ? "#FFFFFF" : "#424242",
+      step1Label: s.step === 1 ? "#1976D2" : "#424242",
+      step2Bg: s.step === 2 ? "#1976D2" : "#E0E0E0",
+      step2Fg: s.step === 2 ? "#FFFFFF" : "#424242",
+      step2Label: s.step === 2 ? "#1976D2" : "#424242",
+      goStep1: () => this.setState({ step: 1 }),
+      goStep2: () => this.setState({ step: 2 }),
+      monthLabel: s.month.toLocaleDateString("en-US", { month: "long", year: "numeric" }),
+      prevMonth: () => this.setState((p) => ({ month: new Date(p.month.getFullYear(), p.month.getMonth() - 1, 1) })),
+      nextMonth: () => this.setState((p) => ({ month: new Date(p.month.getFullYear(), p.month.getMonth() + 1, 1) })),
+      cells: this.buildCells(),
+      slots: slots,
+      hasDate: hasDate,
+      noDate: !hasDate,
+      summary: summary,
+      summaryColor: summaryColor,
+      confirmedSlot: s.date && s.time ? new Date(s.date + "T00:00:00").toLocaleDateString("en-US", WEEKDAY_FMT) + " at " + s.time : "",
+      submit: () => {
+        if (!s.date || !s.time) {
+          this.setState({ error: true, step: 1 });
+          return;
+        }
+        this.setState({ submitted: true });
+      },
+      reset: () => this.setState({ submitted: false, step: 1, date: null, time: null, error: false }),
+      ftServices: s.ftServices,
+      ftAbout: s.ftAbout,
+      toggleFtServices: () => this.setState((p) => ({ ftServices: !p.ftServices })),
+      toggleFtAbout: () => this.setState((p) => ({ ftAbout: !p.ftAbout })),
+      ftServicesChevron: chevron(s.ftServices, 16, 2.2),
+      ftAboutChevron: chevron(s.ftAbout, 16, 2.2),
+    };
+  }
+}
+</script>
+</body>
+</html>

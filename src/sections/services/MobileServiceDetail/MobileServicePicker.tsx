@@ -14,7 +14,6 @@ import type { ServiceSlug } from "./serviceDetail.data";
  * Navbar / Footer / ServiceSidebar already use.
  */
 const SERVICE_HREFS: Record<string, string> = {
-  "urgent-care": SITE.urgentCareHref,
   "family-health": SITE.familyHealthHref,
   "womens-health": SITE.womensHealthHref,
   "pediatric-care": SITE.pediatricCareHref,

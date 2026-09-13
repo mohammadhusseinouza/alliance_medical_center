@@ -14,7 +14,7 @@ import {
 import { withLocale } from "../../../i18n/routing";
 import { useLanguage } from "../../../i18n/useLanguage";
 import { SITE } from "../../../lib/constants";
-import { SERVICES } from "./services.data";
+import { HOME_SERVICES } from "./homeServices.data";
 import type { ServiceIconName } from "./Services.types";
 
 const DEDICATED_SERVICE_HREFS: Record<string, string> = {
@@ -80,17 +80,12 @@ export function MobileServices() {
       </p>
 
       <div className="mt-[26px] grid grid-cols-2 items-start gap-x-3 gap-y-3.5">
-        {SERVICES.map((service, i) => {
-          const href = withLocale(DEDICATED_SERVICE_HREFS[service.id] ?? SITE.urgentCareHref, language);
-          return (
-            <Link
-              key={service.id}
-              to={href}
-              className={
-                "relative flex min-h-[236px] flex-col items-start overflow-hidden rounded-[20px] border border-[#ECEFF1] bg-white p-4 pt-[18px] no-underline shadow-[0_14px_32px_rgba(13,71,161,0.08)] " +
-                (i % 2 === 0 ? "mt-5" : "")
-              }
-            >
+        {HOME_SERVICES.map((service, i) => {
+          const cardClassName =
+            "relative flex min-h-[236px] flex-col items-start overflow-hidden rounded-[20px] border border-[#ECEFF1] bg-white p-4 pt-[18px] no-underline shadow-[0_14px_32px_rgba(13,71,161,0.08)] " +
+            (i % 2 === 0 ? "mt-5" : "");
+          const cardContent = (
+            <>
               <span
                 aria-hidden="true"
                 className="absolute inset-x-0 top-0 h-[3px]"
@@ -114,13 +109,28 @@ export function MobileServices() {
               <span className="mt-auto flex h-[30px] w-[30px] flex-shrink-0 items-center justify-center rounded-full bg-cta text-white">
                 <ArrowRightIcon size={14} />
               </span>
+            </>
+          );
+
+          if (service.disableLink) {
+            return (
+              <div key={service.id} className={cardClassName}>
+                {cardContent}
+              </div>
+            );
+          }
+
+          const href = withLocale(DEDICATED_SERVICE_HREFS[service.id] ?? "/#services", language);
+          return (
+            <Link key={service.id} to={href} className={cardClassName}>
+              {cardContent}
             </Link>
           );
         })}
       </div>
 
       <Link
-        to={withLocale(SITE.urgentCareHref, language)}
+        to={withLocale("/#services", language)}
         className="mt-6 flex h-[50px] w-full items-center justify-center gap-2 rounded-[7px] border-[1.5px] border-brand-icon text-[12.5px] font-bold uppercase tracking-[0.4px] text-brand-icon no-underline"
       >
         {t("common.viewAllServices")}

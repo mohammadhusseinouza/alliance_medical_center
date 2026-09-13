@@ -5,7 +5,7 @@ import { stripLocale } from "../i18n/routing";
 
 const PAGE_BY_CANONICAL_PATH: Record<string, string> = {
   "/book-appointment": "booking",
-  "/services/urgent-care": "urgentCare",
+  "/urgent-care": "urgentCare",
   "/services/diagnostic-services": "diagnosticServices",
   "/services/womens-health": "womensHealth",
   "/services/pediatric-care": "pediatricCare",

@@ -125,7 +125,7 @@ export function DesktopFooter() {
 
         <div className="flex items-center justify-between gap-5 pt-7 mw-650:flex-col mw-650:items-start mw-650:gap-4">
           <div className="text-[13.5px] text-white/[0.55]">
-            © {new Date().getFullYear()} Alliance Medical Clinic
+            © {new Date().getFullYear()} {SITE.name}
           </div>
           <div className="flex gap-[30px]">
             {footerLegalLinks.map((link) => (

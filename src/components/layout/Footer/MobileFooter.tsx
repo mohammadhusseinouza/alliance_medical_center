@@ -164,7 +164,7 @@ export function MobileFooter({ variant = "default" }: MobileFooterProps) {
             ))}
           </div>
           <div className="mt-1.5 text-[12.5px] text-white/[0.55]">
-            © {new Date().getFullYear()} Alliance Medical Clinic
+            © {new Date().getFullYear()} {SITE.name}
           </div>
         </div>
       </div>

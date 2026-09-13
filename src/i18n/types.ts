@@ -6,7 +6,7 @@ export const LANGUAGES: readonly Language[] = ["en", "es"];
 
 export const DEFAULT_LANGUAGE: Language = "en";
 
-export const LANGUAGE_STORAGE_KEY = "accessnow-language";
+export const LANGUAGE_STORAGE_KEY = "alliance-language";
 
 export const INTL_LOCALE_TAGS: Record<Language, string> = {
   en: "en-US",

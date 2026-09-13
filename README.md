@@ -1,6 +1,6 @@
-# AccessNow Care
+# Alliance Medical Center
 
-A React + TypeScript recreation of the supplied AccessNow Care design reference — a marketing site for an urgent care and family health clinic in Portage, Michigan. This project rebuilds the static design as a production-quality, componentized frontend while preserving its content, layout, and behavior exactly.
+A React + TypeScript recreation of the supplied design reference — a marketing site for an urgent care and family health clinic in Pontiac, Michigan. This project rebuilds the static design as a production-quality, componentized frontend while preserving its content, layout, and behavior exactly.
 
 ## Stack
 

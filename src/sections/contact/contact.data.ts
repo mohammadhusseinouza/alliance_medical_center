@@ -1,17 +1,17 @@
 import { SITE } from "../../lib/constants";
 
 /**
- * Address and hours are content the Contact page was specifically briefed
- * with; they differ from SITE.address / SITE.hours (used by TopBar, Footer,
- * and the Home page's ReachUs section) so they live here instead of
- * overwriting shared, site-wide constants used elsewhere.
+ * Derived from the canonical `SITE.address` (single source of truth for the
+ * clinic's real-world location, also used by TopBar, Footer, and the Home
+ * page's ReachUs section) — only the Contact page's extra country line is
+ * unique to this shape.
  */
 export const CONTACT_ADDRESS = {
-  line1: "2911 Capital Ave SW",
-  line2: "Battle Creek, MI 49015",
+  line1: SITE.address.line1,
+  line2: SITE.address.line2,
   line3: "United States",
-  full: "2911 Capital Ave SW, Battle Creek, MI 49015",
-  mapsHref: "https://www.google.com/maps/search/?api=1&query=2911+Capital+Ave+SW+Battle+Creek+MI+49015",
+  full: SITE.address.full,
+  mapsHref: SITE.address.mapsHref,
 } as const;
 
 /**

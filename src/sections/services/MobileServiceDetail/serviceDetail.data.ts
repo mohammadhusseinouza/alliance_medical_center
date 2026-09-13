@@ -12,13 +12,6 @@
 import { SITE } from "../../../lib/constants";
 import { DIAGNOSTIC_SERVICE_ITEMS } from "../DiagnosticServicesContent/diagnosticServicesContent.data";
 
-// Urgent Care
-import ucHero from "../../../assets/urgent-care/hero.png";
-import ucMain from "../../../assets/urgent-care/main-consultation.png";
-import ucGalleryPediatric from "../../../assets/urgent-care/pediatric-care.png";
-import ucGalleryLab from "../../../assets/urgent-care/lab-diagnostics.png";
-import ucCta from "../../../assets/urgent-care/cta-portrait.png";
-
 // Family Health
 import fhHero from "../../../assets/family-health/hero.png";
 import fhMain from "../../../assets/family-health/Primary care physician consulting with a patient in a bright exam room.png";
@@ -48,7 +41,6 @@ import dsGalleryImaging from "../../../assets/diagnostic-services/Clinician perf
 import dsCta from "../../../assets/diagnostic-services/Diagnostic lab technician ready to help patients.png";
 
 export type ServiceSlug =
-  | "urgent-care"
   | "family-health"
   | "womens-health"
   | "pediatric-care"
@@ -114,53 +106,6 @@ export interface MobileServiceConfig {
   faq: FaqConfig;
   cta: { headingKey: string; descKey: string; altKey: string; image: string };
 }
-
-const urgentCare: MobileServiceConfig = {
-  slug: "urgent-care",
-  nameKey: "services.items.urgentCare.title",
-  href: SITE.urgentCareHref,
-  heroImage: ucHero,
-  heroAltKey: "servicePage.urgentCare.heroImageAlt",
-  mainImage: ucMain,
-  mainAltKey: "servicePage.urgentCare.mainPhotoAlt",
-  headingKey: "servicePage.urgentCare.heading",
-  introKey: "servicePage.urgentCare.intro",
-  benefits: {
-    kind: "simple",
-    headingKey: "servicePage.urgentCare.whatsIncluded",
-    itemKeys: [
-      "minorIllnesses",
-      "walkIns",
-      "convenientAccess",
-      "diagnostics",
-      "minorInjuries",
-      "commonIllnesses",
-      "screenings",
-      "followUp",
-    ].map((k) => `servicePage.urgentCare.benefits.${k}`),
-  },
-  secondary: {
-    headingKey: "servicePage.urgentCare.comprehensive.heading",
-    bodyKey: "servicePage.urgentCare.comprehensive.description",
-  },
-  gallery: [
-    { image: ucGalleryPediatric, altKey: "servicePage.urgentCare.pairAlt.pediatric" },
-    { image: ucGalleryLab, altKey: "servicePage.urgentCare.pairAlt.lab", objectPosition: "55% center" },
-  ],
-  faq: {
-    eyebrowKey: "servicePage.urgentCare.faq.eyebrow",
-    idPrefix: "m-urgent-care",
-    base: "servicePage.urgentCare.faq.items",
-    keys: ["appointment", "conditions", "insurance", "hours", "emergency", "moreInformation"],
-    phoneKey: "moreInformation",
-  },
-  cta: {
-    headingKey: "servicePage.sidebarCta.heading",
-    descKey: "servicePage.sidebarCta.description",
-    altKey: "servicePage.sidebarCta.portraitAlt",
-    image: ucCta,
-  },
-};
 
 const familyHealth: MobileServiceConfig = {
   slug: "family-health",
@@ -392,7 +337,6 @@ const diagnosticServices: MobileServiceConfig = {
 };
 
 export const SERVICE_DETAIL_CONFIG: Record<ServiceSlug, MobileServiceConfig> = {
-  "urgent-care": urgentCare,
   "family-health": familyHealth,
   "womens-health": womensHealth,
   "pediatric-care": pediatricCare,

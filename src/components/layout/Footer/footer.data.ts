@@ -10,7 +10,6 @@ import type { FooterContactRow, FooterLink } from "./Footer.types";
  * fallback.
  */
 const DEDICATED_SERVICE_HREFS: Record<string, string> = {
-  "urgent-care": SITE.urgentCareHref,
   "occupational-health": SITE.occupationalHealthHref,
   "diagnostic-services": SITE.diagnosticServicesHref,
   "womens-health": SITE.womensHealthHref,

@@ -45,7 +45,7 @@ export function MobileReachUs() {
       <div className="relative mt-6 h-[260px] overflow-hidden rounded-[18px] border border-border-subtle bg-badge-bg shadow-elevated">
         <iframe
           title={t("reachUs.mapTitle", { business: SITE.name, address: SITE.address.full })}
-          src="https://www.google.com/maps?q=8145+Valleywood+Lane,+Portage,+MI+49024&output=embed"
+          src="https://www.google.com/maps?q=1220+N+Perry+St.,+Pontiac,+MI+48340&output=embed"
           width="100%"
           height="100%"
           className="absolute inset-0 border-0"

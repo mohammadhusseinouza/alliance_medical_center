@@ -8,8 +8,8 @@ export function ReachUsMap() {
   return (
     <div className="relative min-h-[560px] animate-ru-map overflow-hidden rounded-[22px] border border-reach-us-map-border bg-reach-us-map-bg shadow-elevated motion-reduce:[animation-duration:0.01ms] mw-1100:min-h-[500px] mw-850:order-1 mw-850:min-h-[460px] mw-650:min-h-[380px] mw-650:rounded-[18px]">
       <iframe
-        title={t("reachUs.mapTitle", { business: "Alliance Medical Clinic", address: SITE.address.full })}
-        src="https://www.google.com/maps?q=8145+Valleywood+Lane,+Portage,+MI+49024&output=embed"
+        title={t("reachUs.mapTitle", { business: SITE.name, address: SITE.address.full })}
+        src="https://www.google.com/maps?q=1220+N+Perry+St.,+Pontiac,+MI+48340&output=embed"
         width="100%"
         height="100%"
         className="absolute inset-0 min-h-[560px] border-0"
@@ -22,7 +22,7 @@ export function ReachUsMap() {
           <MapMarkerIcon size={26} />
         </div>
         <div>
-          <div className="text-[16px] font-bold text-text-primary">Alliance Medical Clinic</div>
+          <div className="text-[16px] font-bold text-text-primary">{SITE.name}</div>
           <div className="mt-1 text-[13px] leading-[1.5] text-text-secondary">
             {SITE.address.line1}
             <br />
